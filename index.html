@@ -115,7 +115,10 @@
             display: flex;
             gap: 10px;
             margin-bottom: 15px;
-            flex-wrap: wrap;
+            overflow-x: auto; /* Scroll orizzontale */
+            max-width: 100%;
+            padding-bottom: 5px; /* Spazio per la scrollbar */
+            flex-wrap: nowrap; /* Non mandare a capo */
         }
 
         .tab {
@@ -127,6 +130,8 @@
             cursor: pointer;
             box-shadow: 3px 3px 0px rgba(0,0,0,0.2);
             transition: all 0.2s;
+            white-space: nowrap; /* Impedisce il wrap del testo */
+            flex-shrink: 0; /* Impedisce il ridimensionamento */
         }
 
         .tab:hover {
@@ -150,21 +155,26 @@
         }
 
         /* Stile scrollbar personalizzato (opzionale, per Chrome/Safari) */
-        #text-content::-webkit-scrollbar {
+        #text-content::-webkit-scrollbar,
+        #tabs-container::-webkit-scrollbar {
             width: 8px;
+            height: 8px; /* Per scrollbar orizzontale */
         }
 
-        #text-content::-webkit-scrollbar-track {
+        #text-content::-webkit-scrollbar-track,
+        #tabs-container::-webkit-scrollbar-track {
             background: #f0f0f0;
             border: 1px solid #ccc;
         }
 
-        #text-content::-webkit-scrollbar-thumb {
+        #text-content::-webkit-scrollbar-thumb,
+        #tabs-container::-webkit-scrollbar-thumb {
             background: var(--accent);
             border: 1px solid #333;
         }
 
-        #text-content::-webkit-scrollbar-thumb:hover {
+        #text-content::-webkit-scrollbar-thumb:hover,
+        #tabs-container::-webkit-scrollbar-thumb:hover {
             background: #ff7680;
         }
 
@@ -260,6 +270,17 @@
                 tabElement.textContent = tab.nome;
                 tabElement.onclick = () => mostraTab(tab.id);
                 tabsContainer.appendChild(tabElement);
+                
+                // Scrolla automaticamente sulla tab attiva
+                if (tab.id === tabAttivaId) {
+                    setTimeout(() => {
+                        tabElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'nearest',
+                            inline: 'center'
+                        });
+                    }, 10);
+                }
             });
         }
 

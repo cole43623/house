@@ -363,7 +363,7 @@ const casi = [
         eta: 26,
         sintomi: "Dolore toracico trafittivo improvviso irradiato alla regione interscapolare. Sincope all'esordio.",
         anamnesi: "Miopia elevata. Nessun precedente cardiologico noto.",
-        note_infermiera: "Paziente longilineo (198 cm). Aracnodattilia. Pressione arteriosa differenziale: 170/95 braccio destro, 110/60 braccio sinistro.",
+        note_infermiera: "Paziente longilineo (196 cm). Pressione arteriosa differenziale: 170/95 braccio destro, 110/60 braccio sinistro.",
 
         // --- LABORATORIO ---
         emocromo: "Hb 11.8 g/dL, Leucociti 14.000/mmc.",
@@ -1495,6 +1495,7 @@ const casi = [
         ecografia: "Eco Collo/Tiroide: Ghiandola tiroidea diffusamente ingrandita, ipoecogena. Al color-Doppler: ipervascolarizzazione massiva diffusa ('Inferno tiroideo').",
         ecocardiogramma: "Frazione di Eiezione 75% (Cuore iperdinamico). Insufficienza mitralica lieve funzionale.",
         pet: "Non indicata.",
+        elettrocardiogramma: "Fibrillazione Atriale a elevata risposta ventricolare (FC 170-180 bpm).",
 
         // --- PROCEDURE & NEURO ---
         biopsia: "Non indicata.",
@@ -1502,7 +1503,6 @@ const casi = [
         paracentesi: "Nessun liquido.",
         eeg: "Attività rapida diffusa (Beta) mista a onde lente.",
         emg: "Tremore fisiologico esaltato.",
-        elettrocardiogramma: "Fibrillazione Atriale a elevata risposta ventricolare (FC 170-180 bpm).",
 
         // --- EFFETTI TERAPIE ---
         antibiotici: "Nessun effetto sulla frequenza cardiaca o sulla temperatura.",
