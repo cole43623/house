@@ -246,6 +246,7 @@
                     <option value="" disabled selected>-- Scegli un esame --</option>
                 </select>
                 <button onclick="eseguiEsame()">ESEGUI ESAME</button>
+                <button onclick="rivelasol()">SVELA SOLUZIONE</button>
             </div>
         </div>
     </div>
@@ -256,7 +257,7 @@
         // ==========================================
 
         const textElement = document.getElementById('text-content');
-        const selectElement = document.getElementById('exam-selector');
+        let selectElement = document.getElementById('exam-selector');
         const tabsContainer = document.getElementById('tabs-container');
         let casoCorrenteObj = null;
         let tabs = []; // Array di oggetti {nome, contenuto, id}
@@ -311,11 +312,11 @@
             typeWriter(contenuto, 'caso');
         }
 
-		function caricaCaso(indice = null) {
-			if (indice === null) {
-				indice = Math.floor(Math.random() * casi.length);
-			}
-			console.log(indice);
+        function caricaCaso(indice = null) {
+            if (indice === null) {
+                indice = Math.floor(Math.random() * casi.length);
+            }
+            console.log(indice);
             casoCorrenteObj = casi[indice];
             
             // Resetta le tabs (mantiene solo il caso)
@@ -348,29 +349,29 @@
             const nomeEsameLeggibile = esameScelto.replaceAll("_", " ");
             let contenuto;
             
-			if (risultato == undefined) {
-				contenuto = "Non ho programmato risultati per " + nomeEsameLeggibile + " in questo caso, il che significa che probabilmente è inerte, comunque potresti essere fuori strada.";
+            if (risultato == undefined) {
+                contenuto = "Non ho programmato risultati per \"" + nomeEsameLeggibile + "\" in questo caso, il che significa che probabilmente è inerte, comunque potresti essere fuori strada.";
             } else {
-				contenuto = "RISULTATO " + nomeEsameLeggibile + ": " + risultato;
+                contenuto = "RISULTATO " + nomeEsameLeggibile + ": " + risultato;
             }
 
-			// Crea o aggiorna la tab per questo esame
-			const tabEsistente = tabs.find(t => t.id === esameScelto);
-			if (tabEsistente) {
-				tabEsistente.contenuto = contenuto;
-			} else {
-				tabs.push({
-					id: esameScelto,
-					nome: nomeEsameLeggibile,
-					contenuto: contenuto
-				});
-			}
+            // Crea o aggiorna la tab per questo esame
+            const tabEsistente = tabs.find(t => t.id === esameScelto);
+            if (tabEsistente) {
+                tabEsistente.contenuto = contenuto;
+            } else {
+                tabs.push({
+                    id: esameScelto,
+                    nome: nomeEsameLeggibile,
+                    contenuto: contenuto
+                });
+            }
 
-			// Aggiorna tab attiva PRIMA di creare le tabs
-			tabAttivaId = esameScelto; 
+            // Aggiorna tab attiva PRIMA di creare le tabs
+            tabAttivaId = esameScelto; 
 
-			creaTabs(); // ricrea le tabs con quella attiva
-			typeWriter(contenuto);
+            creaTabs(); // ricrea le tabs con quella attiva
+            typeWriter(contenuto);
         }
 
         // Effetto macchina da scrivere
@@ -392,6 +393,41 @@
                 }
             }, 15); 
         }
+
+    function rivelasol() {
+        if (!casoCorrenteObj) return;
+
+        const soluzione = "La soluzione del caso è: " + casoCorrenteObj.nome_malattia;
+
+        // Crea o aggiorna la tab SOLUZIONE
+        tabs.push({
+            id: 'soluzione',
+            nome: 'SOLUZIONE',
+            contenuto: soluzione
+        });
+        
+        tabAttivaId = 'soluzione';
+        creaTabs();
+        typeWriter(soluzione);
+
+        // Svuota i controlli e aggiunge solo il pulsante "Nuovo Caso"
+        const controls = document.getElementById('controls');
+        controls.innerHTML = '';
+        const nuovoCasoBtn = document.createElement('button');
+        nuovoCasoBtn.textContent = 'NUOVO CASO';
+        nuovoCasoBtn.onclick = () => {
+            controls.innerHTML = `
+                <select id="exam-selector">
+                    <option value="" disabled selected>-- Scegli un esame --</option>
+                </select>
+                <button onclick="eseguiEsame()">ESEGUI ESAME</button>
+                <button onclick="rivelasol()">SVELA SOLUZIONE</button>
+            `;
+            selectElement = document.getElementById('exam-selector');
+            caricaCaso(); 
+        };
+        controls.appendChild(nuovoCasoBtn);
+    }
 
         // AVVIO: Carica il primo caso
         caricaCaso();

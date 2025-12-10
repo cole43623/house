@@ -170,6 +170,7 @@ const casi = [
         ves_pcr: "VES 12 mm/h, PCR negativa.",
         emocoltura: "Negativa.",
         esame_urine: "Proteine: 3+ (Proteinuria significativa). Sedimento: Presenza di corpi ovali grassi e lipidi birifrangenti ('Croce di Malta').",
+        esame_feci: "Le feci mostrano malassorbimento moderato con residui lipidici aumentati.",
         autoanticorpi: "ANA, ENA, Anti-DNA negativi.",
         tossicologico: "Negativo.",
         esame_liquor: "Non indicato.",
@@ -198,7 +199,7 @@ const casi = [
         dialisi: "Non necessaria al momento, ma indicata in futuro per progressione danno renale.",
         intubazione: "Non indicata.",
         immunoglobuline: "Nessun effetto."
-        // Terapia corretta (non nel JSON ma per info): Terapia enzimatica sostitutiva (Agalsidasi)
+        // Terapia corretta: Terapia enzimatica sostitutiva (Agalsidasi)
     },
 
     // ---------------- CASO 5: EMOCROMATOSI EREDITARIA ----------------
@@ -723,11 +724,12 @@ const casi = [
         ves_pcr: "VES 45 mm/h, PCR 4.0 mg/dL.",
         emocoltura: "Negativa", // (il batterio T. whipplei cresce molto difficilmente in coltura standard).
         esame_urine: "Normale.",
+        esame_feci: "Le feci presentano significativa steatorrea, indicativa di malassorbimento cronico.",
         autoanticorpi: "Fattore Reumatoide negativo. ANA negativi.",
         tossicologico: "Negativo.",
-        esame_liquor: "Cellule 10/mmc (lieve pleocitosi), PCR per T. whipplei sul liquor: POSITIVA (Coinvolgimento neurologico asintomatico).",
+        esame_liquor: "Cellule 10/mmc (lieve pleocitosi)", //PCR per T. whipplei sul liquor: POSITIVA (Coinvolgimento neurologico asintomatico)
         striscio_sangue: "Ipocromia, microcitosi.",
-        dosaggi_specifici: "Test PCR (DNA) su sangue periferico per Tropheryma whipplei: POSITIVO.",
+        dosaggi_specifici: "Esame liquor test PCR (DNA) su sangue periferico per Tropheryma whipplei: POSITIVO.",
 
         // --- IMAGING ---
         rx: "RX Addome: Distensione anse tenui, assenza di livelli.",
@@ -974,6 +976,7 @@ const casi = [
         ves_pcr: "PCR 12.0 mg/dL.",
         emocoltura: "Negativa.",
         esame_urine: "Chetoni + (digiuno).",
+        esame_feci: "Le feci non mostrano cisti né trofozoiti di amebe intestinali.",
         autoanticorpi: "Non indicati.",
         tossicologico: "Negativo.",
         esame_liquor: "Aspetto torbido/purulento. Pressione apertura molto elevata (>40 cmH2O). Leucociti 4.500/mmc (Neutrofili 98%). Glucosio 10 mg/dL (Ipoglicorrachia marcata). Proteine 400 mg/dL. Colorazione di Gram: NEGATIVA (Nessun batterio visibile).",
@@ -1227,6 +1230,7 @@ const casi = [
         ves_pcr: "VES 60 mm/h, PCR 4.5 mg/dL.",
         emocoltura: "Negativa.",
         esame_urine: "Proteine ++, Sangue +++. Sedimento: Cilindri eritrocitari e numerosi eritrociti dismorfici.",
+        esame_feci: "Le feci mostrano sangue occulto, compatibile con possibile coinvolgimento gastrointestinale.",
         autoanticorpi: "ANA negativi. ANCA negativi (importante per diagnosi differenziale con Wegener).",
         tossicologico: "Negativo.",
         esame_liquor: "Limpido, sterile.",
@@ -1304,7 +1308,7 @@ const casi = [
         cortisone: "Riduzione della febbre e dei dolori articolari, ma rischio di aumentare la replicazione virale (HBV).",
         dialisi: "Gestione dell'uremia, nessun effetto sulla patogenesi vascolare.",
         intubazione: "Non necessaria.",
-        farmaco_antivirale: "Lamivudina/Entecavir: Riduzione della carica virale.",
+        antivirale: "Lamivudina/Entecavir: Riduzione della carica virale.",
         farmaco_plasmaferesi: "Miglioramento clinico rapido (rimozione immunocomplessi circolanti)."
     },
 
@@ -1531,9 +1535,10 @@ const casi = [
         chimica_clinica: "LDH 1800 U/L (Molto aumentato). Bilirubina Totale 3.5 mg/dL (Indiretta 2.9). Creatinina 1.6 mg/dL. Aptoglobina < 10 mg/dL.",
         emogas: "Normale.",
         ves_pcr: "VES 20 mm/h.",
-        coagulazione: "PT e aPTT: NORMALI (Parametro chiave per diagnosi differenziale con DIC). Fibrinogeno normale.",
+        coagulazione: "PT e aPTT: NORMALI. Fibrinogeno normale.",
         emocoltura: "Negativa.",
         esame_urine: "Ematuria microscopica, emoglobinuria.",
+        esame_feci: "Le feci risultano positive per sangue occulto, possibile segno di ischemia intestinale secondaria.",
         autoanticorpi: "Test di Coombs Diretto e Indiretto: NEGATIVO.",
         tossicologico: "Negativo.",
         esame_liquor: "Normale.",
@@ -1637,6 +1642,7 @@ const casi = [
         ves_pcr: "VES 35 mm/h. PCR 0.5 mg/dL.",
         emocoltura: "Negativa.",
         esame_urine: "Proteine ++++ (Proteinuria massiva: 6g/24h). Urine schiumose. Sedimento inattivo.",
+        esame_feci: "Le feci contengono elevate quantità di grassi non assorbiti, compatibile con insufficienza digestiva e malassorbimento.",
         autoanticorpi: "ANA negativi. Fattore Reumatoide negativo.",
         tossicologico: "Negativo.",
         esame_liquor: "Normale.",
@@ -1769,7 +1775,7 @@ const casi = [
         dialisi: "Nessun effetto.",
         intubazione: "Necessaria se la capacità vitale forzata scende sotto 20 ml/kg (Crisi respiratoria).",
         farmaco_inibitore_acetilcolinesterasi: "Piridostigmina (Mestinon): Miglioramento rapido e significativo della forza muscolare e risoluzione della ptosi in 30-60 minuti.",
-        farmaco_immunoglobuline: "Miglioramento della forza muscolare dopo 4-5 giorni."
+        immunoglobuline: "Miglioramento della forza muscolare dopo 4-5 giorni."
     },
 
 // ---------------- CASO 36: EMOGLOBINURIA PAROSSISTICA NOTTURNA (EPN) ----------------
@@ -2339,6 +2345,691 @@ const casi = [
         intubazione: "Non necessaria.",
         farmaco_ketoconazolo: "Riduzione della sintesi di cortisolo e miglioramento graduale dei sintomi.",
         intervento_chirurgico: "Adenectomia trans-sfenoidale: Crollo dei livelli di cortisolo post-operatorio (necessita terapia sostitutiva transitoria) e risoluzione del quadro clinico."
+    },
+
+// ---------------- CASO 47: OVERDOSE DA FENTANYL ----------------
+    {
+        id: 47,
+        nome_malattia: "Overdose da Fentanyl",
+        livello_difficolta: "Medio",
+
+        // --- DATI PAZIENTE ---
+        sesso: "Maschio",
+        eta: 24,
+        sintomi: "Stato di incoscienza (coma profondo), colorito bluastro delle labbra e delle dita (cianosi), respiro estremamente lento e rumoroso ('death rattle').",
+        anamnesi: "Trovato privo di sensi in un parco. Gli amici riferiscono che 'ha comprato delle pillole di Xanax per strada' poco prima. Nessuna storia nota di abuso di oppiacei.",
+        note_infermiera: "Paziente non risvegliabile agli stimoli dolorosi (GCS 3). Frequenza respiratoria 4 atti/minuto (Bradipnea estrema). Le pupille sono puntiformi ('a spillo').",
+
+        // --- LABORATORIO ---
+        emocromo: "Leucocitosi lieve da stress (12.000/mmc).",
+        ves_pcr: "Valori nella norma.",
+        coagulazione: "INR e PTT nella norma.",
+        dosaggi_specifici: "Striscia reattiva specifica per Fentanyl su urine: POSITIVA (Unico modo per rilevarlo).",
+        autoanticorpi: "Negativi.",
+        test_stimolo_acth: "Cortisolo aumenta regolarmente (surrene funzionante, esame inutile).",
+        test_soppressione_desametasone: "Cortisolo soppresso (asse ormonale intatto, esame inutile).",
+        esame_urine: "Chimico fisico normale.",
+        striscio_sangue: "Normale.",
+        chimica_clinica: "CPK 800 U/L (Lieve rabdomiolisi da immobilizzazione prolungata sul terreno).",
+        emocoltura: "Nessuna crescita batterica.",
+        esame_liquor: "Limpido, pressione normale.",
+        esame_microscopico_liquor: "Acellulare.",
+        glucosio_ev: "Glicemia sale a 200 mg/dL, ma il coma persiste invariato (esclude coma ipoglicemico).",
+        emogas: "pH 7.10, pCO2 85 mmHg, pO2 50 mmHg (Acidosi respiratoria severa con ipercapnia e ipossiemia).",
+
+        // --- IMAGING ---
+        ecografia: "Vescica distesa (globo vescicale da ritenzione urinaria).",
+        risonanza: "Encefalo: Nessuna lesione acuta, segni lievi di edema citotossico da ipossia.",
+        rx: "RX Torace: Opacità a vetro smerigliato bilaterali (Edema polmonare non cardiogeno).",
+        tc: "TC Encefalo: Ipodensità diffusa da edema cerebrale ipossico iniziale.",
+        pet: "Distribuzione metabolica normale.",
+        angio: "Vasi pervi.",
+        elettrocardiogramma: "Bradicardia sinusale marcata (38 bpm). Intervallo QTc lievemente prolungato.",
+        ecocardiogramma: "Cinesi cardiaca ridotta globalmente per ipossia, ma strutturalmente sano.",
+        eeg: "Attività delta diffusa (coma), depressione generalizzata del voltaggio.",
+        test_neuropsicologici: "Paziente non valutabile (coma).",
+        test_del_ghiaccio: "Nessun effetto sulle pupille o sullo stato di coscienza.",
+        esame_neurologico_specifico: "Pupille miotiche (< 1mm) fisse. Rigidità muscolare toracica ('Wooden Chest syndrome'). Riflessi osteotendinei ipoeccitabili.",
+        misurazione_pressione_compartimentale: "Pressioni logge muscolari nella norma.",
+        ricerca_ambientale: "Rinvenimento di pillole contraffatte nelle tasche con logo simile a farmaci noti.",
+
+        // --- PROCEDURE ---
+        plasmaferesi: "Nessuna variazione clinica (il farmaco ha alto volume di distribuzione, non si lava via).",
+        dialisi: "Nessun miglioramento dello stato di coscienza.",
+        trasfusione_piastrine: "Nessun effetto.",
+        intervento_chirurgico: "Stress chirurgico inutile su paziente instabile.",
+        intubazione: "Ventilazione meccanica efficace: normalizzazione dei valori emogas (pH e pCO2), ma il paziente rimane in coma farmacologico.",
+        camera_iperbarica: "Miglioramento dell'ossigenazione plasmatica, ma persistenza dell'apnea centrale.",
+        paracentesi: "Nessun liquido prelevabile.",
+        chemioterapia: "Nessun effetto.",
+        fluidoterapia: "Soluzione fisiologica: Miglioramento della pressione arteriosa (da 80/50 a 100/60 mmHg), ma permane la bradicardia.",
+
+        // --- ALTRO ---
+        anticoagulante: "Aumento del rischio emorragico senza benefici.",
+        biopsia: "Tessuto sano.",
+        tossicologico: "Screening standard urine (Oppiacei, Coca, THC, BZO, Anfetamine): NEGATIVO per oppiacei (TRABOCCHETTO: Il test standard cerca la morfina/eroina, non rileva i sintetici come il Fentanyl).",
+
+        // --- FARMACI ---
+        farmaco_ketoconazolo: "Nessun effetto acuto.",
+        farmaco_ciproeptadina: "Nessun effetto.",
+        farmaco_fans: "Nessun effetto.",
+        farmaco_levodopa: "Nessun effetto.",
+        farmaco_tetrabenazina: "Nessun effetto.",
+        farmaco_antitiroideo: "Nessun effetto.",
+        farmaco_benzodiazepine: "PEGGIORAMENTO CRITICO: Arresto respiratorio completo e ipotensione grave (effetto sinergico depressivo).",
+        farmaco_adrenalina: "Aumento temporaneo della frequenza cardiaca a 80 bpm, ma nessuna ripresa della respirazione spontanea.",
+        farmaco_betabloccante: "ARRESTO CARDIACO: Crollo della frequenza cardiaca da 38 bpm all'asistolia completa.",
+        farmaco_cotrimossazolo: "Nessun effetto.",
+        farmaco_inibitore_acetilcolinesterasi: "Aumento delle secrezioni bronchiali, peggioramento degli scambi gassosi.",
+        farmaco_immunosoppressore: "Nessun effetto.",
+        farmaco_biologico: "Nessun effetto.",
+        farmaco_antiretrovirale: "Nessun effetto.",
+        farmaco_aspirina: "Nessun effetto.",
+        farmaco_octreotide: "Nessun effetto.",
+        farmaco_plasmaferesi: "Nessun effetto.",
+        
+        // TERAPIA RISOLUTIVA
+        farmaco_antidoto: "Naloxone (Narcan) EV/Intranasale: Risveglio improvviso ed esplosivo in 30 secondi. Il paziente si siede, diventa agitato, aggressivo, vomita e iperventila (Sindrome da astinenza precipitata).",
+        farmaco_neurolettico: "Peggioramento della sedazione e rischio di aspirazione.",
+        farmaco_amfotericina: "Nessun effetto.",
+        farmaco_antipsicotico: "Nessun effetto.",
+        antibiotici: "Nessun effetto immediato sullo stato clinico.",
+        antivirale: "Nessun effetto.",
+        insulina: "Rischio di ipoglicemia su paziente in coma.",
+        cortisone: "Nessun effetto sul drive respiratorio.",
+        ferro_supplementare: "Nessun effetto.",
+        immunoglobuline: "Nessun effetto.",
+        ossigeno_alta_concentrazione: "Correzione della saturazione arteriosa, ma persistenza dell'acidosi respiratoria (la CO2 non viene espirata perché il paziente non ventila)."
+    },
+
+// ---------------- CASO 48: NEUROCISTICERCOSI (TENIA SOLIUM) ----------------
+    {
+        id: 48,
+        nome_malattia: "Neurocisticercosi (Tenia Solium)",
+        livello_difficolta: "Media",
+
+        // --- DATI PAZIENTE ---
+        sesso: "Maschio",
+        eta: 35,
+        sintomi: "Crisi epilettica tonico-clonica generalizzata (prima volta nella vita), cefalea cronica che peggiora al mattino, nausea.",
+        anamnesi: "Immigrato da zona endemica (Sud America o Sud-Est Asiatico) da 5 anni. Riferisce di mangiare spesso carne di maiale, talvolta poco cotta. Nega traumi cranici.",
+        note_infermiera: "Dopo la crisi il paziente è rimasto confuso per un'ora (Stato post-ictale). Lamenta debolezza al braccio sinistro (Paresi di Todd).",
+
+        // --- LABORATORIO ---
+        emocromo: "Leucociti 11.000/mmc. Eosinofili 12% (Eosinofilia moderata: indizio parassitario). Hb 14.0 g/dL.",
+        chimica_clinica: "Elettroliti, funzionalità renale ed epatica nella norma. CPK 400 U/L (da attività muscolare convulsiva).",
+        emogas: "Acidosi lattica lieve (post-convulsiva), si normalizza rapidamente.",
+        ves_pcr: "VES 25 mm/h. PCR 1.0 mg/dL.",
+        coagulazione: "Normale.",
+        emocoltura: "Negativa.",
+        esame_urine: "Normale.",
+        autoanticorpi: "Negativi.",
+        tossicologico: "Negativo (esclude cause tossiche delle convulsioni).",
+        striscio_sangue: "Eosinofilia confermata.",
+        dosaggi_specifici: "Sierologia (EITB/Western Blot) per Taenia solium: POSITIVA.",
+        esame_feci: "Esame parassitologico: Presenza di uova di Taenia spp.",
+
+        // --- IMAGING ---
+        rx: "RX Torace: Negativo. RX Muscoli (Coscia): Presenza di piccole calcificazioni fusiformi a chicco di riso (cisti muscolari calcifiche).",
+        tc: "TC Encefalo: Multiple lesioni calcifiche puntiformi diffuse ('Starry Sky' / 'Cielo stellato'). Alcune lesioni ipodense con edema perilesionale.",
+        risonanza: "RMN Encefalo: Lesioni cistiche multiple in vari stadi: alcune con nodulo murale eccentrico (scolece visibile), altre con edema anulare (fase infiammatoria), altre calcifiche.",
+        angio: "Negativa.",
+        ecografia: "Eco Oculare (B-scan): Assenza di cisti retiniche (Fondamentale controllare prima della terapia: se si uccide una cisti nell'occhio si causa cecità).",
+        ecocardiogramma: "Normale.",
+        elettrocardiogramma: "Normale.",
+        pet: "Non indicata.",
+
+        // --- PROCEDURE & NEURO ---
+        biopsia: "Biopsia cerebrale (stereotassica): Cisti contenente larva di Taenia solium con infiammazione granulomatosa circostante.",
+        esame_liquor: "Limpido. Pressione lievemente aumentata. Pleocitosi (30 cellule/mmc) con presenza di Eosinofili (reperti rari ma suggestivi). Glucosio normale.",
+        eeg: "Attività epilettiforme focale in regione fronto-parietale destra.",
+        emg: "Normale.",
+        test_neuropsicologici: "Lieve deficit cognitivo.",
+        ricerca_ambientale: "Non pertinente.",
+
+        // --- EFFETTI TERAPIE ---
+        dialisi: "Nessun effetto.",
+        plasmaferesi: "Nessun effetto.",
+        trasfusione_piastrine: "Nessun effetto.",
+        intervento_chirurgico: "Rimozione neurochirurgica: Necessaria solo per cisti intraventricolari che bloccano il liquor (idrocefalo) o cisti giganti.",
+        intubazione: "Necessaria solo se stato di male epilettico refrattario.",
+        
+        // --- FARMACI ---
+        antibiotici: "Nessun effetto sulle cisti o sulle crisi.",
+        antivirale: "Nessun effetto.",
+        farmaco_antiparassitario: "Albendazolo/Praziquantel con Desametasone sopprime la risposta infiammatoria dell'ospite alla morte del parassita. Le cisti vengono uccise dall'Albendazolo e iniziano a calcificare o ridursi senza causare edema cerebrale acuto. Prognosi favorevole.",
+        cortisone: "Desametasone ad alte dosi: Riduzione dell'edema cerebrale e prevenzione della reazione infiammatoria post-lisi parassitaria. Va iniziato PRIMA dell'antiparassitario.",
+        farmaco_fans: "Nessun effetto sull'edema cerebrale.",
+        ossigeno_alta_concentrazione: "Utile solo durante la fase post-critica.",
+        fluidoterapia: "Mantenimento idratazione."
+    },
+
+// ---------------- CASO 49: EPATITE TOSSICA FULMINANTE (DA PARACETAMOLO) ----------------
+    {
+        id: 49,
+        nome_malattia: "Epatite Tossica Fulminante (Avvelenamento da Paracetamolo)",
+        livello_difficolta: "Emergenza",
+
+        // --- DATI PAZIENTE ---
+        sesso: "Femmina",
+        eta: 19,
+        sintomi: "Nausea incoercibile, vomito ripetuto, dolore al quadrante addominale superiore destro (ipocondrio), stato confusionale.",
+        anamnesi: "Odontalgia persistente da 3 giorni. Assunzione incontrollata di molteplici preparati a base di Paracetamolo (Tachipirina, Efferalgan). Ultima assunzione 24 ore fa.",
+        note_infermiera: "Sclere itteriche. Paziente sonnolenta, risponde lentamente alle domande. Alito dolciastro ('Fetor hepaticus').",
+
+        // --- LABORATORIO ---
+        emocromo: "Hb 13.5 g/dL. Leucociti 11.000/mmc. Piastrine 190.000/mmc.",
+        chimica_clinica: "AST 12.500 U/L, ALT 15.800 U/L. Bilirubina Totale 5.5 mg/dL. Creatinina 2.1 mg/dL. Glucosio 55 mg/dL.",
+        emogas: "pH 7.28, Lattati 8.5 mmol/L. Bicarbonati 15 mEq/L.",
+        coagulazione: "PT (Tempo di Protrombina): 35 secondi. INR: 4.5.",
+        ves_pcr: "PCR 2.0 mg/dL.",
+        emocoltura: "Negativa.",
+        esame_urine: "Bilirubina +++. Urobilinogeno aumentato.",
+        autoanticorpi: "ANA, ASMA, LKM-1 negativi.",
+        tossicologico: "Screening droghe negativo.",
+        striscio_sangue: "Normale.",
+        dosaggi_specifici: "Livello sierico Paracetamolo (Acetaminofene): 80 µg/mL (Tossico a 24h). Sierologia Epatiti A, B, C, E: NEGATIVA.",
+
+        // --- IMAGING ---
+        rx: "RX Torace: Negativo.",
+        tc: "TC Addome: Fegato ipodenso da edema diffuso. Assenza di dilatazione delle vie biliari. Assenza di masse.",
+        risonanza: "Non indicata.",
+        angio: "Vasi epatici e portali pervi.",
+        ecografia: "Eco Fegato: Ecostruttura epatica 'brillante' (Starry sky pattern). Colecisti alitiasica.",
+        elettrocardiogramma: "Tachicardia sinusale.",
+        ecocardiogramma: "Normale.",
+        eeg: "Rallentamento diffuso con onde trifasiche.",
+        pet: "Non indicata.",
+
+        // --- PROCEDURE & NEURO ---
+        biopsia: "Biopsia Epatica (Transgiugulare): Necrosi confluente della Zona 3 (centrolobulare). Assenza di fibrosi.",
+        paracentesi: "Nessun liquido ascitico prelevabile.",
+        esame_neurologico_specifico: "Asterixis (Flapping tremor) presente.",
+
+        // --- EFFETTI TERAPIE ---
+        dialisi: "Correzione dell'acidosi metabolica e dell'uremia. Scarsa rimozione delle tossine epatiche legate alle proteine.",
+        plasmaferesi: "Riduzione temporanea della bilirubina e delle citochine infiammatorie. Correzione transitoria dell'INR.",
+        trasfusione_piastrine: "Nessuna variazione significativa del rischio emorragico (coagulopatia da deficit di fattori, non piastrinica).",
+        intervento_chirurgico: "Trapianto di Fegato: Risoluzione completa dell'insufficienza d'organo e normalizzazione progressiva dei parametri vitali.",
+        intubazione: "Stabilizzazione delle vie aeree e prevenzione dell'aspirazione in paziente comatoso.",
+        
+        // FARMACI
+        antibiotici: "Nessuna variazione degli enzimi epatici o dell'INR.",
+        cortisone: "Nessun effetto sulla necrosi epatica.",
+        antivirale: "Nessun effetto.",
+        farmaco_antidoto: "N-Acetilcisteina (NAC) EV: Ripristino delle scorte di Glutatione, miglioramento dell'emodinamica epatica e riduzione della mortalità.",
+        fluidoterapia: "Soluzione Glucosata: Normalizzazione della glicemia e prevenzione del danno neurologico da ipoglicemia.",
+    },
+
+// ---------------- CASO 50: MALATTIA DI ERDHEIM-CHESTER ----------------
+    {
+        id: 50,
+        nome_malattia: "Malattia di Erdheim-Chester",
+        livello_difficolta: "Difficile",
+
+        // --- DATI PAZIENTE ---
+        sesso: "Maschio",
+        eta: 56,
+        sintomi: "Dolore osseo profondo e costante alle gambe (soprattutto ginocchia e tibie), sete inestinguibile (polidipsia) e poliuria (urina tantissimo), dispnea lieve.",
+        anamnesi: "Storia di 'fibrosi retroperitoneale' diagnosticata anni fa ma mai chiarita. Riferisce di bere 6-8 litri d'acqua al giorno da mesi.",
+        note_infermiera: "Il paziente ha delle placche giallastre e morbide sulle palpebre (xantelasmi) e gli occhi sembrano sporgere in fuori (esoftalmo). Si lamenta che il dolore alle gambe è 'dentro l'osso', non sull'articolazione.",
+
+        // --- LABORATORIO ---
+        emocromo: "Hb 11.2 g/dL (Anemia normocitica cronica), Leucociti e Piastrine nella norma.",
+        chimica_clinica: "Creatinina 1.6 mg/dL (Insufficienza renale lieve). Sodio 148 mEq/L (Tendenzialmente alto). Osmolarità urinaria bassa (Urine molto diluite).",
+        emogas: "Normale.",
+        ves_pcr: "VES 60 mm/h. PCR 3.5 mg/dL (Stato infiammatorio cronico).",
+        emocoltura: "Negativa.",
+        esame_urine: "Peso specifico 1002 (Urine 'acqua di roccia').",
+        autoanticorpi: "ANA negativi. ANCA negativi.",
+        tossicologico: "Negativo.",
+        esame_liquor: "Normale.",
+        striscio_sangue: "Normale.",
+        dosaggi_specifici: "Mutazione BRAF V600E su DNA circolante o tissutale: POSITIVA.",
+
+        // --- IMAGING ---
+        rx: "RX Arti Inferiori (Femore/Tibia): Osteosclerosi diafisaria e metafisaria bilaterale e simmetrica (midollo osseo sostituito da osso denso).",
+        tc: "TC Addome: Infiltrazione del grasso perirenale che assume aspetto frastagliato ('Hairy Kidney' / Rene peloso). Tessuto solido che avvolge l'aorta addominale ('Coated Aorta').",
+        risonanza: "RMN Encefalo: Ispessimento del peduncolo ipofisario (causa del Diabete Insipido). Masse retro-orbitali bilaterali.",
+        angio: "Manicotto di tessuto perivascolare attorno all'aorta toracica e addominale.",
+        ecografia: "Eco Cuore: Ispessimento delle pareti atriali e presenza di massa pseudo-tumorale nell'atrio destro. Versamento pericardico.",
+        elettrocardiogramma: "Normale.",
+        ecocardiogramma: "Infiltrazione del solco atrio-ventricolare.",
+        pet: "Captazione intensa simmetrica alle ossa lunghe (tibie e femori) e al grasso perirenale.",
+
+        // --- PROCEDURE & NEURO ---
+        biopsia: "Biopsia ossea o del grasso perirenale: Infiltrato di istiociti schiumosi (Foamy histiocytes) carichi di lipidi e cellule giganti di Touton. Immunoistochimica: CD68 POSITIVO, CD1a NEGATIVO (Differenza chiave con l'Istiocitosi a cellule di Langerhans). S100 Negativo.",
+        endoscopia: "Negativa.",
+        paracentesi: "Nessun liquido.",
+        eeg: "Normale.",
+        emg: "Normale.",
+
+        // --- EFFETTI TERAPIE ---
+        dialisi: "Gestione dell'uremia se presente ostruzione ureterale, nessun effetto sulla malattia sistemica.",
+        plasmaferesi: "Nessun effetto.",
+        trasfusione_piastrine: "Non indicata.",
+        intervento_chirurgico: "Decompressione ureterale (stent) se la fibrosi blocca i reni.",
+        intubazione: "Non necessaria.",
+        
+        // FARMACI
+        antibiotici: "Nessun effetto.",
+        antivirale: "Nessun effetto.",
+        insulina: "Nessun effetto sulla poliuria (è diabete insipido, non mellito).",
+        cortisone: "Miglioramento transitorio dei sintomi infiammatori e del dolore osseo, recidiva alla sospensione.",
+        ferro_supplementare: "Nessun effetto significativo.",
+        immunoglobuline: "Nessun effetto.",
+        ossigeno_alta_concentrazione: "Non necessario.",
+        farmaco_biologico: "Interferone-alfa: Risposta parziale con stabilizzazione della malattia.",
+        farmaco_antidoto: "Vemurafenib (Inibitore BRAF): Rapida regressione delle masse infiltrative, risoluzione del dolore osseo e miglioramento della funzione renale e cardiaca in poche settimane."
+    },
+
+// ---------------- CASO 51: LEBBRA (MORBO DI HANSEN) ----------------
+    {
+        id: 51,
+        nome_malattia: "Lebbra (Forma Lepromatosa)",
+        livello_difficolta: "Difficile",
+
+        // --- DATI PAZIENTE ---
+        sesso: "Maschio",
+        eta: 45,
+        sintomi: "Formicolio persistente a mani e piedi, ostruzione nasale cronica con sangue (epistassi), comparsa di noduli cutanei sul volto e sulle orecchie.",
+        anamnesi: "Immigrato dal Brasile 15 anni fa (lunga incubazione). Trattato per anni per 'allergia' e 'tunnel carpale' senza successo.",
+        note_infermiera: "Mentre gli prendevo la vena ho notato una bruciatura di sigaretta sul dito medio: il paziente non se n'era accorto (anestesia termica). Ha perso la parte esterna delle sopracciglia (Madarosi).",
+
+        // --- LABORATORIO ---
+        emocromo: "Hb 11.5 g/dL (Anemia da malattia cronica), Leucociti nella norma.",
+        chimica_clinica: "Funzionalità renale ed epatica nella norma. Globuline aumentate (Ipergammaglobulinemia policlonale).",
+        emogas: "Normale.",
+        ves_pcr: "VES 60 mm/h. PCR 2.0 mg/dL.",
+        emocoltura: "Negativa.",
+        esame_urine: "Proteinuria lieve.",
+        autoanticorpi: "ANA positivi a basso titolo. Fattore Reumatoide positivo.",
+        tossicologico: "Negativo.",
+        esame_liquor: "Lieve aumento delle proteine.",
+        striscio_sangue: "Rouleaux eritrocitari.",
+        // IL TRABOCCHETTO:
+        dosaggi_specifici: "VDRL (Test Sifilide): POSITIVO (Falso positivo biologico). TPHA (Conferma Sifilide): NEGATIVO (Discrepanza fondamentale).",
+
+        // --- IMAGING ---
+        rx: "RX Mani/Piedi: Assottigliamento e riassorbimento delle falangi distali ('dita a clessidra' o acro-osteolisi).",
+        tc: "TC Massiccio Facciale: Erosione della spina nasale anteriore e dei turbinati (Rinite specifica).",
+        risonanza: "RMN Nervi Periferici: Ispessimento fusiforme del nervo ulnare e del nervo auricolare, con segnale iperintenso (edema/infiammazione).",
+        angio: "Normale.",
+        ecografia: "Eco Nervi: Nervo ulnare ingrossato (> 8mm) e ipoecogeno.",
+        elettrocardiogramma: "Normale.",
+        ecocardiogramma: "Normale.",
+        pet: "Captazione diffusa ai nervi periferici e ai noduli cutanei.",
+
+        // --- PROCEDURE & NEURO ---
+        biopsia: "Biopsia Cutanea/Nervo: Infiltrato di macrofagi schiumosi (Cellule di Virchow) pieni di bacilli acido-resistenti. Colorazione di Fite-Faraco: POSITIVA per Mycobacterium leprae (La colorazione classica Ziehl-Neelsen spesso è negativa perché il batterio è meno acido-resistente della TBC).",
+        esame_microscopico_liquor: "Negativo.",
+        eeg: "Normale.",
+        emg: "Neuropatia sensitivo-motoria assonale e demielinizzante multifocale (Mononeurite multipla).",
+        esame_neurologico_specifico: "Nervi ulnari e peronieri palpabili e ingrossati ('a cordone'). Aree di pelle ipocromica con assenza di sudorazione e sensibilità.",
+
+        // --- EFFETTI TERAPIE ---
+        dialisi: "Nessun effetto.",
+        plasmaferesi: "Nessun effetto.",
+        trasfusione_piastrine: "Nessun effetto.",
+        intervento_chirurgico: "Decompressione del nervo ulnare: Sollievo parziale dal dolore, ma non cura l'infezione.",
+        intubazione: "Non necessaria.",
+        
+        // FARMACI
+        antibiotici: "Penicillina (per presunta Sifilide): NESSUN EFFETTO clinico (il paziente non guarisce).",
+        cortisone: "Riduzione temporanea dell'infiammazione neurale e dei noduli (utile nelle reazioni lebrose), ma non elimina il batterio.",
+        antivirale: "Nessun effetto.",
+        farmaco_antidoto: "Rifampicina + Dapsone + Clofazimina: Urine color arancio (Rifampicina) e progressiva pigmentazione rosso-bruna della pelle (Clofazimina). Negativizzazione graduale dello smear cutaneo e arresto del danno neurologico. Risoluzione rapida dell'Eritema Nodoso Leproso (reazione infiammatoria acuta di Tipo 2 durante la cura con talidomide).",
+        fluidoterapia: "Nessun effetto rilevante."
+    },
+
+// ---------------- CASO 52: ARTERITE DI TAKAYASU ----------------
+    {
+        id: 52,
+        nome_malattia: "Arterite di Takayasu",
+        livello_difficolta: "Difficile",
+
+        // --- DATI PAZIENTE ---
+        sesso: "Femmina",
+        eta: 26,
+        sintomi: "Debolezza alle braccia quando le tiene alzate (es. per asciugarsi i capelli), vertigini, disturbi visivi transitori, dolore al collo.",
+        anamnesi: "Nessun fattore di rischio cardiovascolare. Da circa 6 mesi lamenta febbricola serale, sudorazioni notturne e dolori articolari vaghi, trattati come 'stress' o 'influenza'.",
+        note_infermiera: "Non riesco a trovare il polso al polso sinistro. La pressione arteriosa è molto diversa tra le due braccia: 150/90 a destra, 85/50 a sinistra. Soffio udibile sopra la clavicola sinistra.",
+
+        // --- LABORATORIO ---
+        emocromo: "Hb 10.8 g/dL (Anemia normocitica da disordine cronico). Leucociti e Piastrine nella norma.",
+        chimica_clinica: "Funzionalità renale ed epatica nella norma. Profilo lipidico perfetto (Esclude aterosclerosi precoce).",
+        emogas: "Normale.",
+        ves_pcr: "VES 85 mm/h. PCR 4.5 mg/dL (Indici di flogosi marcatamente elevati).",
+        coagulazione: "Normale.",
+        emocoltura: "Negativa.",
+        esame_urine: "Normale.",
+        autoanticorpi: "ANA negativi. ANCA negativi. (Fondamentale per distinguere da altre vasculiti).",
+        tossicologico: "Negativo.",
+        striscio_sangue: "Normale.",
+        dosaggi_specifici: "Complemento C3 e C4 normali.",
+
+        // --- IMAGING ---
+        rx: "RX Torace: Slargamento del mediastino superiore e dell'aorta toracica. Calcificazioni assenti (tipico in giovane età).",
+        tc: "TC Angio Aorta: Ispessimento concentrico murale ('Macaroni sign') dell'arco aortico e dei tronchi sovra-aortici. Stenosi critica dell'arteria succlavia sinistra e della carotide comune sinistra.",
+        risonanza: "Angio-RM: Edema della parete aortica (segno di infiammazione attiva) con enhancement tardivo dopo contrasto.",
+        angio: "Angiografia digitale (DSA): Restringimenti lunghi e affusolati a 'coda di topo' delle arterie succlavie. Circoli collaterali sviluppati.",
+        ecografia: "Eco-Doppler Tronchi Sovra-aortici: Flusso 'parvus et tardus' (onda smorzata) a valle della stenosi nella succlavia sinistra. Ispessimento intimale medio-congenito diffuso.",
+        elettrocardiogramma: "Normale.",
+        ecocardiogramma: "Insufficienza valvolare aortica lieve (da dilatazione della radice aortica).",
+        pet: "FDG-PET: Intensa captazione lineare lungo le pareti dell'arco aortico e delle grandi arterie (attività metabolica infiammatoria).",
+
+        // --- PROCEDURE & NEURO ---
+        biopsia: "Biopsia arteriosa (raramente eseguita): Panarterite granulomatosa con infiltrato di cellule giganti e distruzione della tonaca media.",
+        esame_liquor: "Normale.",
+        eeg: "Normale.",
+        test_neuropsicologici: "Normali.",
+        esame_neurologico_specifico: "Scomparsa dei polsi radiali. Soffi vascolari multipli (carotidi, succlavie, addome).",
+
+        // --- EFFETTI TERAPIE ---
+        dialisi: "Nessun effetto sulla vasculite sistemica.",
+        plasmaferesi: "Nessun beneficio dimostrato.",
+        trasfusione_piastrine: "Nessun effetto.",
+        
+        intervento_chirurgico: "Bypass vascolare / Angioplastica: ALTO RISCHIO DI FALLIMENTO se eseguito in fase infiammatoria attiva (i tessuti sono fragili e si richiudono/restenosizzano rapidamente). Va fatto solo dopo raffreddamento dell'infiammazione.",
+        
+        intubazione: "Non necessaria.",
+        
+        // FARMACI
+        antibiotici: "Nessun effetto (non è un'infezione batterica).",
+        antivirale: "Nessun effetto.",
+        
+        cortisone: "Prednisone ad alte dosi (1mg/kg): Rapida scomparsa dei sintomi sistemici (febbre, dolori), normalizzazione della VES e arresto della progressione delle stenosi.",
+        
+        farmaco_immunosoppressore: "Metotrexato/Azatioprina: Mantenimento della remissione a lungo termine per risparmiare cortisone.",
+        farmaco_biologico: "Tocilizumab (Anti-IL6) o Infliximab (Anti-TNF): Efficace nei casi refrattari ai cortisonici.",
+        
+        fluidoterapia: "Nessun effetto emodinamico significativo a lungo termine.",
+        anticoagulante: "Aspirina/Antiaggreganti: Prevenzione di eventi ischemici secondari alla turbolenza del flusso, ma non cura la malattia.",
+        farmaco_antidoto: "Nessun effetto."
+    },
+
+// ---------------- CASO 52: MENINGIOMA SPINALE ----------------
+    {
+        id: 52,
+        nome_malattia: "Meningioma Spinale",
+        livello_difficolta: "Difficile",
+
+        // --- DATI PAZIENTE ---
+        sesso: "Femmina",
+        eta: 62,
+        sintomi: "Debolezza progressiva alle gambe (paraparesi), rigidità muscolare, dolore alla schiena localizzato 'a cintura' che peggiora di notte stando sdraiata, disturbi urinari (urgenza).",
+        anamnesi: "In cura da anni per 'artrosi lombare' e 'sciatalgia' senza benefici con FANS o fisioterapia.",
+        note_infermiera: "La paziente cammina con andatura 'a forbice' (spastica). Riferisce che le gambe saltano da sole quando è a riposo (clono spontaneo).",
+
+        // --- LABORATORIO ---
+        emocromo: "Normale.",
+        chimica_clinica: "Normale.",
+        emogas: "Normale.",
+        ves_pcr: "Normale.",
+        emocoltura: "Negativa.",
+        esame_urine: "Normale.",
+        autoanticorpi: "Negativi.",
+        tossicologico: "Negativo.",
+        esame_liquor: "Dissociazione albumino-citologica: Proteine molto elevate (> 100 mg/dL) con cellule normali (Sindrome di Froin da blocco del flusso liquorale).",
+        striscio_sangue: "Normale.",
+        dosaggi_specifici: "Marcatori tumorali negativi.",
+
+        // --- IMAGING ---
+        rx: "RX Rachide: Spondilosi diffusa (artrosi), nessun crollo vertebrale o lesione osteolitica evidente.",
+        tc: "TC Rachide (senza mdc): Modeste protrusioni discali, non giustificano la clinica. Massa isodensa nel canale spinale difficile da distinguere dal midollo senza contrasto.",
+        risonanza: "RMN Rachide Dorsale (con Gadolinio): Massa intradurale extramidollare a livello D8-D9, che comprime severamente il midollo spinale. Presenza del segno della 'coda durale' (Dural tail sign).",
+        angio: "Negativa.",
+        ecografia: "Vescica a pareti ispessite (Vescica neurologica).",
+        elettrocardiogramma: "Normale.",
+        ecocardiogramma: "Normale.",
+        pet: "Nessuna captazione suggestiva di metastasi.",
+
+        // --- PROCEDURE & NEURO ---
+        biopsia: "Esame istologico (post-operatorio): Meningioma psammomatoso (benigno, Grado I WHO).",
+        eeg: "Normale.",
+        emg: "Nessun segno di denervazione nei muscoli degli arti superiori. Segni di sofferenza piramidale agli arti inferiori.",
+        esame_neurologico_specifico: "Iperreflessia rotulea e achillea bilaterale. Segno di Babinski positivo bilaterale. Livello sensitivo (ipoestesia) al di sotto dell'ombelico.",
+
+        // --- EFFETTI TERAPIE ---
+        dialisi: "Nessun effetto.",
+        plasmaferesi: "Nessun effetto.",
+        intubazione: "Non necessaria.",
+        
+        // FARMACI
+        antibiotici: "Nessun effetto.",
+        cortisone: "Desametasone: Riduzione dell'edema peritumorale con transitorio miglioramento della forza e del dolore.",
+        farmaco_fans: "Sollievo minimo dal dolore.",
+        chemioterapia: "Non indicata per meningiomi benigni.",
+        
+        // TERAPIA RISOLUTIVA
+        intervento_chirurgico: "Laminectomia e asportazione della massa: Recupero graduale della funzione motoria e sfinterica. Prognosi eccellente."
+    },
+
+    // ---------------- CASO 53: INFEZIONE DA CHLAMYDIA (CON SINDROME DI FITZ-HUGH-CURTIS) ----------------
+    {
+        id: 53,
+        nome_malattia: "Infezione da Chlamydia Trachomatis (PID + Fitz-Hugh-Curtis)",
+        livello_difficolta: "Medio",
+
+        // --- DATI PAZIENTE ---
+        sesso: "Femmina",
+        eta: 24,
+        sintomi: "Dolore al basso ventre (pelvico) persistente, dolore acuto al fianco destro (zona fegato) che peggiora tossendo o respirando profondo, perdite vaginali anomale.",
+        anamnesi: "Attiva sessualmente, partner multipli recenti. Riferisce dolore durante i rapporti sessuali (dispareunia) nelle ultime settimane.",
+        note_infermiera: "Temperatura 38°C. Palpazione dell’addome superiore destro dolorosa con respiro bloccato, all’esame ginecologico marcato dolore alla mobilizzazione della cervice (segno del lampadario).",
+
+        // --- LABORATORIO ---
+        emocromo: "Leucociti 13.500/mmc (Neutrofilia). Hb normale.",
+        chimica_clinica: "ALT e AST nella norma o lievemente mosse (il fegato parenchimale è sano, è la capsula a essere infiammata). Bilirubina normale.",
+        emogas: "Normale.",
+        ves_pcr: "VES 40 mm/h. PCR 6.0 mg/dL.",
+        emocoltura: "Negativa.",
+        esame_urine: "Leucociti nelle urine (piuria sterile, per contiguità).",
+        autoanticorpi: "Negativi.",
+        tossicologico: "Negativo.",
+        striscio_sangue: "Normale.",
+        dosaggi_specifici: "Test di gravidanza (Beta-HCG): Negativo.",
+        
+        // --- IMAGING ---
+        rx: "RX Torace: Negativo. Non aria libera sottodiaframmatica.",
+        tc: "TC Addome: Ispessimento della capsula epatica (fase arteriosa precoce). Discreto versamento pelvico. Annessi lievemente ingrossati.",
+        risonanza: "Non indicata.",
+        angio: "Negativa.",
+        ecografia: "Eco Pelvi: Tube di Falloppio dilatate e ripiene di liquido (Idrosalpinge). Eco Fegato: Parenchima normale, ma dolore al passaggio della sonda sulla capsula (Peri-epatite).",
+        elettrocardiogramma: "Tachicardia sinusale.",
+        ecocardiogramma: "Normale.",
+        pet: "Captazione flogistica in sede pelvica e peri-epatica.",
+
+        // --- PROCEDURE & NEURO ---
+        biopsia: "Non necessaria.",
+        intervento_chirurgico: "Visualizzazione di aderenze fibrose 'a corda di violino' tra la capsula epatica e la parete addominale anteriore (Segno patognomonico della S. di Fitz-Hugh-Curtis).",
+        paracentesi: "Nessun liquido ascitico significativo.",
+        eeg: "Normale.",
+        emg: "Normale.",
+
+        // --- EFFETTI TERAPIE ---
+        dialisi: "Nessun effetto.",
+        intervento_chirurgico: "Lisi delle aderenze se il dolore cronico persiste, ma non cura l'infezione acuta.",
+        
+        // FARMACI
+        antibiotici: "Doxiciclina + Ceftriaxone (o Azitromicina): Risoluzione della febbre e del dolore pelvico/addominale in 48-72 ore.",
+        cortisone: "Nessun effetto curativo, possibile mascheramento dei sintomi.",
+        antivirale: "Nessun effetto.",
+        farmaco_fans: "Riduzione parziale del dolore.",
+        fluidoterapia: "Nessun effetto particolare."
+    },
+
+// ---------------- CASO 54: MALATTIA CELIACA (FORMA PEDIATRICA CLASSICA) ----------------
+    {
+        id: 54,
+        nome_malattia: "Malattia Celiaca (Forma Classica)",
+        livello_difficolta: "Facile",
+
+        // --- DATI PAZIENTE ---
+        sesso: "Maschio",
+        eta: 3,
+        sintomi: "Diarrea cronica con feci abbondanti, chiare e molto maleodoranti (steatorrea). Arresto della crescita (Failure to thrive), distensione addominale marcata, irritabilità e cambiamenti d'umore (piange spesso senza motivo).",
+        anamnesi: "Nato a termine, sano. I problemi sono iniziati gradualmente intorno ai 9-12 mesi di vita. La madre riferisce che 'ha smesso di prendere peso' da un anno.",
+        note_infermiera: "Il bambino ha un aspetto caratteristico 'a ragno': pancia molto gonfia e tesa, ma braccia e gambe sottilissime. Ho notato che i glutei sono quasi scomparsi (atrofia muscolare glutea o 'segno delle braghe calate').",
+
+        // --- LABORATORIO ---
+        emocromo: "Hb 9.5 g/dL (Anemia microcitica sideropenica). Piastrine 450.000/mmc (Trombocitosi da carenza di ferro).",
+        chimica_clinica: "Ferro sierico: 15 µg/dL (Molto basso). Ferritina: 4 ng/mL. Albumina: 2.9 g/dL (Ipoalbuminemia da malassorbimento). Calcio: 8.0 mg/dL. Transaminasi (AST/ALT): 80/90 U/L ('Epatite celiaca' ipertransaminasemia isolata).",
+        emogas: "Normale.",
+        ves_pcr: "VES lievemente mossa. PCR negativa.",
+        emocoltura: "Negativa.",
+        esame_urine: "Normale.",
+        autoanticorpi: "Negativi (per escludere malattie reumatiche).",
+        tossicologico: "Non indicato.",
+        esame_feci: "Ricerca parassiti negativa (Giardia). Test Sudan III: Positivo (presenza di grassi nelle feci).",
+        striscio_sangue: "Microcitosi, ipocromia.",
+        
+        // IL TEST CHIAVE
+        dosaggi_specifici: "Anticorpi anti-Transglutaminasi (tTG) IgA: > 100 U/mL (Valore > 10 volte la norma, in pediatria permette diagnosi anche senza biopsia se confermato da EMA). Anticorpi anti-Endomisio (EMA): POSITIVI. IgA totali: Normali.",
+
+        // --- IMAGING ---
+        rx: "RX Ossa (Polso per età ossea): Ritardo di maturazione scheletrica rispetto all'età anagrafica.",
+        tc: "Non indicata.",
+        risonanza: "Non indicata.",
+        angio: "Non indicata.",
+        ecografia: "Eco Addome: Meteorismo intestinale massivo. Anse intestinali dilatate e piene di liquido. Peristalsi vivace.",
+        elettrocardiogramma: "Normale.",
+        ecocardiogramma: "Normale.",
+        pet: "Non indicata.",
+
+        // --- PROCEDURE & NEURO ---
+        biopsia: "Biopsia Duodenale (se eseguita): Atrofia totale dei villi, iperplasia delle cripte, aumento linfociti intraepiteliali (Marsh 3c).",
+        endoscopia: "EGDS: Mucosa del duodeno piatta, assenza delle pliche ('aspetto a tubo di gomma').",
+        paracentesi: "Non indicata.",
+        eeg: "Normale.",
+        emg: "Normale.",
+
+        // --- EFFETTI TERAPIE ---
+        dialisi: "Nessun effetto.",
+        intervento_chirurgico: "Non indicato.",
+        trasfusione_piastrine: "Non indicata.",
+        intubazione: "Non necessaria.",
+        
+        // FARMACI
+        antibiotici: "Nessun miglioramento della diarrea (esclude sovracrescita batterica o infezioni).",
+        cortisone: "Lieve miglioramento temporaneo dell'umore e dell'appetito, ma persistenza dell'atrofia.",
+        ferro_supplementare: "Orale: Scarsa risposta (l'intestino atrofico non lo assorbe).",
+    },
+
+// ---------------- CASO 55: SINDROME DI VON HIPPEL-LINDAU (VHL) ----------------
+    {
+        id: 55,
+        nome_malattia: "Sindrome di von Hippel-Lindau",
+        livello_difficolta: "Difficile",
+
+        // --- DATI PAZIENTE ---
+        sesso: "Maschio",
+        eta: 32,
+        sintomi: "Cefalea nucale persistente, vertigini, nausea mattutina, calo della vista all'occhio destro, palpitazioni improvvise.",
+        anamnesi: "Il padre è morto a 40 anni per un 'tumore al rene'. Il paziente riferisce di avere la pressione alta da qualche mese nonostante sia sportivo e magro.",
+        note_infermiera: "Pressione arteriosa molto instabile (picchi di 190/110 mmHg). Al fondo dell'occhio destro vedo un vaso sanguigno molto dilatato e tortuoso che finisce in una pallina rossa.",
+
+        // --- LABORATORIO ---
+        emocromo: "Hb 18.5 g/dL (Poliglobulia/Eritrocitosi). Ematocrito 55%. (Causata dalla produzione di Eritropoietina da parte del tumore cerebellare o renale).",
+        chimica_clinica: "Funzionalità renale normale. Glicemia normale.",
+        emogas: "Normale.",
+        ves_pcr: "Normali.",
+        emocoltura: "Negativa.",
+        esame_urine: "Normale.",
+        autoanticorpi: "Negativi.",
+        tossicologico: "Negativo.",
+        striscio_sangue: "Normale.",
+        
+        // IL TEST CHIAVE
+        dosaggi_specifici: "Catecolamine urinarie/Metanefrine: Aumentate (presenza di Feocromocitoma). Eritropoietina (EPO) sierica: Alta. Test genetico VHL: Mutazione presente.",
+
+        // --- IMAGING ---
+        rx: "RX Torace: Normale.",
+        tc: "TC Addome: Reni disseminati di cisti multiple bilaterali. Presenza di massa surrenalica destra (Feocromocitoma). Cisti multiple nel pancreas.",
+        risonanza: "RMN Encefalo: Massa cistica nel cervelletto con nodulo murale che prende contrasto (Emangioblastoma cerebellare).",
+        angio: "Angiografia retinica: Angioma retinico periferico.",
+        ecografia: "Eco Reni: Reni policistici atipici (cisti complesse).",
+        elettrocardiogramma: "Tachicardia sinusale, segni di ipertrofia ventricolare sx (da ipertensione).",
+        ecocardiogramma: "Ipertrofia concentrica.",
+        pet: "Non indicata come prima linea.",
+
+        // --- PROCEDURE & NEURO ---
+        biopsia: "CONTROINDICATA sul feocromocitoma prima del blocco alfa (rischio crisi ipertensiva mortale). Istologia post-operatoria emangioblastoma: Cellule stromali vacuolate ricche di lipidi ('stromal cells') e ricca rete capillare.",
+        endoscopia: "Non indicata.",
+        paracentesi: "Nessun liquido.",
+        eeg: "Normale.",
+        emg: "Normale.",
+        esame_neurologico_specifico: "Atassia cerebellare (il paziente non riesce a camminare in linea retta, cade verso un lato). Nistagmo.",
+
+        // --- EFFETTI TERAPIE ---
+        dialisi: "Non necessaria (funzione renale conservata).",
+        intubazione: "Necessaria solo per gli interventi neurochirurgici.",
+        
+        // FARMACI
+        antibiotici: "Nessun effetto.",
+        cortisone: "Riduzione temporanea dell'edema cerebrale attorno all'emangioblastoma (Sintomatico).",
+        farmaco_betabloccante: "DA NON DARE DA SOLO prima degli alfa-bloccanti nel feocromocitoma: Rischio di crisi ipertensiva paradossa (blocco vasodilatazione periferica).",
+        
+        // TERAPIA RISOLUTIVA
+        intervento_chirurgico: "Resezione dell'emangioblastoma cerebellare (risolve vertigini e cefalea) e surrenalectomia (risolve ipertensione). Monitoraggio a vita per Carcinoma Renale a cellule chiare.",
+    },
+
+    // ---------------- CASO 56: MORBILLO (IN ADULTO) ----------------
+    {
+        id: 56,
+        nome_malattia: "Morbillo (Complicato da Polmonite)",
+        livello_difficolta: "Medio",
+
+        // --- DATI PAZIENTE ---
+        sesso: "Femmina",
+        eta: 27,
+        sintomi: "Febbre altissima (40°C), tosse stizzosa, naso che cola (rinorrea profusa), occhi rossi che lacrimano (congiuntivite), fastidio alla luce (fotofobia).",
+        anamnesi: "La paziente non è mai stata vaccinata ('i miei genitori erano contrari'). È tornata da un viaggio internazionale 10 giorni fa. Nega allergie.",
+        note_infermiera: "La paziente sembra 'sporca' in viso, ma è un'eruzione cutanea rossa che sta iniziando dietro le orecchie e scende verso il collo. Aprendo la bocca ho visto dei puntini bianchi sulla mucosa delle guance che sembrano granelli di sale.",
+
+        // --- LABORATORIO ---
+        emocromo: "Leucociti 2.500/mmc (Leucopenia marcata). Linfociti bassi. Piastrine 130.000/mmc (Lieve trombocitopenia).",
+        chimica_clinica: "PCR 4.0 mg/dL. Transaminasi lievemente mosse. LDH aumentato.",
+        emogas: "pO2 70 mmHg (Ipossiemia lieve da inizio polmonite interstiziale).",
+        ves_pcr: "VES aumentata.",
+        emocoltura: "Negativa.",
+        esame_urine: "Normale.",
+        autoanticorpi: "Negativi.",
+        tossicologico: "Negativo.",
+        striscio_sangue: "Linfociti reattivi.",
+        
+        // IL TEST CHIAVE
+        dosaggi_specifici: "IgM anti-Morbillo: POSITIVE. RT-PCR per Morbillo su tampone faringeo/urine: POSITIVA.",
+
+        // --- IMAGING ---
+        rx: "RX Torace: Infiltrati interstiziali bilaterali diffusi ('Polmonite a cellule giganti' virale).",
+        tc: "TC Torace (se fatta per dubbi): Aree di ground-glass diffuse.",
+        risonanza: "Non indicata (a meno di segni di encefalite).",
+        angio: "Negativa.",
+        ecografia: "Splenomegalia reattiva.",
+        elettrocardiogramma: "Tachicardia sinusale.",
+        ecocardiogramma: "Normale.",
+        pet: "Non indicata.",
+
+        // --- PROCEDURE & NEURO ---
+        biopsia: "Non necessaria. Se fatta (es. polmone): Cellule giganti multinucleate di Warthin-Finkeldey.",
+        eeg: "Rallentamento lieve (se encefalite in corso).",
+        emg: "Normale.",
+
+        // --- EFFETTI TERAPIE ---
+        dialisi: "Nessun effetto.",
+        intervento_chirurgico: "Non indicato.",
+        trasfusione_piastrine: "Non indicata.",
+        intubazione: "Necessaria solo in caso di insufficienza respiratoria grave (polmonite morbillosa acuta).",
+        
+        // FARMACI
+        antibiotici: "Nessun effetto sul virus. Utili solo se si sovrappone una polmonite batterica (superinfezione).",
+        cortisone: "Controverso, generalmente non usato nella fase acuta virale.",
+        antivirale: "Ribavirina: Usata talvolta nei casi gravissimi o immunodepressi (uso off-label).",
+        
+        // TERAPIA DI SUPPORTO SPECIFICA
+        fluidoterapia: "Idratazione di supporto per la febbre alta.",
+        farmaco_fans: "Paracetamolo: Controllo della febbre."
     }
 ];
 
@@ -2352,6 +3043,7 @@ let esamiDisponibili = [
     "test_stimolo_acth",
     "test_soppressione_desametasone",
     "esame_urine",
+    "esame_feci",
     "striscio_sangue",
     "chimica_clinica",
     "emocoltura",
@@ -2370,6 +3062,7 @@ let esamiDisponibili = [
     "elettrocardiogramma",
     "ecocardiogramma",
     "eeg",
+    "emg",
     "test_neuropsicologici",
     "test_del_ghiaccio",
     "esame_neurologico_specifico",
@@ -2390,8 +3083,8 @@ let esamiDisponibili = [
 
     // 4 Altro / generici / monitoraggi
     "anticoagulante",
-    "antivirale",
     "biopsia",
+    "endoscopia",
     "tossicologico",
 
     // 5 Farmaci
@@ -2405,19 +3098,20 @@ let esamiDisponibili = [
     "farmaco_adrenalina",
     "farmaco_betabloccante",
     "farmaco_cotrimossazolo",
+    "farmaco_antiparassitario",
     "farmaco_inibitore_acetilcolinesterasi",
     "farmaco_immunosoppressore",
     "farmaco_biologico",
-    "farmaco_antivirale",
     "farmaco_antiretrovirale",
     "farmaco_aspirina",
     "farmaco_octreotide",
-    "farmaco_immunoglobuline",
     "farmaco_plasmaferesi",
     "farmaco_antidoto",
     "farmaco_neurolettico",
     "farmaco_amfotericina",
     "farmaco_antipsicotico",
+    "antibiotici",
+    "antivirale",
     "insulina",
     "cortisone",
     "ferro_supplementare",
