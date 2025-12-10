@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ospedale RPG - Full Screen</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #2c3e50;
+            --game-bg: #a8e6cf; /* Verde ospedale pastello */
+            --dialog-bg: #fff;
+            --accent: #ff8b94; /* Rosso/Rosa carino */
+            --text-color: #333;
+            --border-style: 4px solid #333;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            font-family: 'VT323', monospace;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Evita scrollbar */
+            height: 100vh;
+            width: 100vw;
+        }
+
+        /* Contenitore principale a SCHERMO INTERO */
+        #game-screen {
+            width: 100%;
+            height: 100%;
+            background-color: var(--game-bg);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Sfondo decorativo ospedale (Adattabile) */
+        .background-decor {
+            position: absolute;
+            top: 25%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: rgba(0,0,0,0.1);
+        }
+        
+        /* Porta allineata in prospettiva */
+        .door {
+            position: absolute;
+            top: 18%;
+            right: 20%;
+            width: 120px;
+            height: 200px;
+            background: #8bd3c7;
+            border: 3px solid rgba(0,0,0,0.2);
+        }
+
+        /* Cartello Exit (Dettaglio extra) */
+        .sign {
+            position: absolute;
+            top: 10%;
+            right: 22%;
+            background: #fff;
+            padding: 5px 10px;
+            border: 2px solid rgba(0,0,0,0.2);
+            font-size: 1.2rem;
+            color: #2ecc71;
+        }
+
+        /* L'infermiera */
+        #nurse-container {
+            position: absolute;
+            bottom: 340px; /* Ancorata sopra il dialogo */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px; /* Leggermente più grande per il full screen */
+            text-align: center;
+            z-index: 10;
+        }
+
+        /* Animazione "respiro" */
+        #nurse-img {
+            width: 227px; /* Immagine più grande */
+            height: 333px;
+            image-rendering: pixelated; 
+            animation: bobbing 2.5s infinite ease-in-out;
+            filter: drop-shadow(5px 5px 0px rgba(0,0,0,0.2));
+        }
+
+        @keyframes bobbing {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        /* Area di Dialogo (RPG Style) - Ancorata in basso */
+        #dialog-area {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 400px; /* Altezza fissa per i controlli */
+            background-color: var(--dialog-bg);
+            border-top: var(--border-style);
+            box-sizing: border-box; /* Include padding nel calcolo larghezza */
+            padding: 20px 40px;
+            display: flex;
+            flex-direction: column;
+            z-index: 20;
+        }
+
+        .npc-name {
+            background-color: var(--accent);
+            color: white;
+            padding: 5px 15px;
+            display: inline-block;
+            border: 2px solid #333;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            width: fit-content;
+            box-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+        }
+
+        #text-content {
+            font-size: 2rem; /* Testo più grande per full screen */
+            line-height: 1.4;
+            flex-grow: 1;
+            overflow-y: auto; /* Scroll verticale */
+            max-height: 200px; /* Altezza massima prima dello scroll */
+            padding-right: 10px; /* Spazio per la scrollbar */
+        }
+
+        /* Stile scrollbar personalizzato (opzionale, per Chrome/Safari) */
+        #text-content::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        #text-content::-webkit-scrollbar-track {
+            background: #f0f0f0;
+            border: 1px solid #ccc;
+        }
+
+        #text-content::-webkit-scrollbar-thumb {
+            background: var(--accent);
+            border: 1px solid #333;
+        }
+
+        #text-content::-webkit-scrollbar-thumb:hover {
+            background: #ff7680;
+        }
+
+        /* Area Controlli */
+        #controls {
+            margin-top: 15px;
+            border-top: 2px dashed #ccc;
+            padding-top: 15px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: flex-start; /* Allinea a sinistra */
+        }
+
+        select {
+            font-family: 'VT323', monospace;
+            font-size: 1.8rem;
+            padding: 10px;
+            border: 2px solid #333;
+            background: #f0f0f0;
+            min-width: 300px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        button {
+            font-family: 'VT323', monospace;
+            font-size: 1.8rem;
+            padding: 10px 40px;
+            background-color: var(--accent);
+            color: white;
+            border: 2px solid #333;
+            cursor: pointer;
+            box-shadow: 4px 4px 0px #333;
+            transition: transform 0.1s, box-shadow 0.1s;
+        }
+
+        button:active {
+            transform: translate(4px, 4px);
+            box-shadow: none;
+        }
+
+        button:hover {
+            background-color: #ff7680;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="game-screen">
+        <div class="sign">USCITA</div>
+        <div class="door"></div>
+        <div class="background-decor"></div>
+
+        <div id="nurse-container">
+            <img id="nurse-img" src="jo.png" alt="Infermiera">
+        </div>
+
+        <div id="dialog-area">
+            <div class="npc-name">Infermiera Jo</div>
+            
+            <div id="text-content">In attesa del paziente...</div>
+
+            <div id="controls">
+                <select id="exam-selector">
+                    <option value="" disabled selected>-- Scegli un esame --</option>
+                </select>
+                <button onclick="eseguiEsame()">ESEGUI ESAME</button>
+            </div>
+        </div>
+    </div>
+    <script src="casi.js"></script>
+    <script>
+        // ==========================================
+        //  LOGICA DI GIOCO
+        // ==========================================
+
+        const textElement = document.getElementById('text-content');
+        const selectElement = document.getElementById('exam-selector');
+        let casoCorrenteObj = null;
+
+		function caricaCaso(indice = null) {
+			if (indice === null) {
+				indice = Math.floor(Math.random() * casi.length);
+			}
+			console.log(indice);
+            casoCorrenteObj = casi[indice];
+            
+            // Scrittura testo
+            typeWriter("Sesso: "+casoCorrenteObj.sesso+"\nEta: "+casoCorrenteObj.eta+"\nSintomi: "+casoCorrenteObj.sintomi+"\nAnamnesi: "+casoCorrenteObj.anamnesi+"\n"+casoCorrenteObj.note_infermiera);
+
+            // Popola menu
+            selectElement.innerHTML = '<option value="" disabled selected>-- Scegli un esame --</option>';
+            for (let nomeEsame of esamiDisponibili) {
+                let option = document.createElement("option");
+                option.value = nomeEsame;
+                option.text = nomeEsame.replaceAll("_", " ");
+                selectElement.appendChild(option);
+            }
+        }
+
+        function eseguiEsame() {
+            const esameScelto = selectElement.value;
+
+            if (!esameScelto) {
+                // Feedback visivo se non si sceglie nulla
+                selectElement.style.borderColor = "red";
+                setTimeout(() => selectElement.style.borderColor = "#333", 500);
+                return;
+            }
+
+            const risultato = casoCorrenteObj[esameScelto];
+			if (risultato == undefined)
+				typeWriter("Non ho programmato risultati per " + esameScelto.replaceAll("_", " ") + " in questo caso, il che significa che probabilmente è inerte, comunque potresti essere fuori strada.");
+			else
+				typeWriter("RISULTATO " + esameScelto.replaceAll("_", " ") + ": " + risultato);
+        }
+
+        // Effetto macchina da scrivere
+        let typeInterval;
+        function typeWriter(text) {
+            textElement.style.whiteSpace = "pre-wrap";
+            clearInterval(typeInterval);
+            textElement.textContent = "";
+            textElement.scrollTop = 0; // Reset scroll all'inizio
+            let i = 0;
+            typeInterval = setInterval(() => {
+                if (i < text.length) {
+                    textElement.textContent += text.charAt(i);
+                    i++;
+                    textElement.scrollTop = textElement.scrollHeight;
+                } else {
+                    clearInterval(typeInterval);
+                }
+            }, 15); 
+        }
+
+        // AVVIO: Carica il primo caso
+        caricaCaso();
+
+    </script>
+</body>
+</html>

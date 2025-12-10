@@ -1,0 +1,140 @@
+Ecco una lista di 40 condizioni cliniche divise per categoria, perfette per il tuo gioco:
+
+### 🧬 Genetiche ("Sopite" o Metaboliche)
+Queste sono le preferite di House: spesso il paziente convive con il difetto per anni finché un fattore scatenante non lo fa esplodere.
+
+1.  **Porfiria Acuta Intermittente** (Il classico: dolori addominali, urine scure, psicosi).
+2.  **Malattia di Wilson** (Accumulo di rame: anelli di Kayser-Fleischer, problemi epatici e psichiatrici).
+3.  **Malattia di Fabry** (Dolore alle estremità, angiocheratomi, problemi renali).
+4.  **Emocromatosi** (Il "diabete bronzino").
+5.  **Febbre Mediterranea Familiare** (Attacchi ricorrenti di febbre e sierosite).
+6.  **Deficit di Alfa-1-antitripsina** (Enfisema in giovani non fumatori o cirrosi).
+7.  **Sindrome di Marfan** (Problemi aortici in pazienti alti e longilinei).
+8.  **Carenza di G6PD (Favismo)** (Crisi emolitica scatenata da fave o farmaci).
+
+### 🦠 Infettive & Parassitarie
+Spesso legate a viaggi, animali o cibi non convenzionali.
+
+9.  **Malattia di Whipple** (Malassorbimento, dolori articolari, perdita di peso - il batterio "fantasma").
+10. **Malattia di Lyme** (Neuroborreliosi: eritema migrante, paralisi facciale, blocco cardiaco).
+11. **Rabbia** (Idrofobia, agitazione - fatale se non presa subito).
+12. **Leptospirosi** (Sindrome di Weil: ittero, insufficienza renale, emorragie).
+13. **Brucellosi** (Febbre ondulante, sudorazioni notturne, contatto con latticini non pastorizzati).
+14. **Encefalite erpetica** (HSV-1, alterazione comportamentale rapida, lobo temporale).
+15. **Febbre Q** (Coxiella burnetii, polmonite atipica ed epatite).
+16. **Naegleria fowleri** (L'ameba "mangia-cervello", rarissima e fulminante).
+
+### 🛡️ Autoimmuni & Reumatologiche (Il terreno di Harrison)
+Quando il corpo attacca se stesso. La frase *"Non è mai Lupus"* parte da qui (anche se a volte *è* Lupus).
+
+17. **Lupus Eritematoso Sistemico (LES)** (Il grande imitatore: colpisce reni, pelle, cervello, cuore).
+18. **Granulomatosi con poliangioite (Wegener)** (Sinusite cronica + problemi renali/polmonari).
+19. **Sarcoidosi** (Granulomi ovunque, spesso polmoni e occhi).
+20. **Arterite a cellule giganti (di Horton)** (Cefalea temporale, rischio cecità improvvisa).
+21. **Encefalite anti-NMDA** (Spesso scambiata per schizofrenia, teratoma ovarico associato).
+22. **Sindrome di Goodpasture** (Sindrome polmonare-renale emorragica).
+23. **Panarterite Nodosa** (Vasculite necrotizzante, colpisce arterie di medio calibro).
+
+### ⚠️ Tossicologiche, Incidenti & Endocrine
+Fattori esterni o "tempeste" ormonali interne.
+
+24. **Feocromocitoma** (Tumore surrenale: ipertensione parossistica, cefalea, sudorazione).
+25. **Avvelenamento da Tallio** (Caduta capelli, neuropatia dolorosa - l'arma del delitto perfetta).
+26. **Intossicazione da Monossido di Carbonio** (Cefalea, nausea, pelle "rosso ciliegia", confusione).
+27. **Sindrome Serotoninergica** (Mix di farmaci, rigidità, ipertermia, clono).
+28. **Tireotossicosi (Tempesta Tiroidea)** (Tachicardia estrema, febbre alta, agitazione).
+29. **Porpora Trombotica Trombocitopenica (TTP)** (Anemia, piastrine basse, sintomi neurologici fluttuanti).
+30. **Sindrome da Schiacciamento (Crush Syndrome)** (Rabdomiolisi post-trauma, urina color coca-cola, blocco renale).
+
+Amiloidosi (Accumulo di proteine anomale).
+Malattia di Still dell'adulto (Infiammatoria sistemica rara).
+Miastenia Gravis (Autoimmune neuromuscolare).
+Emoglobinuria Parossistica Notturna (EPN).
+Sindrome da Carcinoide (Tumore neuroendocrino, spesso nell'intestino o polmoni).
+Botulismo (Tossina, spesso da conserve casalinghe).
+Endocardite Batterica Subacuta (Infezione valvole cardiache).
+Morbo di Addison (Insufficienza surrenalica).
+Sindrome di Munchausen (Disturbo fittizio).
+Dermatomiosite (Autoimmune muscolare/cutanea).
+incinta
+SINDROME DI GUILLAIN-BARRÉ
+AIDS
+Corea di Huntington
+
+
+
+ESAMI:
+
+Laboratorio (Analisi del Sangue e Liquidi)
+
+    Emocromo con Formula (CBC): Per vedere se c'è anemia, infezione (globuli bianchi alti) o problemi di piastrine.
+
+    Chimica Clinica (CMP): Elettroliti (Sodio, Potassio, Calcio), Funzionalità Renale (Creatinina, Azotemia), Funzionalità Epatica (Transaminasi, Bilirubina).
+
+    Emogasanalisi (EGA): Prelievo arterioso per vedere quanto ossigeno c'è e il pH del sangue (acidosi/alcalosi).
+
+    VES e PCR: Indici di infiammazione generica.
+
+    Emocoltura: Per vedere se ci sono batteri vivi nel sangue (sepsi).
+
+    Esame Urine completo: Per vedere sangue, proteine, infezioni o cristalli.
+
+    Pannello Autoanticorpi (ANA, ENA, ANCA): Per cercare malattie autoimmuni (Lupus, Vasculiti).
+
+    Dosaggio Metalli Pesanti: Piombo, Arsenico, Tallio, Mercurio (capelli o urine).
+
+    Screening Tossicologico: Droghe o veleni comuni.
+
+    Dosaggio Porfirine: (Urine/Feci/Sangue) specifico per le Porfirie.
+
+    Striscio di Sangue Periferico: Guardare i globuli al microscopio (es. parassiti malaria o forme strane).
+
+📸 Imaging (Guardare dentro senza tagliare)
+
+    RX Torace (Lastra): Polmonite, cuore ingrossato, noduli.
+
+    TC (TAC) Total Body (con/senza contrasto): Per vedere tumori, emorragie, ascessi o organi rotti.
+
+    Risonanza Magnetica (RMN): Migliore della TAC per cervello, midollo spinale, muscoli e legamenti.
+
+    Angio-TC / Angiografia: Per vedere i vasi sanguigni (aneurismi, blocchi, dissecazioni).
+
+    Ecografia (Addome/Collo/Doppler): Veloce, per vedere calcoli, liquidi liberi o flussi sanguigni.
+
+    Ecocardiogramma (TTE o Transesofageo): Per vedere le valvole del cuore e come pompa (e se ci sono "vegetazioni" batteriche).
+
+    PET/TC: Per cercare tumori o infezioni nascoste in tutto il corpo (illumina le zone metabolicamente attive).
+
+💉 Procedure Invasive & Biopsie
+
+    Rachicentesi (Puntura Lombare): Prelevare il Liquor (CSF) per cercare meningite, sclerosi multipla o sangue nel cervello.
+
+    Biopsia Midollare: Prelevare midollo dall'osso del bacino (per leucemie o febbri sconosciute).
+
+    Biopsia (Epatica / Renale / Muscolare / Nervo / Temporale): Prendere un pezzetto di organo per analizzarlo al microscopio.
+
+    Broncoscopia / Gastroscopia / Colonscopia: Inserire telecamere nei tubi del corpo (polmoni o apparato digerente).
+
+    Paracentesi / Toracentesi: Aspirare liquido dalla pancia o dal torace per analizzarlo.
+
+⚡ Neurologia & Funzionali
+
+    EEG (Elettroencefalogramma): Registra l'attività elettrica del cervello (epilessia, encefaliti).
+
+    EMG (Elettromiografia): Aghi nei muscoli per vedere se i nervi funzionano (SLA, Miastenia, Neuropatie).
+
+💊 Terapie & Interventi "Ex Juvantibus"
+
+    Antibiotici a largo spettro: "Bombardiamo tutto" (es. Vancomicina + Meropenem).
+
+    Cortisone ad alte dosi (Bolo): Per spegnere il sistema immunitario all'istante (se si sospetta autoimmune).
+
+    Immunoglobuline (IVIG): Per resettare il sistema immunitario.
+
+    Dialisi: Se i reni si fermano o per pulire il sangue da tossine.
+
+    Plasmaferesi: "Lavaggio del sangue", rimuove anticorpi cattivi dal plasma.
+
+    Intubazione / Ventilazione Meccanica: Se il paziente smette di respirare.
+
+    Laparotomia Esplorativa: Aprire la pancia chirurgicamente per vedere cosa c'è che non va (ultima spiaggia).
