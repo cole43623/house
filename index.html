@@ -9,11 +9,15 @@
     <style>
         :root {
             --bg-color: #2c3e50;
-            --game-bg: #a8e6cf; /* Verde ospedale pastello */
+            --game-bg: #a8e6cf;
             --dialog-bg: #fff;
-            --accent: #ff8b94; /* Rosso/Rosa carino */
+            --accent: #ff8b94;
             --text-color: #333;
             --border-style: 4px solid #333;
+        }
+
+        * {
+            box-sizing: border-box;
         }
 
         body {
@@ -21,12 +25,11 @@
             font-family: 'VT323', monospace;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Evita scrollbar */
+            overflow: hidden;
             height: 100vh;
             width: 100vw;
         }
 
-        /* Contenitore principale a SCHERMO INTERO */
         #game-screen {
             width: 100%;
             height: 100%;
@@ -36,7 +39,6 @@
             flex-direction: column;
         }
 
-        /* Sfondo decorativo ospedale (Adattabile) */
         .background-decor {
             position: absolute;
             top: 25%;
@@ -46,7 +48,6 @@
             background: rgba(0,0,0,0.1);
         }
         
-        /* Porta allineata in prospettiva */
         .door {
             position: absolute;
             top: 18%;
@@ -57,7 +58,6 @@
             border: 3px solid rgba(0,0,0,0.2);
         }
 
-        /* Cartello Exit (Dettaglio extra) */
         .sign {
             position: absolute;
             top: 10%;
@@ -69,20 +69,18 @@
             color: #2ecc71;
         }
 
-        /* L'infermiera */
         #nurse-container {
             position: absolute;
-            bottom: 340px; /* Ancorata sopra il dialogo */
+            bottom: 340px;
             left: 50%;
             transform: translateX(-50%);
-            width: 200px; /* Leggermente più grande per il full screen */
+            width: 200px;
             text-align: center;
             z-index: 10;
         }
 
-        /* Animazione "respiro" */
         #nurse-img {
-            width: 227px; /* Immagine più grande */
+            width: 227px;
             height: 333px;
             image-rendering: pixelated; 
             animation: bobbing 2.5s infinite ease-in-out;
@@ -94,31 +92,28 @@
             50% { transform: translateY(-8px); }
         }
 
-        /* Area di Dialogo (RPG Style) - Ancorata in basso */
         #dialog-area {
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 400px; /* Altezza fissa per i controlli */
+            height: 400px;
             background-color: var(--dialog-bg);
             border-top: var(--border-style);
-            box-sizing: border-box; /* Include padding nel calcolo larghezza */
             padding: 20px 40px;
             display: flex;
             flex-direction: column;
             z-index: 20;
         }
 
-        /* Contenitore tabs */
         #tabs-container {
             display: flex;
             gap: 10px;
             margin-bottom: 15px;
-            overflow-x: auto; /* Scroll orizzontale */
+            overflow-x: auto;
             max-width: 100%;
-            padding-bottom: 5px; /* Spazio per la scrollbar */
-            flex-wrap: nowrap; /* Non mandare a capo */
+            padding-bottom: 5px;
+            flex-wrap: nowrap;
         }
 
         .tab {
@@ -130,8 +125,8 @@
             cursor: pointer;
             box-shadow: 3px 3px 0px rgba(0,0,0,0.2);
             transition: all 0.2s;
-            white-space: nowrap; /* Impedisce il wrap del testo */
-            flex-shrink: 0; /* Impedisce il ridimensionamento */
+            white-space: nowrap;
+            flex-shrink: 0;
         }
 
         .tab:hover {
@@ -146,19 +141,18 @@
         }
 
         #text-content {
-            font-size: 2rem; /* Testo più grande per full screen */
+            font-size: 2rem;
             line-height: 1.4;
             flex-grow: 1;
-            overflow-y: auto; /* Scroll verticale */
-            max-height: 200px; /* Altezza massima prima dello scroll */
-            padding-right: 10px; /* Spazio per la scrollbar */
+            overflow-y: auto;
+            max-height: 200px;
+            padding-right: 10px;
         }
 
-        /* Stile scrollbar personalizzato (opzionale, per Chrome/Safari) */
         #text-content::-webkit-scrollbar,
         #tabs-container::-webkit-scrollbar {
             width: 8px;
-            height: 8px; /* Per scrollbar orizzontale */
+            height: 8px;
         }
 
         #text-content::-webkit-scrollbar-track,
@@ -178,7 +172,6 @@
             background: #ff7680;
         }
 
-        /* Area Controlli */
         #controls {
             margin-top: 15px;
             border-top: 2px dashed #ccc;
@@ -186,7 +179,8 @@
             display: flex;
             gap: 20px;
             align-items: center;
-            justify-content: flex-start; /* Allinea a sinistra */
+            justify-content: flex-start;
+            flex-wrap: wrap;
         }
 
         select {
@@ -220,6 +214,119 @@
         button:hover {
             background-color: #ff7680;
         }
+
+        /* ===================================
+           MEDIA QUERIES PER MOBILE
+        =================================== */
+        
+        @media screen and (max-width: 768px) {
+            :root {
+                --border-style: 3px solid #333;
+            }
+
+            /* Nascondi decorazioni su mobile per risparmiare spazio */
+            .door, .background-decor {
+                display: none;
+            }
+
+            /* Riduci dimensioni infermiera */
+            #nurse-container {
+                bottom: 280px;
+                width: 120px;
+            }
+
+            #nurse-img {
+                width: 140px;
+                height: 200px;
+            }
+
+            /* Dialog area più compatta */
+            #dialog-area {
+                height: 280px;
+                padding: 12px 15px;
+            }
+
+            /* Tabs più piccole */
+            #tabs-container {
+                gap: 6px;
+                margin-bottom: 10px;
+            }
+
+            .tab {
+                padding: 4px 10px;
+                font-size: 1.3rem;
+                border: 2px solid #333;
+                box-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+            }
+
+            /* Testo più piccolo */
+            #text-content {
+                font-size: 1.4rem;
+                line-height: 1.3;
+                max-height: 120px;
+                padding-right: 8px;
+            }
+
+            /* Controlli impilati verticalmente */
+            #controls {
+                margin-top: 10px;
+                padding-top: 10px;
+                gap: 8px;
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            select {
+                font-size: 1.4rem;
+                padding: 8px;
+                min-width: unset;
+                width: 100%;
+            }
+
+            button {
+                font-size: 1.4rem;
+                padding: 8px 20px;
+                width: 100%;
+                box-shadow: 3px 3px 0px #333;
+            }
+
+            button:active {
+                transform: translate(3px, 3px);
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            /* Per schermi molto piccoli */
+            #nurse-container {
+                bottom: 430px;
+                width: 100px;
+            }
+
+            #nurse-img {
+                width: 140px;
+                height: 205px;
+            }
+
+            #dialog-area {
+                height: 460px;
+                padding: 10px 12px;
+            }
+
+            .tab {
+                font-size: 1.2rem;
+                padding: 3px 8px;
+            }
+
+            #text-content {
+                font-size: 1.3rem;
+                max-height: 200px;
+            }
+
+            select, button {
+                font-size: 1.3rem;
+            }
+        }
+
 
     </style>
 </head>
@@ -313,7 +420,7 @@
         }
 
         function caricaCaso(indice = null) {
-            if (indice === null) {
+            if (indice === null || indice > 57) {
                 indice = Math.floor(Math.random() * casi.length);
             }
             console.log(indice);
@@ -366,6 +473,12 @@
             const tabEsistente = tabs.find(t => t.id === esameScelto);
             if (tabEsistente) {
                 tabEsistente.contenuto = contenuto;
+                tabAttivaId = esameScelto; 
+               textElement.textContent = contenuto;
+                textElement.style.whiteSpace = "pre-wrap";
+                textElement.scrollTop = 0;
+                creaTabs();
+                return;
             } else {
                 tabs.push({
                     id: esameScelto,
@@ -376,7 +489,6 @@
 
             // Aggiorna tab attiva PRIMA di creare le tabs
             tabAttivaId = esameScelto; 
-
             creaTabs(); // ricrea le tabs con quella attiva
             typeWriter(contenuto);
         }
@@ -404,7 +516,7 @@
     function rivelasol() {
         if (!casoCorrenteObj) return;
 
-        const soluzione = "La soluzione del caso è: " + casoCorrenteObj.nome_malattia;
+        const soluzione = "La soluzione del caso è: " + casoCorrenteObj.nome_malattia + ".";
 
         // Crea o aggiorna la tab SOLUZIONE
         tabs.push({
@@ -421,7 +533,13 @@
         const controls = document.getElementById('controls');
         controls.innerHTML = '';
         const nuovoCasoBtn = document.createElement('button');
+        const condividi = document.createElement('button');
         nuovoCasoBtn.textContent = 'NUOVO CASO';
+        condividi.textContent = 'CONDIVIDI CASO';
+        condividi.onclick = () => {
+             navigator.clipboard.writeText("https://cole43623.github.io/house/?id="+(casoCorrenteObj.id-1));
+             alert("Link copiato!");
+        };
         nuovoCasoBtn.onclick = () => {
             controls.innerHTML = `
                 <select id="exam-selector">
@@ -434,10 +552,12 @@
             caricaCaso(); 
         };
         controls.appendChild(nuovoCasoBtn);
+        controls.appendChild(condividi);
     }
 
         // AVVIO: Carica il primo caso
-        caricaCaso();
+        const id = new URLSearchParams(window.location.search).get('id');
+        caricaCaso(id);
 
     </script>
 </body>

@@ -3031,6 +3031,67 @@ const casi = [
         // TERAPIA DI SUPPORTO SPECIFICA
         fluidoterapia: "Idratazione di supporto per la febbre alta.",
         farmaco_fans: "Paracetamolo: Controllo della febbre."
+    },
+
+// ---------------- CASO 57: MORBO DI CROHN ----------------
+    {
+        id: 57,
+        nome_malattia: "Morbo di Crohn",
+        livello_difficolta: "Difficile",
+
+        // --- DATI PAZIENTE ---
+        sesso: "Femmina",
+        eta: 22,
+        sintomi: "Dolori addominali crampiformi ricorrenti (soprattutto in basso a destra), diarrea non sanguinolenta ma mucosa (4-5 scariche al dì), calo di peso importante, febbricola serale.",
+        anamnesi: "Ha perso 8 kg negli ultimi 3 mesi. Riferisce dolori articolari alle caviglie e piaghe dolorose in bocca (afte) che vanno e vengono. Ex fumatrice (il fumo peggiora il Crohn, al contrario della Colite Ulcerosa).",
+        note_infermiera: "La paziente è molto magra e pallida. Mi ha chiesto una garza perché ha una 'bolla che perde pus' vicino all'ano (Fistola perianale - indizio fondamentale).",
+
+        // --- LABORATORIO ---
+        emocromo: "Hb 9.8 g/dL (Anemia mista: sideropenica da perdita e megaloblastica da malassorbimento B12). Piastrine 450.000/mmc (Trombocitosi reattiva all'infiammazione). Leucociti 11.000/mmc.",
+        chimica_clinica: "Albumina 2.8 g/dL (Bassa - malassorbimento/perdita proteica). Ferro basso. Vitamina B12 bassa (indica danno all'ileo terminale).",
+        emogas: "Normale.",
+        ves_pcr: "VES 65 mm/h. PCR 5.0 mg/dL (Infiammazione attiva).",
+        emocoltura: "Negativa.",
+        esame_urine: "Normale.",
+        autoanticorpi: "p-ANCA negativi (tipici della Colite Ulcerosa).",
+        tossicologico: "Negativo.",
+        esame_feci: "Calprotectina fecale: > 1000 µg/g (Marcatore specifico di infiammazione intestinale). Sangue occulto positivo. Coprocoltura negativa (esclude Salmonella/Campylobacter).",
+        striscio_sangue: "Anisocitosi.",
+        
+        // IL TEST CHIAVE (Sierologico)
+        dosaggi_specifici: "Anticorpi anti-Saccharomyces cerevisiae (ASCA): POSITIVI (Specifici per Crohn).",
+
+        // --- IMAGING ---
+        rx: "RX Addome: Alcune anse del tenue dilatate con livelli idroaerei (sub-occlusione).",
+        tc: "TC Enterografia: Ispessimento parietale dell'ileo terminale ('Segno del bersaglio'). Segno del pettine ('Comb sign': vasi mesenterici ingorgati). Presenza di 'skip lesions' (tratti malati alternati a tratti sani).",
+        risonanza: "RMN Pelvi: Complessa fistola perianale transfinterica con ascesso ramificato.",
+        angio: "Negativa.",
+        ecografia: "Eco Anse Intestinali: Pareti dell'ileo ispessite (>4mm), perdita della stratificazione, grasso periviscerale infiammato ('Creeping fat').",
+        elettrocardiogramma: "Normale.",
+        ecocardiogramma: "Normale.",
+        pet: "Captazione focale discontinua lungo il tenue e il colon destro.",
+
+        // --- PROCEDURE & NEURO ---
+        biopsia: "Biopsia Ileale/Colica: Infiammazione transmurale (a tutto spessore), aggregati linfoidi e granulomi non caseificanti (reperto patognomonico che lo distingue dalla Colite Ulcerosa).",
+        endoscopia: "Colonscopia (ileo-colonscopia): Ulcere serpiginose profonde longitudinali, aspetto della mucosa a 'ciottolato' (Cobblestone appearance). Retto risparmiato (spesso).",
+        paracentesi: "Nessun liquido.",
+        eeg: "Normale.",
+        emg: "Normale.",
+
+        // --- EFFETTI TERAPIE ---
+        dialisi: "Nessun effetto.",
+        
+        intervento_chirurgico: "Resezione ileo-colica: Risolve la stenosi o l'ascesso acuto, ma NON CURA la malattia. Era meglio evitare.",
+        
+        intubazione: "Non necessaria.",
+        trasfusione_piastrine: "Non indicata.",
+        
+        // FARMACI
+        antibiotici: "Metronidazolo/Ciprofloxacina: Utili per trattare l'ascesso perianale e ridurre il drenaggio della fistola, ma non spengono l'infiammazione intestinale sistemica.",
+        cortisone: "Budesonide/Prednisone: Rapida induzione della remissione (spegne la riacutizzazione), ma non usabile a lungo termine per gli effetti collaterali.",
+        farmaco_fans: "PEGGIORAMENTO: Rischio di scatenare una riacutizzazione severa o un sanguinamento.",
+        farmaco_biologico: "Infliximab/Adalimumab (Anti-TNF alfa): Terapia cardine per chiudere le fistole e mantenere la remissione profonda (guarigione mucosale).",
+        farmaco_immunosoppressore: "Azatioprina: Utile per il mantenimento a lungo termine.",
     }
 ];
 
