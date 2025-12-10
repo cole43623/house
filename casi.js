@@ -2408,7 +2408,7 @@ const casi = [
         // --- ALTRO ---
         anticoagulante: "Aumento del rischio emorragico senza benefici.",
         biopsia: "Tessuto sano.",
-        tossicologico: "Screening standard urine (Oppiacei, Coca, THC, BZO, Anfetamine): NEGATIVO per oppiacei (TRABOCCHETTO: Il test standard cerca la morfina/eroina, non rileva i sintetici come il Fentanyl).",
+        tossicologico: "Screening standard urine (Oppiacei, Coca, THC, BZO, Anfetamine): NEGATIVO per oppiacei.",
 
         // --- FARMACI ---
         farmaco_ketoconazolo: "Nessun effetto acuto.",
@@ -3040,7 +3040,6 @@ let esamiDisponibili = {
         "emocromo",
         "ves_pcr",
         "coagulazione",
-        "dosaggi_specifici",
         "autoanticorpi",
         "test_stimolo_acth",
         "test_soppressione_desametasone",
@@ -3094,7 +3093,6 @@ let esamiDisponibili = {
         "cortisone",
         "farmaco_adrenalina",
         "farmaco_amfotericina",
-        "farmaco_antidoto",
         "farmaco_antiparassitario",
         "farmaco_antipsicotico",
         "farmaco_antiretrovirale",
@@ -3117,5 +3115,9 @@ let esamiDisponibili = {
         "immunoglobuline",
         "insulina",
         "ossigeno_alta_concentrazione"
+    ],
+    "SPOILER: Esami Soluzione (verrano eseguiti sulla cosa corretta, farli solo se convinti)": [
+        "dosaggi_specifici",
+        "farmaco_antidoto"
     ]
 };
