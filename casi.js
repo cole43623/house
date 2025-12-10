@@ -1613,7 +1613,7 @@ const casi = [
         cortisone: "Nessun effetto significativo sull'edema muscolare ischemico.",
         dialisi: "Rapida correzione dell'iperkaliemia e dell'acidosi metabolica. Supporto alla funzione renale.",
         intubazione: "Sedazione necessaria per l'intervento chirurgico.",
-        fluidoterapia_aggressiva: "Aumento della diuresi e diluizione parziale della mioglobina.",
+        fluidoterapia: "Aumento della diuresi e diluizione parziale della mioglobina.",
         intervento_chirurgico: "Fasciotomia decompressiva: Ripristino del flusso arterioso distale, riduzione della pressione compartimentale, fuoriuscita di tessuto muscolare necrotico."
     },
 
@@ -2342,4 +2342,85 @@ const casi = [
     }
 ];
 
-let esamiDisponibili = ['plasmaferesi', 'emocoltura', 'farmaco_ketoconazolo', 'misurazione_pressione_compartimentale', 'farmaco_ciproeptadina', 'dosaggi_specifici', 'emg', 'test_neuropsicologici', 'farmaco_fans', 'striscio_sangue', 'emocromo', 'dialisi', 'chimica_clinica', 'farmaco_levodopa', 'esame_liquor', 'anticoagulante', 'ecografia', 'elettrocardiogramma', 'endoscopia', 'farmaco_tetrabenazina', 'test_del_ghiaccio', 'farmaco_antitiroideo', 'esame_microscopico_liquor', 'antivirale', 'risonanza', 'farmaco_benzodiazepine', 'rx', 'trasfusione_piastrine', 'esame_neurologico_specifico', 'farmaco_adrenalina', 'camera_iperbarica', 'angio', 'pet', 'farmaco_betabloccante', 'farmaco_cotrimossazolo', 'ossigeno_alta_concentrazione', 'farmaco_inibitore_acetilcolinesterasi', 'intervento_chirurgico', 'farmaco_immunosoppressore', 'farmaco_biologico', 'farmaco_antivirale', 'biopsia', 'insulina', 'farmaco_antiretrovirale', 'intubazione', 'cortisone', 'ferro_supplementare', 'immunoglobuline', 'tc', 'ecocardiogramma', 'antibiotici', 'farmaco_aspirina', 'test_stimolo_acth', 'esame_urine', 'fluidoterapia_aggressiva', 'coagulazione', 'test_soppressione_desametasone', 'fluidoterapia', 'farmaco_octreotide', 'chemioterapia', 'paracentesi', 'farmaco_immunoglobuline', 'glucosio_ev', 'farmaco_plasmaferesi', 'farmaco_antidoto', 'autoanticorpi', 'ves_pcr', 'emogas', 'farmaco_neurolettico', 'farmaco_amfotericina', 'farmaco_antipsicotico', 'tossicologico', 'eeg', 'ricerca_ambientale'];
+let esamiDisponibili = [
+    // 1️ Esami di laboratorio generali
+    "emocromo",
+    "ves_pcr",
+    "coagulazione",
+    "dosaggi_specifici",
+    "autoanticorpi",
+    "test_stimolo_acth",
+    "test_soppressione_desametasone",
+    "esame_urine",
+    "striscio_sangue",
+    "chimica_clinica",
+    "emocoltura",
+    "esame_liquor",
+    "esame_microscopico_liquor",
+    "glucosio_ev",
+    "emogas",
+
+    // 2️ Esami strumentali/diagnostici
+    "ecografia",
+    "risonanza",
+    "rx",
+    "tc",
+    "pet",
+    "angio",
+    "elettrocardiogramma",
+    "ecocardiogramma",
+    "eeg",
+    "test_neuropsicologici",
+    "test_del_ghiaccio",
+    "esame_neurologico_specifico",
+    "misurazione_pressione_compartimentale",
+    "ricerca_ambientale",
+
+
+    // 3 Procedure/interventi
+    "plasmaferesi",
+    "dialisi",
+    "trasfusione_piastrine",
+    "intervento_chirurgico",
+    "intubazione",
+    "camera_iperbarica",
+    "paracentesi",
+    "chemioterapia",
+    "fluidoterapia",
+
+    // 4 Altro / generici / monitoraggi
+    "anticoagulante",
+    "antivirale",
+    "biopsia",
+    "tossicologico"
+
+    // 5 Farmaci
+    "farmaco_ketoconazolo",
+    "farmaco_ciproeptadina",
+    "farmaco_fans",
+    "farmaco_levodopa",
+    "farmaco_tetrabenazina",
+    "farmaco_antitiroideo",
+    "farmaco_benzodiazepine",
+    "farmaco_adrenalina",
+    "farmaco_betabloccante",
+    "farmaco_cotrimossazolo",
+    "farmaco_inibitore_acetilcolinesterasi",
+    "farmaco_immunosoppressore",
+    "farmaco_biologico",
+    "farmaco_antivirale",
+    "farmaco_antiretrovirale",
+    "farmaco_aspirina",
+    "farmaco_octreotide",
+    "farmaco_immunoglobuline",
+    "farmaco_plasmaferesi",
+    "farmaco_antidoto",
+    "farmaco_neurolettico",
+    "farmaco_amfotericina",
+    "farmaco_antipsicotico",
+    "insulina",
+    "cortisone",
+    "ferro_supplementare",
+    "immunoglobuline",
+    "ossigeno_alta_concentrazione",
+];
