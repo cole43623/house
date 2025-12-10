@@ -110,16 +110,34 @@
             z-index: 20;
         }
 
-        .npc-name {
+        /* Contenitore tabs */
+        #tabs-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .tab {
+            background-color: #ddd;
+            color: #333;
+            padding: 5px 15px;
+            border: 2px solid #333;
+            font-size: 1.6rem;
+            cursor: pointer;
+            box-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+            transition: all 0.2s;
+        }
+
+        .tab:hover {
+            background-color: #ccc;
+        }
+
+        .tab.active {
             background-color: var(--accent);
             color: white;
-            padding: 5px 15px;
-            display: inline-block;
-            border: 2px solid #333;
-            margin-bottom: 15px;
-            font-size: 1.8rem;
-            width: fit-content;
-            box-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+            box-shadow: 2px 2px 0px rgba(0,0,0,0.3);
+            transform: translateY(2px);
         }
 
         #text-content {
@@ -207,7 +225,9 @@
         </div>
 
         <div id="dialog-area">
-            <div class="npc-name">Infermiera Jo</div>
+            <div id="tabs-container">
+                <!-- Le tabs verranno inserite qui dinamicamente -->
+            </div>
             
             <div id="text-content">In attesa del paziente...</div>
 
@@ -227,7 +247,48 @@
 
         const textElement = document.getElementById('text-content');
         const selectElement = document.getElementById('exam-selector');
+        const tabsContainer = document.getElementById('tabs-container');
         let casoCorrenteObj = null;
+        let tabs = []; // Array di oggetti {nome, contenuto, id}
+        let tabAttivaId = null;
+
+        function creaTabs() {
+            tabsContainer.innerHTML = '';
+            tabs.forEach(tab => {
+                const tabElement = document.createElement('div');
+                tabElement.className = 'tab' + (tab.id === tabAttivaId ? ' active' : '');
+                tabElement.textContent = tab.nome;
+                tabElement.onclick = () => mostraTab(tab.id);
+                tabsContainer.appendChild(tabElement);
+            });
+        }
+
+        function mostraTab(tabId) {
+            tabAttivaId = tabId;
+            const tab = tabs.find(t => t.id === tabId);
+            if (tab) {
+                textElement.textContent = tab.contenuto;
+                textElement.style.whiteSpace = "pre-wrap";
+                textElement.scrollTop = 0;
+                creaTabs(); // Aggiorna l'aspetto delle tabs
+            }
+        }
+
+        function aggiungiOAggiornaCaso(contenuto) {
+            const casoTab = tabs.find(t => t.id === 'caso');
+            if (casoTab) {
+                casoTab.contenuto = contenuto;
+            } else {
+                tabs.unshift({
+                    id: 'caso',
+                    nome: 'Infermiera Jo',
+                    contenuto: contenuto
+                });
+            }
+            tabAttivaId = 'caso';
+            creaTabs();
+            typeWriter(contenuto, 'caso');
+        }
 
 		function caricaCaso(indice = null) {
 			if (indice === null) {
@@ -236,8 +297,11 @@
 			console.log(indice);
             casoCorrenteObj = casi[indice];
             
-            // Scrittura testo
-            typeWriter("Sesso: "+casoCorrenteObj.sesso+"\nEta: "+casoCorrenteObj.eta+"\nSintomi: "+casoCorrenteObj.sintomi+"\nAnamnesi: "+casoCorrenteObj.anamnesi+"\n"+casoCorrenteObj.note_infermiera);
+            // Resetta le tabs (mantiene solo il caso)
+            tabs = [];
+            
+            const testoCompleto = "SESSO: "+casoCorrenteObj.sesso+"\nETÀ: "+casoCorrenteObj.eta+"\nSINTOMI: "+casoCorrenteObj.sintomi+"\nANAMNESI: "+casoCorrenteObj.anamnesi+"\n"+casoCorrenteObj.note_infermiera;
+            aggiungiOAggiornaCaso(testoCompleto);
 
             // Popola menu
             selectElement.innerHTML = '<option value="" disabled selected>-- Scegli un esame --</option>';
@@ -260,19 +324,42 @@
             }
 
             const risultato = casoCorrenteObj[esameScelto];
-			if (risultato == undefined)
-				typeWriter("Non ho programmato risultati per " + esameScelto.replaceAll("_", " ") + " in questo caso, il che significa che probabilmente è inerte, comunque potresti essere fuori strada.");
-			else
-				typeWriter("RISULTATO " + esameScelto.replaceAll("_", " ") + ": " + risultato);
+            const nomeEsameLeggibile = esameScelto.replaceAll("_", " ");
+            let contenuto;
+            
+			if (risultato == undefined) {
+				contenuto = "Non ho programmato risultati per " + nomeEsameLeggibile + " in questo caso, il che significa che probabilmente è inerte, comunque potresti essere fuori strada.";
+            } else {
+				contenuto = "RISULTATO " + nomeEsameLeggibile + ": " + risultato;
+            }
+
+			// Crea o aggiorna la tab per questo esame
+			const tabEsistente = tabs.find(t => t.id === esameScelto);
+			if (tabEsistente) {
+				tabEsistente.contenuto = contenuto;
+			} else {
+				tabs.push({
+					id: esameScelto,
+					nome: nomeEsameLeggibile,
+					contenuto: contenuto
+				});
+			}
+
+			// Aggiorna tab attiva PRIMA di creare le tabs
+			tabAttivaId = esameScelto; 
+
+			creaTabs(); // ricrea le tabs con quella attiva
+			typeWriter(contenuto);
         }
 
         // Effetto macchina da scrivere
         let typeInterval;
-        function typeWriter(text) {
+        function typeWriter(text, tabId = null) {
+            if (tabId) tabAttivaId = tabId;
             textElement.style.whiteSpace = "pre-wrap";
             clearInterval(typeInterval);
             textElement.textContent = "";
-            textElement.scrollTop = 0; // Reset scroll all'inizio
+            textElement.scrollTop = 0;
             let i = 0;
             typeInterval = setInterval(() => {
                 if (i < text.length) {
