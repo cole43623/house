@@ -1204,7 +1204,8 @@ const casi = [
         // --- EFFETTI TERAPIE ---
         antibiotici: "Nessun effetto.",
         cortisone: "Miglioramento graduale dei sintomi neurologici dopo diversi giorni.",
-        dialisi: "Scambio plasmatico (Plasmaferesi): Miglioramento clinico significativo e riduzione del titolo anticorpale.",
+        dialisi: "Nessun effetto.",
+		plasmaferesi: "Scambio plasmatico: Miglioramento clinico significativo e riduzione del titolo anticorpale.",
         intubazione: "Necessaria per ipoventilazione centrale e protezione vie aeree durante le crisi convulsive.",
         farmaco_antipsicotico: "Peggioramento della rigidità muscolare e della disautonomia (rischio Sindrome Maligna da Neurolettici).",
         intervento_chirurgico: "Ovariectomia (rimozione teratoma): Accelerazione netta del recupero clinico."
@@ -1258,7 +1259,7 @@ const casi = [
         cortisone: "Bolo endovena: Arresto della progressione dell'insufficienza respiratoria.",
         dialisi: "Necessaria per gestione dell'iperkaliemia e del sovraccarico idrico (anuria).",
         intubazione: "Necessaria per insufficienza respiratoria ipossiemica acuta.",
-        farmaco_plasmaferesi: "Rapida riduzione del titolo anticorpale e miglioramento della prognosi renale se iniziata precocemente."
+        plasmaferesi: "Rapida riduzione del titolo anticorpale e miglioramento della prognosi renale se iniziata precocemente."
     },
 
 // ---------------- CASO 26: PANARTERITE NODOSA ----------------
@@ -1309,7 +1310,7 @@ const casi = [
         dialisi: "Gestione dell'uremia, nessun effetto sulla patogenesi vascolare.",
         intubazione: "Non necessaria.",
         antivirale: "Lamivudina/Entecavir: Riduzione della carica virale.",
-        farmaco_plasmaferesi: "Miglioramento clinico rapido (rimozione immunocomplessi circolanti)."
+        plasmaferesi: "Miglioramento clinico rapido (rimozione immunocomplessi circolanti)."
     },
 
 // ---------------- CASO 27: AVVELENAMENTO DA TALLIO ----------------
@@ -2426,7 +2427,7 @@ const casi = [
         farmaco_antiretrovirale: "Nessun effetto.",
         farmaco_aspirina: "Nessun effetto.",
         farmaco_octreotide: "Nessun effetto.",
-        farmaco_plasmaferesi: "Nessun effetto.",
+        plasmaferesi: "Nessun effetto.",
         
         // TERAPIA RISOLUTIVA
         farmaco_antidoto: "Naloxone (Narcan) EV/Intranasale: Risveglio improvviso ed esplosivo in 30 secondi. Il paziente si siede, diventa agitato, aggressivo, vomita e iperventila (Sindrome da astinenza precipitata).",
@@ -3033,88 +3034,88 @@ const casi = [
     }
 ];
 
-let esamiDisponibili = [
-    // 1️ Esami di laboratorio generali
-    "emocromo",
-    "ves_pcr",
-    "coagulazione",
-    "dosaggi_specifici",
-    "autoanticorpi",
-    "test_stimolo_acth",
-    "test_soppressione_desametasone",
-    "esame_urine",
-    "esame_feci",
-    "striscio_sangue",
-    "chimica_clinica",
-    "emocoltura",
-    "esame_liquor",
-    "esame_microscopico_liquor",
-    "glucosio_ev",
-    "emogas",
 
-    // 2️ Esami strumentali/diagnostici
-    "ecografia",
-    "risonanza",
-    "rx",
-    "tc",
-    "pet",
-    "angio",
-    "elettrocardiogramma",
-    "ecocardiogramma",
-    "eeg",
-    "emg",
-    "test_neuropsicologici",
-    "test_del_ghiaccio",
-    "esame_neurologico_specifico",
-    "misurazione_pressione_compartimentale",
-    "ricerca_ambientale",
-
-
-    // 3 Procedure/interventi
-    "plasmaferesi",
-    "dialisi",
-    "trasfusione_piastrine",
-    "intervento_chirurgico",
-    "intubazione",
-    "camera_iperbarica",
-    "paracentesi",
-    "chemioterapia",
-    "fluidoterapia",
-
-    // 4 Altro / generici / monitoraggi
-    "anticoagulante",
-    "biopsia",
-    "endoscopia",
-    "tossicologico",
-
-    // 5 Farmaci
-    "farmaco_ketoconazolo",
-    "farmaco_ciproeptadina",
-    "farmaco_fans",
-    "farmaco_levodopa",
-    "farmaco_tetrabenazina",
-    "farmaco_antitiroideo",
-    "farmaco_benzodiazepine",
-    "farmaco_adrenalina",
-    "farmaco_betabloccante",
-    "farmaco_cotrimossazolo",
-    "farmaco_antiparassitario",
-    "farmaco_inibitore_acetilcolinesterasi",
-    "farmaco_immunosoppressore",
-    "farmaco_biologico",
-    "farmaco_antiretrovirale",
-    "farmaco_aspirina",
-    "farmaco_octreotide",
-    "farmaco_plasmaferesi",
-    "farmaco_antidoto",
-    "farmaco_neurolettico",
-    "farmaco_amfotericina",
-    "farmaco_antipsicotico",
-    "antibiotici",
-    "antivirale",
-    "insulina",
-    "cortisone",
-    "ferro_supplementare",
-    "immunoglobuline",
-    "ossigeno_alta_concentrazione"
-];
+let esamiDisponibili = {
+    "Esami di laboratorio generali": [
+        "emocromo",
+        "ves_pcr",
+        "coagulazione",
+        "dosaggi_specifici",
+        "autoanticorpi",
+        "test_stimolo_acth",
+        "test_soppressione_desametasone",
+        "esame_urine",
+        "esame_feci",
+        "striscio_sangue",
+        "chimica_clinica",
+        "emocoltura",
+        "esame_liquor",
+        "esame_microscopico_liquor",
+        "glucosio_ev",
+        "emogas"
+    ],
+    "Esami strumentali/diagnostici": [
+        "angio",
+        "eeg",
+        "ecocardiogramma",
+        "ecografia",
+        "elettrocardiogramma",
+        "emg",
+        "esame_neurologico_specifico",
+        "misurazione_pressione_compartimentale",
+        "pet",
+        "risonanza",
+        "rx",
+        "tc",
+        "test_del_ghiaccio",
+        "test_neuropsicologici"
+    ],
+    "Procedure/interventi": [
+        "biopsia",
+        "camera_iperbarica",
+        "chemioterapia",
+        "dialisi",
+        "endoscopia",
+        "intervento_chirurgico",
+        "intubazione",
+        "paracentesi",
+        "plasmaferesi",
+        "trasfusione_piastrine"
+    ],
+    "Altro / generici / monitoraggi": [
+        "anticoagulante",
+        "fluidoterapia",
+        "ricerca_ambientale",
+        "tossicologico"
+    ],
+    "Farmaci": [
+        "antibiotici",
+        "antivirale",
+        "cortisone",
+        "farmaco_adrenalina",
+        "farmaco_amfotericina",
+        "farmaco_antidoto",
+        "farmaco_antiparassitario",
+        "farmaco_antipsicotico",
+        "farmaco_antiretrovirale",
+        "farmaco_antitiroideo",
+        "farmaco_aspirina",
+        "farmaco_benzodiazepine",
+        "farmaco_betabloccante",
+        "farmaco_biologico",
+        "farmaco_ciproeptadina",
+        "farmaco_cotrimossazolo",
+        "farmaco_fans",
+        "farmaco_immunosoppressore",
+        "farmaco_inibitore_acetilcolinesterasi",
+        "farmaco_ketoconazolo",
+        "farmaco_levodopa",
+        "farmaco_neurolettico",
+        "farmaco_octreotide",
+        "farmaco_tetrabenazina",
+        "ferro_supplementare",
+        "immunoglobuline",
+        "insulina",
+        "ossigeno_alta_concentrazione"
+    ]
+};

@@ -327,11 +327,18 @@
 
             // Popola menu
             selectElement.innerHTML = '<option value="" disabled selected>-- Scegli un esame --</option>';
-            for (let nomeEsame of esamiDisponibili) {
-                let option = document.createElement("option");
-                option.value = nomeEsame;
-                option.text = nomeEsame.replaceAll("_", " ");
-                selectElement.appendChild(option);
+            for (let categoria in esamiDisponibili) {
+                let optgroup = document.createElement("optgroup");
+                optgroup.label = categoria;
+
+                for (let nomeEsame of esamiDisponibili[categoria]) {
+                    let option = document.createElement("option");
+                    option.value = nomeEsame;
+                    option.text = nomeEsame.replaceAll("_", " ");
+                    optgroup.appendChild(option);
+                }
+
+                selectElement.appendChild(optgroup);
             }
         }
 
