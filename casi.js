@@ -2392,7 +2392,7 @@ let esamiDisponibili = [
     "anticoagulante",
     "antivirale",
     "biopsia",
-    "tossicologico"
+    "tossicologico",
 
     // 5 Farmaci
     "farmaco_ketoconazolo",
@@ -2422,5 +2422,5 @@ let esamiDisponibili = [
     "cortisone",
     "ferro_supplementare",
     "immunoglobuline",
-    "ossigeno_alta_concentrazione",
+    "ossigeno_alta_concentrazione"
 ];
