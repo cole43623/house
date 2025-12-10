@@ -3116,7 +3116,7 @@ let esamiDisponibili = {
         "insulina",
         "ossigeno_alta_concentrazione"
     ],
-    "SPOILER: Esami Soluzione (verrano eseguiti sulla cosa corretta, farli solo se convinti)": [
+    "SPOILER: Esami Soluzione": [
         "dosaggi_specifici",
         "farmaco_antidoto"
     ]
