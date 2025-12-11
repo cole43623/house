@@ -1463,8 +1463,8 @@ const casi = [
         cortisone: "Nessun effetto.",
         dialisi: "Gestione dell'insufficienza renale da mioglobinuria, inefficace per rimuovere i farmaci lipofili.",
         intubazione: "Necessaria per paralisi muscolare indotta (se ipertermia > 41°C) e sedazione profonda.",
-        farmaco_benzodiazepine: "Riduzione parziale dell'agitazione e della rigidità muscolare.",
-        farmaco_ciproeptadina: "Somministrazione per sondino nasogastrico: Graduale risoluzione dell'ipertermia e normalizzazione del tono muscolare nelle 24 ore successive."
+        //farmaco_benzodiazepine: "Riduzione parziale dell'agitazione e della rigidità muscolare.",
+        farmaco_antiserotoninico: "Somministrazione ciproeptadina per sondino nasogastrico: Graduale risoluzione dell'ipertermia e normalizzazione del tono muscolare nelle 24 ore successive."
     },
 
 // ---------------- CASO 30: TIREOTOSSICOSI (TEMPESTA TIROIDEA) ----------------
@@ -2343,7 +2343,7 @@ const casi = [
         cortisone: "Peggioramento dell'iperglicemia, dell'ipertensione e della psicosi.",
         dialisi: "Correzione temporanea dell'ipokaliemia.",
         intubazione: "Non necessaria.",
-        farmaco_ketoconazolo: "Riduzione della sintesi di cortisolo e miglioramento graduale dei sintomi.",
+        farmaco_antimicotico: "Somministrazione di ketoconazolo, riduzione della sintesi di cortisolo e miglioramento graduale dei sintomi.",
         intervento_chirurgico: "Adenectomia trans-sfenoidale: Crollo dei livelli di cortisolo post-operatorio (necessita terapia sostitutiva transitoria) e risoluzione del quadro clinico."
     },
 
@@ -2409,8 +2409,6 @@ const casi = [
         esame_tossicologico: "Screening standard urine (Oppiacei, Coca, THC, BZO, Anfetamine): NEGATIVO per oppiacei.",
 
         // --- FARMACI ---
-        farmaco_ketoconazolo: "Nessun effetto acuto.",
-        farmaco_ciproeptadina: "Nessun effetto.",
         farmaco_fans: "Nessun effetto.",
         farmaco_levodopa: "Nessun effetto.",
         farmaco_tetrabenazina: "Nessun effetto.",
@@ -3201,7 +3199,7 @@ const casi = [
         // FARMACI
         antibiotici: "Nessun effetto sull'acne a lungo termine (causa ormonale, non infettiva).",
         cortisone: "PEGGIORAMENTO: Aumento ulteriore del peso, della glicemia e dell'acne.",
-        farmaco_antidoto: "Metformina: Migliora l'insulino-resistenza e favorisce il calo ponderale e l'ovulazione. Pillola Estroprogestinica: Regolarizza il ciclo e riduce acne/irsutismo (terapia sintomatica).",
+        dosaggi_specifici: "Metformina: Migliora l'insulino-resistenza e favorisce il calo ponderale e l'ovulazione. Pillola Estroprogestinica: Regolarizza il ciclo e riduce acne/irsutismo (terapia sintomatica).",
     },
 
     // ---------------- CASO 60: SINDROME DI WISKOTT-ALDRICH ----------------
@@ -3556,22 +3554,21 @@ let esamiDisponibili = {
         "farmaco_adrenalina",
         "farmaco_amfotericina",
         "farmaco_antidiabetico",
+        "farmaco_antidoto",
         "farmaco_antimicotico",
         "farmaco_antiparassitario",
         "farmaco_antipsicotico",
+        "farmaco_antiserotoninico",
         "farmaco_antitiroideo",
         "farmaco_aspirina",
-        "farmaco_benzodiazepine",
         "farmaco_betabloccante",
         "farmaco_biologico",
-        "farmaco_ciproeptadina",
         "farmaco_chelante",
         "farmaco_colchicina",
         "farmaco_fans",
         "farmaco_immunomodulante",
         "farmaco_immunosoppressore",
         "farmaco_inibitore_acetilcolinesterasi",
-        "farmaco_ketoconazolo",
         "farmaco_levodopa",
         "farmaco_neurolettico",
         "farmaco_octreotide",
@@ -3581,7 +3578,6 @@ let esamiDisponibili = {
         "insulina"
     ],
     "SPOILER: Esami Soluzione (beta)": [
-        "dosaggi_specifici",
-        "farmaco_antidoto"
+        "dosaggi_specifici"
     ]
 };
