@@ -14,13 +14,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 13.5 g/dL, Leucociti 8.500/mmc (nella norma), Piastrine 250.000/mmc. Nessuna anemia o infezione evidente.",
-        chimica_clinica: "Iponatriemia significativa (Sodio 125 mEq/L - probabile SIADH). Potassio, Calcio, Creatinina e Transaminasi nei limiti.",
+        esami_ematochimici: "Iponatriemia significativa (Sodio 125 mEq/L - probabile SIADH). Potassio, Calcio, Creatinina e Transaminasi nei limiti.",
         emogas: "pH 7.40, pO2 98%, pCO2 40mmHg. Scambi gassosi e pH perfettamente nella norma.",
         ves_pcr: "VES 10 mm/h, PCR 0.5 mg/dL. Indici di flogosi negativi (nessuna infiammazione in atto).",
         emocoltura: "Negativa. Nessuna crescita batterica dopo 48 ore.",
         esame_urine: "Peso specifico 1020. Stick urine: Proteine assenti, Leucociti assenti. Emoglobina NEGATIVA (il colore rosso non è sangue).",
         autoanticorpi: "ANA, ENA e ANCA negativi. Nessun segno di patologia autoimmune.",
-        tossicologico: "Screening negativo per oppiacei, cocaina, cannabinoidi, anfetamine e benzodiazepine.",
+        esame_tossicologico: "Screening negativo per oppiacei, cocaina, cannabinoidi, anfetamine e benzodiazepine.",
         esame_liquor: "Liquor limpido, incolore. Pressione di apertura normale. Chimico-fisico nella norma.",
         striscio_sangue: "Normocitosi, normocromia. Nessuna anomalia morfologica.",
         dosaggi_specifici: "Porfobilinogeno (PBG) e Acido Delta-Aminolevulinico (ALA) urinari: FORTEMENTE AUMENTATI (Diagnostico).",
@@ -64,13 +64,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 14.2 g/dL, Leucociti 6.000/mmc, Piastrine 220.000/mmc. Tutto nella norma.",
-        chimica_clinica: "Elettroliti, funzionalità renale ed epatica perfettamente nella norma.",
+        esami_ematochimici: "Elettroliti, funzionalità renale ed epatica perfettamente nella norma.",
         emogas: "pH 7.32, pCO2 50mmHg (Lieve acidosi respiratoria da ipoventilazione iniziale).",
         ves_pcr: "Indici di infiammazione negativi. VES 2 mm/h.",
         emocoltura: "Negativa.",
         esame_urine: "Esame chimico-fisico nella norma.",
         autoanticorpi: "Negativi.",
-        tossicologico: "Negativo per droghe.",
+        esame_tossicologico: "Negativo per droghe.",
         esame_liquor: "Proteine e cellule nella norma.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Ricerca tossina botulinica nel siero e nelle feci: POSITIVA.",
@@ -114,13 +114,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 10.2 g/dL (lieve anemia), Piastrine 90.000/mmc (lieve trombocitopenia), Leucociti nella norma.",
-        chimica_clinica: "AST 145 U/L, ALT 180 U/L (Aumentate). Bilirubina Totale 2.5 mg/dL (Aumentata). Fosfatasi Alcalina bassa.",
+        esami_ematochimici: "AST 145 U/L, ALT 180 U/L (Aumentate). Bilirubina Totale 2.5 mg/dL (Aumentata). Fosfatasi Alcalina bassa.",
         emogas: "pH 7.42, pO2 96%, pCO2 38mmHg. Lattati nella norma.",
         ves_pcr: "VES 8 mm/h, PCR 0.3 mg/dL.",
         emocoltura: "Negativa.",
         esame_urine: "Esame standard nella norma. Glicosuria lieve presente.",
         autoanticorpi: "ANA negativi. ASMA (Anti-muscolo liscio) negativi. LKM-1 negativi.",
-        tossicologico: "Negativo per etanolo, oppiacei, cocaina.",
+        esame_tossicologico: "Negativo per etanolo, oppiacei, cocaina.",
         esame_liquor: "Limpido. Proteine e glucosio nei limiti. Nessuna banda oligoclonale.",
         striscio_sangue: "Anisocitosi. Presenza di rari sferociti.",
         dosaggi_specifici: "Ceruloplasmina sierica: 12 mg/dL (Range normale: 20-60). Rame urinario 24h: 250 µg (Range normale: <50).",
@@ -147,7 +147,7 @@ const casi = [
         dialisi: "Nessun effetto significativo sui livelli tissutali.",
         intubazione: "Non indicata al momento.",
         immunoglobuline: "Nessun effetto.",
-        // Nota: Nel gioco, la cura corretta sarebbe "Penicillamina" o "Trientina" (chelanti), se l'utente le chiedesse.
+        farmaco_chelante: "Trattamento cronico con chelanti del rame (Penicillamina / Trientina), ora in condizioni cliniche globalmente stazionarie e compensate."
     },
 
     // ---------------- CASO 4: MALATTIA DI FABRY ----------------
@@ -165,14 +165,14 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 13.0 g/dL, Leucociti 7.200/mmc, Piastrine 280.000/mmc.",
-        chimica_clinica: "Creatinina 1.5 mg/dL (Valore superiore alla norma per l'età). Azotemia 55 mg/dL. Elettroliti nella norma.",
+        esami_ematochimici: "Creatinina 1.5 mg/dL (Valore superiore alla norma per l'età). Azotemia 55 mg/dL. Elettroliti nella norma.",
         emogas: "pH 7.40, Scambi gassosi regolari.",
         ves_pcr: "VES 12 mm/h, PCR negativa.",
         emocoltura: "Negativa.",
         esame_urine: "Proteine: 3+ (Proteinuria significativa). Sedimento: Presenza di corpi ovali grassi e lipidi birifrangenti ('Croce di Malta').",
         esame_feci: "Le feci mostrano malassorbimento moderato con residui lipidici aumentati.",
         autoanticorpi: "ANA, ENA, Anti-DNA negativi.",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_liquor: "Non indicato.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Attività alfa-galattosidasi A leucocitaria: < 1% del valore di riferimento.",
@@ -198,8 +198,8 @@ const casi = [
         cortisone: "Nessun effetto sul dolore neuropatico o sulla proteinuria.",
         dialisi: "Non necessaria al momento, ma indicata in futuro per progressione danno renale.",
         intubazione: "Non indicata.",
-        immunoglobuline: "Nessun effetto."
-        // Terapia corretta: Terapia enzimatica sostitutiva (Agalsidasi)
+        immunoglobuline: "Nessun effetto.",
+        dosaggi_specifici: "Terapia enzimatica sostitutiva (Agalsidasi), il paziente mostra un miglioramento dei sintomi e una stabilizzazione della funzione d'organo."
     },
 
     // ---------------- CASO 5: EMOCROMATOSI EREDITARIA ----------------
@@ -217,13 +217,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 14.5 g/dL, Piastrine 150.000/mmc (limiti bassi), Leucociti nella norma.",
-        chimica_clinica: "Glicemia a digiuno: 195 mg/dL (Diabete non controllato). ALT 110 U/L, AST 95 U/L (Transaminasi aumentate ~3x). Bilirubina totale lievemente mossa.",
+        esami_ematochimici: "Glicemia a digiuno: 195 mg/dL (Diabete non controllato). ALT 110 U/L, AST 95 U/L (Transaminasi aumentate ~3x). Bilirubina totale lievemente mossa.",
         emogas: "Nella norma.",
         ves_pcr: "VES 15 mm/h. Fattore Reumatoide negativo (Esclude Artrite Reumatoide classica).",
         emocoltura: "Negativa.",
         esame_urine: "Glicosuria +++. Chetoni negativi.",
         autoanticorpi: "ANA, AMA, ASMA negativi. Anti-HCV e HBsAg negativi (Esclude epatiti virali).",
-        tossicologico: "Negativo. Etanolemia 0.",
+        esame_tossicologico: "Negativo. Etanolemia 0.",
         esame_liquor: "Non indicato.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Ferritina: 2800 ng/mL (Valore critico). Saturazione della Transferrina: 92% (Valore diagnostico >45%). Testosterone totale basso.",
@@ -250,7 +250,7 @@ const casi = [
         dialisi: "Non indicata.",
         intubazione: "Non indicata.",
         immunoglobuline: "Nessun effetto.",
-        // Nota terapeutica: La terapia corretta sarebbe il "Salasso terapeutico" (flebotomia).
+        dosaggi_specifici: "Dopo terapia con salassi terapeutici (flebotomia), il paziente presenta parametri marziali normalizzati e condizioni cliniche stabili."
     },
 
 // ---------------- CASO 6: FEBBRE MEDITERRANEA FAMILIARE ----------------
@@ -268,13 +268,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Leucociti 18.500/mmc (Neutrofili 88%), Hb 13.0 g/dL, Piastrine 450.000/mmc.",
-        chimica_clinica: "Creatinina 0.9 mg/dL, AST/ALT nella norma. Elettroliti regolari.",
+        esami_ematochimici: "Creatinina 0.9 mg/dL, AST/ALT nella norma. Elettroliti regolari.",
         emogas: "pH 7.45, pCO2 38 mmHg, pO2 98%.",
         ves_pcr: "VES 85 mm/h, PCR 18.0 mg/dL, Fibrinogeno 700 mg/dL (Indici di flogosi alle stelle).",
         emocoltura: "Negativa dopo 48h.",
         esame_urine: "Proteinuria ++ (1g/24h). Sedimento inattivo.",
         autoanticorpi: "ANA negativi, ANCA negativi.",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_liquor: "Limpido, incolore. Pressione, cellule e proteine nella norma.",
         striscio_sangue: "Neutrofilia con granulazioni tossiche.",
         dosaggi_specifici: "Analisi molecolare gene MEFV: Omozigosi per mutazione M694V (Diagnostico).",
@@ -318,13 +318,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 16.5 g/dL, Ematocrito 52%, Leucociti 7.000/mmc.",
-        chimica_clinica: "ALT 68 U/L, AST 60 U/L, Bilirubina totale 1.2 mg/dL.",
+        esami_ematochimici: "ALT 68 U/L, AST 60 U/L, Bilirubina totale 1.2 mg/dL.",
         emogas: "pH 7.38, pO2 62 mmHg, pCO2 42 mmHg.",
         ves_pcr: "VES 5 mm/h, PCR 0.1 mg/dL.",
         emocoltura: "Negativa.",
         esame_urine: "Esame chimico-fisico nella norma.",
         autoanticorpi: "ANA negativi, ANCA negativi.",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_liquor: "Limpido, incolore. Pressione di apertura 15 cmH2O.",
         striscio_sangue: "Normocitosi.",
         dosaggi_specifici: "Alfa-1 Antitripsina sierica: 18 mg/dL (Range: 90-200).",
@@ -368,13 +368,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 11.8 g/dL, Leucociti 14.000/mmc.",
-        chimica_clinica: "Creatinina 1.3 mg/dL, Troponina I negativa.",
+        esami_ematochimici: "Creatinina 1.3 mg/dL, Troponina I negativa.",
         emogas: "pH 7.30, Lattati 3.5 mmol/L.",
         ves_pcr: "PCR 2.0 mg/dL.",
         emocoltura: "Negativa.",
         esame_urine: "Ematuria microscopica.",
         autoanticorpi: "Negativi.",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_liquor: "Liquor ematico (se puntura traumatica) o limpido.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Test genetico non disponibile in urgenza.",
@@ -418,13 +418,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 7.2 g/dL, Reticolociti 15%, Piastrine 200.000/mmc.",
-        chimica_clinica: "Bilirubina Totale 5.8 mg/dL (Indiretta 5.0). LDH 1450 U/L. Aptoglobina < 10 mg/dL.",
+        esami_ematochimici: "Bilirubina Totale 5.8 mg/dL (Indiretta 5.0). LDH 1450 U/L. Aptoglobina < 10 mg/dL.",
         emogas: "pH 7.40, pO2 98%.",
         ves_pcr: "VES 10 mm/h.",
         emocoltura: "Negativa.",
         esame_urine: "Sangue +++ (emoglobinuria). Sedimento: rari eritrociti.",
         autoanticorpi: "Coombs Diretto e Indiretto: NEGATIVI.",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_liquor: "Limpido.",
         striscio_sangue: "Anisopoichilocitosi, presenza di 'Bite cells' e 'Blister cells'.",
         dosaggi_specifici: "G6PD eritrocitaria: 2.5 U/g Hb (Ridotta).",
@@ -469,13 +469,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 13.5 g/dL, Leucociti nella norma.",
-        chimica_clinica: "Funzionalità epatica e renale nella norma.",
+        esami_ematochimici: "Funzionalità epatica e renale nella norma.",
         emogas: "Normale.",
         ves_pcr: "VES 30 mm/h (Lievemente aumentata).",
         emocoltura: "Negativa.",
         esame_urine: "Normale.",
         autoanticorpi: "ANA positivi a basso titolo (Aspecifici).",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_liquor: "Pleocitosi linfocitaria (presenza di globuli bianchi nel liquor). Proteine aumentate. Glucosio normale (Quadro virale/atipico).",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Sierologia Borrelia Burgdorferi (ELISA + Western Blot): POSITIVA (IgM e IgG presenti).",
@@ -519,13 +519,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Leucopenia (Globuli bianchi bassi: 3.000/mmc), Piastrinopenia (90.000/mmc), Anemia emolitica lieve.",
-        chimica_clinica: "Creatinina 1.3 mg/dL (Insufficienza renale lieve).",
+        esami_ematochimici: "Creatinina 1.3 mg/dL (Insufficienza renale lieve).",
         emogas: "Normale.",
         ves_pcr: "VES molto alta (80 mm/h). PCR solo lievemente mossa (Discrepanza tipica del Lupus).",
         emocoltura: "Negativa.",
         esame_urine: "Proteinuria ++, Ematuria microscopica, Cilindri cellulari (Segni di nefrite).",
         autoanticorpi: "ANA Positivi (Titolo 1:1280, pattern omogeneo). Anti-dsDNA POSITIVI (Specifici). C3 e C4 ridotti (Consumo del complemento).",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_liquor: "Normale.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Test di Coombs Diretto: Positivo.",
@@ -551,7 +551,8 @@ const casi = [
         cortisone: "Miglioramento rapido e spettacolare dei sintomi articolari e della febbre.",
         dialisi: "Non necessaria in acuto, ma la funzionalità renale va monitorata.",
         intubazione: "Non necessaria.",
-        immunoglobuline: "Miglioramento della conta piastrinica."
+        immunoglobuline: "Miglioramento della conta piastrinica.",
+        farmaco_immunomodulante: "Idrossiclorochina (Plaquenil): Controllo della sintomatologia articolare e della fatica a lungo termine."
     },
 
     // ---------------- CASO 12: FEOCROMOCITOMA ----------------
@@ -569,13 +570,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Ematocrito lievemente aumentato (emoconcentrazione).",
-        chimica_clinica: "Iperglicemia (200 mg/dL - adrenalina alza lo zucchero). Ipokaliemia lieve.",
+        esami_ematochimici: "Iperglicemia (200 mg/dL - adrenalina alza lo zucchero). Ipokaliemia lieve.",
         emogas: "Normale.",
         ves_pcr: "Normale.",
         emocoltura: "Negativa.",
         esame_urine: "Normale.",
         autoanticorpi: "Negativi.",
-        tossicologico: "Negativo (Esclude cocaina/anfetamine che darebbero sintomi simili).",
+        esame_tossicologico: "Negativo (Esclude cocaina/anfetamine che darebbero sintomi simili).",
         esame_liquor: "Pressione normale, limpido.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Metanefrine plasmatiche e urinarie (24h): Valori 10 volte superiori alla norma.",
@@ -619,13 +620,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Leucocitosi neutrofila moderata.",
-        chimica_clinica: "Sodio lievemente basso, CPK aumentato (per gli spasmi muscolari).",
+        esami_ematochimici: "Sodio lievemente basso, CPK aumentato (per gli spasmi muscolari).",
         emogas: "Alcalosi respiratoria (per l'iperventilazione/ansia).",
         ves_pcr: "Nella norma o lievemente mosse.",
         emocoltura: "Negativa.",
         esame_urine: "Normale.",
         autoanticorpi: "Negativi.",
-        tossicologico: "Negativo (Esclude intossicazione da stricnina o tetano).",
+        esame_tossicologico: "Negativo (Esclude intossicazione da stricnina o tetano).",
         esame_liquor: "Lieve pleocitosi linfocitaria, proteine lievemente aumentate. (Quadro di encefalite virale aspecifica).",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "PCR virale su saliva e biopsia nucale: POSITIVA per RNA virus della Rabbia.",
@@ -669,13 +670,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 14.0 g/dL, Leucociti 6.500/mmc.",
-        chimica_clinica: "CPK normale. Elettroliti nella norma.",
+        esami_ematochimici: "CPK normale. Elettroliti nella norma.",
         emogas: "pH 7.35, pCO2 48 mmHg (Lieve ritenzione CO2 per debolezza muscoli respiratori).",
         ves_pcr: "VES 15 mm/h.",
         emocoltura: "Negativa.",
         esame_urine: "Normale.",
         autoanticorpi: "Anti-gangliosidi (GM1) Positivi.",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_liquor: "Dissociazione albumino-citologica (Proteine 150 mg/dL, Cellule < 5/mmc).",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Campylobacter jejuni nelle feci (precedente): Negativo (infezione risolta).",
@@ -719,14 +720,14 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 9.5 g/dL (Anemia microcitica), Leucociti 11.000/mmc, Piastrine 400.000/mmc.",
-        chimica_clinica: "Albumina 2.1 g/dL (Ipoalbuminemia grave). Calcio 7.5 mg/dL. Colesterolo totale 90 mg/dL (Malassorbimento).",
+        esami_ematochimici: "Albumina 2.1 g/dL (Ipoalbuminemia grave). Calcio 7.5 mg/dL. Colesterolo totale 90 mg/dL (Malassorbimento).",
         emogas: "pH 7.38, bicarbonati lievemente ridotti (perdita intestinale).",
         ves_pcr: "VES 45 mm/h, PCR 4.0 mg/dL.",
         emocoltura: "Negativa", // (il batterio T. whipplei cresce molto difficilmente in coltura standard).
         esame_urine: "Normale.",
         esame_feci: "Le feci presentano significativa steatorrea, indicativa di malassorbimento cronico.",
         autoanticorpi: "Fattore Reumatoide negativo. ANA negativi.",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_liquor: "Cellule 10/mmc (lieve pleocitosi)", //PCR per T. whipplei sul liquor: POSITIVA (Coinvolgimento neurologico asintomatico)
         striscio_sangue: "Ipocromia, microcitosi.",
         dosaggi_specifici: "Esame liquor test PCR (DNA) su sangue periferico per Tropheryma whipplei: POSITIVO.",
@@ -770,13 +771,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Leucociti 16.500/mmc (Neutrofili 90%), Hb 10.2 g/dL, Piastrine 45.000/mmc.",
-        chimica_clinica: "Creatinina 4.5 mg/dL, Azotemia 120 mg/dL. Bilirubina Totale 15.8 mg/dL (Diretta 10.2). AST 150 U/L, ALT 140 U/L. CPK 2500 U/L. Potassio 3.0 mEq/L.",
+        esami_ematochimici: "Creatinina 4.5 mg/dL, Azotemia 120 mg/dL. Bilirubina Totale 15.8 mg/dL (Diretta 10.2). AST 150 U/L, ALT 140 U/L. CPK 2500 U/L. Potassio 3.0 mEq/L.",
         emogas: "pH 7.28, pCO2 32 mmHg, HCO3 14 mEq/L, Lattati 4.0 mmol/L.",
         ves_pcr: "VES 65 mm/h, PCR 18.0 mg/dL.",
         emocoltura: "Negativa.",
         esame_urine: "Proteine ++, Emoglobina +++, Bilirubina +++. Sedimento: cilindri granulosi e ialini, cellule tubulari.",
         autoanticorpi: "ANA negativi, ANCA negativi.",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_liquor: "Limpido. Cellule 80/mmc (prevalenza linfociti), Proteine 60 mg/dL, Glucosio 60 mg/dL.",
         striscio_sangue: "Normale morfologia eritrocitaria. Piastrinopenia confermata.",
         dosaggi_specifici: "IgM anti-Leptospira (ELISA): POSITIVO. MAT (Test di Microagglutinazione): Titolo 1:800.",
@@ -820,13 +821,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Leucociti 3.800/mmc (Leucopenia con linfocitosi relativa), Hb 10.5 g/dL, Piastrine 130.000/mmc.",
-        chimica_clinica: "ALT 95 U/L, AST 110 U/L, Fosfatasi Alcalina 180 U/L. Bilirubina nella norma.",
+        esami_ematochimici: "ALT 95 U/L, AST 110 U/L, Fosfatasi Alcalina 180 U/L. Bilirubina nella norma.",
         emogas: "Normale.",
         ves_pcr: "VES 40 mm/h, PCR 3.5 mg/dL.",
         emocoltura: "Negativa dopo 5 giorni di incubazione standard.",
         esame_urine: "Normale.",
         autoanticorpi: "ANA negativi, Fattore Reumatoide negativo.",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_liquor: "Limpido, chimico-fisico nella norma.",
         striscio_sangue: "Linfociti attivati.",
         dosaggi_specifici: "Sieroagglutinazione di Wright (Rose Bengal): Titolo 1:1280.",
@@ -870,13 +871,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Leucociti 11.500/mmc (Linfociti 40%), Hb 13.2 g/dL, Piastrine 210.000/mmc.",
-        chimica_clinica: "Sodio 130 mEq/L (Lieve iponatriemia). Funzionalità renale ed epatica nella norma.",
+        esami_ematochimici: "Sodio 130 mEq/L (Lieve iponatriemia). Funzionalità renale ed epatica nella norma.",
         emogas: "pH 7.42, pO2 96%, pCO2 38 mmHg.",
         ves_pcr: "VES 25 mm/h, PCR 1.5 mg/dL.",
         emocoltura: "Negativa.",
         esame_urine: "Normale.",
         autoanticorpi: "ANA negativi. Anti-NMDA negativi.",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_liquor: "Aspetto 'a canna di rocca' (lievemente xantocromico/giallo). Pressione 25 cmH2O. Cellule 150/mmc (90% Linfociti). Proteine 95 mg/dL (Aumentate). Glucosio 60 mg/dL (Rapporto liquor/siero normale). Eritrociti 80/mmc.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "PCR Real-Time su Liquor per HSV-1 (Herpes Simplex Virus 1): POSITIVA.",
@@ -921,13 +922,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Leucociti 8.500/mmc (nella norma), Hb 13.0 g/dL, Piastrine 110.000/mmc (Lieve trombocitopenia).",
-        chimica_clinica: "AST 180 U/L, ALT 210 U/L (Epatite acuta). Bilirubina totale 1.5 mg/dL. LDH 850 U/L (Aumentato).",
+        esami_ematochimici: "AST 180 U/L, ALT 210 U/L (Epatite acuta). Bilirubina totale 1.5 mg/dL. LDH 850 U/L (Aumentato).",
         emogas: "pH 7.42, pO2 90% (Lieve ipossiemia).",
         ves_pcr: "VES 50 mm/h, PCR 8.5 mg/dL.",
-        emocoltura: "Negativa (Coxiella è un batterio intracellulare, non cresce nei terreni standard).",
+        emocoltura: "Negativa", // (Coxiella è un batterio intracellulare, non cresce nei terreni standard)
         esame_urine: "Microematuria discreta.",
         autoanticorpi: "ANA negativi. Anti-muscolo liscio (ASMA) positivi a basso titolo (1:40).",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_liquor: "Limpido, sterile.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Sierologia Coxiella burnetii (IFA): Titolo IgM Fase II > 1:200 (Infezione acuta).",
@@ -949,6 +950,7 @@ const casi = [
         emg: "Normale.",
 
         // --- EFFETTI TERAPIE ---
+        farmaco_aspirina: "Efficacia sintomatica sulla febbre, ma alto rischio emorragico per aggravamento della piastrinopenia e potenziale peggioramento del quadro epatico.",
         antibiotici: "Somministrazione Penicilline/Cefalosporine: Nessun effetto. Somministrazione Doxiciclina: Defervescenza rapida in 48 ore.",
         cortisone: "Nessun effetto sulla febbre, lieve riduzione mialgie.",
         dialisi: "Nessun effetto.",
@@ -971,15 +973,15 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Leucociti 24.000/mmc (Neutrofilia marcata), Hb 13.5 g/dL, Piastrine 300.000/mmc.",
-        chimica_clinica: "Glucosio 140 mg/dL (da stress), Sodio 145 mEq/L. Funzionalità organi nella norma.",
+        esami_ematochimici: "Glucosio 140 mg/dL (da stress), Sodio 145 mEq/L. Funzionalità organi nella norma.",
         emogas: "pH 7.48, pCO2 30 mmHg (Alcalosi respiratoria da iperventilazione centrale).",
         ves_pcr: "PCR 12.0 mg/dL.",
         emocoltura: "Negativa.",
         esame_urine: "Chetoni + (digiuno).",
         esame_feci: "Le feci non mostrano cisti né trofozoiti di amebe intestinali.",
         autoanticorpi: "Non indicati.",
-        tossicologico: "Negativo.",
-        esame_liquor: "Aspetto torbido/purulento. Pressione apertura molto elevata (>40 cmH2O). Leucociti 4.500/mmc (Neutrofili 98%). Glucosio 10 mg/dL (Ipoglicorrachia marcata). Proteine 400 mg/dL. Colorazione di Gram: NEGATIVA (Nessun batterio visibile).",
+        esame_tossicologico: "Negativo.",
+        esame_liquor: "Aspetto torbido/purulento. Pressione apertura molto elevata (>40 cmH2O). Leucociti 4.500/mmc (Neutrofili 98%). Glucosio 10 mg/dL (Ipoglicorrachia marcata). Proteine 400 mg/dL. Colorazione di Gram: NEGATIVA (Nessun batterio visibile). Esame a fresco (Wet mount): Presenza di trofozoiti mobili (movimento a 'lumaca') tra i neutrofili.",
         striscio_sangue: "Neutrofilia.",
         dosaggi_specifici: "PCR Real-Time su Liquor per Naegleria fowleri: POSITIVO.",
 
@@ -998,7 +1000,6 @@ const casi = [
         paracentesi: "Non indicata.",
         eeg: "Attività delta diffusa polimorfa (sofferenza cerebrale grave).",
         emg: "Non indicato.",
-        esame_microscopico_liquor: "Esame a fresco (Wet mount): Presenza di trofozoiti mobili (movimento a 'lumaca') tra i neutrofili.",
 
         // --- EFFETTI TERAPIE ---
         antibiotici: "Ceftriaxone/Vancomicina: Nessun effetto. Progressione rapida verso il coma.",
@@ -1024,13 +1025,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 9.8 g/dL (Anemia normocitica), Leucociti 13.000/mmc (Neutrofilia), Piastrine 450.000/mmc (Trombocitosi reattiva).",
-        chimica_clinica: "Creatinina 2.8 mg/dL (Insufficienza renale acuta), Azotemia 85 mg/dL. Potassio 5.2 mEq/L.",
+        esami_ematochimici: "Creatinina 2.8 mg/dL (Insufficienza renale acuta), Azotemia 85 mg/dL. Potassio 5.2 mEq/L.",
         emogas: "pH 7.35, pO2 92%.",
         ves_pcr: "VES 90 mm/h, PCR 12.5 mg/dL.",
         emocoltura: "Negativa.",
         esame_urine: "Proteine ++, Sangue +++ (Ematuria). Sedimento: tappeto di eritrociti dismorfici e cilindri eritrocitari.",
         autoanticorpi: "ANA negativi. Anti-GBM negativi. c-ANCA (Anti-PR3) POSITIVI a titolo elevato.",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_liquor: "Limpido, sterile.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Complemento C3 e C4 nella norma.",
@@ -1074,13 +1075,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 12.5 g/dL, Leucociti 4.500/mmc (Linfopenia assoluta), Piastrine 280.000/mmc.",
-        chimica_clinica: "Calcio sierico 11.5 mg/dL (Ipercalcemia). Funzionalità renale ed epatica nella norma. Fosfatasi alcalina lievemente aumentata.",
+        esami_ematochimici: "Calcio sierico 11.5 mg/dL (Ipercalcemia). Funzionalità renale ed epatica nella norma. Fosfatasi alcalina lievemente aumentata.",
         emogas: "pH 7.42, pO2 88 mmHg (Lieve ipossiemia a riposo).",
         ves_pcr: "VES 40 mm/h, PCR 1.2 mg/dL.",
         emocoltura: "Negativa.",
         esame_urine: "Ipercalciuria (Calcio nelle urine 24h: 350 mg).",
         autoanticorpi: "ANA negativi. ANCA negativi. Fattore Reumatoide negativo.",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_liquor: "Limpido, sterile.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "ACE (Angiotensin Converting Enzyme) sierico: 110 U/L (Valore di riferimento < 60).",
@@ -1124,13 +1125,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 10.5 g/dL (Anemia normocitica), Piastrine 550.000/mmc (Trombocitosi reattiva), Leucociti 11.000/mmc.",
-        chimica_clinica: "Fosfatasi Alcalina 160 U/L (Lievemente aumentata). Funzionalità renale nella norma. Glucosio 95 mg/dL.",
+        esami_ematochimici: "Fosfatasi Alcalina 160 U/L (Lievemente aumentata). Funzionalità renale nella norma. Glucosio 95 mg/dL.",
         emogas: "Normale.",
         ves_pcr: "VES 110 mm/h (Estremamente elevata), PCR 8.5 mg/dL.",
         emocoltura: "Negativa.",
         esame_urine: "Normale.",
         autoanticorpi: "ANA negativi. ANCA negativi. Fattore Reumatoide negativo.",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_liquor: "Limpido, sterile.",
         striscio_sangue: "Rouleaux eritrocitari (impilamento dei globuli rossi dovuto all'alta VES).",
         dosaggi_specifici: "Non indicati.",
@@ -1174,13 +1175,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Leucociti 11.000/mmc, Hb 12.8 g/dL, Piastrine 250.000/mmc.",
-        chimica_clinica: "CPK 600 U/L (lievemente aumentato per agitazione muscolare). Elettroliti nella norma.",
+        esami_ematochimici: "CPK 600 U/L (lievemente aumentato per agitazione muscolare). Elettroliti nella norma.",
         emogas: "Normale.",
         ves_pcr: "VES 15 mm/h, PCR 0.8 mg/dL.",
         emocoltura: "Negativa.",
         esame_urine: "Normale.",
         autoanticorpi: "ANA negativi, ENA negativi, Anti-TPO negativi (esclude Encefalopatia di Hashimoto).",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_liquor: "Limpido. Pleocitosi linfocitaria moderata (40 cellule/mmc). Proteine lievemente aumentate (60 mg/dL). Bande oligoclonali presenti.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Anticorpi anti-recettore NMDA (GluN1) su Liquor e Siero: POSITIVI.",
@@ -1226,14 +1227,14 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 8.5 g/dL (Anemia microcitica severa), Leucociti 12.000/mmc, Piastrine 250.000/mmc.",
-        chimica_clinica: "Creatinina 5.8 mg/dL (Insufficienza Renale Acuta grave), Azotemia 110 mg/dL. Potassio 5.8 mEq/L (Iperkaliemia).",
+        esami_ematochimici: "Creatinina 5.8 mg/dL (Insufficienza Renale Acuta grave), Azotemia 110 mg/dL. Potassio 5.8 mEq/L (Iperkaliemia).",
         emogas: "pH 7.32, pO2 60 mmHg (Ipossiemia severa), pCO2 35 mmHg.",
         ves_pcr: "VES 60 mm/h, PCR 4.5 mg/dL.",
         emocoltura: "Negativa.",
         esame_urine: "Proteine ++, Sangue +++. Sedimento: Cilindri eritrocitari e numerosi eritrociti dismorfici.",
         esame_feci: "Le feci mostrano sangue occulto, compatibile con possibile coinvolgimento gastrointestinale.",
         autoanticorpi: "ANA negativi. ANCA negativi (importante per diagnosi differenziale con Wegener).",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_liquor: "Limpido, sterile.",
         striscio_sangue: "Ipocromia.",
         dosaggi_specifici: "Anticorpi anti-MBG (Membrana Basale Glomerulare) sierici: POSITIVI ad alto titolo.",
@@ -1277,13 +1278,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Leucociti 14.500/mmc (Neutrofilia), Hb 10.5 g/dL, Piastrine 400.000/mmc.",
-        chimica_clinica: "Creatinina 2.1 mg/dL, Azotemia 70 mg/dL. ALT 120 U/L, AST 90 U/L. CPK nella norma.",
+        esami_ematochimici: "Creatinina 2.1 mg/dL, Azotemia 70 mg/dL. ALT 120 U/L, AST 90 U/L. CPK nella norma.",
         emogas: "Normale.",
         ves_pcr: "VES 85 mm/h, PCR 9.0 mg/dL.",
         emocoltura: "Negativa.",
         esame_urine: "Proteinuria modesta (+). Microematuria. Assenza di cilindri eritrocitari (esclude glomerulonefrite attiva).",
         autoanticorpi: "ANA negativi. ANCA (p-ANCA e c-ANCA) NEGATIVI.",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_liquor: "Limpido, sterile.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "HBsAg (Antigene di superficie Epatite B): POSITIVO. HBeAg: Positivo. Carica virale HBV-DNA elevata.",
@@ -1328,13 +1329,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 13.0 g/dL, Leucociti 9.000/mmc, Piastrine 220.000/mmc.",
-        chimica_clinica: "Potassio 3.2 mEq/L (Ipokaliemia lievissima). Creatinina 1.1 mg/dL. ALT 60 U/L, AST 55 U/L.",
+        esami_ematochimici: "Potassio 3.2 mEq/L (Ipokaliemia lievissima). Creatinina 1.1 mg/dL. ALT 60 U/L, AST 55 U/L.",
         emogas: "Normale.",
         ves_pcr: "VES 12 mm/h, PCR 0.5 mg/dL.",
         emocoltura: "Negativa.",
         esame_urine: "Proteinuria lieve.",
         autoanticorpi: "ANA negativi. Anti-Gangliosidi negativi (per differenziarla da Guillain-Barré).",
-        tossicologico: "Screening standard urine (Oppiacei, Coca, THC, BZO, Anfetamine): NEGATIVO. Metalli pesanti sangue (Piombo, Mercurio, Arsenico): NEGATIVI.",
+        esame_tossicologico: "Screening standard urine (Oppiacei, Coca, THC, BZO, Anfetamine): NEGATIVO. Metalli pesanti sangue (Piombo, Mercurio, Arsenico): NEGATIVI.",
         esame_liquor: "Limpido. Proteine 80 mg/dL (Aumentate). Cellule 2/mmc. (Dissociazione albumino-citologica).",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Tallio urinario (24h): 4500 µg/L (Valore normale < 1 µg/L). Tallio ematico: 800 µg/L.",
@@ -1360,7 +1361,7 @@ const casi = [
         cortisone: "Nessun effetto sul dolore neuropatico.",
         dialisi: "Emodialisi: Riduzione della concentrazione plasmatica del metallo (efficace ma non rimuove quello nei tessuti).",
         intubazione: "Non necessaria.",
-        farmaco_antidoto: "Blu di Prussia (per via orale): Aumento progressivo dell'eliminazione del metallo nelle feci e miglioramento lento della neuropatia."
+        farmaco_chelante: "Blu di Prussia (per via orale): Aumento progressivo dell'eliminazione del metallo nelle feci e miglioramento lento della neuropatia."
     },
 
 // ---------------- CASO 28: INTOSSICAZIONE DA MONOSSIDO DI CARBONIO ----------------
@@ -1378,13 +1379,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 14.0 g/dL, Leucociti 12.000/mmc (Leucocitosi da stress).",
-        chimica_clinica: "Troponina I: 0.15 ng/mL (Lieve rialzo da sofferenza miocardica ipossica). CPK 300 U/L. Glucosio 130 mg/dL.",
+        esami_ematochimici: "Troponina I: 0.15 ng/mL (Lieve rialzo da sofferenza miocardica ipossica). CPK 300 U/L. Glucosio 130 mg/dL.",
         emogas: "pH 7.28 (Acidosi metabolica). pO2 95 mmHg (Ossigeno disciolto normale). pCO2 38 mmHg. Lattati 6.5 mmol/L (Ipossia tissutale grave). HCO3 16 mEq/L.",
         ves_pcr: "Normali.",
         emocoltura: "Negativa.",
         esame_urine: "Normale.",
         autoanticorpi: "Negativi.",
-        tossicologico: "Negativo per alcool e droghe.",
+        esame_tossicologico: "Negativo per alcool e droghe.",
         esame_liquor: "Limpido, pressione normale.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Carbossiemoglobina (COHb) su sangue arterioso: 35% (Valore normale < 1.5% nei non fumatori).",
@@ -1429,13 +1430,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Leucociti 14.000/mmc (Leucocitosi), Hb 13.5 g/dL, Piastrine 280.000/mmc.",
-        chimica_clinica: "CPK 3.500 U/L (Rabdomiolisi significativa). Creatinina 1.4 mg/dL. Sodio 140 mEq/L. Potassio 4.0 mEq/L.",
+        esami_ematochimici: "CPK 3.500 U/L (Rabdomiolisi significativa). Creatinina 1.4 mg/dL. Sodio 140 mEq/L. Potassio 4.0 mEq/L.",
         emogas: "pH 7.30, pCO2 35 mmHg, HCO3 18 mEq/L (Acidosi metabolica lattacida).",
         ves_pcr: "VES 10 mm/h, PCR 0.5 mg/dL.",
         emocoltura: "Negativa.",
         esame_urine: "Urine scure. Presenza di Mioglobina. Assenza di nitriti o leucociti.",
         autoanticorpi: "Negativi.",
-        tossicologico: "Screening droghe d'abuso negativo (esclude cocaina/amfetamine).",
+        esame_tossicologico: "Screening droghe d'abuso negativo (esclude cocaina/amfetamine).",
         esame_liquor: "Limpido, sterile.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Livelli sierici di farmaci antidepressivi nel range terapeutico (non è un sovradosaggio, è un'interazione).",
@@ -1481,13 +1482,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Leucociti 13.000/mmc (Leucocitosi neutrofila). Hb 12.5 g/dL.",
-        chimica_clinica: "Glucosio 160 mg/dL. Calcio 11.2 mg/dL (Ipercalcemia lieve). AST 60 U/L, ALT 55 U/L. Colesterolo Totale 90 mg/dL (Basso).",
+        esami_ematochimici: "Glucosio 160 mg/dL. Calcio 11.2 mg/dL (Ipercalcemia lieve). AST 60 U/L, ALT 55 U/L. Colesterolo Totale 90 mg/dL (Basso).",
         emogas: "pH 7.48, pCO2 28 mmHg (Alcalosi respiratoria da iperventilazione).",
         ves_pcr: "VES 20 mm/h.",
         emocoltura: "Negativa.",
         esame_urine: "Normale.",
         autoanticorpi: "Ab anti-Recettore TSH (TRAb): POSITIVI.",
-        tossicologico: "Negativo per cocaina/anfetamine.",
+        esame_tossicologico: "Negativo per cocaina/anfetamine.",
         esame_liquor: "Limpido, sterile.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "TSH < 0.01 mIU/L (Soppresso). fT3 e fT4 > 100 pmol/L (Valori superiori alla scala di misurazione).",
@@ -1533,7 +1534,7 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 7.8 g/dL, Piastrine 12.000/mmc (Gravissima trombocitopenia), Leucociti 10.500/mmc.",
-        chimica_clinica: "LDH 1800 U/L (Molto aumentato). Bilirubina Totale 3.5 mg/dL (Indiretta 2.9). Creatinina 1.6 mg/dL. Aptoglobina < 10 mg/dL.",
+        esami_ematochimici: "LDH 1800 U/L (Molto aumentato). Bilirubina Totale 3.5 mg/dL (Indiretta 2.9). Creatinina 1.6 mg/dL. Aptoglobina < 10 mg/dL.",
         emogas: "Normale.",
         ves_pcr: "VES 20 mm/h.",
         coagulazione: "PT e aPTT: NORMALI. Fibrinogeno normale.",
@@ -1541,7 +1542,7 @@ const casi = [
         esame_urine: "Ematuria microscopica, emoglobinuria.",
         esame_feci: "Le feci risultano positive per sangue occulto, possibile segno di ischemia intestinale secondaria.",
         autoanticorpi: "Test di Coombs Diretto e Indiretto: NEGATIVO.",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_liquor: "Normale.",
         striscio_sangue: "Presenza massiva di Schistociti (>1% dei globuli rossi).",
         dosaggi_specifici: "Attività ADAMTS13: < 5% (Grave deficit). Presenza di inibitore anti-ADAMTS13.",
@@ -1586,13 +1587,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 16.0 g/dL (Emoconcentrazione da disidratazione), Leucociti 15.000/mmc, Piastrine 200.000/mmc.",
-        chimica_clinica: "CPK (Creatinchinasi): 85.000 U/L (Valore massivo). Potassio 7.2 mEq/L (Iperkaliemia grave). Creatinina 2.8 mg/dL (Insufficienza renale acuta). Calcio 7.0 mg/dL (Ipocalcemia da deposizione nei muscoli).",
+        esami_ematochimici: "CPK (Creatinchinasi): 85.000 U/L (Valore massivo). Potassio 7.2 mEq/L (Iperkaliemia grave). Creatinina 2.8 mg/dL (Insufficienza renale acuta). Calcio 7.0 mg/dL (Ipocalcemia da deposizione nei muscoli).",
         emogas: "pH 7.25, HCO3 14 mEq/L (Acidosi metabolica). Lattati 5.0 mmol/L.",
         ves_pcr: "PCR 10 mg/dL.",
         emocoltura: "Negativa.",
         esame_urine: "Stick: Sangue +++ (Falso positivo per emoglobina). Sedimento: Rari eritrociti (La positività dello stick è dovuta alla Mioglobina).",
         autoanticorpi: "Negativi.",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_liquor: "Limpido.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Mioglobina sierica e urinaria: Valori > 20.000 ng/mL.",
@@ -1638,14 +1639,14 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 10.5 g/dL (Anemia normocitica), Leucociti 6.000/mmc, Piastrine 180.000/mmc.",
-        chimica_clinica: "Creatinina 1.9 mg/dL. Albumina sierica 2.5 g/dL (Bassa). Fosfatasi Alcalina 250 U/L (Aumentata). NT-proBNP > 5000 pg/mL (Scompenso cardiaco).",
+        esami_ematochimici: "Creatinina 1.9 mg/dL. Albumina sierica 2.5 g/dL (Bassa). Fosfatasi Alcalina 250 U/L (Aumentata). NT-proBNP > 5000 pg/mL (Scompenso cardiaco).",
         emogas: "Normale.",
         ves_pcr: "VES 35 mm/h. PCR 0.5 mg/dL.",
         emocoltura: "Negativa.",
         esame_urine: "Proteine ++++ (Proteinuria massiva: 6g/24h). Urine schiumose. Sedimento inattivo.",
         esame_feci: "Le feci contengono elevate quantità di grassi non assorbiti, compatibile con insufficienza digestiva e malassorbimento.",
         autoanticorpi: "ANA negativi. Fattore Reumatoide negativo.",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_liquor: "Normale.",
         striscio_sangue: "Rouleaux eritrocitari.",
         dosaggi_specifici: "Elettroforesi sierica: Picco monoclonale (Componente M) in zona gamma. Catene leggere libere nel siero (FLC): Rapporto Lambda/Kappa 50:1 (Fortemente alterato).",
@@ -1691,13 +1692,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Leucociti 22.000/mmc (Leucocitosi neutrofila marcata). Hb 10.2 g/dL. Piastrine 450.000/mmc.",
-        chimica_clinica: "ALT 180 U/L, AST 160 U/L. LDH 900 U/L. Fibrinogeno 600 mg/dL.",
+        esami_ematochimici: "ALT 180 U/L, AST 160 U/L. LDH 900 U/L. Fibrinogeno 600 mg/dL.",
         emogas: "Normale.",
         ves_pcr: "VES 100 mm/h. PCR 22.0 mg/dL.",
         emocoltura: "Negativa (ripetuta 3 volte).",
         esame_urine: "Proteinuria lieve.",
         autoanticorpi: "ANA negativi. Fattore Reumatoide negativo. ANCA negativi.",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_liquor: "Limpido, sterile.",
         striscio_sangue: "Granulociti neutrofili con granulazioni tossiche. Assenza di blasti.",
         dosaggi_specifici: "Ferritina sierica: 12.500 ng/mL. Frazione glicosilata della ferritina < 20%.",
@@ -1742,13 +1743,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 13.2 g/dL, Leucociti 6.500/mmc, Piastrine 240.000/mmc.",
-        chimica_clinica: "CPK nella norma (differenza fondamentale con le miositi). Elettroliti e funzionalità tiroidea (TSH) nella norma.",
+        esami_ematochimici: "CPK nella norma (differenza fondamentale con le miositi). Elettroliti e funzionalità tiroidea (TSH) nella norma.",
         emogas: "pH 7.38, pCO2 42 mmHg (Scambi gassosi conservati a riposo).",
         ves_pcr: "VES 5 mm/h. PCR negativa.",
         emocoltura: "Negativa.",
         esame_urine: "Normale.",
         autoanticorpi: "ANA positivi a basso titolo (1:80).",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_liquor: "Normale.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Anticorpi anti-Recettore Acetilcolina (AChR): POSITIVI. Anticorpi anti-MuSK: Negativi.",
@@ -1794,13 +1795,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 8.2 g/dL, Reticolociti aumentati (180.000/mmc). Leucociti 3.500/mmc (Leucopenia lieve). Piastrine 90.000/mmc (Trombocitopenia).",
-        chimica_clinica: "LDH 2800 U/L (Valore critico). Bilirubina Totale 3.8 mg/dL (Indiretta 3.2). Aptoglobina < 7 mg/dL (Indosabile). Ferritina 15 ng/mL (Bassa).",
+        esami_ematochimici: "LDH 2800 U/L (Valore critico). Bilirubina Totale 3.8 mg/dL (Indiretta 3.2). Aptoglobina < 7 mg/dL (Indosabile). Ferritina 15 ng/mL (Bassa).",
         emogas: "Normale.",
         ves_pcr: "VES 5 mm/h. PCR 0.1 mg/dL.",
         emocoltura: "Negativa.",
         esame_urine: "Sangue ++++ (Stick fortemente positivo). Sedimento: Assenza di eritrociti (Discrepanza emoglobinuria/ematuria). Presenza di emosiderina urinaria.",
         autoanticorpi: "Test di Coombs Diretto e Indiretto: NEGATIVI.",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_liquor: "Normale.",
         striscio_sangue: "Policromasia. Assenza di schistociti (esclude cause meccaniche come TTP).",
         dosaggi_specifici: "Citometria a flusso (sangue periferico): Assenza delle proteine ancorate al GPI (CD55 e CD59) sul 60% dei granulociti e dei globuli rossi.",
@@ -1846,13 +1847,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 13.0 g/dL, Leucociti 6.000/mmc, Piastrine 250.000/mmc.",
-        chimica_clinica: "Elettroliti: Ipokaliemia lieve (Potassio 3.3 mEq/L da diarrea). Funzionalità epatica: GGT e Fosfatasi Alcalina aumentate (2x norma). Bilirubina nella norma.",
+        esami_ematochimici: "Elettroliti: Ipokaliemia lieve (Potassio 3.3 mEq/L da diarrea). Funzionalità epatica: GGT e Fosfatasi Alcalina aumentate (2x norma). Bilirubina nella norma.",
         emogas: "pH 7.42, HCO3 20 mEq/L (Lieve acidosi metabolica ipercloremica).",
         ves_pcr: "VES 10 mm/h. PCR negativa.",
         emocoltura: "Negativa.",
         esame_urine: "Normale.",
         autoanticorpi: "Negativi.",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_liquor: "Normale.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Acido 5-idrossi-indolacetico (5-HIAA) urinario 24h: 180 mg (Valore normale < 10 mg). Cromogranina A sierica: 1200 ng/mL (Marcatamente aumentata).",
@@ -1898,13 +1899,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 10.5 g/dL (Anemia da disordine cronico), Leucociti 12.500/mmc (Lieve leucocitosi), Piastrine 150.000/mmc.",
-        chimica_clinica: "Creatinina 1.4 mg/dL (Sofferenza renale lieve da microemboli/complesso immune). LDH lievemente aumentato. PCR 4.5 mg/dL.",
+        esami_ematochimici: "Creatinina 1.4 mg/dL (Sofferenza renale lieve da microemboli/complesso immune). LDH lievemente aumentato. PCR 4.5 mg/dL.",
         emogas: "Normale.",
         ves_pcr: "VES 55 mm/h (Aumentata).",
         emocoltura: "POSITIVA (3 flaconi su 3): Crescita di Streptococcus viridans (o Enterococco).",
         esame_urine: "Ematuria microscopica (Sangue ++).",
         autoanticorpi: "Fattore Reumatoide POSITIVO (Falso positivo frequente nell'endocardite cronica).",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_liquor: "Normale (o lieve pleocitosi se embolia settica cerebrale asintomatica).",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Complemento C3 e C4 ridotti (Glomerulonefrite da immunocomplessi).",
@@ -1948,13 +1949,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 11.5 g/dL (Lieve anemia), Eosinofilia (Eosinofili 8%).",
-        chimica_clinica: "Sodio 128 mEq/L (Iponatriemia), Potassio 5.6 mEq/L (Iperkaliemia), Cloro 96 mEq/L. Glucosio 65 mg/dL (Tendenzialmente basso). Creatinina 1.1 mg/dL.",
+        esami_ematochimici: "Sodio 128 mEq/L (Iponatriemia), Potassio 5.6 mEq/L (Iperkaliemia), Cloro 96 mEq/L. Glucosio 65 mg/dL (Tendenzialmente basso). Creatinina 1.1 mg/dL.",
         emogas: "pH 7.32, HCO3 18 mEq/L (Acidosi metabolica lieve).",
         ves_pcr: "VES 15 mm/h. PCR negativa.",
         emocoltura: "Negativa.",
         esame_urine: "Sodio urinario elevato (perdita di sali).",
         autoanticorpi: "Anticorpi anti-TPO positivi (dalla storia di Hashimoto).",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_liquor: "Normale.",
         striscio_sangue: "Eosinofilia relativa.",
         dosaggi_specifici: "Cortisolo basale (ore 8:00): 2.0 µg/dL (Molto basso). ACTH: > 1250 pg/mL (Alle stelle). Anticorpi anti-21-idrossilasi: POSITIVI.",
@@ -2000,13 +2001,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 12.8 g/dL, Leucociti 7.500/mmc, Piastrine 220.000/mmc.",
-        chimica_clinica: "Glucosio plasmatico: 22 mg/dL (Ipoglicemia grave critica). Elettroliti nella norma. Funzionalità epatica e renale nella norma.",
+        esami_ematochimici: "Glucosio plasmatico: 22 mg/dL (Ipoglicemia grave critica). Elettroliti nella norma. Funzionalità epatica e renale nella norma.",
         emogas: "Normale.",
         ves_pcr: "VES 12 mm/h.",
         emocoltura: "Negativa.",
         esame_urine: "Normale.",
         autoanticorpi: "Anticorpi anti-Insulina: Assenti (o bassi).",
-        tossicologico: "Screening Sulfaniluree su sangue e urine: NEGATIVO (Esclude assunzione di farmaci stimolanti il pancreas).",
+        esame_tossicologico: "Screening Sulfaniluree su sangue e urine: NEGATIVO (Esclude assunzione di farmaci stimolanti il pancreas).",
         esame_liquor: "Glucosio 15 mg/dL (basso, specchio della glicemia sistemica). Per il resto normale.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Insulina plasmatica: > 200 µU/mL (Valore estremamente elevato). Peptide C: < 0.1 ng/mL (Soppresso/Indosabile). Proinsulina: Bassa.",
@@ -2052,13 +2053,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 11.0 g/dL, Leucociti 8.000/mmc, Piastrine 250.000/mmc.",
-        chimica_clinica: "CPK (Creatinchinasi) 4.500 U/L (Aumentato). LDH 650 U/L. AST 140 U/L, ALT 110 U/L (Transaminasi aumentate di origine muscolare).",
+        esami_ematochimici: "CPK (Creatinchinasi) 4.500 U/L (Aumentato). LDH 650 U/L. AST 140 U/L, ALT 110 U/L (Transaminasi aumentate di origine muscolare).",
         emogas: "Normale.",
         ves_pcr: "VES 45 mm/h, PCR 3.0 mg/dL.",
         emocoltura: "Negativa.",
         esame_urine: "Mioglobina presente.",
         autoanticorpi: "ANA Positivi (pattern maculato). Anti-Jo1 Positivi. Anti-Mi2 Positivi.",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_liquor: "Normale.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Marcatore CA-125: 150 U/mL (Aumentato - sospetto neoplasia ovarica).",
@@ -2103,13 +2104,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 8.5 g/dL (Calo acuto rispetto ai controlli annuali precedenti), Leucociti 12.000/mmc (Leucocitosi da stress).",
-        chimica_clinica: "Creatinina e Elettroliti nella norma.",
+        esami_ematochimici: "Creatinina e Elettroliti nella norma.",
         emogas: "Lattati 2.5 mmol/L (Segno iniziale di shock ipovolemico).",
         ves_pcr: "PCR 1.5 mg/dL.",
         emocoltura: "Negativa.",
         esame_urine: "Ematuria assente (esclude colica renale).",
         autoanticorpi: "Non indicati.",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_liquor: "Normale.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Beta-HCG (Gonadotropina Corionica): 15.000 mIU/mL (POSITIVO).",
@@ -2154,13 +2155,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Leucociti 2.800/mmc (Leucopenia). Linfociti totali 400/mmc (Linfopenia severa). Hb 10.5 g/dL.",
-        chimica_clinica: "LDH (Lattato Deidrogenasi): 650 U/L (Aumentato - indice di danno polmonare interstiziale). Funzionalità renale ed epatica nella norma.",
+        esami_ematochimici: "LDH (Lattato Deidrogenasi): 650 U/L (Aumentato - indice di danno polmonare interstiziale). Funzionalità renale ed epatica nella norma.",
         emogas: "pH 7.45, pO2 55 mmHg (Ipossiemia grave), pCO2 30 mmHg (Alcalosi respiratoria da iperventilazione).",
         ves_pcr: "VES 40 mm/h. PCR 2.5 mg/dL.",
         emocoltura: "Negativa per batteri comuni.",
         esame_urine: "Normale.",
         autoanticorpi: "ANA negativi.",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_liquor: "Limpido, sterile. Test antigenico Criptococco negativo.",
         striscio_sangue: "Assenza di atipie cellulari.",
         dosaggi_specifici: "Test HIV 1/2 Ag/Ab (IV generazione): REATTIVO. Conta Linfociti T CD4+: 45 cellule/mmc (Valore critico < 200). Carica Virale HIV-RNA: > 750.000 copie/mL.",
@@ -2182,12 +2183,10 @@ const casi = [
         emg: "Polineuropatia distale sensitiva (assenza riflessi achillei).",
 
         // --- EFFETTI TERAPIE ---
-        antibiotici: "Amoxicillina/Ceftriaxone: Nessun effetto clinico sulla febbre o sulla dispnea.",
         cortisone: "Prednisone in aggiunta all'antibiotico specifico: Miglioramento rapido degli scambi gassosi e riduzione del rischio di insufficienza respiratoria.",
         dialisi: "Non necessaria.",
         intubazione: "Necessaria se pO2 < 60 mmHg nonostante ossigenoterapia ad alti flussi.",
-        farmaco_cotrimossazolo: "Trimethoprim-Sulfametossazolo (Bactrim) ad alte dosi: Graduale miglioramento della dispnea e della febbre in 5-7 giorni.",
-        farmaco_antiretrovirale: "Inizio terapia (HAART): Soppressione della carica virale nel tempo. Attenzione: se iniziata subito durante la polmonite, possibile peggioramento acuto per IRIS (Sindrome infiammatoria da ricostituzione immune)."
+        antibiotici: "Trimetoprim-Sulfametossazolo (Bactrim) ad alte dosi: Graduale miglioramento della dispnea e della febbre in 5-7 giorni. Inizio terapia (HAART): Soppressione della carica virale nel tempo."
     },
 
 // ---------------- CASO 44: COREA DI HUNTINGTON ----------------
@@ -2205,13 +2204,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Normale.",
-        chimica_clinica: "Elettroliti, funzionalità epatica e renale nella norma. Ceruloplasmina normale.",
+        esami_ematochimici: "Elettroliti, funzionalità epatica e renale nella norma. Ceruloplasmina normale.",
         emogas: "Normale.",
         ves_pcr: "Normale.",
         emocoltura: "Negativa.",
         esame_urine: "Normale.",
         autoanticorpi: "ANA negativi. Anti-fosfolipidi negativi.",
-        tossicologico: "Negativo per alcool, cocaina e anfetamine (importante per escludere cause tossiche dei movimenti).",
+        esame_tossicologico: "Negativo per alcool, cocaina e anfetamine (importante per escludere cause tossiche dei movimenti).",
         esame_liquor: "Normale.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Test genetico molecolare (PCR) gene HTT: Presenza di 45 ripetizioni della tripletta CAG (Valore patologico > 36).",
@@ -2257,13 +2256,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 10.2 g/dL (Anemia emolitica meccanica), Piastrine 450.000/mmc (Trombocitosi reattiva), Leucociti 11.000/mmc.",
-        chimica_clinica: "LDH aumentato (emolisi). Funzionalità renale ed epatica nella norma. Globuline sieriche aumentate.",
+        esami_ematochimici: "LDH aumentato (emolisi). Funzionalità renale ed epatica nella norma. Globuline sieriche aumentate.",
         emogas: "Ipossiemia lieve in ortostatismo (in piedi), normale in clinostatismo (sdraiata).",
         ves_pcr: "VES 70 mm/h. PCR 6.5 mg/dL (Indici infiammatori molto alti, simulano infezione).",
         emocoltura: "Negativa (Differenza chiave con l'Endocardite).",
         esame_urine: "Microematuria.",
         autoanticorpi: "ANA positivi a basso titolo (Aspecifici, simulano il Lupus).",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_liquor: "Normale.",
         striscio_sangue: "Schistociti rari (emolisi da impatto meccanico).",
         dosaggi_specifici: "Interleuchina-6 (IL-6) sierica: Molto elevata (Prodotta dal tumore, causa la febbre).",
@@ -2308,13 +2307,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Leucociti 13.000/mmc (Neutrofilia), Linfociti 900/mmc (Linfopenia), Hb 14.5 g/dL.",
-        chimica_clinica: "Glucosio a digiuno 195 mg/dL. Sodio 146 mEq/L. Potassio 3.1 mEq/L (Ipokaliemia). Colesterolo Totale 280 mg/dL.",
+        esami_ematochimici: "Glucosio a digiuno 195 mg/dL. Sodio 146 mEq/L. Potassio 3.1 mEq/L (Ipokaliemia). Colesterolo Totale 280 mg/dL.",
         emogas: "pH 7.46, HCO3 30 mEq/L (Alcalosi metabolica).",
         ves_pcr: "VES 10 mm/h. PCR 0.3 mg/dL.",
         emocoltura: "Negativa.",
         esame_urine: "Glicosuria ++. Calciuria elevata.",
         autoanticorpi: "Negativi.",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_liquor: "Normale.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Cortisolo urinario 24h: 450 µg/24h (Valore normale < 50). ACTH plasmatico: 85 pg/mL (Aumentato). Cortisolo salivare notturno: Elevato.",
@@ -2371,10 +2370,9 @@ const casi = [
         test_soppressione_desametasone: "Cortisolo soppresso (asse ormonale intatto, esame inutile).",
         esame_urine: "Chimico fisico normale.",
         striscio_sangue: "Normale.",
-        chimica_clinica: "CPK 800 U/L (Lieve rabdomiolisi da immobilizzazione prolungata sul terreno).",
+        esami_ematochimici: "CPK 800 U/L (Lieve rabdomiolisi da immobilizzazione prolungata sul terreno).",
         emocoltura: "Nessuna crescita batterica.",
         esame_liquor: "Limpido, pressione normale.",
-        esame_microscopico_liquor: "Acellulare.",
         glucosio_ev: "Glicemia sale a 200 mg/dL, ma il coma persiste invariato (esclude coma ipoglicemico).",
         emogas: "pH 7.10, pCO2 85 mmHg, pO2 50 mmHg (Acidosi respiratoria severa con ipercapnia e ipossiemia).",
 
@@ -2408,7 +2406,7 @@ const casi = [
         // --- ALTRO ---
         anticoagulante: "Aumento del rischio emorragico senza benefici.",
         biopsia: "Tessuto sano.",
-        tossicologico: "Screening standard urine (Oppiacei, Coca, THC, BZO, Anfetamine): NEGATIVO per oppiacei.",
+        esame_tossicologico: "Screening standard urine (Oppiacei, Coca, THC, BZO, Anfetamine): NEGATIVO per oppiacei.",
 
         // --- FARMACI ---
         farmaco_ketoconazolo: "Nessun effetto acuto.",
@@ -2420,11 +2418,9 @@ const casi = [
         farmaco_benzodiazepine: "PEGGIORAMENTO CRITICO: Arresto respiratorio completo e ipotensione grave (effetto sinergico depressivo).",
         farmaco_adrenalina: "Aumento temporaneo della frequenza cardiaca a 80 bpm, ma nessuna ripresa della respirazione spontanea.",
         farmaco_betabloccante: "ARRESTO CARDIACO: Crollo della frequenza cardiaca da 38 bpm all'asistolia completa.",
-        farmaco_cotrimossazolo: "Nessun effetto.",
         farmaco_inibitore_acetilcolinesterasi: "Aumento delle secrezioni bronchiali, peggioramento degli scambi gassosi.",
         farmaco_immunosoppressore: "Nessun effetto.",
         farmaco_biologico: "Nessun effetto.",
-        farmaco_antiretrovirale: "Nessun effetto.",
         farmaco_aspirina: "Nessun effetto.",
         farmaco_octreotide: "Nessun effetto.",
         plasmaferesi: "Nessun effetto.",
@@ -2458,14 +2454,14 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Leucociti 11.000/mmc. Eosinofili 12% (Eosinofilia moderata: indizio parassitario). Hb 14.0 g/dL.",
-        chimica_clinica: "Elettroliti, funzionalità renale ed epatica nella norma. CPK 400 U/L (da attività muscolare convulsiva).",
+        esami_ematochimici: "Elettroliti, funzionalità renale ed epatica nella norma. CPK 400 U/L (da attività muscolare convulsiva).",
         emogas: "Acidosi lattica lieve (post-convulsiva), si normalizza rapidamente.",
         ves_pcr: "VES 25 mm/h. PCR 1.0 mg/dL.",
         coagulazione: "Normale.",
         emocoltura: "Negativa.",
         esame_urine: "Normale.",
         autoanticorpi: "Negativi.",
-        tossicologico: "Negativo (esclude cause tossiche delle convulsioni).",
+        esame_tossicologico: "Negativo (esclude cause tossiche delle convulsioni).",
         striscio_sangue: "Eosinofilia confermata.",
         dosaggi_specifici: "Sierologia (EITB/Western Blot) per Taenia solium: POSITIVA.",
         esame_feci: "Esame parassitologico: Presenza di uova di Taenia spp.",
@@ -2499,7 +2495,7 @@ const casi = [
         antibiotici: "Nessun effetto sulle cisti o sulle crisi.",
         antivirale: "Nessun effetto.",
         farmaco_antiparassitario: "Albendazolo/Praziquantel con Desametasone sopprime la risposta infiammatoria dell'ospite alla morte del parassita. Le cisti vengono uccise dall'Albendazolo e iniziano a calcificare o ridursi senza causare edema cerebrale acuto. Prognosi favorevole.",
-        cortisone: "Desametasone ad alte dosi: Riduzione dell'edema cerebrale e prevenzione della reazione infiammatoria post-lisi parassitaria. Va iniziato PRIMA dell'antiparassitario.",
+        cortisone: "Desametasone ad alte dosi: Riduzione dell'edema cerebrale.",
         farmaco_fans: "Nessun effetto sull'edema cerebrale.",
         ossigeno_alta_concentrazione: "Utile solo durante la fase post-critica.",
         fluidoterapia: "Mantenimento idratazione."
@@ -2520,14 +2516,14 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 13.5 g/dL. Leucociti 11.000/mmc. Piastrine 190.000/mmc.",
-        chimica_clinica: "AST 12.500 U/L, ALT 15.800 U/L. Bilirubina Totale 5.5 mg/dL. Creatinina 2.1 mg/dL. Glucosio 55 mg/dL.",
+        esami_ematochimici: "AST 12.500 U/L, ALT 15.800 U/L. Bilirubina Totale 5.5 mg/dL. Creatinina 2.1 mg/dL. Glucosio 55 mg/dL.",
         emogas: "pH 7.28, Lattati 8.5 mmol/L. Bicarbonati 15 mEq/L.",
         coagulazione: "PT (Tempo di Protrombina): 35 secondi. INR: 4.5.",
         ves_pcr: "PCR 2.0 mg/dL.",
         emocoltura: "Negativa.",
         esame_urine: "Bilirubina +++. Urobilinogeno aumentato.",
         autoanticorpi: "ANA, ASMA, LKM-1 negativi.",
-        tossicologico: "Screening droghe negativo.",
+        esame_tossicologico: "Screening droghe negativo.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Livello sierico Paracetamolo (Acetaminofene): 80 µg/mL (Tossico a 24h). Sierologia Epatiti A, B, C, E: NEGATIVA.",
 
@@ -2577,13 +2573,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 11.2 g/dL (Anemia normocitica cronica), Leucociti e Piastrine nella norma.",
-        chimica_clinica: "Creatinina 1.6 mg/dL (Insufficienza renale lieve). Sodio 148 mEq/L (Tendenzialmente alto). Osmolarità urinaria bassa (Urine molto diluite).",
+        esami_ematochimici: "Creatinina 1.6 mg/dL (Insufficienza renale lieve). Sodio 148 mEq/L (Tendenzialmente alto). Osmolarità urinaria bassa (Urine molto diluite).",
         emogas: "Normale.",
         ves_pcr: "VES 60 mm/h. PCR 3.5 mg/dL (Stato infiammatorio cronico).",
         emocoltura: "Negativa.",
         esame_urine: "Peso specifico 1002 (Urine 'acqua di roccia').",
         autoanticorpi: "ANA negativi. ANCA negativi.",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_liquor: "Normale.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Mutazione BRAF V600E su DNA circolante o tissutale: POSITIVA.",
@@ -2621,7 +2617,7 @@ const casi = [
         immunoglobuline: "Nessun effetto.",
         ossigeno_alta_concentrazione: "Non necessario.",
         farmaco_biologico: "Interferone-alfa: Risposta parziale con stabilizzazione della malattia.",
-        farmaco_antidoto: "Vemurafenib (Inibitore BRAF): Rapida regressione delle masse infiltrative, risoluzione del dolore osseo e miglioramento della funzione renale e cardiaca in poche settimane."
+        chemioterapia: "Vemurafenib (Inibitore BRAF): Rapida regressione delle masse infiltrative, risoluzione del dolore osseo e miglioramento della funzione renale e cardiaca in poche settimane."
     },
 
 // ---------------- CASO 51: LEBBRA (MORBO DI HANSEN) ----------------
@@ -2639,14 +2635,14 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 11.5 g/dL (Anemia da malattia cronica), Leucociti nella norma.",
-        chimica_clinica: "Funzionalità renale ed epatica nella norma. Globuline aumentate (Ipergammaglobulinemia policlonale).",
+        esami_ematochimici: "Funzionalità renale ed epatica nella norma. Globuline aumentate (Ipergammaglobulinemia policlonale).",
         emogas: "Normale.",
         ves_pcr: "VES 60 mm/h. PCR 2.0 mg/dL.",
         emocoltura: "Negativa.",
         esame_urine: "Proteinuria lieve.",
         autoanticorpi: "ANA positivi a basso titolo. Fattore Reumatoide positivo.",
-        tossicologico: "Negativo.",
-        esame_liquor: "Lieve aumento delle proteine.",
+        esame_tossicologico: "Negativo.",
+        esame_liquor: "Lieve aumento delle proteine, esame microscopio negativo.",
         striscio_sangue: "Rouleaux eritrocitari.",
         // IL TRABOCCHETTO:
         dosaggi_specifici: "VDRL (Test Sifilide): POSITIVO (Falso positivo biologico). TPHA (Conferma Sifilide): NEGATIVO (Discrepanza fondamentale).",
@@ -2663,7 +2659,6 @@ const casi = [
 
         // --- PROCEDURE & NEURO ---
         biopsia: "Biopsia Cutanea/Nervo: Infiltrato di macrofagi schiumosi (Cellule di Virchow) pieni di bacilli acido-resistenti. Colorazione di Fite-Faraco: POSITIVA per Mycobacterium leprae (La colorazione classica Ziehl-Neelsen spesso è negativa perché il batterio è meno acido-resistente della TBC).",
-        esame_microscopico_liquor: "Negativo.",
         eeg: "Normale.",
         emg: "Neuropatia sensitivo-motoria assonale e demielinizzante multifocale (Mononeurite multipla).",
         esame_neurologico_specifico: "Nervi ulnari e peronieri palpabili e ingrossati ('a cordone'). Aree di pelle ipocromica con assenza di sudorazione e sensibilità.",
@@ -2676,10 +2671,10 @@ const casi = [
         intubazione: "Non necessaria.",
         
         // FARMACI
-        antibiotici: "Penicillina (per presunta Sifilide): NESSUN EFFETTO clinico (il paziente non guarisce).",
+        //antibiotici: "Penicillina (per presunta Sifilide): NESSUN EFFETTO clinico (il paziente non guarisce).",
         cortisone: "Riduzione temporanea dell'infiammazione neurale e dei noduli (utile nelle reazioni lebrose), ma non elimina il batterio.",
         antivirale: "Nessun effetto.",
-        farmaco_antidoto: "Rifampicina + Dapsone + Clofazimina: Urine color arancio (Rifampicina) e progressiva pigmentazione rosso-bruna della pelle (Clofazimina). Negativizzazione graduale dello smear cutaneo e arresto del danno neurologico. Risoluzione rapida dell'Eritema Nodoso Leproso (reazione infiammatoria acuta di Tipo 2 durante la cura con talidomide).",
+        antibiotici: "Rifampicina + Dapsone + Clofazimina: Urine color arancio (Rifampicina) e progressiva pigmentazione rosso-bruna della pelle (Clofazimina). Negativizzazione graduale dello smear cutaneo e arresto del danno neurologico. Risoluzione rapida dell'Eritema Nodoso Leproso (reazione infiammatoria acuta di Tipo 2 durante la cura con talidomide).",
         fluidoterapia: "Nessun effetto rilevante."
     },
 
@@ -2698,14 +2693,14 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 10.8 g/dL (Anemia normocitica da disordine cronico). Leucociti e Piastrine nella norma.",
-        chimica_clinica: "Funzionalità renale ed epatica nella norma. Profilo lipidico perfetto (Esclude aterosclerosi precoce).",
+        esami_ematochimici: "Funzionalità renale ed epatica nella norma. Profilo lipidico perfetto (Esclude aterosclerosi precoce).",
         emogas: "Normale.",
         ves_pcr: "VES 85 mm/h. PCR 4.5 mg/dL (Indici di flogosi marcatamente elevati).",
         coagulazione: "Normale.",
         emocoltura: "Negativa.",
         esame_urine: "Normale.",
         autoanticorpi: "ANA negativi. ANCA negativi. (Fondamentale per distinguere da altre vasculiti).",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Complemento C3 e C4 normali.",
 
@@ -2745,8 +2740,8 @@ const casi = [
         farmaco_biologico: "Tocilizumab (Anti-IL6) o Infliximab (Anti-TNF): Efficace nei casi refrattari ai cortisonici.",
         
         fluidoterapia: "Nessun effetto emodinamico significativo a lungo termine.",
-        anticoagulante: "Aspirina/Antiaggreganti: Prevenzione di eventi ischemici secondari alla turbolenza del flusso, ma non cura la malattia.",
-        farmaco_antidoto: "Nessun effetto."
+        farmaco_aspirina: "Prevenzione della formazione di trombi nelle zone di turbolenza (stenosi); nessun effetto sull'infiammazione parietale.",
+        anticoagulante: "Aumento significativo del rischio emorragico.",
     },
 
 // ---------------- CASO 52: MENINGIOMA SPINALE ----------------
@@ -2764,13 +2759,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Normale.",
-        chimica_clinica: "Normale.",
+        esami_ematochimici: "Normale.",
         emogas: "Normale.",
         ves_pcr: "Normale.",
         emocoltura: "Negativa.",
         esame_urine: "Normale.",
         autoanticorpi: "Negativi.",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_liquor: "Dissociazione albumino-citologica: Proteine molto elevate (> 100 mg/dL) con cellule normali (Sindrome di Froin da blocco del flusso liquorale).",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Marcatori tumorali negativi.",
@@ -2821,13 +2816,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Leucociti 13.500/mmc (Neutrofilia). Hb normale.",
-        chimica_clinica: "ALT e AST nella norma o lievemente mosse (il fegato parenchimale è sano, è la capsula a essere infiammata). Bilirubina normale.",
+        esami_ematochimici: "ALT e AST nella norma o lievemente mosse (il fegato parenchimale è sano, è la capsula a essere infiammata). Bilirubina normale.",
         emogas: "Normale.",
         ves_pcr: "VES 40 mm/h. PCR 6.0 mg/dL.",
         emocoltura: "Negativa.",
         esame_urine: "Leucociti nelle urine (piuria sterile, per contiguità).",
         autoanticorpi: "Negativi.",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Test di gravidanza (Beta-HCG): Negativo.",
         
@@ -2875,13 +2870,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 9.5 g/dL (Anemia microcitica sideropenica). Piastrine 450.000/mmc (Trombocitosi da carenza di ferro).",
-        chimica_clinica: "Ferro sierico: 15 µg/dL (Molto basso). Ferritina: 4 ng/mL. Albumina: 2.9 g/dL (Ipoalbuminemia da malassorbimento). Calcio: 8.0 mg/dL. Transaminasi (AST/ALT): 80/90 U/L ('Epatite celiaca' ipertransaminasemia isolata).",
+        esami_ematochimici: "Ferro sierico: 15 µg/dL (Molto basso). Ferritina: 4 ng/mL. Albumina: 2.9 g/dL (Ipoalbuminemia da malassorbimento). Calcio: 8.0 mg/dL. Transaminasi (AST/ALT): 80/90 U/L ('Epatite celiaca' ipertransaminasemia isolata).",
         emogas: "Normale.",
         ves_pcr: "VES lievemente mossa. PCR negativa.",
         emocoltura: "Negativa.",
         esame_urine: "Normale.",
         autoanticorpi: "Negativi (per escludere malattie reumatiche).",
-        tossicologico: "Non indicato.",
+        esame_tossicologico: "Non indicato.",
         esame_feci: "Ricerca parassiti negativa (Giardia). Test Sudan III: Positivo (presenza di grassi nelle feci).",
         striscio_sangue: "Microcitosi, ipocromia.",
         
@@ -2932,13 +2927,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 18.5 g/dL (Poliglobulia/Eritrocitosi). Ematocrito 55%. (Causata dalla produzione di Eritropoietina da parte del tumore cerebellare o renale).",
-        chimica_clinica: "Funzionalità renale normale. Glicemia normale.",
+        esami_ematochimici: "Funzionalità renale normale. Glicemia normale.",
         emogas: "Normale.",
         ves_pcr: "Normali.",
         emocoltura: "Negativa.",
         esame_urine: "Normale.",
         autoanticorpi: "Negativi.",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         striscio_sangue: "Normale.",
         
         // IL TEST CHIAVE
@@ -2990,13 +2985,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Leucociti 2.500/mmc (Leucopenia marcata). Linfociti bassi. Piastrine 130.000/mmc (Lieve trombocitopenia).",
-        chimica_clinica: "PCR 4.0 mg/dL. Transaminasi lievemente mosse. LDH aumentato.",
+        esami_ematochimici: "PCR 4.0 mg/dL. Transaminasi lievemente mosse. LDH aumentato.",
         emogas: "pO2 70 mmHg (Ipossiemia lieve da inizio polmonite interstiziale).",
         ves_pcr: "VES aumentata.",
         emocoltura: "Negativa.",
         esame_urine: "Normale.",
         autoanticorpi: "Negativi.",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         striscio_sangue: "Linfociti reattivi.",
         
         // IL TEST CHIAVE
@@ -3048,13 +3043,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Hb 9.8 g/dL (Anemia mista: sideropenica da perdita e megaloblastica da malassorbimento B12). Piastrine 450.000/mmc (Trombocitosi reattiva all'infiammazione). Leucociti 11.000/mmc.",
-        chimica_clinica: "Albumina 2.8 g/dL (Bassa - malassorbimento/perdita proteica). Ferro basso. Vitamina B12 bassa (indica danno all'ileo terminale).",
+        esami_ematochimici: "Albumina 2.8 g/dL (Bassa - malassorbimento/perdita proteica). Ferro basso. Vitamina B12 bassa (indica danno all'ileo terminale).",
         emogas: "Normale.",
         ves_pcr: "VES 65 mm/h. PCR 5.0 mg/dL (Infiammazione attiva).",
         emocoltura: "Negativa.",
         esame_urine: "Normale.",
         autoanticorpi: "p-ANCA negativi (tipici della Colite Ulcerosa).",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         esame_feci: "Calprotectina fecale: > 1000 µg/g (Marcatore specifico di infiammazione intestinale). Sangue occulto positivo. Coprocoltura negativa (esclude Salmonella/Campylobacter).",
         striscio_sangue: "Anisocitosi.",
         
@@ -3092,27 +3087,435 @@ const casi = [
         farmaco_fans: "PEGGIORAMENTO: Rischio di scatenare una riacutizzazione severa o un sanguinamento.",
         farmaco_biologico: "Infliximab/Adalimumab (Anti-TNF alfa): Terapia cardine per chiudere le fistole e mantenere la remissione profonda (guarigione mucosale).",
         farmaco_immunosoppressore: "Azatioprina: Utile per il mantenimento a lungo termine.",
+    },
+
+// ---------------- CASO 58: SINDROME DI SJÖGREN ----------------
+    {
+        id: 58,
+        nome_malattia: "Sindrome di Sjögren",
+        livello_difficolta: "Medio",
+
+        // --- DATI PAZIENTE ---
+        sesso: "Femmina",
+        eta: 52,
+        sintomi: "Sensazione persistente di 'sabbia negli occhi' (xeroftalmia), bocca sempre impastata e secca (xerostomia), stanchezza profonda, dolori articolari alle mani e ai polsi.",
+        anamnesi: "Riferisce di aver dovuto rifare otturazioni dentali multiple nell'ultimo anno per carie improvvise al colletto dei denti (tipico della mancanza di saliva protettiva). Necessita di bere acqua per riuscire a deglutire cibi solidi come pane o cracker.",
+        note_infermiera: "La paziente tiene sempre una bottiglietta d'acqua in mano e beve a piccoli sorsi ogni 5 minuti. Ho notato un gonfiore bilaterale duro ma non dolente davanti alle orecchie (ipertrofia ghiandole parotidi).",
+
+        // --- LABORATORIO ---
+        emocromo: "Hb 11.5 g/dL (Anemia lieve). Leucociti 3.500/mmc (Leucopenia lieve). Piastrine normali.",
+        esami_ematochimici: "Potassio 3.4 mEq/L (Lieve ipokaliemia, possibile spia di Acidosi Tubulare Renale distale). Proteine Totali 8.5 g/dL (Aumentate). Albumina normale.",
+        emogas: "pH 7.35, HCO3 20 mEq/L (Lieve acidosi metabolica ipercloremica).",
+        ves_pcr: "VES 50 mm/h (Molto alta rispetto alla PCR). PCR 0.8 mg/dL.",
+        emocoltura: "Negativa.",
+        esame_urine: "pH urinario 6.5 (Inappropriatamente alto in presenza di acidosi metabolica).",
+        esame_feci: "Normale. Calprotectina fecale negativa.",
+        autoanticorpi: "ANA positivi (pattern punteggiato/speckled). Fattore Reumatoide POSITIVO (presente nel 70% dei casi).",
+        esame_tossicologico: "Negativo.",
+        striscio_sangue: "Normale.",
+        
+        // IL TEST CHIAVE
+        dosaggi_specifici: "Anticorpi Anti-SSA (Ro): POSITIVI. Anticorpi Anti-SSB (La): POSITIVI. Elettroforesi proteica: Ipergammaglobulinemia policlonale marcata.",
+
+        // --- IMAGING ---
+        rx: "RX Torace: Normale o lieve rinforzo interstiziale.",
+        tc: "Non indicata routinariamente.",
+        risonanza: "RMN Ghiandole Salivari: Atrofia ghiandolare con alterazioni cistiche o nodulari.",
+        angio: "Negativa.",
+        ecografia: "Eco Ghiandole Salivari Maggiori: Struttura disomogenea con aree ipoecogene multiple ('aspetto a formaggio svizzero' o tarlato). Ipervascolarizzazione al color doppler.",
+        elettrocardiogramma: "Normale.",
+        ecocardiogramma: "Normale.",
+        pet: "Captazione diffusa alle parotidi (flogosi).",
+
+        // --- PROCEDURE & NEURO ---
+        biopsia: "Biopsia ghiandole salivari minori (labbro inferiore): Sialadenite linfocitaria focale con Focus Score > 1 (aggregati di >50 linfociti attorno ai dotti).",
+        test_oculistici: "Test di Schirmer: < 5 mm in 5 minuti (Conferma secchezza oculare patologica). Test Rosa Bengala: Positivo per cheratite secca.",
+        paracentesi: "Non indicata.",
+        eeg: "Normale.",
+        emg: "Possibile polineuropatia sensitiva distale.",
+
+        // --- EFFETTI TERAPIE ---
+        dialisi: "Nessun effetto.",
+        intervento_chirurgico: "Non indicato.",
+        intubazione: "Non necessaria.",
+        trasfusione_piastrine: "Non indicata.",
+        
+        // FARMACI
+        antibiotici: "Nessun effetto.",
+        cortisone: "Miglioramento dei dolori articolari e della stanchezza, riduzione del gonfiore parotideo.",
+        farmaco_fans: "Sollievo temporaneo dai dolori articolari.",
+        farmaco_immunomodulante: "Pilocarpina: Aumento della produzione di saliva e lacrime (sollievo sintomatico). Idrossiclorochina (Plaquenil): Utile per controllare la sintomatologia articolare e la fatica a lungo termine."
+    },
+
+    // ---------------- CASO 59: SINDROME DELL'OVAIO POLICISTICO (PCOS) ----------------
+    {
+        id: 59,
+        nome_malattia: "Sindrome dell'Ovaio Policistico (PCOS)",
+        livello_difficolta: "Facile",
+
+        // --- DATI PAZIENTE ---
+        sesso: "Femmina",
+        eta: 24,
+        sintomi: "Ciclo mestruale estremamente irregolare (una volta ogni 3-4 mesi) o assente, acne cistica persistente su viso e schiena, aumento di peso difficile da controllare nonostante la dieta.",
+        anamnesi: "I problemi col ciclo sono iniziati fin dall'adolescenza. La paziente riferisce frustrazione perché 'non riesce a dimagrire' e si sente sempre gonfia. Nega gravidanza.",
+        note_infermiera: "La paziente presenta peluria eccessiva e scura sul mento e attorno ai capezzoli (Irsutismo). Ho notato delle chiazze di pelle scura e vellutata sulle pieghe del collo e sotto le ascelle (Acanthosis Nigricans).",
+
+        // --- LABORATORIO ---
+        emocromo: "Normale.",
+        esami_ematochimici: "Glucosio a digiuno: 105 mg/dL (Alterata glicemia a digiuno). Colesterolo totale: 230 mg/dL. Trigliceridi: 180 mg/dL. Insulina basale: 25 µU/mL (Molto alta - Insulino-resistenza).",
+        emogas: "Normale.",
+        ves_pcr: "Normali.",
+        emocoltura: "Negativa.",
+        esame_urine: "Normale.",
+        autoanticorpi: "Negativi (esclude cause autoimmuni).",
+        esame_tossicologico: "Negativo.",
+        esame_feci: "Normale.",
+        striscio_sangue: "Normale.",
+        
+        // IL TEST CHIAVE (Profilo Ormonale)
+        dosaggi_specifici: "Testosterone Totale e Libero: Aumentati. Rapporto LH/FSH: > 2:1 (Inversione del rapporto fisiologico, LH elevato). Prolattina: Normale. TSH: Normale (esclude ipotiroidismo). Beta-HCG: Negativo.",
+
+        // --- IMAGING ---
+        rx: "Non indicata.",
+        tc: "Non indicata.",
+        risonanza: "Non indicata.",
+        angio: "Negativa.",
+        ecografia: "Eco Pelvica (Transvaginale): Ovaie aumentate di volume, presenza di numerosi (>12) piccoli follicoli (2-9mm) disposti alla periferia 'a corona di rosario' o 'collana di perle'. Stroma ovarico iperecogeno centrale.",
+        elettrocardiogramma: "Normale.",
+        ecocardiogramma: "Normale.",
+        pet: "Non indicata.",
+
+        // --- PROCEDURE & NEURO ---
+        biopsia: "Non necessaria. Se fatta sull'endometrio: Iperplasia semplice (da stimolo estrogenico non bilanciato dal progesterone).",
+        endoscopia: "Non indicata.",
+        paracentesi: "Non indicata.",
+        eeg: "Normale.",
+        emg: "Normale.",
+
+        // --- EFFETTI TERAPIE ---
+        dialisi: "Nessun effetto.",
+        intervento_chirurgico: "Drilling ovarico (laparoscopia): Opzione di seconda linea per indurre l'ovulazione se i farmaci falliscono, ma non cura la sindrome.",
+        trasfusione_piastrine: "Non indicata.",
+        intubazione: "Non necessaria.",
+        
+        // FARMACI
+        antibiotici: "Nessun effetto sull'acne a lungo termine (causa ormonale, non infettiva).",
+        cortisone: "PEGGIORAMENTO: Aumento ulteriore del peso, della glicemia e dell'acne.",
+        farmaco_antidoto: "Metformina: Migliora l'insulino-resistenza e favorisce il calo ponderale e l'ovulazione. Pillola Estroprogestinica: Regolarizza il ciclo e riduce acne/irsutismo (terapia sintomatica).",
+    },
+
+    // ---------------- CASO 60: SINDROME DI WISKOTT-ALDRICH ----------------
+    {
+        id: 60,
+        nome_malattia: "Sindrome di Wiskott-Aldrich",
+        livello_difficolta: "Difficile",
+
+        // --- DATI PAZIENTE ---
+        sesso: "Maschio",
+        eta: 2,
+        sintomi: "Sangue dal naso frequente (epistassi), lividi che compaiono al minimo urto, pelle molto secca e pruriginosa, infezioni all'orecchio (otiti) che non guariscono mai.",
+        anamnesi: "Il bambino è stato ricoverato 3 volte nell'ultimo anno per polmoniti. La madre riferisce che uno zio materno è morto da bambino per 'un'infezione del sangue'.",
+        note_infermiera: "Il bambino si gratta continuamente (Eczema severo nelle pieghe di gomiti e ginocchia). Il pannolino è macchiato di sangue (rettorragia). Sulle braccia ci sono puntini rossi (petecchie).",
+
+        // --- LABORATORIO ---
+        emocromo: "Hb 10.5 g/dL. Leucociti 6.000/mmc (Linfopenia lieve). Piastrine 35.000/mmc (Trombocitopenia significativa).",
+        // IL DATO CHIAVE (MPV):
+        esami_ematochimici: "MPV (Volume Piastrinico Medio): 4.5 fL (Molto basso - Microtrombocitopenia. Normale è 7-11).", 
+        emogas: "Normale.",
+        ves_pcr: "VES 30 mm/h. PCR 1.5 mg/dL (Infiammazione cronica/infezione).",
+        emocoltura: "Negativa al momento.",
+        esame_urine: "Microematuria.",
+        autoanticorpi: "Test di Coombs negativo (esclude emolisi autoimmune).",
+        esame_tossicologico: "Non indicato.",
+        esame_feci: "Sangue occulto positivo.",
+        
+        striscio_sangue: "Piastrine estremamente piccole e scarse. Linfociti di aspetto normale.",
+        
+        dosaggi_specifici: "Immunoglobuline: IgM Basse. IgA e IgE Molto Elevate (Profilo tipico). Isoemoagglutinine assenti.",
+
+        // --- IMAGING ---
+        rx: "RX Torace: Ispessimento peribronchiale (segni di infezioni ricorrenti). Assenza di ombra timica (a volte ridotta).",
+        tc: "Non indicata.",
+        risonanza: "Non indicata.",
+        angio: "Non indicata.",
+        ecografia: "Eco Addome: Splenomegalia (Milza ingrossata, intrappola le piastrine).",
+        elettrocardiogramma: "Normale.",
+        ecocardiogramma: "Normale.",
+        pet: "Non indicata.",
+
+        // --- PROCEDURE & NEURO ---
+        biopsia: "Biopsia Midollare: Megacariociti presenti e normali.",
+        endoscopia: "Non indicata.",
+        paracentesi: "Non indicata.",
+        eeg: "Normale.",
+        emg: "Normale.",
+        //test_genetico: "Analisi gene WAS (sul cromosoma X): Mutazione confermata. Assenza della proteina WASp.",
+
+        // --- EFFETTI TERAPIE ---
+        dialisi: "Nessun effetto.",
+        intubazione: "Non necessaria.",
+        
+        // FARMACI
+        antibiotici: "Necessari per trattare le infezioni acute (otiti/polmoniti), ma non risolvono la malattia di base.",
+        cortisone: "Miglioramento dell'eczema e lieve risalita transitoria delle piastrine, ma aumenta il rischio infettivo già alto.",
+        trasfusione_piastrine: "Efficace per fermare emorragie acute, ma le piastrine trasfuse vengono distrutte rapidamente.",
+        farmaco_immunosoppressore: "Rituximab: Controllo delle complicanze autoimmuni (emolisi o trombocitopenia immune) se presenti.",
+        immunoglobuline: "IVIG: Riduzione della frequenza delle infezioni batteriche.",
+        intervento_chirurgico: "Trapianto di Cellule Staminali Ematopoietiche (Midollo Osseo): Guarigione completa del difetto immunitario e piastrinico."
+    },
+
+    // ---------------- CASO 61: SPOROTRICOSI ----------------
+    {
+        id: 61,
+        nome_malattia: "Sporotricosi (Malattia dei giardinieri)",
+        livello_difficolta: "Medio",
+
+        // --- DATI PAZIENTE ---
+        sesso: "Femmina",
+        eta: 45,
+        sintomi: "Comparsa di noduli sottocutanei rossastri e non dolenti sul braccio destro, che progressivamente si ulcerano rilasciando poco pus. Assenza di febbre o malessere generale.",
+        anamnesi: "Appassionata di giardinaggio. Riferisce di essersi punta con una spina di rosa all'indice destro circa 3 settimane fa. Ha già fatto 2 cicli di antibiotici (Augmentin) prescritti dal medico curante senza alcun miglioramento.",
+        note_infermiera: "La lesione sul dito indice è un'ulcera aperta. Ho notato che ci sono altri 4-5 noduli duri che 'risalgono' in linea retta lungo l'avambraccio fino al gomito, seguendo il decorso delle vene (diffusione linfocutanea sporotricoide).",
+
+        // --- LABORATORIO ---
+        emocromo: "Normale (Leucociti nella norma, esclude infezione batterica acuta sistemica).",
+        esami_ematochimici: "Normale.",
+        emogas: "Normale.",
+        ves_pcr: "VES 25 mm/h (Lievemente mossa). PCR 0.8 mg/dL.",
+        emocoltura: "Negativa.",
+        esame_urine: "Normale.",
+        autoanticorpi: "Negativi.",
+        esame_tossicologico: "Negativo.",
+        striscio_sangue: "Normale.",
+        
+        // IL TEST CHIAVE
+        ricerca_ambientale: "Coltura su terreno Sabouraud a 25°C: Crescita di muffa biancastra che diventa scura/nera dopo giorni. Identificazione microscopica: Ife settate con conidi a 'margherita' (Sporothrix schenckii).",
+
+        // --- IMAGING ---
+        rx: "RX Mano/Braccio: Assenza di osteomielite (l'infezione è limitata ai tessuti molli e linfatici).",
+        tc: "Non indicata.",
+        risonanza: "Non indicata.",
+        angio: "Non indicata.",
+        ecografia: "Eco Tessuti Molli: Formazioni nodulari ipoecogene sottocutanee lungo i vasi linfatici, con aumento della vascolarizzazione periferica.",
+        elettrocardiogramma: "Normale.",
+        ecocardiogramma: "Normale.",
+        pet: "Non indicata.",
+
+        // --- PROCEDURE & NEURO ---
+        biopsia: "Biopsia cutanea del nodulo: Infiammazione granulomatosa mista (suppurativa e granulomatosa). Colorazione PAS/Grocott: Rari lieviti pleomorfi, talvolta allungati 'a forma di sigaro' (Cigar-shaped yeast) o circondati da materiale raggiato (Corpi asteroidi / Fenomeno di Splendore-Hoeppli).",
+        endoscopia: "Non indicata.",
+        paracentesi: "Non indicata.",
+        eeg: "Normale.",
+        emg: "Normale.",
+
+        // --- EFFETTI TERAPIE ---
+        dialisi: "Nessun effetto.",
+        intervento_chirurgico: "Escissione chirurgica: Spesso seguita da recidiva se non accompagnata da terapia antifungina sistemica. Non raccomandata come prima linea.",
+        trasfusione_piastrine: "Non indicata.",
+        intubazione: "Non necessaria.",
+        
+        // FARMACI
+        antibiotici: "Nessun effetto (l'ulcera non guarisce e i noduli continuano a comparire).",
+        cortisone: "PEGGIORAMENTO: Le ulcere si estendono diventando più purulente e i noduli rossi aumentano rapidamente di numero risalendo lungo il braccio.",
+        farmaco_antimicotico: "Itraconazolo (per 3-6 mesi): Guarigione lenta ma progressiva delle lesioni."
+    },
+
+// ---------------- CASO 62: SINDROME DI BEHÇET ----------------
+    {
+        id: 62,
+        nome_malattia: "Sindrome di Behçet",
+        livello_difficolta: "Difficile",
+
+        // --- DATI PAZIENTE ---
+        sesso: "M",
+        eta: 28,
+        sintomi: "Calo improvviso della vista all'occhio destro con dolore e arrossamento, ulcere dolorosissime in bocca (non riesce a mangiare), dolori articolari alle ginocchia.",
+        anamnesi: "Origini mediorientali o mediterranee (via della seta). Riferisce episodi passati di 'brufoli dolorosi' sullo scroto che hanno lasciato cicatrici bianche (Ulcere genitali).",
+        note_infermiera: "Ho dovuto cambiare il sito dell'agocannula perché sul braccio sinistro, dove l'avevo bucato ieri, si è formata una grossa pustola rossa infiammata (Fenomeno della Patergia).",
+
+        // --- LABORATORIO ---
+        emocromo: "Leucocitosi neutrofila lieve.",
+        esami_ematochimici: "Funzionalità renale ed epatica nella norma.",
+        emogas: "Normale.",
+        ves_pcr: "VES 45 mm/h. PCR 3.2 mg/dL (Infiammazione attiva).",
+        emocoltura: "Negativa.",
+        esame_urine: "Normale.",
+        autoanticorpi: "ANA negativi. ANCA negativi (importante per escludere altre vasculiti).",
+        esame_tossicologico: "Negativo.",
+        striscio_sangue: "Normale.",
+        
+        // IL TEST CHIAVE
+        dosaggi_specifici: "Tipizzazione HLA: Positività per HLA-B51 (Forte associazione genetica).",
+
+        // --- IMAGING ---
+        rx: "RX Torace: Ilo polmonare destro lievemente prominente.",
+        tc: "TC Torace con MdC: Aneurisma dell'arteria polmonare destra (complicanza vascolare grave e tipica della malattia di Hughes-Stovin/Behçet). Rischio rottura.",
+        risonanza: "RMN Encefalo: Aree iperintense nel tronco encefalico (Neuro-Behçet), se presenti sintomi neurologici.",
+        angio: "Angio-TC: Conferma aneurisma polmonare e possibili trombosi venose profonde.",
+        ecografia: "Eco Articolare: Sinovite aspecifica al ginocchio.",
+        elettrocardiogramma: "Normale.",
+        ecocardiogramma: "Normale.",
+        pet: "Captazione vascolare diffusa.",
+
+        // --- PROCEDURE & NEURO ---
+        biopsia: "Biopsia ulcera cutanea: Vasculite leucocitoclastica (infiammazione dei vasi).",
+        visita_oculistica: "Lampada a fessura: Panuveite con Ipopion (livello di pus visibile nella camera anteriore dell'occhio). Vasculite retinica.",
+        test_patergia: "Puntura dell'avambraccio con ago sterile: Formazione di una papula/pustola eritematosa dopo 24-48 ore (POSITIVO).",
+        paracentesi: "Non indicata.",
+        eeg: "Normale.",
+        emg: "Normale.",
+
+        // --- EFFETTI TERAPIE ---
+        dialisi: "Nessun effetto.",
+        intervento_chirurgico: "Embolizzazione aneurisma polmonare: Necessaria se a rischio rottura, ma la chirurgia è rischiosa per la fragilità dei tessuti (tendenza a formare falsi aneurismi nei punti di sutura).",
+        intubazione: "Non necessaria.",
+        trasfusione_piastrine: "Non indicata.",
+        
+        // FARMACI
+        antibiotici: "Nessun effetto sulle ulcere orali (non sono infettive).",
+        antivirale: "Aciclovir: NESSUN EFFETTO (le ulcere non sono Herpes, anche se ci somigliano).",
+        cortisone: "Prednisone ad alte dosi: Rapido spegnimento dell'uveite e miglioramento delle ulcere.",
+        farmaco_colchicina: "Ottimo controllo delle ulcere orali/genitali e dell'artrite a lungo termine.",
+        farmaco_biologico: "Infliximab (Anti-TNF) o Ciclosporina: Salvataggio della vista in caso di uveite posteriore grave o vasculite retinica.",
+        anticoagulante: "PEGGIORAMENTO CRITICO: Rottura dell'aneurisma dell'arteria polmonare seguita da emottisi massiva (tosse con molto sangue) e shock emorragico."
+    },
+
+// ---------------- CASO 63: DIABETE MODY (TIPO 3) ----------------
+    {
+        id: 63,
+        nome_malattia: "Diabete MODY (Tipo 3 - HNF1A)",
+        livello_difficolta: "Difficile",
+
+        // --- DATI PAZIENTE ---
+        sesso: "F",
+        eta: 19,
+        sintomi: "Sete eccessiva e poliuria, ma si sente bene. Nessun calo di peso recente.",
+        anamnesi: "Diagnosticata come 'Diabete Tipo 1' tre anni fa. Assume insulina ma ha continui cali di zucchero (ipoglicemie) inspiegabili. Riferisce che anche la nonna e lo zio hanno il diabete 'leggero'.",
+        note_infermiera: "La paziente è magra (BMI 20). Non ha l'alito che sa di frutta (niente chetosi) anche se non fa l'insulina da 24 ore.",
+
+        // --- LABORATORIO ---
+        emocromo: "Normale.",
+        esami_ematochimici: "Glucosio: 210 mg/dL. Emoglobina Glicata (HbA1c): 7.8%. Funzionalità renale normale.",
+        emogas: "pH 7.40 (Assenza di chetoacidosi anche senza insulina - Differenza chiave col Tipo 1).",
+        ves_pcr: "Normali.",
+        emocoltura: "Negativa.",
+        esame_urine: "Glicosuria +++. Corpi chetonici: ASSENTI (dato fondamentale: il pancreas produce ancora un po' di insulina).",
+        autoanticorpi: "Anti-GAD negativi. Anti-IA2 negativi. Anti-Insulina negativi. (Esclude il Diabete Tipo 1/Autoimmune).",
+        esame_tossicologico: "Negativo.",
+        striscio_sangue: "Normale.",
+        
+        // IL TEST CHIAVE
+        dosaggi_specifici: "Peptide C: 1.2 ng/mL (Presente, non azzerato come nel Tipo 1). Test Genetico HNF1A: Mutazione eterozigote POSITIVA.",
+
+        // --- IMAGING ---
+        rx: "Non indicata.",
+        tc: "Non indicata.",
+        risonanza: "Non indicata.",
+        angio: "Negativa.",
+        ecografia: "Eco Addome: Pancreas normale. Assenza di steatosi epatica (comune invece nel Tipo 2).",
+        elettrocardiogramma: "Normale.",
+        ecocardiogramma: "Normale.",
+        pet: "Non indicata.",
+
+        // --- PROCEDURE & NEURO ---
+        biopsia: "Non necessaria.",
+        endoscopia: "Non indicata.",
+        paracentesi: "Non indicata.",
+        eeg: "Normale.",
+        emg: "Normale.",
+
+        // --- EFFETTI TERAPIE ---
+        dialisi: "Nessun effetto.",
+        intervento_chirurgico: "Non indicato.",
+        intubazione: "Non necessaria.",
+        trasfusione_piastrine: "Non indicata.",
+        
+        // FARMACI
+        antibiotici: "Nessun effetto.",
+        cortisone: "PEGGIORAMENTO: Aumento della glicemia.",
+        insulina: "Provoca frequenti ipoglicemie perché il paziente è ipersensibile. Non necessaria per sopravvivere (non va in chetoacidosi).",
+        farmaco_antidiabetico: "sulfanilurea Glibenclamide/Gliclazide a basse dosi: Risposta eccellente e stabile.",
+    },
+
+// ---------------- CASO 64: GOTTA (ARTRITE GOTTOSA ACUTA) ----------------
+    {
+        id: 64,
+        nome_malattia: "Gotta (Artrite Gottosa Acuta)",
+        livello_difficolta: "Facile",
+
+        // --- DATI PAZIENTE ---
+        sesso: "M",
+        eta: 54,
+        sintomi: "Dolore atroce, improvviso e pulsante all'alluce del piede destro. Il dolore è iniziato di notte svegliando il paziente. Impossibilità a camminare.",
+        anamnesi: "Iperteso in terapia con diuretici (Tiazidici - fattore di rischio). Riferisce di aver partecipato a una grigliata con abbondante carne rossa e vino la sera prima dell'attacco.",
+        note_infermiera: "L'alluce è gonfio, lucido, teso e di colore rosso violaceo (Podagra). È caldissimo al tatto. Il paziente urla se provo solo a sfiorarlo con il lenzuolo.",
+
+        // --- LABORATORIO ---
+        emocromo: "Leucocitosi neutrofila (13.000/mmc) da infiammazione acuta.",
+        esami_ematochimici: "Creatinina 1.3 mg/dL. Funzionalità epatica normale.",
+        emogas: "Normale.",
+        ves_pcr: "VES 40 mm/h. PCR 5.5 mg/dL (Indici di flogosi molto alti, simula un'infezione).",
+        emocoltura: "Negativa (esclude artrite settica).",
+        esame_urine: "Urati amorfi nel sedimento.",
+        autoanticorpi: "Fattore Reumatoide negativo.",
+        esame_tossicologico: "Negativo.",
+        striscio_sangue: "Normale.",
+        
+        // IL TEST CHIAVE
+        dosaggi_specifici: "Acido Urico sierico: 9.8 mg/dL (Alto). ATTENZIONE: Può essere normale durante l'attacco acuto perché l'acido urico precipita nell'articolazione.",
+
+        // --- IMAGING ---
+        rx: "RX Piede: Tumefazione dei tessuti molli. Assenza di fratture. In casi cronici: erosioni ossee a 'morso di topo' (rat bite) con orletto sclerotico.",
+        tc: "TC Dual Energy: Identifica depositi di cristalli di urato (colorati in verde) differenziandoli dal calcio.",
+        risonanza: "Non indicata in acuto.",
+        angio: "Negativa.",
+        ecografia: "Eco Articolare: Versamento articolare e segno del 'doppio contorno' (Double Contour Sign) sulla cartilagine (deposito di cristalli).",
+        elettrocardiogramma: "Normale.",
+        ecocardiogramma: "Normale.",
+        pet: "Non indicata.",
+
+        // --- PROCEDURE & NEURO ---
+        biopsia: "Artrocentesi (aspirazione liquido articolare): Liquido torbido. Microscopia a luce polarizzata: Presenza di cristalli a forma di ago con BIRIFRANGENZA NEGATIVA intra ed extracellulari (Patognomonico). Assenza di batteri.",
+        endoscopia: "Non indicata.",
+        paracentesi: "Non indicata.",
+        eeg: "Normale.",
+        emg: "Normale.",
+
+        // --- EFFETTI TERAPIE ---
+        dialisi: "Riduce l'uricemia ma non indicata per un attacco articolare isolato.",
+        intervento_chirurgico: "Lavaggio articolare: Utile solo se diagnosi dubbia (sospetta settica) o cristalli massivi.",
+        trasfusione_piastrine: "Non indicata.",
+        intubazione: "Non necessaria.",
+        
+        // FARMACI
+        antibiotici: "Nessun effetto (l'articolazione è rossa e calda ma non è infetta).",
+        farmaco_aspirina: "PEGGIORAMENTO: A basse dosi inibisce l'escrezione renale di acido urico, prolungando l'attacco.",
+        //farmaco_allopurinolo: "TRABOCCHETTO: Se iniziato durante l'attacco acuto, PEGGIORA il dolore mobilitando i cristalli dai depositi. Va iniziato solo a infiammazione spenta per prevenzione.",
+        farmaco_colchicina: "Risoluzione rapida del dolore e dell'infiammazione.",
+        farmaco_fans: "Indometacina/Naprossene ad alte dosi: Sollievo efficace dal dolore in 24-48 ore.",
+        cortisone: "Iniezione intra-articolare o sistemico: Efficace se i FANS sono controindicati (es. insufficienza renale).",
+        fluidoterapia: "Idratazione abbondante: Aiuta l'escrezione renale dell'acido urico."
     }
 ];
 
 
 let esamiDisponibili = {
     "Esami di laboratorio generali": [
-        "emocromo",
-        "ves_pcr",
-        "coagulazione",
         "autoanticorpi",
-        "test_stimolo_acth",
-        "test_soppressione_desametasone",
-        "esame_urine",
-        "esame_feci",
-        "striscio_sangue",
-        "chimica_clinica",
+        "coagulazione",
         "emocoltura",
+        "emocromo",
+        "emogas",
+        "esame_feci",
         "esame_liquor",
-        "esame_microscopico_liquor",
+        "esame_tossicologico",
+        "esame_urine",
+        "esami_ematochimici",
         "glucosio_ev",
-        "emogas"
+        "striscio_sangue",
+        "test_soppressione_desametasone",
+        "test_stimolo_acth",
+        "ves_pcr"
     ],
     "Esami strumentali/diagnostici": [
         "angio",
@@ -3124,6 +3527,7 @@ let esamiDisponibili = {
         "esame_neurologico_specifico",
         "misurazione_pressione_compartimentale",
         "pet",
+        "ricerca_ambientale",
         "risonanza",
         "rx",
         "tc",
@@ -3133,38 +3537,38 @@ let esamiDisponibili = {
     "Procedure/interventi": [
         "biopsia",
         "camera_iperbarica",
-        "chemioterapia",
         "dialisi",
         "endoscopia",
+        "fluidoterapia",
         "intervento_chirurgico",
         "intubazione",
         "paracentesi",
         "plasmaferesi",
+        "ossigeno_alta_concentrazione",
         "trasfusione_piastrine"
-    ],
-    "Altro / generici / monitoraggi": [
-        "anticoagulante",
-        "fluidoterapia",
-        "ricerca_ambientale",
-        "tossicologico"
     ],
     "Farmaci": [
         "antibiotici",
+        "anticoagulante",
         "antivirale",
         "cortisone",
+        "chemioterapia",
         "farmaco_adrenalina",
         "farmaco_amfotericina",
+        "farmaco_antidiabetico",
+        "farmaco_antimicotico",
         "farmaco_antiparassitario",
         "farmaco_antipsicotico",
-        "farmaco_antiretrovirale",
         "farmaco_antitiroideo",
         "farmaco_aspirina",
         "farmaco_benzodiazepine",
         "farmaco_betabloccante",
         "farmaco_biologico",
         "farmaco_ciproeptadina",
-        "farmaco_cotrimossazolo",
+        "farmaco_chelante",
+        "farmaco_colchicina",
         "farmaco_fans",
+        "farmaco_immunomodulante",
         "farmaco_immunosoppressore",
         "farmaco_inibitore_acetilcolinesterasi",
         "farmaco_ketoconazolo",
@@ -3174,10 +3578,9 @@ let esamiDisponibili = {
         "farmaco_tetrabenazina",
         "ferro_supplementare",
         "immunoglobuline",
-        "insulina",
-        "ossigeno_alta_concentrazione"
+        "insulina"
     ],
-    "SPOILER: Esami Soluzione": [
+    "SPOILER: Esami Soluzione (beta)": [
         "dosaggi_specifici",
         "farmaco_antidoto"
     ]

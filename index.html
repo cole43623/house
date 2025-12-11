@@ -97,7 +97,7 @@
         }
 
         function caricaCaso(indice = null) {
-            if (indice === null || indice > 57) {
+            if (indice === null || indice >= casi.length) {
                 indice = Math.floor(Math.random() * casi.length);
             }
             console.log(indice);
@@ -191,9 +191,7 @@
         }
 
     function rivelasol() {
-        const conferma = confirm("Sei sicuro di voler rivelare la soluzione del caso?");
-    
-        if (!casoCorrenteObj || !conferma) return;
+        if (!casoCorrenteObj) return;
 
         const soluzione = "La soluzione del caso è: " + casoCorrenteObj.nome_malattia + ".";
 
