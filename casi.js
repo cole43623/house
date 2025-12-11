@@ -2480,7 +2480,6 @@ const casi = [
         eeg: "Attività epilettiforme focale in regione fronto-parietale destra.",
         emg: "Normale.",
         test_neuropsicologici: "Lieve deficit cognitivo.",
-        ricerca_ambientale: "Non pertinente.",
 
         // --- EFFETTI TERAPIE ---
         dialisi: "Nessun effetto.",
@@ -3511,8 +3510,6 @@ let esamiDisponibili = {
         "esami_ematochimici",
         "glucosio_ev",
         "striscio_sangue",
-        "test_soppressione_desametasone",
-        "test_stimolo_acth",
         "ves_pcr"
     ],
     "Esami strumentali/diagnostici": [
@@ -3530,7 +3527,9 @@ let esamiDisponibili = {
         "rx",
         "tc",
         "test_del_ghiaccio",
-        "test_neuropsicologici"
+        "test_neuropsicologici",
+        "test_soppressione_desametasone",
+        "test_stimolo_acth"
     ],
     "Procedure/interventi": [
         "biopsia",
