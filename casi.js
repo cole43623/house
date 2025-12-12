@@ -2099,7 +2099,7 @@ const casi = [
         sesso: "Femmina",
         eta: 26,
         sintomi: "Dolore lancinante improvviso in fossa iliaca destra (basso ventre), vertigini, lipotimia (sensazione di svenimento), dolore riflesso alla spalla destra.",
-        anamnesi: "Nessuna patologia cronica nota. Riferisce di aver sentito la fitta dolorosa improvvisamente mentre sollevava un peso in palestra. Assume regolarmente la pillola anticoncezionale da 3 anni. Nega febbre o disturbi alimentari recenti.",
+        anamnesi: "Nessuna patologia cronica nota. Riferisce di aver sentito la fitta dolorosa improvvisamente mentre sollevava un peso in palestra e di assumere regolarmente la pillola anticoncezionale da 3 anni. Nega febbre o disturbi alimentari recenti.",
         note_infermiera: "Paziente pallida e sudata. Pressione arteriosa 85/50 mmHg (Ipotensione). Frequenza cardiaca 120 bpm. Addome molto dolente alla palpazione nei quadranti inferiori.",
 
         // --- LABORATORIO ---
@@ -3324,7 +3324,7 @@ const casi = [
         livello_difficolta: "Difficile",
 
         // --- DATI PAZIENTE ---
-        sesso: "M",
+        sesso: "Maschio",
         eta: 28,
         sintomi: "Calo improvviso della vista all'occhio destro con dolore e arrossamento, ulcere dolorosissime in bocca (non riesce a mangiare), dolori articolari alle ginocchia.",
         anamnesi: "Origini mediorientali o mediterranee (via della seta). Riferisce episodi passati di 'brufoli dolorosi' sullo scroto che hanno lasciato cicatrici bianche (Ulcere genitali).",
@@ -3384,7 +3384,7 @@ const casi = [
         livello_difficolta: "Difficile",
 
         // --- DATI PAZIENTE ---
-        sesso: "F",
+        sesso: "Femmina",
         eta: 19,
         sintomi: "Sete eccessiva e poliuria, ma si sente bene. Nessun calo di peso recente.",
         anamnesi: "Diagnosticata come 'Diabete Tipo 1' tre anni fa. Assume insulina ma ha continui cali di zucchero (ipoglicemie) inspiegabili. Riferisce che anche la nonna e lo zio hanno il diabete 'leggero'.",
@@ -3441,7 +3441,7 @@ const casi = [
         livello_difficolta: "Facile",
 
         // --- DATI PAZIENTE ---
-        sesso: "M",
+        sesso: "Maschio",
         eta: 54,
         sintomi: "Dolore atroce, improvviso e pulsante all'alluce del piede destro. Il dolore è iniziato di notte svegliando il paziente. Impossibilità a camminare.",
         anamnesi: "Iperteso in terapia con diuretici (Tiazidici - fattore di rischio). Riferisce di aver partecipato a una grigliata con abbondante carne rossa e vino la sera prima dell'attacco.",
@@ -3492,6 +3492,123 @@ const casi = [
         farmaco_fans: "Indometacina/Naprossene ad alte dosi: Sollievo efficace dal dolore in 24-48 ore.",
         cortisone: "Iniezione intra-articolare o sistemico: Efficace se i FANS sono controindicati (es. insufficienza renale).",
         fluidoterapia: "Idratazione abbondante: Aiuta l'escrezione renale dell'acido urico."
+    },
+
+// ---------------- CASO 65: APPENDICITE ACUTA ----------------
+    {
+        id: 65,
+        nome_malattia: "Appendicite Acuta",
+        livello_difficolta: "Facile",
+
+        // --- DATI PAZIENTE ---
+        sesso: "Maschio",
+        eta: 17,
+        sintomi: "Dolore addominale migratorio: iniziato come un 'peso allo stomaco' e intorno all'ombelico, ora si è localizzato in basso a destra (Fossa Iliaca Destra). Nausea, inappetenza totale (anoressia).",
+        anamnesi: "Nessuna patologia pregressa. Il dolore è iniziato ieri sera dopo cena. Nega diarrea.",
+        note_infermiera: "Il paziente cammina piegato in due tenendosi il fianco. Ha riferito di aver sentito una fitta lancinante quando l'ambulanza ha preso un dosso (Segno di irritazione peritoneale). Febbre 38.2°C.",
+
+        // --- LABORATORIO ---
+        emocromo: "Leucociti 16.500/mmc (Leucocitosi neutrofila). Hb e Piastrine normali.",
+        chimica_clinica: "PCR 4.5 mg/dL (Aumentata). Elettroliti e funzionalità renale nella norma.",
+        emogas: "Normale.",
+        ves_pcr: "Aumentate.",
+        emocoltura: "Negativa.",
+        esame_urine: "Normale o rari leucociti/eritrociti (per contiguità dell'infiammazione con l'uretere, ma senza batteri).",
+        autoanticorpi: "Negativi.",
+        tossicologico: "Negativo.",
+        striscio_sangue: "Normale.",
+        dosaggi_specifici: "Beta-HCG: Non indicata (maschio). Se femmina: Negativa (esclude gravidanza ectopica).",
+
+        // --- IMAGING ---
+        rx: "RX Addome in bianco: Livelli idroaerei scarsi (ileo paralitico riflesso). Coprostasi nel colon destro. A volte visibile un 'coprolita' (fecaloma calcifico) in sede appendicolare.",
+        tc: "TC Addome con MdC: Struttura tubulare a fondo cieco, dilatata (> 7mm), a pareti ispessite che prendono contrasto. Infiltrazione del grasso periappendicolare. Presenza di appendicolita.",
+        risonanza: "RMN Addome: Struttura tubulare cieca dilatata (>7mm) con parete ispessita. Iperintensità di segnale nelle sequenze T2 (segno di edema/infiammazione acuta) a carico dell'appendice e del grasso circostante. Presenza di liquido libero nel Douglas.",
+        angio: "Non indicata.",
+        ecografia: "Eco Addome: Immagine tubulare a fondo cieco, non comprimibile con la sonda, di diametro > 6mm. Segno del bersaglio (target sign) in sezione trasversale. Versamento periappendicolare.",
+        elettrocardiogramma: "Tachicardia sinusale (da dolore/febbre).",
+        ecocardiogramma: "Normale.",
+        pet: "Non indicata.",
+
+        // --- PROCEDURE & NEURO ---
+        biopsia: "Esame istologico (post-operatorio): Appendicite acuta suppurativa/gangrenosa.",
+        esame_obiettivo_addome: "Segno di McBurney positivo (dolore alla pressione nel punto tra ombelico e spina iliaca). Segno di Blumberg positivo (dolore al rilascio improvviso della mano = Peritonite). Segno di Rovsing positivo (dolore a destra premendo a sinistra).",
+        paracentesi: "Non indicata.",
+        eeg: "Normale.",
+        emg: "Normale.",
+
+        // --- EFFETTI TERAPIE ---
+        dialisi: "Nessun effetto.",
+        intubazione: "Necessaria solo per l'anestesia generale chirurgica.",
+        trasfusione_piastrine: "Non indicata.",
+        
+        // FARMACI
+        antibiotici: "Ceftriaxone + Metronidazolo: Raffreddamento temporaneo dell'infiammazione ('plastrone').",
+        //cortisone: "PEGGIORAMENTO: riduce le difese.",
+        farmaco_fans: "Riduzione del dolore.",
+        //farmaco_laxativo: "Purganti/Clistere: ERRORE GRAVE. L'aumento della peristalsi contro l'ostruzione causa la rottura immediata dell'appendice -> Peritonite stercoracea -> Sepsi.",
+        intervento_chirurgico: "Appendicectomia (Laparoscopica): Rimozione dell'organo infetto. Risoluzione completa e rapida dei sintomi."
+    },
+
+// ---------------- CASO 66: EXTRASISTOLIA VENTRICOLARE (BENIGNA) ----------------
+    {
+        id: 66,
+        nome_malattia: "Extrasistolia Ventricolare (Benigna)",
+        livello_difficolta: "Facile",
+
+        // --- DATI PAZIENTE ---
+        sesso: "Femmina",
+        eta: 16,
+        sintomi: "Sensazione di 'tuffo al cuore' o 'cuore in gola'. Riferisce occasionalmente la sensazione che il cuore si fermi per un secondo (pausa compensatoria), seguita da un colpo fortissimo.",
+        anamnesi: "Studentessa liceale molto ansiosa, sotto stress per le interrogazioni. Ciclo mestruale regolare.",
+        note_infermiera: "Al polso sento un ritmo irregolare: ogni tanto manca un battito (polso ritmico con deficit). La ragazza è spaventatissima, piange e teme di morire di infarto.",
+
+        // --- LABORATORIO ---
+        emocromo: "Normale (Hb 13.0 g/dL - esclude anemia che può causare tachicardia).",
+        chimica_clinica: "Elettroliti (Potassio, Magnesio, Calcio): Nella norma (esclude cause elettrolitiche).",
+        emogas: "Normale.",
+        ves_pcr: "Normali.",
+        emocoltura: "Negativa.",
+        esame_urine: "Normale. Test di gravidanza: Negativo.",
+        autoanticorpi: "Negativi.",
+        tossicologico: "Negativo per droghe.",
+        striscio_sangue: "Normale.",
+        
+        // IL TEST CHIAVE (Di esclusione)
+        dosaggi_specifici: "Troponina: NEGATIVA (Esclude danno miocardico). TSH: Normale (Esclude ipertiroidismo, frequente nelle giovani donne).",
+
+        // --- IMAGING ---
+        rx: "RX Torace: Normale. Cuore di dimensioni normali.",
+        tc: "Non indicata.",
+        risonanza: "Non indicata.",
+        angio: "Non indicata.",
+        ecografia: "Eco Addome: Normale.",
+        
+        // FONDAMENTALE PER LA PROGNOSI
+        ecocardiogramma: "Cuore strutturalmente SANO. Frazione di eiezione normale. Assenza di prolasso della mitrale (comune nelle ragazze, ma qui assente per confermare la benignità pura).",
+        elettrocardiogramma: "Ritmo sinusale interrotto da frequenti complessi QRS larghi, aberranti e anticipati, non preceduti dall'onda P, seguiti da una pausa compensatoria completa. (BEV: Battiti Ectopici Ventricolari). Holter 24h: registrazione di 8.000 Battiti Ectopici Ventricolari (BEV) isolati, monomorfi (tutti uguali, vengono da un solo punto). Assenza di fenomeni pericolosi notturni. Test da sforzo al tapis roulant, con l'aumento della frequenza cardiaca, le extrasistoli SCOMPAIONO completamente (Overdrive suppression).",
+
+        pet: "Non indicata.",
+
+        // --- PROCEDURE & NEURO ---
+        biopsia: "Non necessaria.",
+        
+        eeg: "Normale.",
+        emg: "Normale.",
+
+        // --- EFFETTI TERAPIE ---
+        dialisi: "Nessun effetto.",
+        intervento_chirurgico: "Ablazione Transcatetere: Raramente indicata a questa età se il cuore è sano, riservata solo se i sintomi sono intollerabili.",
+        intubazione: "Non necessaria.",
+        trasfusione_piastrine: "Non indicata.",
+        
+        // FARMACI
+        antibiotici: "Nessun effetto.",
+        
+        farmaco_betabloccante: "Bisoprololo/Nadololo a basse dosi: Riduzione della forza del battito post-extrasistolico (riduce la sensazione di 'colpo') e della frequenza delle aritmie. Molto efficace.",
+        
+        //farmaco_ansiolitico: "Gocce ansiolitiche al bisogno: Aiutano a spezzare il circolo vizioso ansia-aritmia.",
+        
+        //farmaco_antiaritmico_potente: "Controindicato per il rischio di effetti pro-aritmici su un cuore giovane e sano.",
     }
 ];
 
