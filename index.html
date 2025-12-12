@@ -191,7 +191,9 @@
         }
 
     function rivelasol() {
-        if (!casoCorrenteObj) return;
+        const conferma = confirm("Sei sicuro di voler rivelare la soluzione del caso?");
+
+        if (!casoCorrenteObj || !conferma) return;
 
         const soluzione = "La soluzione del caso è: " + casoCorrenteObj.nome_malattia + ".";
 
