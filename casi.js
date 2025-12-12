@@ -1006,7 +1006,7 @@ const casi = [
         cortisone: "Riduzione temporanea dell'edema cerebrale, ma nessuna inibizione del patogeno.",
         dialisi: "Nessun effetto.",
         intubazione: "Necessaria per protezione vie aeree e gestione ipertensione endocranica (GCS < 8).",
-        farmaco_amfotericina: "Somministrazione intratecale: Rallentamento della replicazione (unica chance terapeutica, spesso tardiva).",
+        farmaco_antimicotico: "Somministrazione intratecale di amfotericina: Rallentamento della replicazione.",
         immunoglobuline: "Nessun effetto."
     },
 
@@ -1881,7 +1881,7 @@ const casi = [
         intubazione: "Rischio di broncospasmo severo durante l'induzione.",
         //manovre_addominali: "La palpazione profonda del fegato scatena un violento episodio di flushing e ipotensione (rilascio massivo di mediatori).",
         farmaco_octreotide: "Somministrazione analogo della Somatostatina: Rapida scomparsa del flushing e arresto della diarrea.",
-        farmaco_adrenalina: "PEGGIORAMENTO: Ipotensione paradossa e peggioramento del flushing (stimola il rilascio di sostanze vasoattive dal tumore)."
+        adrenalina: "PEGGIORAMENTO: Ipotensione paradossa e peggioramento del flushing (stimola il rilascio di sostanze vasoattive dal tumore)."
     },
 
 // ---------------- CASO 38: ENDOCARDITE BATTERICA SUBACUTA ----------------
@@ -2237,7 +2237,7 @@ const casi = [
         cortisone: "Nessun effetto.",
         dialisi: "Nessun effetto.",
         farmaco_levodopa: "PEGGIORAMENTO netto dei movimenti coreici e dell'agitazione psicomotoria.",
-        farmaco_neurolettico: "Aloperidolo/Olanzepina: Riduzione dei movimenti coreici e controllo dell'agitazione.",
+        farmaco_antipsicotico: "Aloperidolo/Olanzepina: Riduzione dei movimenti coreici e controllo dell'agitazione.",
         farmaco_tetrabenazina: "Riduzione significativa della corea."
     },
 
@@ -2411,23 +2411,19 @@ const casi = [
         // --- FARMACI ---
         farmaco_fans: "Nessun effetto.",
         farmaco_levodopa: "Nessun effetto.",
-        farmaco_tetrabenazina: "Nessun effetto.",
         farmaco_antitiroideo: "Nessun effetto.",
         farmaco_benzodiazepine: "PEGGIORAMENTO CRITICO: Arresto respiratorio completo e ipotensione grave (effetto sinergico depressivo).",
-        farmaco_adrenalina: "Aumento temporaneo della frequenza cardiaca a 80 bpm, ma nessuna ripresa della respirazione spontanea.",
+        adrenalina: "Aumento temporaneo della frequenza cardiaca a 80 bpm, ma nessuna ripresa della respirazione spontanea.",
         farmaco_betabloccante: "ARRESTO CARDIACO: Crollo della frequenza cardiaca da 38 bpm all'asistolia completa.",
         farmaco_inibitore_acetilcolinesterasi: "Aumento delle secrezioni bronchiali, peggioramento degli scambi gassosi.",
         farmaco_immunosoppressore: "Nessun effetto.",
         farmaco_biologico: "Nessun effetto.",
         farmaco_aspirina: "Nessun effetto.",
-        farmaco_octreotide: "Nessun effetto.",
         plasmaferesi: "Nessun effetto.",
         
         // TERAPIA RISOLUTIVA
         farmaco_antidoto: "Naloxone (Narcan) EV/Intranasale: Risveglio improvviso ed esplosivo in 30 secondi. Il paziente si siede, diventa agitato, aggressivo, vomita e iperventila (Sindrome da astinenza precipitata).",
-        farmaco_neurolettico: "Peggioramento della sedazione e rischio di aspirazione.",
-        farmaco_amfotericina: "Nessun effetto.",
-        farmaco_antipsicotico: "Nessun effetto.",
+        farmaco_antipsicotico: "Peggioramento della sedazione e rischio di aspirazione.",
         antibiotici: "Nessun effetto immediato sullo stato clinico.",
         antivirale: "Nessun effetto.",
         insulina: "Rischio di ipoglicemia su paziente in coma.",
@@ -3459,7 +3455,7 @@ const casi = [
         striscio_sangue: "Normale.",
         
         // IL TEST CHIAVE
-        dosaggi_specifici: "Acido Urico sierico: 9.8 mg/dL (Alto). ATTENZIONE: Può essere normale durante l'attacco acuto perché l'acido urico precipita nell'articolazione.",
+        dosaggi_specifici: "Acido Urico sierico: 9.8 mg/dL (Alto).",
 
         // --- IMAGING ---
         rx: "RX Piede: Tumefazione dei tessuti molli. Assenza di fratture. In casi cronici: erosioni ossee a 'morso di topo' (rat bite) con orletto sclerotico.",
@@ -3509,13 +3505,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Leucociti 16.500/mmc (Leucocitosi neutrofila). Hb e Piastrine normali.",
-        chimica_clinica: "PCR 4.5 mg/dL (Aumentata). Elettroliti e funzionalità renale nella norma.",
+        esami_ematochimici: "PCR 4.5 mg/dL (Aumentata). Elettroliti e funzionalità renale nella norma.",
         emogas: "Normale.",
         ves_pcr: "Aumentate.",
         emocoltura: "Negativa.",
         esame_urine: "Normale o rari leucociti/eritrociti (per contiguità dell'infiammazione con l'uretere, ma senza batteri).",
         autoanticorpi: "Negativi.",
-        tossicologico: "Negativo.",
+        esame_tossicologico: "Negativo.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Beta-HCG: Non indicata (maschio). Se femmina: Negativa (esclude gravidanza ectopica).",
 
@@ -3564,13 +3560,13 @@ const casi = [
 
         // --- LABORATORIO ---
         emocromo: "Normale (Hb 13.0 g/dL - esclude anemia che può causare tachicardia).",
-        chimica_clinica: "Elettroliti (Potassio, Magnesio, Calcio): Nella norma (esclude cause elettrolitiche).",
+        esami_ematochimici: "Elettroliti (Potassio, Magnesio, Calcio): Nella norma (esclude cause elettrolitiche).",
         emogas: "Normale.",
         ves_pcr: "Normali.",
         emocoltura: "Negativa.",
         esame_urine: "Normale. Test di gravidanza: Negativo.",
         autoanticorpi: "Negativi.",
-        tossicologico: "Negativo per droghe.",
+        esame_tossicologico: "Negativo per droghe.",
         striscio_sangue: "Normale.",
         
         // IL TEST CHIAVE (Di esclusione)
@@ -3608,7 +3604,66 @@ const casi = [
         
         //farmaco_ansiolitico: "Gocce ansiolitiche al bisogno: Aiutano a spezzare il circolo vizioso ansia-aritmia.",
         
-        //farmaco_antiaritmico_potente: "Controindicato per il rischio di effetti pro-aritmici su un cuore giovane e sano.",
+        //farmaco_antiaritmico_potente: "Controindicato per il rischio di effetti pro-aritmici su un cuore giovane e sano."
+    },
+
+// ---------------- CASO 67: SINDROME PARANEOPLASTICA (RETINOPATIA MAR) ----------------
+    {
+        id: 67,
+        nome_malattia: "Sindrome Paraneoplastica (Retinopatia associata a Melanoma - MAR)",
+        livello_difficolta: "Difficile",
+
+        // --- DATI PAZIENTE ---
+        sesso: "M",
+        eta: 58,
+        sintomi: "Improvvisa difficoltà a vedere di notte o in ambienti poco illuminati (Nictalopia), visione di luci scintillanti o 'formicolio' visivo (Fotopsie), perdita della visione periferica.",
+        anamnesi: "3 anni fa gli è stato rimosso un 'neo brutto' dalla schiena (Melanoma cutaneo), dichiarato guarito. Nessun problema di vista precedente.",
+        note_infermiera: "Il paziente sbatte contro i mobili se abbasso le luci nella stanza. Ho notato che sulle mani e intorno alla bocca gli sono comparse delle chiazze di pelle completamente bianca (Vitiligine/Leucoderma acquisito).",
+
+        // --- LABORATORIO ---
+        emocromo: "Normale.",
+        esami_ematochimici: "LDH (Lattato Deidrogenasi): 450 U/L (Aumentato - indice aspecifico di carico tumorale/turnover cellulare). Funzionalità renale ed epatica nella norma.",
+        emogas: "Normale.",
+        ves_pcr: "Lievemente aumentate.",
+        emocoltura: "Negativa.",
+        esame_urine: "Normale.",
+        autoanticorpi: "ANA negativi.",
+        esame_tossicologico: "Negativo.",
+        striscio_sangue: "Normale.",
+        
+        // IL TEST CHIAVE
+        dosaggi_specifici: "Anticorpi anti-Retina (contro le cellule bipolari della retina): POSITIVI. Proteina S-100 sierica: Elevata (Marker tumorale melanoma).",
+
+        // --- IMAGING ---
+        rx: "RX Torace: Nodulo solitario sospetto al lobo superiore destro.",
+        tc: "TC Total Body: Presenza di linfoadenopatie ascellari e mediastiniche ingrossate. Nodulo polmonare di 2cm (Metastasi di melanoma).",
+        risonanza: "RMN Encefalo/Orbita: CERVELLO E NERVI OTTICI NORMALI.", // (Fondamentale: la cecità non è causata da metastasi cerebrali, ma da anticorpi che attaccano la retina)
+        angio: "Negativa.",
+        ecografia: "Eco Linfonodi: Linfonodi ascellari ipoecogeni, rotondeggianti e vascolarizzati (sospetto metastatico).",
+        elettrocardiogramma: "Normale.",
+        ecocardiogramma: "Normale.",
+        pet: "FDG-PET: Ipercaptazione metabolica intensa ai linfonodi ascellari, mediastinici e al nodulo polmonare.",
+
+        // --- PROCEDURE & NEURO ---
+        biopsia: "Biopsia linfonodale/polmonare: Metastasi di Melanoma Maligno. Immunoistochimica: HMB-45 Positivo, Melan-A Positivo.",
+        visita_oculistica: "Fondo oculare apparentemente normale (il danno è microscopico/elettrico).",
+        
+        //test_elettrofisiologico: "Elettroretinogramma (ERG): Onda B scotopica assente o drasticamente ridotta ('ERG negativo'). Indica blocco della trasmissione tra fotorecettori e cellule bipolari. Reperto patognomonico di MAR.",
+        
+        eeg: "Normale.",
+        emg: "Normale.",
+
+        // --- EFFETTI TERAPIE ---
+        dialisi: "Nessun effetto.",
+        intervento_chirurgico: "Asportazione delle metastasi (se operabili): Può ridurre il carico antigenico, ma spesso non basta a fermare la reazione autoimmune visiva.",
+        intubazione: "Non necessaria.",
+        trasfusione_piastrine: "Non indicata.",
+        
+        // FARMACI
+        antibiotici: "Nessun effetto.",
+        cortisone: "Prednisone sistemico: Miglioramento parziale dei sintomi visivi (sopprime l'autoimmunità), ma rischio di favorire la crescita del tumore.",
+        immunoglobuline: "IVIG o Plasmaferesi: Miglioramento della vista rimuovendo gli autoanticorpi circolanti.",
+        farmaco_biologico: "Immunoterapia (Pembrolizumab/Nivolumab): ESSENZIALE per trattare il melanoma metastatico. PARADOSSO: Potenziando il sistema immunitario, questi farmaci potrebbero inizialmente peggiorare la retinopatia autoimmune o la vitiligine (segno che il farmaco funziona e sta attaccando i melanociti ovunque).",
     }
 ];
 
@@ -3646,7 +3701,8 @@ let esamiDisponibili = {
         "test_del_ghiaccio",
         "test_neuropsicologici",
         "test_soppressione_desametasone",
-        "test_stimolo_acth"
+        "test_stimolo_acth",
+        "visita_oculistica"
     ],
     "Procedure/interventi": [
         "biopsia",
@@ -3662,13 +3718,12 @@ let esamiDisponibili = {
         "trasfusione_piastrine"
     ],
     "Farmaci": [
+        "adrenalina",
         "antibiotici",
         "anticoagulante",
         "antivirale",
         "cortisone",
         "chemioterapia",
-        "farmaco_adrenalina",
-        "farmaco_amfotericina",
         "farmaco_antidiabetico",
         "farmaco_antidoto",
         "farmaco_antimicotico",
@@ -3686,14 +3741,13 @@ let esamiDisponibili = {
         "farmaco_immunosoppressore",
         "farmaco_inibitore_acetilcolinesterasi",
         "farmaco_levodopa",
-        "farmaco_neurolettico",
         "farmaco_octreotide",
         "farmaco_tetrabenazina",
         "ferro_supplementare",
         "immunoglobuline",
         "insulina"
     ],
-    "SPOILER: Esami Soluzione (beta)": [
+    "SPOILER: Esame Soluzione (beta)": [
         "dosaggi_specifici"
     ]
 };
