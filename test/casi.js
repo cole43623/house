@@ -61,7 +61,7 @@ const casi = [
         // FARMACI
         antibiotici: "Nessun effetto.",
         farmaco_vasodilatatore: "Trinitrina sublinguale: Scomparsa completa del dolore in 2 minuti (Vasodilatazione coronarica immediata). Test diagnostico 'ex juvantibus' positivo.",
-        farmaco_aspirina: "Antiaggregazione piastrinica: Previene che la placca si rompa e diventi un infarto vero, ma non toglie il dolore istantaneamente.",
+        farmaco_fans: "Dopo la somministrazione di aspirina: agisce come antiaggregante piastrinico, prevenendo che la placca si rompa e diventi un infarto, ma non allevia il dolore immediato.",
         //farmaco_trombolitico: "TPA: Il paziente non trae beneficio dall’angiolisi e rischia complicanze emorragiche potenzialmente gravi.",
         farmaco_betabloccante: "Riduzione della frequenza cardiaca e del consumo di ossigeno miocardico. Previene futuri attacchi.",
         ossigeno_alta_concentrazione: "Utile durante la crisi dolorosa."
@@ -1040,7 +1040,7 @@ const casi = [
         emg: "Normale.",
 
         // --- EFFETTI TERAPIE ---
-        farmaco_aspirina: "Efficacia sintomatica sulla febbre, ma alto rischio emorragico per aggravamento della piastrinopenia e potenziale peggioramento del quadro epatico.",
+        farmaco_fans: "Dopo la somministrazione di aspirina: ha efficacia sintomatica sulla febbre, ma presenta alto rischio emorragico in caso di piastrinopenia e può peggiorare il quadro epatico.",
         antibiotici: "Somministrazione Penicilline/Cefalosporine: Nessun effetto. Somministrazione Doxiciclina: Defervescenza rapida in 48 ore.",
         cortisone: "Nessun effetto sulla febbre, lieve riduzione mialgie.",
         dialisi: "Nessun effetto.",
@@ -1617,7 +1617,7 @@ const casi = [
 
         // --- EFFETTI TERAPIE ---
         antibiotici: "Nessun effetto sulla frequenza cardiaca o sulla temperatura.",
-        farmaco_aspirina: "PEGGIORAMENTO: Aumento della quota libera di ormoni tiroidei (spiazzamento dalle proteine di legame).",
+        farmaco_fans: "Dopo la somministrazione di aspirina PEGGIORAMENTO: Aumento della quota libera di ormoni tiroidei (spiazzamento dalle proteine di legame).",
         farmaco_betabloccante: "Propranololo EV: Rapida riduzione della frequenza cardiaca e controllo del tremore.",
         farmaco_antitiroideo: "Metimazolo/Propiltiouracile: Blocco della sintesi ormonale (effetto clinico ritardato).",
         cortisone: "Idrocortisone: Riduzione della conversione periferica di T4 in T3 e supporto surrenalico. Miglioramento clinico.",
@@ -2547,7 +2547,6 @@ const casi = [
         farmaco_inibitore_acetilcolinesterasi: "Aumento delle secrezioni bronchiali, peggioramento degli scambi gassosi.",
         farmaco_immunosoppressore: "Nessun effetto.",
         farmaco_biologico: "Nessun effetto.",
-        farmaco_aspirina: "Nessun effetto.",
         plasmaferesi: "Nessun effetto.",
         
         // TERAPIA RISOLUTIVA
@@ -2867,7 +2866,7 @@ const casi = [
         farmaco_biologico: "Tocilizumab (Anti-IL6) o Infliximab (Anti-TNF): Efficace nei casi refrattari ai cortisonici.",
         
         fluidoterapia: "Nessun effetto emodinamico significativo a lungo termine.",
-        farmaco_aspirina: "Prevenzione della formazione di trombi nelle zone di turbolenza (stenosi); nessun effetto sull'infiammazione parietale.",
+        farmaco_fans: "Dopo la somministrazione di aspirina: prevenzione della formazione di trombi nelle zone di turbolenza (stenosi); nessun effetto sull'infiammazione parietale.",
         anticoagulante: "Aumento significativo del rischio emorragico.",
         farmaco_vasodilatatore: "Nifedipina orale: miglioramento della temperatura e colorito delle mani e piedi, riduzione di sensazione di freddo e formicolio, pressione leggermente ridotta."
     },
@@ -3629,7 +3628,7 @@ const casi = [
         
         // FARMACI
         antibiotici: "Nessun effetto (l'articolazione è rossa e calda ma non è infetta).",
-        farmaco_aspirina: "PEGGIORAMENTO: A basse dosi inibisce l'escrezione renale di acido urico, prolungando l'attacco.",
+        //farmaco_aspirina: "PEGGIORAMENTO: A basse dosi inibisce l'escrezione renale di acido urico, prolungando l'attacco.",
         //farmaco_allopurinolo: "TRABOCCHETTO: Se iniziato durante l'attacco acuto, PEGGIORA il dolore mobilitando i cristalli dai depositi. Va iniziato solo a infiammazione spenta per prevenzione.",
         farmaco_colchicina: "Risoluzione rapida del dolore e dell'infiammazione.",
         farmaco_fans: "Indometacina/Naprossene ad alte dosi: Sollievo efficace dal dolore in 24-48 ore.",
@@ -3881,7 +3880,6 @@ let esamiDisponibili = {
         "farmaco_antipsicotico",
         "farmaco_antiserotoninico",
         "farmaco_antitiroideo",
-        "farmaco_aspirina",
         "farmaco_betabloccante",
         "farmaco_biologico",
         "farmaco_chelante",
