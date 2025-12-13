@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ospedale RPG - Full Screen</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stile.css">
+</head>
+<body>
+
+    <div id="game-screen">
+        <div class="sign">USCITA</div>
+        <div class="door"></div>
+        <div class="background-decor"></div>
+
+        <div id="nurse-container">
+            <img id="nurse-img" src="jo.png" alt="Infermiera">
+        </div>
+
+        <div id="dialog-area">
+            <div id="tabs-container">
+                <!-- Le tabs verranno inserite qui dinamicamente -->
+            </div>
+            
+            <div id="text-content">In attesa del paziente...</div>
+
+            <div id="controls">
+                <select id="exam-selector">
+                    <option value="" disabled selected>-- Scegli un esame --</option>
+                </select>
+                <button onclick="eseguiEsame()">ESEGUI ESAME</button>
+                <button onclick="rivelasol()">SVELA SOLUZIONE</button>
+            </div>
+        </div>
+    </div>
+    <script src="casi.js"></script>
+    <script>
+        // ==========================================
+        //  LOGICA DI GIOCO
+        // ==========================================
+
+        const textElement = document.getElementById('text-content');
+        let selectElement = document.getElementById('exam-selector');
+        const tabsContainer = document.getElementById('tabs-container');
+        let casoCorrenteObj = null;
+        let tabs = []; // Array di oggetti {nome, contenuto, id}
+        let tabAttivaId = null;
+
+        function creaTabs() {
+            tabsContainer.innerHTML = '';
+            tabs.forEach(tab => {
+                const tabElement = document.createElement('div');
+                tabElement.className = 'tab' + (tab.id === tabAttivaId ? ' active' : '');
+                tabElement.textContent = tab.nome;
+                tabElement.onclick = () => mostraTab(tab.id);
+                tabsContainer.appendChild(tabElement);
+                
+                // Scrolla automaticamente sulla tab attiva
+                if (tab.id === tabAttivaId) {
+                    setTimeout(() => {
+                        tabElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'nearest',
+                            inline: 'center'
+                        });
+                    }, 10);
+                }
+            });
+        }
+
+        function mostraTab(tabId) {
+            tabAttivaId = tabId;
+            const tab = tabs.find(t => t.id === tabId);
+            if (tab) {
+                textElement.textContent = tab.contenuto;
+                textElement.style.whiteSpace = "pre-wrap";
+                textElement.scrollTop = 0;
+                creaTabs(); // Aggiorna l'aspetto delle tabs
+            }
+        }
+
+        function aggiungiOAggiornaCaso(contenuto) {
+            const casoTab = tabs.find(t => t.id === 'caso');
+            if (casoTab) {
+                casoTab.contenuto = contenuto;
+            } else {
+                tabs.unshift({
+                    id: 'caso',
+                    nome: 'Infermiera Jo',
+                    contenuto: contenuto
+                });
+            }
+            tabAttivaId = 'caso';
+            creaTabs();
+            typeWriter(contenuto, 'caso');
+        }
+
+        function caricaCaso(indice = null) {
+            if (indice === null || indice >= casi.length) {
+                indice = Math.floor(Math.random() * casi.length);
+            }
+            console.log(indice);
+            casoCorrenteObj = casi[indice];
+            
+            // Resetta le tabs (mantiene solo il caso)
+            tabs = [];
+            
+            const testoCompleto = "SESSO: "+casoCorrenteObj.sesso+"\nETÀ: "+casoCorrenteObj.eta+"\nSINTOMI: "+casoCorrenteObj.sintomi+"\nANAMNESI: "+casoCorrenteObj.anamnesi+"\n"+casoCorrenteObj.note_infermiera;
+            aggiungiOAggiornaCaso(testoCompleto);
+
+            // Popola menu
+            selectElement.innerHTML = '<option value="" disabled selected>-- Scegli un esame --</option>';
+            for (let categoria in esamiDisponibili) {
+                let optgroup = document.createElement("optgroup");
+                optgroup.label = categoria;
+
+                for (let nomeEsame of esamiDisponibili[categoria]) {
+                    let option = document.createElement("option");
+                    option.value = nomeEsame;
+                    option.text = nomeEsame.replaceAll("_", " ");
+                    optgroup.appendChild(option);
+                }
+
+                selectElement.appendChild(optgroup);
+            }
+        }
+
+        function eseguiEsame() {
+            const esameScelto = selectElement.value;
+
+            if (!esameScelto) {
+                // Feedback visivo se non si sceglie nulla
+                selectElement.style.borderColor = "red";
+                setTimeout(() => selectElement.style.borderColor = "#333", 500);
+                return;
+            }
+
+            const risultato = casoCorrenteObj[esameScelto];
+            const nomeEsameLeggibile = esameScelto.replaceAll("_", " ");
+            let contenuto;
+            
+            if (risultato == undefined) {
+                contenuto = "Non ho programmato risultati per \"" + nomeEsameLeggibile + "\" in questo caso, il che significa che probabilmente è inerte, comunque potresti essere fuori strada.";
+            } else {
+                contenuto = "RISULTATO " + nomeEsameLeggibile + ": " + risultato;
+            }
+
+            // Crea o aggiorna la tab per questo esame
+            const tabEsistente = tabs.find(t => t.id === esameScelto);
+            if (tabEsistente) {
+                tabEsistente.contenuto = contenuto;
+                tabAttivaId = esameScelto; 
+               textElement.textContent = contenuto;
+                textElement.style.whiteSpace = "pre-wrap";
+                textElement.scrollTop = 0;
+                creaTabs();
+                return;
+            } else {
+                tabs.push({
+                    id: esameScelto,
+                    nome: nomeEsameLeggibile,
+                    contenuto: contenuto
+                });
+            }
+
+            // Aggiorna tab attiva PRIMA di creare le tabs
+            tabAttivaId = esameScelto; 
+            creaTabs(); // ricrea le tabs con quella attiva
+            typeWriter(contenuto);
+        }
+
+        // Effetto macchina da scrivere
+        let typeInterval;
+        function typeWriter(text, tabId = null) {
+            if (tabId) tabAttivaId = tabId;
+            textElement.style.whiteSpace = "pre-wrap";
+            clearInterval(typeInterval);
+            textElement.textContent = "";
+            textElement.scrollTop = 0;
+            let i = 0;
+            typeInterval = setInterval(() => {
+                if (i < text.length) {
+                    textElement.textContent += text.charAt(i);
+                    i++;
+                    textElement.scrollTop = textElement.scrollHeight;
+                } else {
+                    clearInterval(typeInterval);
+                }
+            }, 15); 
+        }
+
+    function rivelasol() {
+        const conferma = confirm("Sei sicuro di voler rivelare la soluzione del caso?");
+
+        if (!casoCorrenteObj || !conferma) return;
+
+        const soluzione = "La soluzione del caso è: " + casoCorrenteObj.nome_malattia + ".";
+
+        // Crea o aggiorna la tab SOLUZIONE
+        tabs.push({
+            id: 'soluzione',
+            nome: 'SOLUZIONE',
+            contenuto: soluzione
+        });
+        
+        tabAttivaId = 'soluzione';
+        creaTabs();
+        typeWriter(soluzione);
+
+        // Svuota i controlli e aggiunge solo il pulsante "Nuovo Caso"
+        const controls = document.getElementById('controls');
+        controls.innerHTML = '';
+        const nuovoCasoBtn = document.createElement('button');
+        const condividi = document.createElement('button');
+        nuovoCasoBtn.textContent = 'NUOVO CASO';
+        condividi.textContent = 'CONDIVIDI CASO';
+        condividi.onclick = () => {
+             navigator.clipboard.writeText("https://cole43623.github.io/house/?id="+(casoCorrenteObj.id-1));
+             alert("Link copiato!");
+        };
+        nuovoCasoBtn.onclick = () => {
+            controls.innerHTML = `
+                <select id="exam-selector">
+                    <option value="" disabled selected>-- Scegli un esame --</option>
+                </select>
+                <button onclick="eseguiEsame()">ESEGUI ESAME</button>
+                <button onclick="rivelasol()">SVELA SOLUZIONE</button>
+            `;
+            selectElement = document.getElementById('exam-selector');
+            caricaCaso(); 
+        };
+        controls.appendChild(nuovoCasoBtn);
+        controls.appendChild(condividi);
+    }
+
+        // AVVIO: Carica il primo caso
+        const id = new URLSearchParams(window.location.search).get('id');
+        caricaCaso(id);
+
+    </script>
+</body>
+</html>
