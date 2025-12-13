@@ -3775,9 +3775,5 @@ const nomi = casi.map(d => d.nome_malattia);
 console.log(nomi);
 
 
-​
-8: "farmaco_benzodiazepine"
-​
-10: "test_patergia"
-​
-11: "esame_obiettivo_addome"
+ "farmaco_benzodiazepine"
+

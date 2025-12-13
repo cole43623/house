@@ -1,4 +1,72 @@
 const casi = [
+// ---------------- CASO 0: ANGINA PECTORIS (STABILE) ----------------
+    {
+        id: 0,
+        nome_malattia: "Angina Pectoris (Ischemia Miocardica Transitoria)",
+        livello_difficolta: "Facile",
+
+        // --- DATI PAZIENTE ---
+        sesso: "M",
+        eta: 58,
+        sintomi: "Dolore oppressivo al centro del petto ('come un elefante seduto sopra') che si irradia al braccio sinistro e alla mandibola. Il dolore è comparso mentre correva per prendere l'autobus.",
+        anamnesi: "Forte fumatore (20 sigarette/dì) da 30 anni. Iperteso in trattamento irregolare. Padre deceduto di infarto a 60 anni.",
+        note_infermiera: "Il paziente è pallido e sudato. Mi ha detto che ora che si è seduto sul lettino il dolore sta diminuendo leggermente. PA 160/95 mmHg.",
+
+        // --- LABORATORIO ---
+        emocromo: "Hb 14.0 g/dL, Leucociti e Piastrine nella norma.",
+        
+        esami_ematochimici: "Colesterolo Totale: 280 mg/dL (Alto). LDL: 190 mg/dL. Glucosio: 110 mg/dL. Creatinina: 1.0 mg/dL. AST/ALT nella norma.",
+        
+        emogas: "Normale.",
+        ves_pcr: "Normali (esclude cause infiammatorie come pericardite).",
+        coagulazione: "Normale.",
+        emocoltura: "Negativa.",
+        esame_urine: "Normale.",
+        autoanticorpi: "Negativi.",
+        esame_tossicologico: "Negativo (esclude cocaina che causa vasospasmo coronarico).",
+        striscio_sangue: "Normale.",
+        
+        // IL TEST CHIAVE (Diagnosi differenziale con Infarto)
+        dosaggi_specifici: "Troponina I (TnI) e T (TnT): NEGATIVE (seriate a 0, 3 e 6 ore). CK-MB: Normale. (Il muscolo cardiaco soffre ma non sta morendo).",
+
+        // --- IMAGING ---
+        rx: "RX Torace: Ombra cardiaca ai limiti superiori. Campi polmonari liberi (esclude cause polmonari del dolore).",
+        tc: "TC Coronarica (Calcium Score): Alto punteggio di calcio coronarico (aterosclerosi diffusa).",
+        risonanza: "Non indicata in acuto.",
+        angio: "Coronarografia: Stenosi critica (restringimento) del 80% dell'Arteria Discendente Anteriore (LAD). Flusso rallentato ma presente. Nessuna occlusione trombotica acuta completa.",
+        ecografia: "Eco Addome: Normale.",
+        
+        // Elettrocardiogramma: La differenza tra Angina e Infarto
+        elettrocardiogramma: "A riposo: Ritmo sinusale, normale. Sotto sforzo (o durante il dolore): Sottoslivellamento del tratto ST in V3-V6 (Ischemia subendocardica transitoria).",
+        
+        ecocardiogramma: "A riposo: Cinesi normale. Durante il dolore: Ipocinesia della parete anteriore (il muscolo si muove poco perché ha poco ossigeno).",
+        pet: "Non indicata.",
+
+        // --- PROCEDURE & NEURO ---
+        biopsia: "Non necessaria.",
+        endoscopia: "Non indicata (esclude reflusso/gastrite se il dolore fosse dubbio).",
+        
+        esame_obiettivo_addome: "Addome piano, trattabile, non dolente alla palpazione. Assenza di masse pulsanti (esclude aneurisma aorta addominale). Peristalsi presente.",
+        
+        paracentesi: "Non indicata.",
+        eeg: "Normale.",
+        emg: "Normale.",
+
+        // --- EFFETTI TERAPIE ---
+        dialisi: "Nessun effetto.",
+        intervento_chirurgico: "Angioplastica (PTCA) con stenting: Dilatazione del vaso stenotico. Risoluzione completa della sintomatologia sotto sforzo.",
+        intubazione: "Non necessaria.",
+        trasfusione_piastrine: "Non indicata.",
+        
+        // FARMACI
+        antibiotici: "Nessun effetto.",
+        farmaco_vasodilatatore: "Trinitrina sublinguale: Scomparsa completa del dolore in 2 minuti (Vasodilatazione coronarica immediata). Test diagnostico 'ex juvantibus' positivo.",
+        farmaco_aspirina: "Antiaggregazione piastrinica: Previene che la placca si rompa e diventi un infarto vero, ma non toglie il dolore istantaneamente.",
+        //farmaco_trombolitico: "TPA: Il paziente non trae beneficio dall’angiolisi e rischia complicanze emorragiche potenzialmente gravi.",
+        farmaco_betabloccante: "Riduzione della frequenza cardiaca e del consumo di ossigeno miocardico. Previene futuri attacchi.",
+        ossigeno_alta_concentrazione: "Utile durante la crisi dolorosa."
+    },
+
     // ---------------- CASO 1: PORFIRIA ACUTA INTERMITTENTE ----------------
     {
         id: 1,
@@ -47,7 +115,8 @@ const casi = [
         cortisone: "Nessun cambiamento nel quadro clinico.",
         dialisi: "Inefficace per i sintomi acuti.",
         intubazione: "Necessaria solo in caso di paralisi respiratoria avanzata.",
-        immunoglobuline: "Nessun beneficio clinico."
+        immunoglobuline: "Nessun beneficio clinico.",
+        farmaco_vasodilatatore: "Nitroglicerina sublinguale: comparsa immediata di dolore addominale intenso, nausea e debolezza generalizzata, paziente riferisce formicolio alle estremità."
     },
 
     // ---------------- CASO 2: BOTULISMO ----------------
@@ -408,7 +477,8 @@ const casi = [
         cortisone: "Aumento della pressione arteriosa (effetto indesiderato).",
         dialisi: "Ipotensione grave durante la seduta.",
         intubazione: "Stabilizzazione temporanea dei parametri respiratori.",
-        immunoglobuline: "Nessun effetto."
+        immunoglobuline: "Nessun effetto.",
+        farmaco_vasodilatatore: "Nitroprussiato: riduzione immediata della pressione arteriosa sistolica di 25 mmHg, sensazione di sollievo toracico e diminuzione del dolore retrosternale. Frequenza cardiaca stabile."
     },
 
     // ---------------- CASO 9: CARENZA DI G6PD (FAVISMO) ----------------
@@ -614,7 +684,8 @@ const casi = [
         cortisone: "Nessun effetto.",
         dialisi: "Nessun effetto.",
         intubazione: "Necessaria se sopravviene emorragia cerebrale da picco ipertensivo.",
-        immunoglobuline: "Nessun effetto."
+        immunoglobuline: "Nessun effetto.",
+        farmaco_vasodilatatore: "Nitroderivati endovenosi: improvviso aumento della pressione arteriosa a 240/130 mmHg, tachicardia marcata, sensazione di ansia intensa e palpitazioni."
     },
 
     // ---------------- CASO 13: RABBIA (Lyssavirus) ----------------
@@ -1078,7 +1149,8 @@ const casi = [
         cortisone: "Rapido miglioramento della febbre e dei dolori articolari. Stabilizzazione della funzione renale.",
         dialisi: "Necessaria temporaneamente per gestire l'iperazotemia e l'equilibrio acido-base.",
         intubazione: "Necessaria solo in caso di emorragia alveolare massiva con insufficienza respiratoria.",
-        farmaco_immunosoppressore: "Ciclofosfamide/Rituximab: Remissione clinica e radiologica progressiva nelle settimane successive."
+        farmaco_immunosoppressore: "Ciclofosfamide/Rituximab: Remissione clinica e radiologica progressiva nelle settimane successive.",
+        farmaco_vasodilatatore: "Nifedipina orale: miglioramento della temperatura e colorito delle mani e piedi, riduzione di sensazione di freddo e formicolio, pressione leggermente ridotta."
     },
 
 // ---------------- CASO 22: SARCOIDOSI ----------------
@@ -1180,7 +1252,8 @@ const casi = [
         cortisone: "Bolo di Metilprednisolone: Risoluzione della cefalea in 24 ore, normalizzazione della VES in giorni, salvataggio della vista residua.",
         dialisi: "Nessun effetto.",
         intubazione: "Non necessaria.",
-        immunoglobuline: "Nessun beneficio aggiuntivo in acuto rispetto agli steroidi."
+        immunoglobuline: "Nessun beneficio aggiuntivo in acuto rispetto agli steroidi.",
+        farmaco_vasodilatatore: "Nifedipina orale: miglioramento della temperatura e colorito delle mani e piedi, riduzione di sensazione di freddo e formicolio, pressione leggermente ridotta."
     },
 
 // ---------------- CASO 24: ENCEFALITE ANTI-NMDA ----------------
@@ -1230,7 +1303,7 @@ const casi = [
         antibiotici: "Nessun effetto.",
         cortisone: "Miglioramento graduale dei sintomi neurologici dopo diversi giorni.",
         dialisi: "Nessun effetto.",
-		plasmaferesi: "Scambio plasmatico: Miglioramento clinico significativo e riduzione del titolo anticorpale.",
+        plasmaferesi: "Scambio plasmatico: Miglioramento clinico significativo e riduzione del titolo anticorpale.",
         intubazione: "Necessaria per ipoventilazione centrale e protezione vie aeree durante le crisi convulsive.",
         farmaco_antipsicotico: "Peggioramento della rigidità muscolare e della disautonomia (rischio Sindrome Maligna da Neurolettici).",
         intervento_chirurgico: "Ovariectomia (rimozione teratoma): Accelerazione netta del recupero clinico."
@@ -1337,7 +1410,8 @@ const casi = [
         dialisi: "Gestione dell'uremia, nessun effetto sulla patogenesi vascolare.",
         intubazione: "Non necessaria.",
         antivirale: "Lamivudina/Entecavir: Riduzione della carica virale.",
-        plasmaferesi: "Miglioramento clinico rapido (rimozione immunocomplessi circolanti)."
+        plasmaferesi: "Miglioramento clinico rapido (rimozione immunocomplessi circolanti).",
+        farmaco_vasodilatatore: "Nifedipina orale: miglioramento della temperatura e colorito delle mani e piedi, riduzione di sensazione di freddo e formicolio, pressione leggermente ridotta."
     },
 
 // ---------------- CASO 27: AVVELENAMENTO DA TALLIO ----------------
@@ -1493,7 +1567,8 @@ const casi = [
         dialisi: "Gestione dell'insufficienza renale da mioglobinuria, inefficace per rimuovere i farmaci lipofili.",
         intubazione: "Necessaria per paralisi muscolare indotta (se ipertermia > 41°C) e sedazione profonda.",
         //farmaco_benzodiazepine: "Riduzione parziale dell'agitazione e della rigidità muscolare.",
-        farmaco_antiserotoninico: "Somministrazione ciproeptadina per sondino nasogastrico: Graduale risoluzione dell'ipertermia e normalizzazione del tono muscolare nelle 24 ore successive."
+        farmaco_antiserotoninico: "Somministrazione ciproeptadina per sondino nasogastrico: Graduale risoluzione dell'ipertermia e normalizzazione del tono muscolare nelle 24 ore successive.",
+        farmaco_vasodilatatore: "Nitroprussiato endovenoso: calo della pressione arteriosa da 180/100 mmHg a 140/80 mmHg, riduzione dei tremori periferici e sensazione soggettiva di minore agitazione."
     },
 
 // ---------------- CASO 30: TIREOTOSSICOSI (TEMPESTA TIROIDEA) ----------------
@@ -1546,7 +1621,8 @@ const casi = [
         farmaco_betabloccante: "Propranololo EV: Rapida riduzione della frequenza cardiaca e controllo del tremore.",
         farmaco_antitiroideo: "Metimazolo/Propiltiouracile: Blocco della sintesi ormonale (effetto clinico ritardato).",
         cortisone: "Idrocortisone: Riduzione della conversione periferica di T4 in T3 e supporto surrenalico. Miglioramento clinico.",
-        intubazione: "Necessaria in caso di scompenso cardiaco refrattario o coma."
+        intubazione: "Necessaria in caso di scompenso cardiaco refrattario o coma.",
+        farmaco_vasodilatatore: "Nitroprussiato endovenoso: calo della pressione arteriosa da 180/100 mmHg a 140/80 mmHg, riduzione dei tremori periferici e sensazione soggettiva di minore agitazione."
     },
 
 // ---------------- CASO 31: PORPORA TROMBOTICA TROMBOCITOPENICA (TTP) ----------------
@@ -1654,7 +1730,8 @@ const casi = [
         dialisi: "Rapida correzione dell'iperkaliemia e dell'acidosi metabolica. Supporto alla funzione renale.",
         intubazione: "Sedazione necessaria per l'intervento chirurgico.",
         fluidoterapia: "Aumento della diuresi e diluizione parziale della mioglobina.",
-        intervento_chirurgico: "Fasciotomia decompressiva: Ripristino del flusso arterioso distale, riduzione della pressione compartimentale, fuoriuscita di tessuto muscolare necrotico."
+        intervento_chirurgico: "Fasciotomia decompressiva: Ripristino del flusso arterioso distale, riduzione della pressione compartimentale, fuoriuscita di tessuto muscolare necrotico.",
+        farmaco_vasodilatatore: "Fenoldopam endovenoso: aumento immediato della diuresi, urine più chiare, miglioramento della pressione arteriosa senza sintomi di ipotensione, paziente riferisce minore sensazione di gonfiore muscolare."
     },
 
 // ---------------- CASO 33: AMILOIDOSI SISTEMICA (AL) ----------------
@@ -1866,7 +1943,8 @@ const casi = [
         intubazione: "Non necessaria.",
         ferro_supplementare: "Aumento della reticolocitosi, ma possibile scatenamento di emolisi acuta (il ferro stimola la produzione di globuli rossi difettosi che vengono subito distrutti).",
         farmaco_biologico: "Eculizumab (Anti-C5): Cessazione rapida dell'emoglobinuria (urine chiare in 24h) e stabilizzazione dell'emoglobina.",
-        anticoagulante: "Eparina: Stabilizzazione della trombosi portale."
+        anticoagulante: "Eparina: Stabilizzazione della trombosi portale.",
+        farmaco_vasodilatatore: "Fenoldopam endovenoso: calo marcato della pressione arteriosa a 70/40 mmHg, peggioramento dello stato di coscienza, urine quasi assenti, paziente riferisce capogiri e sudorazione intensa."
     },
 
 // ---------------- CASO 37: SINDROME DA CARCINOIDE ----------------
@@ -2180,7 +2258,8 @@ const casi = [
         dialisi: "Non necessaria.",
         intubazione: "Necessaria solo in caso di shock emorragico irreversibile pre-operatorio.",
         fluidoterapia: "Miglioramento transitorio della pressione arteriosa, ma persistente calo dell'emoglobina (il rubinetto è aperto).",
-        intervento_chirurgico: "Laparoscopia d'urgenza (Salpingectomia): Arresto dell'emorragia e rimozione della tuba rotta."
+        intervento_chirurgico: "Laparoscopia d'urgenza (Salpingectomia): Arresto dell'emorragia e rimozione della tuba rotta.",
+        farmaco_vasodilatatore: "Fenoldopam endovenoso: calo marcato della pressione arteriosa a 70/40 mmHg, peggioramento dello stato di coscienza, urine quasi assenti, paziente riferisce capogiri e sudorazione intensa."
     },
 
 // ---------------- CASO 43: AIDS (ESORDIO CON PNEUMOCYSTIS JIROVECII) ----------------
@@ -2230,7 +2309,8 @@ const casi = [
         cortisone: "Prednisone in aggiunta all'antibiotico specifico: Miglioramento rapido degli scambi gassosi e riduzione del rischio di insufficienza respiratoria.",
         dialisi: "Non necessaria.",
         intubazione: "Necessaria se pO2 < 60 mmHg nonostante ossigenoterapia ad alti flussi.",
-        antibiotici: "Trimetoprim-Sulfametossazolo (Bactrim) ad alte dosi: Graduale miglioramento della dispnea e della febbre in 5-7 giorni. Inizio terapia (HAART): Soppressione della carica virale nel tempo."
+        antibiotici: "Trimetoprim-Sulfametossazolo (Bactrim) ad alte dosi: Graduale miglioramento della dispnea e della febbre in 5-7 giorni. Inizio terapia (HAART): Soppressione della carica virale nel tempo.",
+        farmaco_vasodilatatore: "Fenoldopam endovenoso: calo marcato della pressione arteriosa a 70/40 mmHg, peggioramento dello stato di coscienza, urine quasi assenti, paziente riferisce capogiri e sudorazione intensa."
     },
 
 // ---------------- CASO 44: COREA DI HUNTINGTON ----------------
@@ -2391,7 +2471,8 @@ const casi = [
         dialisi: "Correzione temporanea dell'ipokaliemia.",
         intubazione: "Non necessaria.",
         farmaco_antimicotico: "Somministrazione di ketoconazolo, riduzione della sintesi di cortisolo e miglioramento graduale dei sintomi.",
-        intervento_chirurgico: "Adenectomia trans-sfenoidale: Crollo dei livelli di cortisolo post-operatorio (necessita terapia sostitutiva transitoria) e risoluzione del quadro clinico."
+        intervento_chirurgico: "Adenectomia trans-sfenoidale: Crollo dei livelli di cortisolo post-operatorio (necessita terapia sostitutiva transitoria) e risoluzione del quadro clinico.",
+        farmaco_vasodilatatore: "Amlodipina orale: abbassamento progressivo della pressione arteriosa da 160/100 mmHg a 130/85 mmHg, miglioramento lieve della cefalea e riduzione del senso di pesantezza toracica."
     },
 
 // ---------------- CASO 47: OVERDOSE DA FENTANYL ----------------
@@ -2788,6 +2869,7 @@ const casi = [
         fluidoterapia: "Nessun effetto emodinamico significativo a lungo termine.",
         farmaco_aspirina: "Prevenzione della formazione di trombi nelle zone di turbolenza (stenosi); nessun effetto sull'infiammazione parietale.",
         anticoagulante: "Aumento significativo del rischio emorragico.",
+        farmaco_vasodilatatore: "Nifedipina orale: miglioramento della temperatura e colorito delle mani e piedi, riduzione di sensazione di freddo e formicolio, pressione leggermente ridotta."
     },
 
 // ---------------- CASO 52: MENINGIOMA SPINALE ----------------
@@ -3811,6 +3893,7 @@ let esamiDisponibili = {
         "farmaco_levodopa",
         "farmaco_octreotide",
         "farmaco_tetrabenazina",
+        "farmaco_vasodilatatore",
         "ferro_supplementare",
         "immunoglobuline",
         "insulina"

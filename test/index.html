@@ -11,7 +11,7 @@
 
     <div id="game-screen">
         <div class="sign">USCITA</div>
-        <div class="door"></div>
+        <div class="door"><img id="door-img" src="door.png" alt="Porta"></div>
         <div class="background-decor"></div>
 
         <div id="nurse-container">
@@ -228,7 +228,11 @@
                 <button onclick="rivelasol()">SVELA SOLUZIONE</button>
             `;
             selectElement = document.getElementById('exam-selector');
-            caricaCaso(); 
+            let indice2 = Math.floor(Math.random() * casi.length);
+            while (indice2 == casoCorrenteObj.id) {
+                indice2 = Math.floor(Math.random() * casi.length);
+            }
+            caricaCaso(indice2);
         };
         controls.appendChild(nuovoCasoBtn);
         controls.appendChild(condividi);
