@@ -30,6 +30,107 @@ body {
     flex-direction: column;
 }
 
+#top-controls {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    gap: 10px;
+    z-index: 100;
+}
+
+#sound-toggle,
+#theme-toggle {
+    width: 45px;
+    height: 45px;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+#sound-toggle:active,
+#theme-toggle:active {
+    transform: translate(3px, 3px);
+}
+
+#sound-icon,
+#theme-icon {
+    font-size: 1.5rem;
+}
+
+/* ===================================
+   DARK MODE
+=================================== */
+
+.dark-mode #dialog-area {
+    background-color: #1a1a1a;
+    border-top-color: #444;
+}
+
+.dark-mode #game-screen {
+    background-color: #2d5a4a;
+}
+
+.dark-mode #text-content {
+    color: #fff;
+}
+
+.dark-mode .tab {
+    background-color: #333;
+    color: #fff;
+    border-color: #555;
+}
+
+.dark-mode .tab:hover {
+    background-color: #444;
+}
+
+.dark-mode .tab.active {
+    background-color: #5b21b6;
+    border-color: #4c1d95;
+}
+
+.dark-mode button {
+    background-color: #5b21b6;
+    border-color: #4c1d95;
+}
+
+.dark-mode button:hover {
+    background-color: #4c1d95;
+}
+
+.dark-mode select {
+    background-color: #333;
+    color: #fff;
+    border-color: #555;
+}
+
+.dark-mode #exam-counter {
+    background-color: #333;
+    color: #aaa;
+    border-color: #555;
+}
+
+.dark-mode #controls {
+    border-top-color: #444;
+}
+
+.dark-mode .sign {
+    background: rgba(0,0,0,0.7);
+    color: #aaa;
+    border-color: #444;
+}
+
+.dark-mode .door {
+    background: rgba(0,0,0,0.5);
+    border-color: rgba(0,0,0,0.4);
+}
+
 .background-decor {
     position: absolute;
     top: 25%;
@@ -98,14 +199,30 @@ body {
     z-index: 20;
 }
 
+#tabs-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
 #tabs-container {
     display: flex;
     gap: 10px;
-    margin-bottom: 15px;
     overflow-x: auto;
-    max-width: 100%;
+    flex: 1;
     padding-bottom: 5px;
     flex-wrap: nowrap;
+}
+
+#exam-counter {
+    font-size: 1.4rem;
+    color: #666;
+    white-space: nowrap;
+    padding: 5px 10px;
+    background: #f0f0f0;
+    border: 2px solid #ccc;
+    flex-shrink: 0;
 }
 
 .tab {
@@ -141,6 +258,14 @@ body {
     padding-right: 10px;
 }
 
+/* Scrollbar per Firefox */
+#text-content,
+#tabs-container {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) #f0f0f0;
+}
+
+/* Scrollbar per Chrome/Safari/Edge */
 #text-content::-webkit-scrollbar,
 #tabs-container::-webkit-scrollbar {
     width: 8px;
@@ -248,6 +373,11 @@ button:hover {
     #tabs-container {
         gap: 6px;
         margin-bottom: 10px;
+    }
+
+    #exam-counter {
+        font-size: 1.1rem;
+        padding: 3px 8px;
     }
 
     .tab {
