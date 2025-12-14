@@ -154,6 +154,9 @@
         }
 
         function mostraTab(tabId) {
+            // Ferma il typewriter se in corso
+            clearInterval(typeInterval);
+            
             tabAttivaId = tabId;
             const tab = tabs.find(t => t.id === tabId);
             if (tab) {
