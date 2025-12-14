@@ -106,6 +106,14 @@
             isDarkMode = !isDarkMode;
             document.body.classList.toggle('dark-mode', isDarkMode);
             themeIcon.textContent = isDarkMode ? '☀️' : '🌙';
+            
+            // Forza repaint del testo per evitare bug di rendering
+            const textEl = document.getElementById('text-content');
+            const scrollPos = textEl.scrollTop;
+            textEl.style.display = 'none';
+            textEl.offsetHeight; // Trigger reflow
+            textEl.style.display = '';
+            textEl.scrollTop = scrollPos;
         }
 
         // ==========================================
