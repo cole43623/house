@@ -215,6 +215,7 @@ const casi = [
 
         // --- EFFETTI TERAPIE ---
         antibiotici: "Nessuna variazione clinica.",
+        trasfusione_sangue: "Aggravamento dell’emolisi e del danno epatico dopo somministrazione trasfusionale.",
         cortisone: "Nessun miglioramento della sintomatologia neurologica o epatica.",
         dialisi: "Nessun effetto significativo sui livelli tissutali.",
         intubazione: "Non indicata al momento.",
@@ -529,6 +530,7 @@ const casi = [
         cortisone: "Nessuna variazione dell'emolisi.",
         dialisi: "Riduzione dei livelli di bilirubina e metaboliti, supporto in caso di blocco renale.",
         intubazione: "Non necessaria.",
+        trasfusione_sangue: "Riduzione della tachicardia e miglioramento della tolleranza allo sforzo dopo aumento dell’emoglobina.",
         immunoglobuline: "Nessun rallentamento dell'emolisi."
     },
 
@@ -632,6 +634,7 @@ const casi = [
         cortisone: "Miglioramento rapido e spettacolare dei sintomi articolari e della febbre.",
         dialisi: "Non necessaria in acuto, ma la funzionalità renale va monitorata.",
         intubazione: "Non necessaria.",
+        trasfusione_sangue: "Miglioramento della sintomatologia da anemia senza regressione delle manifestazioni sistemiche.",
         immunoglobuline: "Miglioramento della conta piastrinica.",
         farmaco_immunomodulante: "Idrossiclorochina (Plaquenil): Controllo della sintomatologia articolare e della fatica a lungo termine."
     },
@@ -838,6 +841,7 @@ const casi = [
         antibiotici: "Miglioramento clinico lento ma progressivo (risoluzione febbre e diarrea in 2 settimane con Ceftriaxone/Cotrimossazolo).",
         cortisone: "Transitorio miglioramento dei dolori articolari, ma persistenza della diarrea e del calo ponderale.",
         dialisi: "Nessun effetto.",
+        trasfusione_sangue: "Riduzione della debolezza marcata con rapido ritorno dei sintomi nel follow-up.",
         intubazione: "Non necessaria.",
         immunoglobuline: "Nessun effetto. Peggioramento se associati a immunosoppressori (TNF-inibitori scatenano la malattia fulminante)."
     },
@@ -1149,6 +1153,7 @@ const casi = [
         cortisone: "Rapido miglioramento della febbre e dei dolori articolari. Stabilizzazione della funzione renale.",
         dialisi: "Necessaria temporaneamente per gestire l'iperazotemia e l'equilibrio acido-base.",
         intubazione: "Necessaria solo in caso di emorragia alveolare massiva con insufficienza respiratoria.",
+        trasfusione_sangue: "Peggioramento della funzione respiratoria per sovraccarico circolatorio in presenza di emorragia alveolare.",
         farmaco_immunosoppressore: "Ciclofosfamide/Rituximab: Remissione clinica e radiologica progressiva nelle settimane successive.",
         farmaco_vasodilatatore: "Nifedipina orale: miglioramento della temperatura e colorito delle mani e piedi, riduzione di sensazione di freddo e formicolio, pressione leggermente ridotta."
     },
@@ -1357,6 +1362,7 @@ const casi = [
         antibiotici: "Nessun miglioramento clinico o radiologico.",
         cortisone: "Bolo endovena: Arresto della progressione dell'insufficienza respiratoria.",
         dialisi: "Necessaria per gestione dell'iperkaliemia e del sovraccarico idrico (anuria).",
+        trasfusione_sangue: "Aumento dell’edema polmonare e peggioramento dell’ipossiemia per sovraccarico volemico.",
         intubazione: "Necessaria per insufficienza respiratoria ipossiemica acuta.",
         plasmaferesi: "Rapida riduzione del titolo anticorpale e miglioramento della prognosi renale se iniziata precocemente."
     },
@@ -1620,6 +1626,7 @@ const casi = [
         farmaco_fans: "Dopo la somministrazione di aspirina PEGGIORAMENTO: Aumento della quota libera di ormoni tiroidei (spiazzamento dalle proteine di legame).",
         farmaco_betabloccante: "Propranololo EV: Rapida riduzione della frequenza cardiaca e controllo del tremore.",
         farmaco_antitiroideo: "Metimazolo/Propiltiouracile: Blocco della sintesi ormonale (effetto clinico ritardato).",
+        trasfusione_sangue: "Aumento della tachiaritmia e instabilità emodinamica dopo carico volemico trasfusionale.",
         cortisone: "Idrocortisone: Riduzione della conversione periferica di T4 in T3 e supporto surrenalico. Miglioramento clinico.",
         intubazione: "Necessaria in caso di scompenso cardiaco refrattario o coma.",
         farmaco_vasodilatatore: "Nitroprussiato endovenoso: calo della pressione arteriosa da 180/100 mmHg a 140/80 mmHg, riduzione dei tremori periferici e sensazione soggettiva di minore agitazione."
@@ -1653,7 +1660,6 @@ const casi = [
         striscio_sangue: "Presenza massiva di Schistociti (>1% dei globuli rossi).",
         dosaggi_specifici: "Attività ADAMTS13: < 5% (Grave deficit). Presenza di inibitore anti-ADAMTS13.",
         esame_obiettivo_addome: "Addome morbido, lieve dolore diffuso, peristalsi normale.",
-        esame_obiettivo_addome: "Addome teso, dolorabile diffuso, peristalsi presente.",
 
         // --- IMAGING ---
         rx: "RX Torace: Negativo.",
@@ -1676,6 +1682,7 @@ const casi = [
         cortisone: "Lieve miglioramento transitorio, non risolutivo.",
         dialisi: "Non necessaria per il volume, ma non risolve la patologia di base.",
         intubazione: "Necessaria solo se il livello di coscienza decade (GCS < 8).",
+        trasfusione_sangue: "Parziale miglioramento dell’astenia e della dispnea da sforzo dopo correzione dell’anemia, senza risoluzione dei sintomi neurologici.",
         trasfusione_piastrine: "PEGGIORAMENTO DRAMMATICO: Aumento della confusione mentale, comparsa di nuovi deficit neurologici, febbre in aumento (alimenta la microtrombosi).",
         plasmaferesi: "Plasma Exchange (PEX): Rapida risalita della conta piastrinica e normalizzazione dell'LDH nelle 24-48 ore successive."
     },
@@ -1729,6 +1736,7 @@ const casi = [
         cortisone: "Nessun effetto significativo sull'edema muscolare ischemico.",
         dialisi: "Rapida correzione dell'iperkaliemia e dell'acidosi metabolica. Supporto alla funzione renale.",
         intubazione: "Sedazione necessaria per l'intervento chirurgico.",
+        trasfusione_sangue: "Peggioramento dell’iperpotassiemia e del rischio aritmico per emolisi associata.",
         fluidoterapia: "Aumento della diuresi e diluizione parziale della mioglobina.",
         intervento_chirurgico: "Fasciotomia decompressiva: Ripristino del flusso arterioso distale, riduzione della pressione compartimentale, fuoriuscita di tessuto muscolare necrotico.",
         farmaco_vasodilatatore: "Fenoldopam endovenoso: aumento immediato della diuresi, urine più chiare, miglioramento della pressione arteriosa senza sintomi di ipotensione, paziente riferisce minore sensazione di gonfiore muscolare."
@@ -1783,6 +1791,7 @@ const casi = [
         antibiotici: "Nessun effetto.",
         cortisone: "Riduzione temporanea dell'edema (effetto mineralcorticoide negativo se non gestito). Parte della terapia chemioterapica.",
         dialisi: "Gestione del sovraccarico idrico e dell'azotemia. Nessuna rimozione delle fibrille dai tessuti.",
+        trasfusione_sangue: "Miglioramento temporaneo della dispnea e della debolezza muscolare senza modifica del quadro sistemico.",
         intubazione: "Difficoltosa a causa della macroglossia (lingua ingrossata) e rigidità cervicale.",
         farmaco_betabloccante: "Peggioramento dell'ipotensione e della fatica (il cuore rigido ha bisogno della frequenza per mantenere la gittata, bloccandola crolla la portata).",
         chemioterapia: "Bortezomib/Daratumumab: Riduzione delle catene leggere nel sangue e arresto della deposizione di nuova amiloide."
@@ -1941,6 +1950,7 @@ const casi = [
         cortisone: "Nessun miglioramento dell'emolisi o dell'Hb.",
         dialisi: "Non indicata.",
         intubazione: "Non necessaria.",
+        trasfusione_sangue: "Dopo trasfusione filtrata netto miglioramento della stanchezza e della cefalea mattutina dopo trasfusione, con beneficio transitorio.",
         ferro_supplementare: "Aumento della reticolocitosi, ma possibile scatenamento di emolisi acuta (il ferro stimola la produzione di globuli rossi difettosi che vengono subito distrutti).",
         farmaco_biologico: "Eculizumab (Anti-C5): Cessazione rapida dell'emoglobinuria (urine chiare in 24h) e stabilizzazione dell'emoglobina.",
         anticoagulante: "Eparina: Stabilizzazione della trombosi portale.",
@@ -1972,7 +1982,7 @@ const casi = [
         esame_liquor: "Normale.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Acido 5-idrossi-indolacetico (5-HIAA) urinario 24h: 180 mg (Valore normale < 10 mg). Cromogranina A sierica: 1200 ng/mL (Marcatamente aumentata).",
-        esame_obiettivo_addome: "Addome con dolore colico episodico, massa non palpabile, peristalsi presente.",
+        esame_obiettivo_addome: "Addome con dolore colico episodico, massa non palpabile, peristalsi presente. La palpazione profonda del fegato scatena un violento episodio di flushing e ipotensione (rilascio massivo di mediatori).",
 
         // --- IMAGING ---
         rx: "RX Torace: Campi polmonari liberi. Cuore di dimensioni ai limiti.",
@@ -1994,8 +2004,8 @@ const casi = [
         antibiotici: "Nessun effetto sulla diarrea o sul flushing.",
         cortisone: "Nessun effetto significativo.",
         dialisi: "Nessun effetto.",
+        trasfusione_sangue: "Scatenamento di flushing severo, broncospasmo e instabilità emodinamica dopo trasfusione.",
         intubazione: "Rischio di broncospasmo severo durante l'induzione.",
-        //manovre_addominali: "La palpazione profonda del fegato scatena un violento episodio di flushing e ipotensione (rilascio massivo di mediatori).",
         farmaco_octreotide: "Somministrazione analogo della Somatostatina: Rapida scomparsa del flushing e arresto della diarrea.",
         adrenalina: "PEGGIORAMENTO: Ipotensione paradossa e peggioramento del flushing (stimola il rilascio di sostanze vasoattive dal tumore)."
     },
@@ -2045,6 +2055,7 @@ const casi = [
 
         // --- EFFETTI TERAPIE ---
         antibiotici: "Terapia mirata (es. Penicillina + Gentamicina): Defervescenza lenta (3-4 giorni) e sterilizzazione delle emocolture successive.",
+        trasfusione_sangue: "Incremento della performance fisica e riduzione delle vertigini, con persistenza della febbricola.",
         cortisone: "Nessun effetto sull'infezione, possibile mascheramento della febbre.",
         dialisi: "Non necessaria in acuto.",
         intubazione: "Necessaria solo in caso di scompenso cardiaco acuto da rottura valvolare (edema polmonare).",
@@ -2256,6 +2267,7 @@ const casi = [
         antibiotici: "Nessun effetto.",
         cortisone: "Nessun effetto.",
         dialisi: "Non necessaria.",
+        trasfusione_sangue: "Rapido recupero della pressione arteriosa e dello stato di coscienza dopo somministrazione di emazie concentrate.",
         intubazione: "Necessaria solo in caso di shock emorragico irreversibile pre-operatorio.",
         fluidoterapia: "Miglioramento transitorio della pressione arteriosa, ma persistente calo dell'emoglobina (il rubinetto è aperto).",
         intervento_chirurgico: "Laparoscopia d'urgenza (Salpingectomia): Arresto dell'emorragia e rimozione della tuba rotta.",
@@ -2308,6 +2320,7 @@ const casi = [
         // --- EFFETTI TERAPIE ---
         cortisone: "Prednisone in aggiunta all'antibiotico specifico: Miglioramento rapido degli scambi gassosi e riduzione del rischio di insufficienza respiratoria.",
         dialisi: "Non necessaria.",
+        trasfusione_sangue: "Miglioramento della tolleranza allo sforzo e della tachicardia senza impatto sull’insufficienza respiratoria.",
         intubazione: "Necessaria se pO2 < 60 mmHg nonostante ossigenoterapia ad alti flussi.",
         antibiotici: "Trimetoprim-Sulfametossazolo (Bactrim) ad alte dosi: Graduale miglioramento della dispnea e della febbre in 5-7 giorni. Inizio terapia (HAART): Soppressione della carica virale nel tempo.",
         farmaco_vasodilatatore: "Fenoldopam endovenoso: calo marcato della pressione arteriosa a 70/40 mmHg, peggioramento dello stato di coscienza, urine quasi assenti, paziente riferisce capogiri e sudorazione intensa."
@@ -2413,6 +2426,7 @@ const casi = [
         antibiotici: "Nessun effetto sulla febbre o sulla VES.",
         cortisone: "Lieve riduzione temporanea della febbre.",
         dialisi: "Non indicata.",
+        trasfusione_sangue: "Transitorio miglioramento della dispnea e delle sincopi senza completa normalizzazione emodinamica.",
         intubazione: "Necessaria per l'intervento cardiochirurgico.",
         anticoagulante: "Warfarin/Eparina: RISCHIOSO. Non scioglie la massa e aumenta il rischio di emorragia intratumorale con embolizzazione massiva.",
         intervento_chirurgico: "Resezione della massa in circolazione extracorporea: Guarigione completa, scomparsa immediata dei sintomi e normalizzazione degli esami."
@@ -2677,6 +2691,7 @@ const casi = [
         antibiotici: "Nessuna variazione degli enzimi epatici o dell'INR.",
         cortisone: "Nessun effetto sulla necrosi epatica.",
         antivirale: "Nessun effetto.",
+        trasfusione_sangue: "Stabilizzazione emodinamica temporanea in presenza di sanguinamento e coagulopatia.",
         farmaco_antidoto: "N-Acetilcisteina (NAC) EV: Ripristino delle scorte di Glutatione, miglioramento dell'emodinamica epatica e riduzione della mortalità.",
         fluidoterapia: "Soluzione Glucosata: Normalizzazione della glicemia e prevenzione del danno neurologico da ipoglicemia.",
     },
@@ -3033,6 +3048,7 @@ const casi = [
         // --- EFFETTI TERAPIE ---
         dialisi: "Nessun effetto.",
         intervento_chirurgico: "Non indicato.",
+        trasfusione_sangue: "Riduzione dei sintomi da anemia con beneficio clinico non duraturo nel tempo.",
         trasfusione_piastrine: "Non indicata.",
         intubazione: "Non necessaria.",
         
@@ -3212,6 +3228,7 @@ const casi = [
         intervento_chirurgico: "Resezione ileo-colica: Risolve la stenosi o l'ascesso acuto, ma NON CURA la malattia. Era meglio evitare.",
         
         intubazione: "Non necessaria.",
+        trasfusione_sangue: "Miglioramento dell’astenia e della capacità funzionale senza beneficio sul dolore addominale.",
         trasfusione_piastrine: "Non indicata.",
         
         // FARMACI
@@ -3394,6 +3411,7 @@ const casi = [
         antibiotici: "Necessari per trattare le infezioni acute (otiti/polmoniti), ma non risolvono la malattia di base.",
         cortisone: "Miglioramento dell'eczema e lieve risalita transitoria delle piastrine, ma aumenta il rischio infettivo già alto.",
         trasfusione_piastrine: "Efficace per fermare emorragie acute, ma le piastrine trasfuse vengono distrutte rapidamente.",
+        //forse è sbagliato trasfusione_sangue: "Comparsa di reazione trasfusionale grave e peggioramento dell’immunodeficienza.",
         farmaco_immunosoppressore: "Rituximab: Controllo delle complicanze autoimmuni (emolisi o trombocitopenia immune) se presenti.",
         immunoglobuline: "IVIG: Riduzione della frequenza delle infezioni batteriche.",
         intervento_chirurgico: "Trapianto di Cellule Staminali Ematopoietiche (Midollo Osseo): Guarigione completa del difetto immunitario e piastrinico."
@@ -3761,7 +3779,7 @@ const casi = [
         livello_difficolta: "Difficile",
 
         // --- DATI PAZIENTE ---
-        sesso: "M",
+        sesso: "Maschio",
         eta: 58,
         sintomi: "Improvvisa difficoltà a vedere di notte o in ambienti poco illuminati (Nictalopia), visione di luci scintillanti o 'formicolio' visivo (Fotopsie), perdita della visione periferica.",
         anamnesi: "3 anni fa gli è stato rimosso un 'neo brutto' dalla schiena (Melanoma cutaneo), dichiarato guarito. Nessun problema di vista precedente.",
@@ -3812,6 +3830,149 @@ const casi = [
         cortisone: "Prednisone sistemico: Miglioramento parziale dei sintomi visivi (sopprime l'autoimmunità), ma rischio di favorire la crescita del tumore.",
         immunoglobuline: "IVIG o Plasmaferesi: Miglioramento della vista rimuovendo gli autoanticorpi circolanti.",
         farmaco_biologico: "Immunoterapia (Pembrolizumab/Nivolumab): ESSENZIALE per trattare il melanoma metastatico. PARADOSSO: Potenziando il sistema immunitario, questi farmaci potrebbero inizialmente peggiorare la retinopatia autoimmune o la vitiligine (segno che il farmaco funziona e sta attaccando i melanociti ovunque).",
+    },
+
+// ---------------- CASO 68: ANEMIA FALCIFORME (PEDIATRICO) ----------------
+    {
+        id: 68,
+        nome_malattia: "Anemia Falciforme (Drepanocitosi)",
+        livello_difficolta: "Medio",
+
+        // --- DATI PAZIENTE ---
+        sesso: "Maschio",
+        eta: 10,
+        sintomi: "Pianto ininterrotto, riferisce dolore insopportabile alle gambe e alla schiena. Febbre, pallore marcato, stanchezza (non riesce a giocare a calcio da giorni).",
+        anamnesi: "Bambino di origine africana. Storia di 'mani e piedi gonfi' (Dattilite) quando era lattante. È più basso e magro dei suoi compagni di classe (ritardo di crescita). Vaccinazioni in regola.",
+        note_infermiera: "Il bambino è rannicchiato nel letto e urla se provo a toccargli le gambe. Gli occhi sono gialli (Ittero). La madre dice che 'ha fatto pipì scura come la coca-cola'.",
+
+        // --- LABORATORIO ---
+        emocromo: "Hb 6.5 g/dL (Anemia grave). Reticolociti: 18% (Altissimi - crisi rigenerativa). Leucociti 15.000/mmc.",
+        
+        esami_ematochimici: "Bilirubina Totale: 3.8 mg/dL (Indiretta aumentata). LDH: 950 U/L. Aptoglobina: Assente.",
+        
+        emogas: "pO2 90 mmHg (Monitorare attentamente per Sindrome Toracica Acuta).",
+        ves_pcr: "PCR aumentata.",
+        coagulazione: "Normale.",
+        emocoltura: "In corso (Rischio sepsi da Pneumococco).",
+        esame_urine: "Urobilinogeno ++. Ematuria assente.",
+        autoanticorpi: "Coombs Diretto NEGATIVO.",
+        
+        esame_tossicologico: "Non indicato (età pediatrica).",
+        
+        striscio_sangue: "Presenza di drepanociti (globuli a falce) e cellule a bersaglio (Target cells).",
+        
+        // IL TEST CHIAVE
+        dosaggi_specifici: "Elettroforesi Emoglobina: HbS 92%, HbF 8% (se non prende idrossiurea), HbA assente.",
+
+        // --- IMAGING ---
+        rx: "RX Torace: Iniziali opacità basali (polmonite o infarto polmonare). RX Ossa: Allargamento degli spazi midollari (l'osso si allarga per produrre sangue).",
+        tc: "TC Cranio: Se segni neurologici, per escludere Ictus (Stroke) che è frequente nei bambini falcemici.",
+        risonanza: "RMN Encefalo: Aree di ischemie silenti (Silent infarcts).",
+        angio: "Doppler Transcranico (TCD): Velocità di flusso aumentata (> 200 cm/s) nelle arterie cerebrali (Indice di alto rischio ictus).",
+        ecografia: "Eco Addome: Milza aumentata di volume (Splenomegalia). Calcoli alla colecisti.",
+        elettrocardiogramma: "Tachicardia sinusale.",
+        ecocardiogramma: "Lieve dilatazione ventricolare sinistra (da anemia cronica).",
+        pet: "Non indicata.",
+
+        // --- PROCEDURE & NEURO ---
+        biopsia: "Non necessaria.",
+        
+        esame_obiettivo_addome: "Addome trattabile. Milza palpabile 2 cm sotto l'arcata costale (Rischio sequestro splenico acuto). Fegato lievemente ingrossato.",
+        
+        paracentesi: "Non indicata.",
+        eeg: "Normale.",
+        emg: "Normale.",
+
+        // --- EFFETTI TERAPIE ---
+        dialisi: "Non indicata.",
+        intervento_chirurgico: "Splenectomia: Valutata se crisi di sequestro splenico ricorrenti.",
+        intubazione: "Solo in caso di insufficienza respiratoria grave.",
+        trasfusione_piastrine: "Non indicata.",
+        
+        // FARMACI
+        antibiotici: "Penicillina/Ceftriaxone: Profilassi o terapia aggressiva immediata alla minima febbre (il sistema immunitario è debole).",
+        farmaco_fans: "Ibuprofene: Non sufficiente per la crisi vaso-occlusiva, ma utile per la febbre.",
+        farmaco_analgesico: "Morfina EV (dosaggio pediatrico): Necessaria.",
+        fluidoterapia: "Idratazione endovenosa (1.5 volte il fabbisogno basale): Fondamentale per 'diluire' i globuli rossi.",
+        ossigeno_alta_concentrazione: "Mantenere sat > 95%.",
+        trasfusione_sangue: "Trasfusione semplice o Exchange: Necessaria se Hb < 5 g/dL o se segni di Ictus/Sindrome Toracica.",
+        chemioterapia: "Somministrazione idrossiurea: terapia preventiva a lungo termine (aumenta HbF)."
+    },
+
+// ---------------- CASO 69: RICERCA DI FARMACI (DRUG SEEKING BEHAVIOR / SIMULAZIONE) ----------------
+    {
+        id: 69,
+        nome_malattia: "Simulazione (Drug Seeking Behavior - Finta Colica Renale)",
+        livello_difficolta: "Medio",
+
+        // --- DATI PAZIENTE ---
+        sesso: "Maschio",
+        eta: 34,
+        sintomi: "Lamenta un dolore atroce (10/10) al fianco destro che si irradia all'inguine. Si contorce sul lettino, urla e chiede aiuto.",
+        anamnesi: "Anamnesi positiva per episodi ricorrenti di calcolosi renale. Riporta precedenti reazioni avverse a diversi farmaci antinfiammatori non steroidei.",
+        note_infermiera: "Paziente vigile, orientato e collaborante. Alterna momenti di apparente sollievo a fasi di forti dolori, durante le quali richiede assistenza.",
+
+        // --- LABORATORIO ---
+        emocromo: "Normale.",
+        
+        esami_ematochimici: "Creatinina e Funzionalità renale normali. Calcio normale.",
+        
+        emogas: "Normale.",
+        ves_pcr: "Normali.",
+        coagulazione: "Normale.",
+        emocoltura: "Negativa.",
+        
+        // L'INDIZIO CHIAVE DI LABORATORIO
+        esame_urine: "Chimico-Fisico: NORMALE. Assenza totale di Microematuria (sangue).",
+        
+        autoanticorpi: "Negativi.",
+        
+        esame_tossicologico: "Positivo agli Oppiacei (tracce). Il paziente dice che ha preso 'una vecchia pillola di codeina della nonna' per il dolore prima di venire, ma che 'non ha fatto niente'.",
+        
+        striscio_sangue: "Normale.",
+        
+        dosaggi_specifici: "Nessuno specifico.",
+
+        // --- IMAGING ---
+        rx: "RX Addome: Nessuna calcificazione visibile lungo le vie urinarie.",
+        
+        // LA PROVA DEFINITIVA
+        tc: "TC Addome senza mezzo di contrasto: ASSENZA DI CALCOLI (Urolitiasi). Vie escretrici non dilatate. Reni normali.",
+        
+        risonanza: "Non indicata.",
+        angio: "Non indicata.",
+        ecografia: "Eco Reni: Reni di dimensioni normali, assenza di idronefrosi (dilatazione) o calcoli.",
+        elettrocardiogramma: "Frequenza cardiaca 75 bpm (Normale).",
+        ecocardiogramma: "Normale.",
+        pet: "Non indicata.",
+
+        // --- PROCEDURE & NEURO ---
+        biopsia: "Non necessaria.",
+        
+        esame_obiettivo_addome: "Giordano (colpo sul rene) apparentemente positivo (il paziente salta dal dolore appena lo sfiori). Addome trattabile.",
+        
+        paracentesi: "Non indicata.",
+        eeg: "Normale.",
+        emg: "Normale.",
+
+        // --- EFFETTI TERAPIE ---
+        dialisi: "Non indicata.",
+        intervento_chirurgico: "Non indicato.",
+        intubazione: "Non necessaria.",
+        trasfusione_piastrine: "Non indicata.",
+        
+        // FARMACI
+        antibiotici: "Nessun effetto.",
+        
+        farmaco_fans: "Ketorolac (Toradol): Il paziente rifiuta di farselo somministrare urlando che è allergico.",
+        
+        farmaco_analgesico: "Morfina/Petidina: dopo la somministrazione riferisce una riduzione significativa del dolore e appare più tranquillo e collaborante. Chiede informazioni sull’andamento della terapia analgesica.",
+        
+        //farmaco_placebo: "Soluzione Fisiologica (spacciata verbalmente per 'un nuovo potente antidolorifico'): Il paziente riferisce un miglioramento netto del dolore (Risposta positiva al placebo = componente non organica).",
+        
+        fluidoterapia: "Nessun effetto clinico reale, ma il paziente si lamenta che 'l'acqua non toglie il dolore'.",
+        
+        //dimissione: "Appena si comunica che la TC è negativa e non verranno prescritti oppioidi, il paziente si arrabbia, minaccia il personale, si strappa l'agocannula e se ne va (DAMA - Dimissione volontaria)."
     }
 ];
 
@@ -3864,7 +4025,8 @@ let esamiDisponibili = {
         "paracentesi",
         "plasmaferesi",
         "ossigeno_alta_concentrazione",
-        "trasfusione_piastrine"
+        "trasfusione_piastrine",
+        "trasfusione_sangue"
     ],
     "Farmaci": [
         "adrenalina",
@@ -3873,6 +4035,7 @@ let esamiDisponibili = {
         "antivirale",
         "cortisone",
         "chemioterapia",
+        "farmaco_analgesico",
         "farmaco_antidiabetico",
         "farmaco_antidoto",
         "farmaco_antimicotico",
