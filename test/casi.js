@@ -2886,64 +2886,6 @@ const casi = [
         farmaco_vasodilatatore: "Nifedipina orale: miglioramento della temperatura e colorito delle mani e piedi, riduzione di sensazione di freddo e formicolio, pressione leggermente ridotta."
     },
 
-// ---------------- CASO 52: MENINGIOMA SPINALE ----------------
-    {
-        id: 52,
-        nome_malattia: "Meningioma Spinale",
-        livello_difficolta: "Difficile",
-
-        // --- DATI PAZIENTE ---
-        sesso: "Femmina",
-        eta: 62,
-        sintomi: "Debolezza progressiva alle gambe (paraparesi), rigidità muscolare, dolore alla schiena localizzato 'a cintura' che peggiora di notte stando sdraiata, disturbi urinari (urgenza).",
-        anamnesi: "In cura da anni per 'artrosi lombare' e 'sciatalgia' senza benefici con FANS o fisioterapia.",
-        note_infermiera: "La paziente cammina con andatura 'a forbice' (spastica). Riferisce che le gambe saltano da sole quando è a riposo (clono spontaneo).",
-
-        // --- LABORATORIO ---
-        emocromo: "Normale.",
-        esami_ematochimici: "Normale.",
-        emogas: "Normale.",
-        ves_pcr: "Normale.",
-        emocoltura: "Negativa.",
-        esame_urine: "Normale.",
-        autoanticorpi: "Negativi.",
-        esame_tossicologico: "Negativo.",
-        esame_liquor: "Dissociazione albumino-citologica: Proteine molto elevate (> 100 mg/dL) con cellule normali (Sindrome di Froin da blocco del flusso liquorale).",
-        striscio_sangue: "Normale.",
-        dosaggi_specifici: "Marcatori tumorali negativi.",
-        esame_obiettivo_addome: "Addome morbido, non dolorabile, peristalsi normale.",
-
-        // --- IMAGING ---
-        rx: "RX Rachide: Spondilosi diffusa (artrosi), nessun crollo vertebrale o lesione osteolitica evidente.",
-        tc: "TC Rachide (senza mdc): Modeste protrusioni discali, non giustificano la clinica. Massa isodensa nel canale spinale difficile da distinguere dal midollo senza contrasto.",
-        risonanza: "RMN Rachide Dorsale (con Gadolinio): Massa intradurale extramidollare a livello D8-D9, che comprime severamente il midollo spinale. Presenza del segno della 'coda durale' (Dural tail sign).",
-        angio: "Negativa.",
-        ecografia: "Vescica a pareti ispessite (Vescica neurologica).",
-        elettrocardiogramma: "Normale.",
-        ecocardiogramma: "Normale.",
-        pet: "Nessuna captazione suggestiva di metastasi.",
-
-        // --- PROCEDURE & NEURO ---
-        biopsia: "Esame istologico (post-operatorio): Meningioma psammomatoso (benigno, Grado I WHO).",
-        eeg: "Normale.",
-        emg: "Nessun segno di denervazione nei muscoli degli arti superiori. Segni di sofferenza piramidale agli arti inferiori.",
-        esame_neurologico_specifico: "Iperreflessia rotulea e achillea bilaterale. Segno di Babinski positivo bilaterale. Livello sensitivo (ipoestesia) al di sotto dell'ombelico.",
-
-        // --- EFFETTI TERAPIE ---
-        dialisi: "Nessun effetto.",
-        plasmaferesi: "Nessun effetto.",
-        intubazione: "Non necessaria.",
-        
-        // FARMACI
-        antibiotici: "Nessun effetto.",
-        cortisone: "Desametasone: Riduzione dell'edema peritumorale con transitorio miglioramento della forza e del dolore.",
-        farmaco_fans: "Sollievo minimo dal dolore.",
-        chemioterapia: "Non indicata per meningiomi benigni.",
-        
-        // TERAPIA RISOLUTIVA
-        intervento_chirurgico: "Laminectomia e asportazione della massa: Recupero graduale della funzione motoria e sfinterica. Prognosi eccellente."
-    },
-
     // ---------------- CASO 53: INFEZIONE DA CHLAMYDIA (CON SINDROME DI FITZ-HUGH-CURTIS) ----------------
     {
         id: 53,
@@ -3973,6 +3915,64 @@ const casi = [
         fluidoterapia: "Nessun effetto clinico reale, ma il paziente si lamenta che 'l'acqua non toglie il dolore'.",
         
         //dimissione: "Appena si comunica che la TC è negativa e non verranno prescritti oppioidi, il paziente si arrabbia, minaccia il personale, si strappa l'agocannula e se ne va (DAMA - Dimissione volontaria)."
+    },
+
+// ---------------- CASO 70: MENINGIOMA SPINALE ----------------
+    {
+        id: 70,
+        nome_malattia: "Meningioma Spinale",
+        livello_difficolta: "Difficile",
+
+        // --- DATI PAZIENTE ---
+        sesso: "Femmina",
+        eta: 62,
+        sintomi: "Debolezza progressiva alle gambe (paraparesi), rigidità muscolare, dolore alla schiena localizzato 'a cintura' che peggiora di notte stando sdraiata, disturbi urinari (urgenza).",
+        anamnesi: "In cura da anni per 'artrosi lombare' e 'sciatalgia' senza benefici con FANS o fisioterapia.",
+        note_infermiera: "La paziente cammina con andatura 'a forbice' (spastica). Riferisce che le gambe saltano da sole quando è a riposo (clono spontaneo).",
+
+        // --- LABORATORIO ---
+        emocromo: "Normale.",
+        esami_ematochimici: "Normale.",
+        emogas: "Normale.",
+        ves_pcr: "Normale.",
+        emocoltura: "Negativa.",
+        esame_urine: "Normale.",
+        autoanticorpi: "Negativi.",
+        esame_tossicologico: "Negativo.",
+        esame_liquor: "Dissociazione albumino-citologica: Proteine molto elevate (> 100 mg/dL) con cellule normali (Sindrome di Froin da blocco del flusso liquorale).",
+        striscio_sangue: "Normale.",
+        dosaggi_specifici: "Marcatori tumorali negativi.",
+        esame_obiettivo_addome: "Addome morbido, non dolorabile, peristalsi normale.",
+
+        // --- IMAGING ---
+        rx: "RX Rachide: Spondilosi diffusa (artrosi), nessun crollo vertebrale o lesione osteolitica evidente.",
+        tc: "TC Rachide (senza mdc): Modeste protrusioni discali, non giustificano la clinica. Massa isodensa nel canale spinale difficile da distinguere dal midollo senza contrasto.",
+        risonanza: "RMN Rachide Dorsale (con Gadolinio): Massa intradurale extramidollare a livello D8-D9, che comprime severamente il midollo spinale. Presenza del segno della 'coda durale' (Dural tail sign).",
+        angio: "Negativa.",
+        ecografia: "Vescica a pareti ispessite (Vescica neurologica).",
+        elettrocardiogramma: "Normale.",
+        ecocardiogramma: "Normale.",
+        pet: "Nessuna captazione suggestiva di metastasi.",
+
+        // --- PROCEDURE & NEURO ---
+        biopsia: "Esame istologico (post-operatorio): Meningioma psammomatoso (benigno, Grado I WHO).",
+        eeg: "Normale.",
+        emg: "Nessun segno di denervazione nei muscoli degli arti superiori. Segni di sofferenza piramidale agli arti inferiori.",
+        esame_neurologico_specifico: "Iperreflessia rotulea e achillea bilaterale. Segno di Babinski positivo bilaterale. Livello sensitivo (ipoestesia) al di sotto dell'ombelico.",
+
+        // --- EFFETTI TERAPIE ---
+        dialisi: "Nessun effetto.",
+        plasmaferesi: "Nessun effetto.",
+        intubazione: "Non necessaria.",
+        
+        // FARMACI
+        antibiotici: "Nessun effetto.",
+        cortisone: "Desametasone: Riduzione dell'edema peritumorale con transitorio miglioramento della forza e del dolore.",
+        farmaco_fans: "Sollievo minimo dal dolore.",
+        chemioterapia: "Non indicata per meningiomi benigni.",
+        
+        // TERAPIA RISOLUTIVA
+        intervento_chirurgico: "Laminectomia e asportazione della massa: Recupero graduale della funzione motoria e sfinterica. Prognosi eccellente."
     }
 ];
 
