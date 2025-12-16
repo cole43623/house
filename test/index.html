@@ -45,6 +45,17 @@
                 <button onclick="accettaPaziente()">ACCETTA PAZIENTE</button>
             </div>
         </div>
+
+        <!-- Popup conferma pixel art -->
+        <div id="popup-overlay" class="hidden">
+            <div id="popup-box">
+                <div id="popup-text">Sei sicuro di voler rivelare la soluzione del caso?</div>
+                <div id="popup-buttons">
+                    <button id="popup-confirm">SÌ</button>
+                    <button id="popup-cancel">NO</button>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="casi.js"></script>
     <script>
@@ -139,7 +150,7 @@
         document.addEventListener('mousemove', (e) => {
             if (!isResizing) return;
             const deltaY = startY - e.clientY;
-            const newHeight = Math.min(Math.max(startHeight + deltaY, 150), window.innerHeight * 0.8);
+            const newHeight = Math.min(Math.max(startHeight + deltaY, 150), window.innerHeight * 0.90);
             dialogArea.style.height = newHeight + 'px';
         });
 
@@ -162,7 +173,7 @@
         document.addEventListener('touchmove', (e) => {
             if (!isResizing) return;
             const deltaY = startY - e.touches[0].clientY;
-            const newHeight = Math.min(Math.max(startHeight + deltaY, 150), window.innerHeight * 0.8);
+            const newHeight = Math.min(Math.max(startHeight + deltaY, 150), window.innerHeight * 0.95);
             dialogArea.style.height = newHeight + 'px';
         }, { passive: false });
 
@@ -350,10 +361,23 @@
         }
 
     function rivelasol() {
-        const conferma = confirm("Sei sicuro di voler rivelare la soluzione del caso?");
+        if (!casoCorrenteObj) return;
+        
+        // Mostra popup personalizzato
+        const overlay = document.getElementById('popup-overlay');
+        overlay.classList.remove('hidden');
+        
+        // Gestione bottoni
+        document.getElementById('popup-confirm').onclick = () => {
+            overlay.classList.add('hidden');
+            mostraSoluzione();
+        };
+        document.getElementById('popup-cancel').onclick = () => {
+            overlay.classList.add('hidden');
+        };
+    }
 
-        if (!casoCorrenteObj || !conferma) return;
-
+    function mostraSoluzione() {
         // Calcola il tempo impiegato
         const tempoImpiegato = Date.now() - timerStart;
         const tempo = formatTempo(tempoImpiegato);

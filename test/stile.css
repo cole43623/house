@@ -193,7 +193,7 @@ body {
     width: 100%;
     height: 400px;
     min-height: 200px;
-    max-height: 85dvh;
+    max-height: 90dvh;
     background-color: var(--dialog-bg);
     border-top: var(--border-style);
     padding: 20px 40px;
@@ -378,6 +378,93 @@ button:hover {
 }
 
 /* ===================================
+   POPUP CONFERMA PIXEL ART
+=================================== */
+
+#popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+#popup-overlay.hidden {
+    display: none;
+}
+
+#popup-box {
+    background: var(--dialog-bg);
+    border: 4px solid #333;
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.3);
+    padding: 30px 40px;
+    text-align: center;
+    max-width: 90%;
+    animation: popupBounce 0.3s ease-out;
+}
+
+@keyframes popupBounce {
+    0% { transform: scale(0.5); opacity: 0; }
+    70% { transform: scale(1.05); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+#popup-text {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+#popup-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+#popup-confirm {
+    background-color: #2ecc71;
+    border-color: #27ae60;
+}
+
+#popup-confirm:hover {
+    background-color: #27ae60;
+}
+
+#popup-cancel {
+    background-color: #e74c3c;
+    border-color: #c0392b;
+}
+
+#popup-cancel:hover {
+    background-color: #c0392b;
+}
+
+.dark-mode #popup-box {
+    background: #1a1a1a;
+    border-color: #444;
+}
+
+.dark-mode #popup-text {
+    color: #fff;
+}
+
+.dark-mode #popup-confirm {
+    background-color: #27ae60;
+    border-color: #1e8449;
+}
+
+.dark-mode #popup-cancel {
+    background-color: #c0392b;
+    border-color: #922b21;
+}
+
+/* ===================================
    MEDIA QUERIES PER MOBILE
 =================================== */
 
@@ -411,7 +498,9 @@ button:hover {
     /* Dialog area più compatta */
     #dialog-area {
         height: 280px;
+        min-height: 200px;
         padding: 12px 15px;
+        padding-top: 30px;
     }
 
     /* Tabs più piccole */
@@ -436,7 +525,8 @@ button:hover {
     #text-content {
         font-size: 1.4rem;
         line-height: 1.3;
-        max-height: 120px;
+        flex: 1;
+        min-height: 0;
         padding-right: 8px;
     }
 
@@ -447,6 +537,7 @@ button:hover {
         gap: 8px;
         flex-direction: column;
         align-items: stretch;
+        flex-shrink: 0;
     }
 
     select {
@@ -482,7 +573,9 @@ button:hover {
 
     #dialog-area {
         height: 460px;
+        min-height: 300px;
         padding: 10px 12px;
+        padding-top: 30px;
     }
 
     .tab {
@@ -492,7 +585,8 @@ button:hover {
 
     #text-content {
         font-size: 1.3rem;
-        max-height: 200px;
+        flex: 1;
+        min-height: 0;
     }
 
     select, button {

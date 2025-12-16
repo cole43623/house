@@ -3923,6 +3923,3 @@ console.log("Solo in chiavi:", soloChiavi);
 const nomi = casi.map(d => d.nome_malattia);
 console.log(nomi);
 
-
- "farmaco_benzodiazepine"
-

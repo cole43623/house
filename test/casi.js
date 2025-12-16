@@ -269,6 +269,7 @@ const casi = [
 
         // --- EFFETTI TERAPIE ---
         antibiotici: "Nessun effetto.",
+        farmaco_antidepressivo: "Aumento della tolleranza al dolore neuropatico, lieve miglioramento della qualità di vita.",
         cortisone: "Nessun effetto sul dolore neuropatico o sulla proteinuria.",
         dialisi: "Non necessaria al momento, ma indicata in futuro per progressione danno renale.",
         intubazione: "Non indicata.",
@@ -1789,6 +1790,7 @@ const casi = [
 
         // --- EFFETTI TERAPIE ---
         antibiotici: "Nessun effetto.",
+        farmaco_antidepressivo: "Duloxetina: Parziale sollievo del dolore neuropatico periferico.",
         cortisone: "Riduzione temporanea dell'edema (effetto mineralcorticoide negativo se non gestito). Parte della terapia chemioterapica.",
         dialisi: "Gestione del sovraccarico idrico e dell'azotemia. Nessuna rimozione delle fibrille dai tessuti.",
         trasfusione_sangue: "Miglioramento temporaneo della dispnea e della debolezza muscolare senza modifica del quadro sistemico.",
@@ -3973,6 +3975,77 @@ const casi = [
         
         // TERAPIA RISOLUTIVA
         intervento_chirurgico: "Laminectomia e asportazione della massa: Recupero graduale della funzione motoria e sfinterica. Prognosi eccellente."
+    },
+
+    // ---------------- CASO 71: FIBROMIALGIA ----------------
+    {
+        id: 71,
+        nome_malattia: "Fibromialgia",
+        livello_difficolta: "Difficile",
+
+        // --- DATI PAZIENTE ---
+        sesso: "Femmina",
+        eta: 42,
+        sintomi: "Dolore diffuso 'dappertutto' (muscoli, ossa, pelle), stanchezza cronica che non passa dormendo, rigidità mattutina, difficoltà di concentrazione ('nebbia mentale' o fibro-fog), formicolii alle mani.",
+        anamnesi: "La paziente ha girato 5 specialisti diversi in 2 anni (reumatologo, neurologo, ortopedico) senza diagnosi. Riferisce anche Colon Irritabile ed emicranie frequenti. Nega traumi recenti.",
+        note_infermiera: "La paziente è ipersensibile: si lamenta che la luce è troppo forte, che c'è troppo rumore e ha fatto un salto dal dolore quando le ho solo appoggiato la mano sulla spalla per rassicurarla (Allodinia tattile).",
+
+        // --- LABORATORIO ---
+        emocromo: "Perfettamente Normale.",
+        
+        esami_ematochimici: "CPK (Enzimi muscolari): Normali (esclude miosite/distrofia). TSH: Normale (esclude ipotiroidismo). Calcio e Vitamina D: Normali.",
+        
+        emogas: "Normale.",
+        ves_pcr: "VES 5 mm/h. PCR 0.1 mg/dL.",
+        coagulazione: "Normale.",
+        emocoltura: "Negativa.",
+        esame_urine: "Normale.",
+        autoanticorpi: "ANA negativi. Fattore Reumatoide negativo. Anti-CCP negativi. (Esclude Lupus e Artrite Reumatoide).",
+        
+        esame_tossicologico: "Negativo.",
+        
+        striscio_sangue: "Normale.",
+        
+        // IL TEST CHIAVE (Non è un esame del sangue, è clinico)
+        dosaggi_specifici: "Non esistono marker ematici diagnosticati.",
+
+        // --- IMAGING ---
+        rx: "RX Rachide/Articolazioni: Nessun segno di artrite, solo lievi note di artrosi non compatibili con l'intensità del dolore riferito.",
+        tc: "TC Encefalo: Normale.",
+        risonanza: "RMN Muscolare/Scheletrica: Assenza di edema o infiammazione.",
+        angio: "Negativa.",
+        ecografia: "Eco Articolare: Assenza di sinovite o versamento (l'articolazione è sana).",
+        elettrocardiogramma: "Normale.",
+        ecocardiogramma: "Normale.",
+        pet: "Ipometabolismo in aree del dolore nel cervello.",
+
+        // --- PROCEDURE & NEURO ---
+        biopsia: "Biopsia Muscolare: Normale, assenza di infiltrati infiammatori.",
+        
+        esame_obiettivo_addome: "Addome trattabile, dolente alla palpazione profonda lungo il colon (comorbidità IBS).",
+        
+        esame_neurologico_specifico: "Esame dei Tender Points: Dolore acuto alla pressione digitale (< 4kg) su almeno 11 dei 18 punti specifici (collo, trapezi, gomiti, glutei, ginocchia).",
+        
+        paracentesi: "Non indicata.",
+        eeg: "Normale.",
+        emg: "Normale (esclude neuropatie periferiche o miopatie).",
+
+        // --- EFFETTI TERAPIE ---
+        dialisi: "Nessun effetto.",
+        intervento_chirurgico: "Decompressione del tunnel carpale: Il dolore e i formicolii alla mano sono rimasti identici dopo l'operazione.",
+        intubazione: "Non necessaria.",
+        trasfusione_piastrine: "Non indicata.",
+        
+        // FARMACI
+        antibiotici: "Nessun effetto.",
+        
+        farmaco_fans: "Ibuprofene/Aspirina: Scarsa o nulla efficacia.",
+        
+        cortisone: "Nessun effetto significativo (conferma che non è polimialgia reumatica).",
+        farmaco_analgesico: "Paracetamolo: Efficacia limitata.",
+        
+        // TERAPIA RISOLUTIVA
+        farmaco_antidepressivo: "Amitriptilina (o Duloxetina/Pregabalin): Miglioramento della qualità del sonno e riduzione della soglia del dolore (agiscono sui neurotrasmettitori centrali).",
     }
 ];
 
@@ -4036,6 +4109,7 @@ let esamiDisponibili = {
         "cortisone",
         "chemioterapia",
         "farmaco_analgesico",
+        "farmaco_antidepressivo",
         "farmaco_antidiabetico",
         "farmaco_antidoto",
         "farmaco_antimicotico",
