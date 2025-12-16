@@ -382,7 +382,7 @@
         const tempoImpiegato = Date.now() - timerStart;
         const tempo = formatTempo(tempoImpiegato);
 
-        const soluzione = "La soluzione del caso è: " + casoCorrenteObj.nome_malattia + ".\nTempo impiegato: " + tempo;
+        const soluzione = "La soluzione del caso è: " + casoCorrenteObj.nome_malattia + ".\n\nTempo impiegato: " + tempo + "\nEsami richiesti: " + (tabs.length - 1);
 
         // Crea o aggiorna la tab SOLUZIONE
         tabs.push({
