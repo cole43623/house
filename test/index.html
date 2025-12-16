@@ -126,6 +126,17 @@
         let casoCorrenteObj = null;
         let tabs = []; // Array di oggetti {nome, contenuto, id}
         let tabAttivaId = null;
+        let timerStart = null; // Timestamp di inizio caso
+
+        function formatTempo(ms) {
+            const totalSeconds = Math.floor(ms / 1000);
+            const minuti = Math.floor(totalSeconds / 60);
+            const secondi = totalSeconds % 60;
+            if (minuti > 0) {
+                return minuti + " minuti " + secondi + " secondi.";
+            }
+            return secondi + " secondi.";
+        }
 
         function creaTabs() {
             tabsContainer.innerHTML = '';
@@ -189,6 +200,9 @@
             }
             console.log(indice);
             casoCorrenteObj = casi[indice];
+            
+            // Avvia il timer
+            timerStart = Date.now();
             
             // Resetta le tabs (mantiene solo il caso)
             tabs = [];
@@ -286,7 +300,11 @@
 
         if (!casoCorrenteObj || !conferma) return;
 
-        const soluzione = "La soluzione del caso è: " + casoCorrenteObj.nome_malattia + ".";
+        // Calcola il tempo impiegato
+        const tempoImpiegato = Date.now() - timerStart;
+        const tempo = formatTempo(tempoImpiegato);
+
+        const soluzione = "La soluzione del caso è: " + casoCorrenteObj.nome_malattia + ".\nTempo impiegato: " + tempo;
 
         // Crea o aggiorna la tab SOLUZIONE
         tabs.push({
