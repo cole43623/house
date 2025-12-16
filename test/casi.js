@@ -3997,6 +3997,7 @@ const casi = [
         
         emogas: "Normale.",
         ves_pcr: "VES 5 mm/h. PCR 0.1 mg/dL.",
+        esame_liquor: "Normale.",
         coagulazione: "Normale.",
         emocoltura: "Negativa.",
         esame_urine: "Normale.",
