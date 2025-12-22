@@ -1574,6 +1574,7 @@ const casi = [
         dialisi: "Gestione dell'insufficienza renale da mioglobinuria, inefficace per rimuovere i farmaci lipofili.",
         intubazione: "Necessaria per paralisi muscolare indotta (se ipertermia > 41°C) e sedazione profonda.",
         //farmaco_benzodiazepine: "Riduzione parziale dell'agitazione e della rigidità muscolare.",
+        farmaco_antidepressivo: "Somministrazione di Amitriptilina: peggioramento rapido della sintomatologia: aumento agitazione, ipertermia e rigidità muscolare.",
         farmaco_antiserotoninico: "Somministrazione ciproeptadina per sondino nasogastrico: Graduale risoluzione dell'ipertermia e normalizzazione del tono muscolare nelle 24 ore successive.",
         farmaco_vasodilatatore: "Nitroprussiato endovenoso: calo della pressione arteriosa da 180/100 mmHg a 140/80 mmHg, riduzione dei tremori periferici e sensazione soggettiva di minore agitazione."
     },

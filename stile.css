@@ -30,6 +30,108 @@ body {
     flex-direction: column;
 }
 
+#top-controls {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    gap: 10px;
+    z-index: 100;
+}
+
+#sound-toggle,
+#theme-toggle {
+    width: 45px;
+    height: 45px;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+#sound-toggle:active,
+#theme-toggle:active {
+    transform: translate(3px, 3px);
+}
+
+#sound-icon,
+#theme-icon {
+    font-size: 1.5rem;
+}
+
+/* ===================================
+   DARK MODE
+=================================== */
+
+.dark-mode #dialog-area {
+    background-color: #1a1a1a;
+    border-top-color: #444;
+    color: #fff;
+}
+
+.dark-mode #game-screen {
+    background-color: #2d5a4a;
+}
+
+.dark-mode #text-content {
+    color: #fff !important;
+}
+
+.dark-mode .tab {
+    background-color: #333;
+    color: #fff;
+    border-color: #555;
+}
+
+.dark-mode .tab:hover {
+    background-color: #444;
+}
+
+.dark-mode .tab.active {
+    background-color: #5b21b6;
+    border-color: #4c1d95;
+}
+
+.dark-mode button {
+    background-color: #5b21b6;
+    border-color: #4c1d95;
+}
+
+.dark-mode button:hover {
+    background-color: #4c1d95;
+}
+
+.dark-mode select {
+    background-color: #333;
+    color: #fff;
+    border-color: #555;
+}
+
+.dark-mode #exam-counter {
+    background-color: #333;
+    color: #aaa;
+    border-color: #555;
+}
+
+.dark-mode #controls {
+    border-top-color: #444;
+}
+
+.dark-mode .sign {
+    background: rgba(0,0,0,0.7);
+    color: #aaa;
+    border-color: #444;
+}
+
+.dark-mode .door {
+    background: rgba(0,0,0,0.5);
+    border-color: rgba(0,0,0,0.4);
+}
+
 .background-decor {
     position: absolute;
     top: 25%;
@@ -42,11 +144,12 @@ body {
 .door {
     position: absolute;
     top: 18%;
-    right: 20%;
-    width: 120px;
-    height: 200px;
+    right: 18%;
+    width: 176px;
+    height: 199px;
     background: #8bd3c7;
     border: 3px solid rgba(0,0,0,0.2);
+    z-index: 5;
 }
 
 .sign {
@@ -89,22 +192,79 @@ body {
     left: 0;
     width: 100%;
     height: 400px;
+    min-height: 200px;
+    max-height: 90dvh;
     background-color: var(--dialog-bg);
     border-top: var(--border-style);
     padding: 20px 40px;
+    padding-top: 30px;
     display: flex;
     flex-direction: column;
     z-index: 20;
 }
 
+#resize-handle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    cursor: ns-resize;
+    background: linear-gradient(to bottom, #ccc 0%, transparent 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#resize-handle::after {
+    content: '';
+    width: 60px;
+    height: 6px;
+    background: #999;
+    border-radius: 3px;
+    margin-top: 4px;
+}
+
+#resize-handle:hover::after {
+    background: var(--accent);
+}
+
+.dark-mode #resize-handle {
+    background: linear-gradient(to bottom, #444 0%, transparent 100%);
+}
+
+.dark-mode #resize-handle::after {
+    background: #666;
+}
+
+.dark-mode #resize-handle:hover::after {
+    background: #5b21b6;
+}
+
+#tabs-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
 #tabs-container {
     display: flex;
     gap: 10px;
-    margin-bottom: 15px;
     overflow-x: auto;
-    max-width: 100%;
+    flex: 1;
     padding-bottom: 5px;
     flex-wrap: nowrap;
+}
+
+#exam-counter {
+    font-size: 1.4rem;
+    color: #666;
+    white-space: nowrap;
+    padding: 5px 10px;
+    background: #f0f0f0;
+    border: 2px solid #ccc;
+    flex-shrink: 0;
 }
 
 .tab {
@@ -134,12 +294,22 @@ body {
 #text-content {
     font-size: 2rem;
     line-height: 1.4;
-    flex-grow: 1;
+    flex: 1;
+    min-height: 0;
     overflow-y: auto;
-    max-height: 200px;
     padding-right: 10px;
+    color: #333;
+    transition: color 0.2s;
 }
 
+/* Scrollbar per Firefox */
+#text-content,
+#tabs-container {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) #f0f0f0;
+}
+
+/* Scrollbar per Chrome/Safari/Edge */
 #text-content::-webkit-scrollbar,
 #tabs-container::-webkit-scrollbar {
     width: 8px;
@@ -172,6 +342,7 @@ body {
     align-items: center;
     justify-content: flex-start;
     flex-wrap: wrap;
+    flex-shrink: 0;
 }
 
 select {
@@ -204,6 +375,93 @@ button:active {
 
 button:hover {
     background-color: #ff7680;
+}
+
+/* ===================================
+   POPUP CONFERMA PIXEL ART
+=================================== */
+
+#popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+#popup-overlay.hidden {
+    display: none;
+}
+
+#popup-box {
+    background: var(--dialog-bg);
+    border: 4px solid #333;
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.3);
+    padding: 30px 40px;
+    text-align: center;
+    max-width: 90%;
+    animation: popupBounce 0.3s ease-out;
+}
+
+@keyframes popupBounce {
+    0% { transform: scale(0.5); opacity: 0; }
+    70% { transform: scale(1.05); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+#popup-text {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+#popup-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+#popup-confirm {
+    background-color: #2ecc71;
+    border-color: #27ae60;
+}
+
+#popup-confirm:hover {
+    background-color: #27ae60;
+}
+
+#popup-cancel {
+    background-color: #e74c3c;
+    border-color: #c0392b;
+}
+
+#popup-cancel:hover {
+    background-color: #c0392b;
+}
+
+.dark-mode #popup-box {
+    background: #1a1a1a;
+    border-color: #444;
+}
+
+.dark-mode #popup-text {
+    color: #fff;
+}
+
+.dark-mode #popup-confirm {
+    background-color: #27ae60;
+    border-color: #1e8449;
+}
+
+.dark-mode #popup-cancel {
+    background-color: #c0392b;
+    border-color: #922b21;
 }
 
 /* ===================================
@@ -240,13 +498,20 @@ button:hover {
     /* Dialog area più compatta */
     #dialog-area {
         height: 280px;
+        min-height: 200px;
         padding: 12px 15px;
+        padding-top: 30px;
     }
 
     /* Tabs più piccole */
     #tabs-container {
         gap: 6px;
         margin-bottom: 10px;
+    }
+
+    #exam-counter {
+        font-size: 1.1rem;
+        padding: 3px 8px;
     }
 
     .tab {
@@ -260,7 +525,8 @@ button:hover {
     #text-content {
         font-size: 1.4rem;
         line-height: 1.3;
-        max-height: 120px;
+        flex: 1;
+        min-height: 0;
         padding-right: 8px;
     }
 
@@ -271,6 +537,7 @@ button:hover {
         gap: 8px;
         flex-direction: column;
         align-items: stretch;
+        flex-shrink: 0;
     }
 
     select {
@@ -306,7 +573,9 @@ button:hover {
 
     #dialog-area {
         height: 460px;
+        min-height: 300px;
         padding: 10px 12px;
+        padding-top: 30px;
     }
 
     .tab {
@@ -316,7 +585,8 @@ button:hover {
 
     #text-content {
         font-size: 1.3rem;
-        max-height: 200px;
+        flex: 1;
+        min-height: 0;
     }
 
     select, button {

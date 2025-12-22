@@ -1,4 +1,72 @@
 const casi = [
+// ---------------- CASO 0: ANGINA PECTORIS (STABILE) ----------------
+    {
+        id: 0,
+        nome_malattia: "Angina Pectoris (Ischemia Miocardica Transitoria)",
+        livello_difficolta: "Facile",
+
+        // --- DATI PAZIENTE ---
+        sesso: "M",
+        eta: 58,
+        sintomi: "Dolore oppressivo al centro del petto ('come un elefante seduto sopra') che si irradia al braccio sinistro e alla mandibola. Il dolore è comparso mentre correva per prendere l'autobus.",
+        anamnesi: "Forte fumatore (20 sigarette/dì) da 30 anni. Iperteso in trattamento irregolare. Padre deceduto di infarto a 60 anni.",
+        note_infermiera: "Il paziente è pallido e sudato. Mi ha detto che ora che si è seduto sul lettino il dolore sta diminuendo leggermente. PA 160/95 mmHg.",
+
+        // --- LABORATORIO ---
+        emocromo: "Hb 14.0 g/dL, Leucociti e Piastrine nella norma.",
+        
+        esami_ematochimici: "Colesterolo Totale: 280 mg/dL (Alto). LDL: 190 mg/dL. Glucosio: 110 mg/dL. Creatinina: 1.0 mg/dL. AST/ALT nella norma.",
+        
+        emogas: "Normale.",
+        ves_pcr: "Normali (esclude cause infiammatorie come pericardite).",
+        coagulazione: "Normale.",
+        emocoltura: "Negativa.",
+        esame_urine: "Normale.",
+        autoanticorpi: "Negativi.",
+        esame_tossicologico: "Negativo (esclude cocaina che causa vasospasmo coronarico).",
+        striscio_sangue: "Normale.",
+        
+        // IL TEST CHIAVE (Diagnosi differenziale con Infarto)
+        dosaggi_specifici: "Troponina I (TnI) e T (TnT): NEGATIVE (seriate a 0, 3 e 6 ore). CK-MB: Normale. (Il muscolo cardiaco soffre ma non sta morendo).",
+
+        // --- IMAGING ---
+        rx: "RX Torace: Ombra cardiaca ai limiti superiori. Campi polmonari liberi (esclude cause polmonari del dolore).",
+        tc: "TC Coronarica (Calcium Score): Alto punteggio di calcio coronarico (aterosclerosi diffusa).",
+        risonanza: "Non indicata in acuto.",
+        angio: "Coronarografia: Stenosi critica (restringimento) del 80% dell'Arteria Discendente Anteriore (LAD). Flusso rallentato ma presente. Nessuna occlusione trombotica acuta completa.",
+        ecografia: "Eco Addome: Normale.",
+        
+        // Elettrocardiogramma: La differenza tra Angina e Infarto
+        elettrocardiogramma: "A riposo: Ritmo sinusale, normale. Sotto sforzo (o durante il dolore): Sottoslivellamento del tratto ST in V3-V6 (Ischemia subendocardica transitoria).",
+        
+        ecocardiogramma: "A riposo: Cinesi normale. Durante il dolore: Ipocinesia della parete anteriore (il muscolo si muove poco perché ha poco ossigeno).",
+        pet: "Non indicata.",
+
+        // --- PROCEDURE & NEURO ---
+        biopsia: "Non necessaria.",
+        endoscopia: "Non indicata (esclude reflusso/gastrite se il dolore fosse dubbio).",
+        
+        esame_obiettivo_addome: "Addome piano, trattabile, non dolente alla palpazione. Assenza di masse pulsanti (esclude aneurisma aorta addominale). Peristalsi presente.",
+        
+        paracentesi: "Non indicata.",
+        eeg: "Normale.",
+        emg: "Normale.",
+
+        // --- EFFETTI TERAPIE ---
+        dialisi: "Nessun effetto.",
+        intervento_chirurgico: "Angioplastica (PTCA) con stenting: Dilatazione del vaso stenotico. Risoluzione completa della sintomatologia sotto sforzo.",
+        intubazione: "Non necessaria.",
+        trasfusione_piastrine: "Non indicata.",
+        
+        // FARMACI
+        antibiotici: "Nessun effetto.",
+        farmaco_vasodilatatore: "Trinitrina sublinguale: Scomparsa completa del dolore in 2 minuti (Vasodilatazione coronarica immediata). Test diagnostico 'ex juvantibus' positivo.",
+        farmaco_fans: "Dopo la somministrazione di aspirina: agisce come antiaggregante piastrinico, prevenendo che la placca si rompa e diventi un infarto, ma non allevia il dolore immediato.",
+        //farmaco_trombolitico: "TPA: Il paziente non trae beneficio dall’angiolisi e rischia complicanze emorragiche potenzialmente gravi.",
+        farmaco_betabloccante: "Riduzione della frequenza cardiaca e del consumo di ossigeno miocardico. Previene futuri attacchi.",
+        ossigeno_alta_concentrazione: "Utile durante la crisi dolorosa."
+    },
+
     // ---------------- CASO 1: PORFIRIA ACUTA INTERMITTENTE ----------------
     {
         id: 1,
@@ -24,6 +92,7 @@ const casi = [
         esame_liquor: "Liquor limpido, incolore. Pressione di apertura normale. Chimico-fisico nella norma.",
         striscio_sangue: "Normocitosi, normocromia. Nessuna anomalia morfologica.",
         dosaggi_specifici: "Porfobilinogeno (PBG) e Acido Delta-Aminolevulinico (ALA) urinari: FORTEMENTE AUMENTATI (Diagnostico).",
+        esame_obiettivo_addome: "Addome teso, dolorabile diffuso, crampi evidenti, peristalsi presente.",
 
         // --- IMAGING ---
         rx: "RX Torace e Addome in bianco: Campi polmonari liberi. Non livelli idroaerei, non aria libera.",
@@ -46,7 +115,8 @@ const casi = [
         cortisone: "Nessun cambiamento nel quadro clinico.",
         dialisi: "Inefficace per i sintomi acuti.",
         intubazione: "Necessaria solo in caso di paralisi respiratoria avanzata.",
-        immunoglobuline: "Nessun beneficio clinico."
+        immunoglobuline: "Nessun beneficio clinico.",
+        farmaco_vasodilatatore: "Nitroglicerina sublinguale: comparsa immediata di dolore addominale intenso, nausea e debolezza generalizzata, paziente riferisce formicolio alle estremità."
     },
 
     // ---------------- CASO 2: BOTULISMO ----------------
@@ -74,6 +144,7 @@ const casi = [
         esame_liquor: "Proteine e cellule nella norma.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Ricerca tossina botulinica nel siero e nelle feci: POSITIVA.",
+        esame_obiettivo_addome: "Addome morbido, non dolorabile, peristalsi rallentata.",
 
         // --- IMAGING ---
         rx: "RX Torace: Modesta riduzione dell'espansione polmonare basale, parenchima pulito.",
@@ -124,6 +195,7 @@ const casi = [
         esame_liquor: "Limpido. Proteine e glucosio nei limiti. Nessuna banda oligoclonale.",
         striscio_sangue: "Anisocitosi. Presenza di rari sferociti.",
         dosaggi_specifici: "Ceruloplasmina sierica: 12 mg/dL (Range normale: 20-60). Rame urinario 24h: 250 µg (Range normale: <50).",
+        esame_obiettivo_addome: "Addome con epatomegalia palpabile, non dolorabile.",
 
         // --- IMAGING ---
         rx: "RX Torace: Ombra cardiaca nei limiti. Campi polmonari liberi.",
@@ -143,6 +215,7 @@ const casi = [
 
         // --- EFFETTI TERAPIE ---
         antibiotici: "Nessuna variazione clinica.",
+        trasfusione_sangue: "Aggravamento dell’emolisi e del danno epatico dopo somministrazione trasfusionale.",
         cortisone: "Nessun miglioramento della sintomatologia neurologica o epatica.",
         dialisi: "Nessun effetto significativo sui livelli tissutali.",
         intubazione: "Non indicata al momento.",
@@ -176,6 +249,7 @@ const casi = [
         esame_liquor: "Non indicato.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Attività alfa-galattosidasi A leucocitaria: < 1% del valore di riferimento.",
+        esame_obiettivo_addome: "Addome morbido, dolore addominale episodico, peristalsi normale.",
 
         // --- IMAGING ---
         rx: "RX Torace: Lieve ingrandimento dell'ombra cardiaca. Campi polmonari limpidi.",
@@ -195,6 +269,7 @@ const casi = [
 
         // --- EFFETTI TERAPIE ---
         antibiotici: "Nessun effetto.",
+        farmaco_antidepressivo: "Aumento della tolleranza al dolore neuropatico, lieve miglioramento della qualità di vita.",
         cortisone: "Nessun effetto sul dolore neuropatico o sulla proteinuria.",
         dialisi: "Non necessaria al momento, ma indicata in futuro per progressione danno renale.",
         intubazione: "Non indicata.",
@@ -227,6 +302,7 @@ const casi = [
         esame_liquor: "Non indicato.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Ferritina: 2800 ng/mL (Valore critico). Saturazione della Transferrina: 92% (Valore diagnostico >45%). Testosterone totale basso.",
+        esame_obiettivo_addome: "Addome con epatomegalia palpabile, non dolorabile.",
 
         // --- IMAGING ---
         rx: "RX Mani: Restringimento dello spazio articolare e presenza di osteofiti 'a uncino' sulle teste metacarpali del 2° e 3° dito.",
@@ -278,6 +354,7 @@ const casi = [
         esame_liquor: "Limpido, incolore. Pressione, cellule e proteine nella norma.",
         striscio_sangue: "Neutrofilia con granulazioni tossiche.",
         dosaggi_specifici: "Analisi molecolare gene MEFV: Omozigosi per mutazione M694V (Diagnostico).",
+        esame_obiettivo_addome: "Il paziente rifiuta il contatto addominale, dolorabilità diffusa non valutabile.",
 
         // --- IMAGING ---
         rx: "RX Addome: Modesta distensione gassosa delle anse ileali (ileo riflesso). Assenza di livelli idroaerei significativi. Non aria libera.",
@@ -328,6 +405,7 @@ const casi = [
         esame_liquor: "Limpido, incolore. Pressione di apertura 15 cmH2O.",
         striscio_sangue: "Normocitosi.",
         dosaggi_specifici: "Alfa-1 Antitripsina sierica: 18 mg/dL (Range: 90-200).",
+        esame_obiettivo_addome: "Addome morbido, epatomegalia lieve palpabile, peristalsi normale.",
 
         // --- IMAGING ---
         rx: "RX Torace: Ipertrasparenza dei campi polmonari, appiattimento emidiaframmi. Cuore verticalizzato.",
@@ -378,6 +456,7 @@ const casi = [
         esame_liquor: "Liquor ematico (se puntura traumatica) o limpido.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Test genetico non disponibile in urgenza.",
+        esame_obiettivo_addome: "Addome morbido, dolore addominale diffuso, difesa assente.",
 
         // --- IMAGING ---
         rx: "RX Torace: Slargamento del mediastino superiore.",
@@ -400,7 +479,8 @@ const casi = [
         cortisone: "Aumento della pressione arteriosa (effetto indesiderato).",
         dialisi: "Ipotensione grave durante la seduta.",
         intubazione: "Stabilizzazione temporanea dei parametri respiratori.",
-        immunoglobuline: "Nessun effetto."
+        immunoglobuline: "Nessun effetto.",
+        farmaco_vasodilatatore: "Nitroprussiato: riduzione immediata della pressione arteriosa sistolica di 25 mmHg, sensazione di sollievo toracico e diminuzione del dolore retrosternale. Frequenza cardiaca stabile."
     },
 
     // ---------------- CASO 9: CARENZA DI G6PD (FAVISMO) ----------------
@@ -428,6 +508,7 @@ const casi = [
         esame_liquor: "Limpido.",
         striscio_sangue: "Anisopoichilocitosi, presenza di 'Bite cells' e 'Blister cells'.",
         dosaggi_specifici: "G6PD eritrocitaria: 2.5 U/g Hb (Ridotta).",
+        esame_obiettivo_addome: "Addome morbido, lieve dolore in ipocondrio, peristalsi presente.",
 
         // --- IMAGING ---
         rx: "RX Torace: Negativo.",
@@ -450,6 +531,7 @@ const casi = [
         cortisone: "Nessuna variazione dell'emolisi.",
         dialisi: "Riduzione dei livelli di bilirubina e metaboliti, supporto in caso di blocco renale.",
         intubazione: "Non necessaria.",
+        trasfusione_sangue: "Riduzione della tachicardia e miglioramento della tolleranza allo sforzo dopo aumento dell’emoglobina.",
         immunoglobuline: "Nessun rallentamento dell'emolisi."
     },
 
@@ -479,6 +561,7 @@ const casi = [
         esame_liquor: "Pleocitosi linfocitaria (presenza di globuli bianchi nel liquor). Proteine aumentate. Glucosio normale (Quadro virale/atipico).",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Sierologia Borrelia Burgdorferi (ELISA + Western Blot): POSITIVA (IgM e IgG presenti).",
+        esame_obiettivo_addome: "Addome morbido, non dolorabile, peristalsi presente.",
 
         // --- IMAGING ---
         rx: "Nessuna anomalia pleuro-parenchimale.",
@@ -529,6 +612,7 @@ const casi = [
         esame_liquor: "Normale.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Test di Coombs Diretto: Positivo.",
+        esame_obiettivo_addome: "Addome morbido, lieve dolorabilità diffusa, peristalsi presente.",
 
         // --- IMAGING ---
         rx: "Versamento pleurico bilaterale di modesta entità.",
@@ -551,6 +635,7 @@ const casi = [
         cortisone: "Miglioramento rapido e spettacolare dei sintomi articolari e della febbre.",
         dialisi: "Non necessaria in acuto, ma la funzionalità renale va monitorata.",
         intubazione: "Non necessaria.",
+        trasfusione_sangue: "Miglioramento della sintomatologia da anemia senza regressione delle manifestazioni sistemiche.",
         immunoglobuline: "Miglioramento della conta piastrinica.",
         farmaco_immunomodulante: "Idrossiclorochina (Plaquenil): Controllo della sintomatologia articolare e della fatica a lungo termine."
     },
@@ -580,6 +665,7 @@ const casi = [
         esame_liquor: "Pressione normale, limpido.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Metanefrine plasmatiche e urinarie (24h): Valori 10 volte superiori alla norma.",
+        esame_obiettivo_addome: "Addome morbido, dolore lombare lieve, massa non palpabile.",
 
         // --- IMAGING ---
         rx: "Ombra cardiaca nei limiti. Polmoni puliti.",
@@ -602,7 +688,8 @@ const casi = [
         cortisone: "Nessun effetto.",
         dialisi: "Nessun effetto.",
         intubazione: "Necessaria se sopravviene emorragia cerebrale da picco ipertensivo.",
-        immunoglobuline: "Nessun effetto."
+        immunoglobuline: "Nessun effetto.",
+        farmaco_vasodilatatore: "Nitroderivati endovenosi: improvviso aumento della pressione arteriosa a 240/130 mmHg, tachicardia marcata, sensazione di ansia intensa e palpitazioni."
     },
 
     // ---------------- CASO 13: RABBIA (Lyssavirus) ----------------
@@ -630,6 +717,7 @@ const casi = [
         esame_liquor: "Lieve pleocitosi linfocitaria, proteine lievemente aumentate. (Quadro di encefalite virale aspecifica).",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "PCR virale su saliva e biopsia nucale: POSITIVA per RNA virus della Rabbia.",
+        esame_obiettivo_addome: "Addome morbido, non dolorabile, peristalsi presente.",
 
         // --- IMAGING ---
         rx: "Polmonite ab ingestis iniziale (ha inalato saliva).",
@@ -680,6 +768,7 @@ const casi = [
         esame_liquor: "Dissociazione albumino-citologica (Proteine 150 mg/dL, Cellule < 5/mmc).",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Campylobacter jejuni nelle feci (precedente): Negativo (infezione risolta).",
+        esame_obiettivo_addome: "Addome morbido, non dolorabile, tono muscolare ridotto.",
 
         // --- IMAGING ---
         rx: "RX Torace: Sollevamento degli emidiaframmi (ridotta espansione).",
@@ -731,6 +820,7 @@ const casi = [
         esame_liquor: "Cellule 10/mmc (lieve pleocitosi)", //PCR per T. whipplei sul liquor: POSITIVA (Coinvolgimento neurologico asintomatico)
         striscio_sangue: "Ipocromia, microcitosi.",
         dosaggi_specifici: "Esame liquor test PCR (DNA) su sangue periferico per Tropheryma whipplei: POSITIVO.",
+        esame_obiettivo_addome: "Addome morbido, dolorabilità diffusa, lieve distensione.",
 
         // --- IMAGING ---
         rx: "RX Addome: Distensione anse tenui, assenza di livelli.",
@@ -752,6 +842,7 @@ const casi = [
         antibiotici: "Miglioramento clinico lento ma progressivo (risoluzione febbre e diarrea in 2 settimane con Ceftriaxone/Cotrimossazolo).",
         cortisone: "Transitorio miglioramento dei dolori articolari, ma persistenza della diarrea e del calo ponderale.",
         dialisi: "Nessun effetto.",
+        trasfusione_sangue: "Riduzione della debolezza marcata con rapido ritorno dei sintomi nel follow-up.",
         intubazione: "Non necessaria.",
         immunoglobuline: "Nessun effetto. Peggioramento se associati a immunosoppressori (TNF-inibitori scatenano la malattia fulminante)."
     },
@@ -781,6 +872,7 @@ const casi = [
         esame_liquor: "Limpido. Cellule 80/mmc (prevalenza linfociti), Proteine 60 mg/dL, Glucosio 60 mg/dL.",
         striscio_sangue: "Normale morfologia eritrocitaria. Piastrinopenia confermata.",
         dosaggi_specifici: "IgM anti-Leptospira (ELISA): POSITIVO. MAT (Test di Microagglutinazione): Titolo 1:800.",
+        esame_obiettivo_addome: "Addome morbido, lieve dolorabilità ipocondrio, peristalsi normale.",
 
         // --- IMAGING ---
         rx: "RX Torace: Infiltrati alveolari a chiazze bilaterali diffusi.",
@@ -831,6 +923,7 @@ const casi = [
         esame_liquor: "Limpido, chimico-fisico nella norma.",
         striscio_sangue: "Linfociti attivati.",
         dosaggi_specifici: "Sieroagglutinazione di Wright (Rose Bengal): Titolo 1:1280.",
+        esame_obiettivo_addome: "Addome morbido, lieve epatomegalia e splenomegalia palpabile.",
 
         // --- IMAGING ---
         rx: "RX Torace: Negativo. RX Rachide Lombare: Modesta sclerosi delle articolazioni sacro-iliache.",
@@ -881,6 +974,7 @@ const casi = [
         esame_liquor: "Aspetto 'a canna di rocca' (lievemente xantocromico/giallo). Pressione 25 cmH2O. Cellule 150/mmc (90% Linfociti). Proteine 95 mg/dL (Aumentate). Glucosio 60 mg/dL (Rapporto liquor/siero normale). Eritrociti 80/mmc.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "PCR Real-Time su Liquor per HSV-1 (Herpes Simplex Virus 1): POSITIVA.",
+        esame_obiettivo_addome: "Addome morbido, non dolorabile, peristalsi presente.",
 
         // --- IMAGING ---
         rx: "RX Torace: Negativo.",
@@ -932,6 +1026,7 @@ const casi = [
         esame_liquor: "Limpido, sterile.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Sierologia Coxiella burnetii (IFA): Titolo IgM Fase II > 1:200 (Infezione acuta).",
+        esame_obiettivo_addome: "Addome morbido, lieve epatomegalia, non dolorabile.",
 
         // --- IMAGING ---
         rx: "RX Torace: Opacità parenchimali rotondeggianti multiple ('a palla di cannone') ai lobi inferiori.",
@@ -950,7 +1045,7 @@ const casi = [
         emg: "Normale.",
 
         // --- EFFETTI TERAPIE ---
-        farmaco_aspirina: "Efficacia sintomatica sulla febbre, ma alto rischio emorragico per aggravamento della piastrinopenia e potenziale peggioramento del quadro epatico.",
+        farmaco_fans: "Dopo la somministrazione di aspirina: ha efficacia sintomatica sulla febbre, ma presenta alto rischio emorragico in caso di piastrinopenia e può peggiorare il quadro epatico.",
         antibiotici: "Somministrazione Penicilline/Cefalosporine: Nessun effetto. Somministrazione Doxiciclina: Defervescenza rapida in 48 ore.",
         cortisone: "Nessun effetto sulla febbre, lieve riduzione mialgie.",
         dialisi: "Nessun effetto.",
@@ -984,6 +1079,7 @@ const casi = [
         esame_liquor: "Aspetto torbido/purulento. Pressione apertura molto elevata (>40 cmH2O). Leucociti 4.500/mmc (Neutrofili 98%). Glucosio 10 mg/dL (Ipoglicorrachia marcata). Proteine 400 mg/dL. Colorazione di Gram: NEGATIVA (Nessun batterio visibile). Esame a fresco (Wet mount): Presenza di trofozoiti mobili (movimento a 'lumaca') tra i neutrofili.",
         striscio_sangue: "Neutrofilia.",
         dosaggi_specifici: "PCR Real-Time su Liquor per Naegleria fowleri: POSITIVO.",
+        esame_obiettivo_addome: "Addome morbido, non dolorabile, peristalsi normale.",
 
         // --- IMAGING ---
         rx: "RX Torace: Negativo.",
@@ -1035,6 +1131,7 @@ const casi = [
         esame_liquor: "Limpido, sterile.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Complemento C3 e C4 nella norma.",
+        esame_obiettivo_addome: "Addome morbido, non dolorabile, peristalsi presente.",
 
         // --- IMAGING ---
         rx: "RX Torace: Opacità nodulari multiple bilaterali, alcune delle quali presentano escavazione centrale (cavitate).",
@@ -1057,7 +1154,9 @@ const casi = [
         cortisone: "Rapido miglioramento della febbre e dei dolori articolari. Stabilizzazione della funzione renale.",
         dialisi: "Necessaria temporaneamente per gestire l'iperazotemia e l'equilibrio acido-base.",
         intubazione: "Necessaria solo in caso di emorragia alveolare massiva con insufficienza respiratoria.",
-        farmaco_immunosoppressore: "Ciclofosfamide/Rituximab: Remissione clinica e radiologica progressiva nelle settimane successive."
+        trasfusione_sangue: "Peggioramento della funzione respiratoria per sovraccarico circolatorio in presenza di emorragia alveolare.",
+        farmaco_immunosoppressore: "Ciclofosfamide/Rituximab: Remissione clinica e radiologica progressiva nelle settimane successive.",
+        farmaco_vasodilatatore: "Nifedipina orale: miglioramento della temperatura e colorito delle mani e piedi, riduzione di sensazione di freddo e formicolio, pressione leggermente ridotta."
     },
 
 // ---------------- CASO 22: SARCOIDOSI ----------------
@@ -1085,6 +1184,7 @@ const casi = [
         esame_liquor: "Limpido, sterile.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "ACE (Angiotensin Converting Enzyme) sierico: 110 U/L (Valore di riferimento < 60).",
+        esame_obiettivo_addome: "Addome morbido, epatomegalia palpabile, peristalsi presente.",
 
         // --- IMAGING ---
         rx: "RX Torace: Slargamento mediastinico per linfoadenomegalie ilari bilaterali e simmetriche ('a patata'). Trasparenza parenchimale sostanzialmente conservata.",
@@ -1135,6 +1235,7 @@ const casi = [
         esame_liquor: "Limpido, sterile.",
         striscio_sangue: "Rouleaux eritrocitari (impilamento dei globuli rossi dovuto all'alta VES).",
         dosaggi_specifici: "Non indicati.",
+        esame_obiettivo_addome: "Addome morbido, non dolorabile, peristalsi normale.",
 
         // --- IMAGING ---
         rx: "RX Torace: Sclerosi aortica. Non addensamenti polmonari.",
@@ -1157,7 +1258,8 @@ const casi = [
         cortisone: "Bolo di Metilprednisolone: Risoluzione della cefalea in 24 ore, normalizzazione della VES in giorni, salvataggio della vista residua.",
         dialisi: "Nessun effetto.",
         intubazione: "Non necessaria.",
-        immunoglobuline: "Nessun beneficio aggiuntivo in acuto rispetto agli steroidi."
+        immunoglobuline: "Nessun beneficio aggiuntivo in acuto rispetto agli steroidi.",
+        farmaco_vasodilatatore: "Nifedipina orale: miglioramento della temperatura e colorito delle mani e piedi, riduzione di sensazione di freddo e formicolio, pressione leggermente ridotta."
     },
 
 // ---------------- CASO 24: ENCEFALITE ANTI-NMDA ----------------
@@ -1185,6 +1287,7 @@ const casi = [
         esame_liquor: "Limpido. Pleocitosi linfocitaria moderata (40 cellule/mmc). Proteine lievemente aumentate (60 mg/dL). Bande oligoclonali presenti.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Anticorpi anti-recettore NMDA (GluN1) su Liquor e Siero: POSITIVI.",
+        esame_obiettivo_addome: "Addome morbido, non dolorabile, peristalsi presente.",
 
         // --- IMAGING ---
         rx: "RX Torace: Negativo.",
@@ -1206,7 +1309,7 @@ const casi = [
         antibiotici: "Nessun effetto.",
         cortisone: "Miglioramento graduale dei sintomi neurologici dopo diversi giorni.",
         dialisi: "Nessun effetto.",
-		plasmaferesi: "Scambio plasmatico: Miglioramento clinico significativo e riduzione del titolo anticorpale.",
+        plasmaferesi: "Scambio plasmatico: Miglioramento clinico significativo e riduzione del titolo anticorpale.",
         intubazione: "Necessaria per ipoventilazione centrale e protezione vie aeree durante le crisi convulsive.",
         farmaco_antipsicotico: "Peggioramento della rigidità muscolare e della disautonomia (rischio Sindrome Maligna da Neurolettici).",
         intervento_chirurgico: "Ovariectomia (rimozione teratoma): Accelerazione netta del recupero clinico."
@@ -1238,6 +1341,7 @@ const casi = [
         esame_liquor: "Limpido, sterile.",
         striscio_sangue: "Ipocromia.",
         dosaggi_specifici: "Anticorpi anti-MBG (Membrana Basale Glomerulare) sierici: POSITIVI ad alto titolo.",
+        esame_obiettivo_addome: "Addome morbido, lieve dolore lombare, peristalsi normale.",
 
         // --- IMAGING ---
         rx: "RX Torace: Infiltrati alveolari bilaterali diffusi a 'ali di farfalla', prevalentemente ai campi medi e inferiori.",
@@ -1259,6 +1363,7 @@ const casi = [
         antibiotici: "Nessun miglioramento clinico o radiologico.",
         cortisone: "Bolo endovena: Arresto della progressione dell'insufficienza respiratoria.",
         dialisi: "Necessaria per gestione dell'iperkaliemia e del sovraccarico idrico (anuria).",
+        trasfusione_sangue: "Aumento dell’edema polmonare e peggioramento dell’ipossiemia per sovraccarico volemico.",
         intubazione: "Necessaria per insufficienza respiratoria ipossiemica acuta.",
         plasmaferesi: "Rapida riduzione del titolo anticorpale e miglioramento della prognosi renale se iniziata precocemente."
     },
@@ -1288,6 +1393,7 @@ const casi = [
         esame_liquor: "Limpido, sterile.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "HBsAg (Antigene di superficie Epatite B): POSITIVO. HBeAg: Positivo. Carica virale HBV-DNA elevata.",
+        esame_obiettivo_addome: "Addome teso, dolorabilità diffusa, peristalsi presente.",
 
         // --- IMAGING ---
         rx: "RX Torace: Campi polmonari perfettamente liberi (assenza di infiltrati o noduli).",
@@ -1311,7 +1417,8 @@ const casi = [
         dialisi: "Gestione dell'uremia, nessun effetto sulla patogenesi vascolare.",
         intubazione: "Non necessaria.",
         antivirale: "Lamivudina/Entecavir: Riduzione della carica virale.",
-        plasmaferesi: "Miglioramento clinico rapido (rimozione immunocomplessi circolanti)."
+        plasmaferesi: "Miglioramento clinico rapido (rimozione immunocomplessi circolanti).",
+        farmaco_vasodilatatore: "Nifedipina orale: miglioramento della temperatura e colorito delle mani e piedi, riduzione di sensazione di freddo e formicolio, pressione leggermente ridotta."
     },
 
 // ---------------- CASO 27: AVVELENAMENTO DA TALLIO ----------------
@@ -1339,6 +1446,7 @@ const casi = [
         esame_liquor: "Limpido. Proteine 80 mg/dL (Aumentate). Cellule 2/mmc. (Dissociazione albumino-citologica).",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Tallio urinario (24h): 4500 µg/L (Valore normale < 1 µg/L). Tallio ematico: 800 µg/L.",
+        esame_obiettivo_addome: "Addome dolorabile diffuso, crampi evidenti, peristalsi presente.",
 
         // --- IMAGING ---
         rx: "RX Addome: Ipotonia intestinale con stasi fecale.",
@@ -1389,6 +1497,7 @@ const casi = [
         esame_liquor: "Limpido, pressione normale.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Carbossiemoglobina (COHb) su sangue arterioso: 35% (Valore normale < 1.5% nei non fumatori).",
+        esame_obiettivo_addome: "Addome morbido, non dolorabile, peristalsi normale.",
 
         // --- IMAGING ---
         rx: "RX Torace: Negativo. Campi polmonari trasparenti.",
@@ -1440,6 +1549,7 @@ const casi = [
         esame_liquor: "Limpido, sterile.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Livelli sierici di farmaci antidepressivi nel range terapeutico (non è un sovradosaggio, è un'interazione).",
+        esame_obiettivo_addome: "Addome morbido, crampi lievi, peristalsi aumentata.",
 
         // --- IMAGING ---
         rx: "RX Torace: Negativo.",
@@ -1464,7 +1574,9 @@ const casi = [
         dialisi: "Gestione dell'insufficienza renale da mioglobinuria, inefficace per rimuovere i farmaci lipofili.",
         intubazione: "Necessaria per paralisi muscolare indotta (se ipertermia > 41°C) e sedazione profonda.",
         //farmaco_benzodiazepine: "Riduzione parziale dell'agitazione e della rigidità muscolare.",
-        farmaco_antiserotoninico: "Somministrazione ciproeptadina per sondino nasogastrico: Graduale risoluzione dell'ipertermia e normalizzazione del tono muscolare nelle 24 ore successive."
+        farmaco_antidepressivo: "Somministrazione di Amitriptilina: peggioramento rapido della sintomatologia: aumento agitazione, ipertermia e rigidità muscolare.",
+        farmaco_antiserotoninico: "Somministrazione ciproeptadina per sondino nasogastrico: Graduale risoluzione dell'ipertermia e normalizzazione del tono muscolare nelle 24 ore successive.",
+        farmaco_vasodilatatore: "Nitroprussiato endovenoso: calo della pressione arteriosa da 180/100 mmHg a 140/80 mmHg, riduzione dei tremori periferici e sensazione soggettiva di minore agitazione."
     },
 
 // ---------------- CASO 30: TIREOTOSSICOSI (TEMPESTA TIROIDEA) ----------------
@@ -1492,6 +1604,7 @@ const casi = [
         esame_liquor: "Limpido, sterile.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "TSH < 0.01 mIU/L (Soppresso). fT3 e fT4 > 100 pmol/L (Valori superiori alla scala di misurazione).",
+        esame_obiettivo_addome: "Addome morbido, crampi lievi, peristalsi aumentata.",
 
         // --- IMAGING ---
         rx: "RX Torace: Lieve congestione ilare (iniziale scompenso). Ombra cardiaca nei limiti.",
@@ -1512,11 +1625,13 @@ const casi = [
 
         // --- EFFETTI TERAPIE ---
         antibiotici: "Nessun effetto sulla frequenza cardiaca o sulla temperatura.",
-        farmaco_aspirina: "PEGGIORAMENTO: Aumento della quota libera di ormoni tiroidei (spiazzamento dalle proteine di legame).",
+        farmaco_fans: "Dopo la somministrazione di aspirina PEGGIORAMENTO: Aumento della quota libera di ormoni tiroidei (spiazzamento dalle proteine di legame).",
         farmaco_betabloccante: "Propranololo EV: Rapida riduzione della frequenza cardiaca e controllo del tremore.",
         farmaco_antitiroideo: "Metimazolo/Propiltiouracile: Blocco della sintesi ormonale (effetto clinico ritardato).",
+        trasfusione_sangue: "Aumento della tachiaritmia e instabilità emodinamica dopo carico volemico trasfusionale.",
         cortisone: "Idrocortisone: Riduzione della conversione periferica di T4 in T3 e supporto surrenalico. Miglioramento clinico.",
-        intubazione: "Necessaria in caso di scompenso cardiaco refrattario o coma."
+        intubazione: "Necessaria in caso di scompenso cardiaco refrattario o coma.",
+        farmaco_vasodilatatore: "Nitroprussiato endovenoso: calo della pressione arteriosa da 180/100 mmHg a 140/80 mmHg, riduzione dei tremori periferici e sensazione soggettiva di minore agitazione."
     },
 
 // ---------------- CASO 31: PORPORA TROMBOTICA TROMBOCITOPENICA (TTP) ----------------
@@ -1546,6 +1661,7 @@ const casi = [
         esame_liquor: "Normale.",
         striscio_sangue: "Presenza massiva di Schistociti (>1% dei globuli rossi).",
         dosaggi_specifici: "Attività ADAMTS13: < 5% (Grave deficit). Presenza di inibitore anti-ADAMTS13.",
+        esame_obiettivo_addome: "Addome morbido, lieve dolore diffuso, peristalsi normale.",
 
         // --- IMAGING ---
         rx: "RX Torace: Negativo.",
@@ -1568,6 +1684,7 @@ const casi = [
         cortisone: "Lieve miglioramento transitorio, non risolutivo.",
         dialisi: "Non necessaria per il volume, ma non risolve la patologia di base.",
         intubazione: "Necessaria solo se il livello di coscienza decade (GCS < 8).",
+        trasfusione_sangue: "Parziale miglioramento dell’astenia e della dispnea da sforzo dopo correzione dell’anemia, senza risoluzione dei sintomi neurologici.",
         trasfusione_piastrine: "PEGGIORAMENTO DRAMMATICO: Aumento della confusione mentale, comparsa di nuovi deficit neurologici, febbre in aumento (alimenta la microtrombosi).",
         plasmaferesi: "Plasma Exchange (PEX): Rapida risalita della conta piastrinica e normalizzazione dell'LDH nelle 24-48 ore successive."
     },
@@ -1597,6 +1714,7 @@ const casi = [
         esame_liquor: "Limpido.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Mioglobina sierica e urinaria: Valori > 20.000 ng/mL.",
+        esame_obiettivo_addome: "Addome teso, dolorabile diffuso, peristalsi presente.",
 
         // --- IMAGING ---
         rx: "RX Gamba DX: Frattura composta di tibia e perone.",
@@ -1620,8 +1738,10 @@ const casi = [
         cortisone: "Nessun effetto significativo sull'edema muscolare ischemico.",
         dialisi: "Rapida correzione dell'iperkaliemia e dell'acidosi metabolica. Supporto alla funzione renale.",
         intubazione: "Sedazione necessaria per l'intervento chirurgico.",
+        trasfusione_sangue: "Peggioramento dell’iperpotassiemia e del rischio aritmico per emolisi associata.",
         fluidoterapia: "Aumento della diuresi e diluizione parziale della mioglobina.",
-        intervento_chirurgico: "Fasciotomia decompressiva: Ripristino del flusso arterioso distale, riduzione della pressione compartimentale, fuoriuscita di tessuto muscolare necrotico."
+        intervento_chirurgico: "Fasciotomia decompressiva: Ripristino del flusso arterioso distale, riduzione della pressione compartimentale, fuoriuscita di tessuto muscolare necrotico.",
+        farmaco_vasodilatatore: "Fenoldopam endovenoso: aumento immediato della diuresi, urine più chiare, miglioramento della pressione arteriosa senza sintomi di ipotensione, paziente riferisce minore sensazione di gonfiore muscolare."
     },
 
 // ---------------- CASO 33: AMILOIDOSI SISTEMICA (AL) ----------------
@@ -1650,6 +1770,7 @@ const casi = [
         esame_liquor: "Normale.",
         striscio_sangue: "Rouleaux eritrocitari.",
         dosaggi_specifici: "Elettroforesi sierica: Picco monoclonale (Componente M) in zona gamma. Catene leggere libere nel siero (FLC): Rapporto Lambda/Kappa 50:1 (Fortemente alterato).",
+        esame_obiettivo_addome: "Addome morbido, epatomegalia e ascite presenti, peristalsi normale.",
 
         // --- IMAGING ---
         rx: "RX Torace: Versamento pleurico bilaterale. Congestione polmonare.",
@@ -1670,8 +1791,10 @@ const casi = [
 
         // --- EFFETTI TERAPIE ---
         antibiotici: "Nessun effetto.",
+        farmaco_antidepressivo: "Duloxetina: Parziale sollievo del dolore neuropatico periferico.",
         cortisone: "Riduzione temporanea dell'edema (effetto mineralcorticoide negativo se non gestito). Parte della terapia chemioterapica.",
         dialisi: "Gestione del sovraccarico idrico e dell'azotemia. Nessuna rimozione delle fibrille dai tessuti.",
+        trasfusione_sangue: "Miglioramento temporaneo della dispnea e della debolezza muscolare senza modifica del quadro sistemico.",
         intubazione: "Difficoltosa a causa della macroglossia (lingua ingrossata) e rigidità cervicale.",
         farmaco_betabloccante: "Peggioramento dell'ipotensione e della fatica (il cuore rigido ha bisogno della frequenza per mantenere la gittata, bloccandola crolla la portata).",
         chemioterapia: "Bortezomib/Daratumumab: Riduzione delle catene leggere nel sangue e arresto della deposizione di nuova amiloide."
@@ -1702,6 +1825,7 @@ const casi = [
         esame_liquor: "Limpido, sterile.",
         striscio_sangue: "Granulociti neutrofili con granulazioni tossiche. Assenza di blasti.",
         dosaggi_specifici: "Ferritina sierica: 12.500 ng/mL. Frazione glicosilata della ferritina < 20%.",
+        esame_obiettivo_addome: "Addome morbido, lieve dolorabilità diffusa, peristalsi presente.",
 
         // --- IMAGING ---
         rx: "RX Torace: Versamento pleurico bilaterale lieve. Ombra cardiaca ai limiti superiori.",
@@ -1753,6 +1877,7 @@ const casi = [
         esame_liquor: "Normale.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Anticorpi anti-Recettore Acetilcolina (AChR): POSITIVI. Anticorpi anti-MuSK: Negativi.",
+        esame_obiettivo_addome: "Addome morbido, tono muscolare ridotto, peristalsi normale.",
 
         // --- IMAGING ---
         rx: "RX Torace: Slargamento del mediastino anteriore.",
@@ -1805,6 +1930,7 @@ const casi = [
         esame_liquor: "Normale.",
         striscio_sangue: "Policromasia. Assenza di schistociti (esclude cause meccaniche come TTP).",
         dosaggi_specifici: "Citometria a flusso (sangue periferico): Assenza delle proteine ancorate al GPI (CD55 e CD59) sul 60% dei granulociti e dei globuli rossi.",
+        esame_obiettivo_addome: "Addome morbido, lieve splenomegalia palpabile, peristalsi presente.",
 
         // --- IMAGING ---
         rx: "RX Torace: Negativo.",
@@ -1827,9 +1953,11 @@ const casi = [
         cortisone: "Nessun miglioramento dell'emolisi o dell'Hb.",
         dialisi: "Non indicata.",
         intubazione: "Non necessaria.",
+        trasfusione_sangue: "Dopo trasfusione filtrata netto miglioramento della stanchezza e della cefalea mattutina dopo trasfusione, con beneficio transitorio.",
         ferro_supplementare: "Aumento della reticolocitosi, ma possibile scatenamento di emolisi acuta (il ferro stimola la produzione di globuli rossi difettosi che vengono subito distrutti).",
         farmaco_biologico: "Eculizumab (Anti-C5): Cessazione rapida dell'emoglobinuria (urine chiare in 24h) e stabilizzazione dell'emoglobina.",
-        anticoagulante: "Eparina: Stabilizzazione della trombosi portale."
+        anticoagulante: "Eparina: Stabilizzazione della trombosi portale.",
+        farmaco_vasodilatatore: "Fenoldopam endovenoso: calo marcato della pressione arteriosa a 70/40 mmHg, peggioramento dello stato di coscienza, urine quasi assenti, paziente riferisce capogiri e sudorazione intensa."
     },
 
 // ---------------- CASO 37: SINDROME DA CARCINOIDE ----------------
@@ -1857,6 +1985,7 @@ const casi = [
         esame_liquor: "Normale.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Acido 5-idrossi-indolacetico (5-HIAA) urinario 24h: 180 mg (Valore normale < 10 mg). Cromogranina A sierica: 1200 ng/mL (Marcatamente aumentata).",
+        esame_obiettivo_addome: "Addome con dolore colico episodico, massa non palpabile, peristalsi presente. La palpazione profonda del fegato scatena un violento episodio di flushing e ipotensione (rilascio massivo di mediatori).",
 
         // --- IMAGING ---
         rx: "RX Torace: Campi polmonari liberi. Cuore di dimensioni ai limiti.",
@@ -1878,8 +2007,8 @@ const casi = [
         antibiotici: "Nessun effetto sulla diarrea o sul flushing.",
         cortisone: "Nessun effetto significativo.",
         dialisi: "Nessun effetto.",
+        trasfusione_sangue: "Scatenamento di flushing severo, broncospasmo e instabilità emodinamica dopo trasfusione.",
         intubazione: "Rischio di broncospasmo severo durante l'induzione.",
-        //manovre_addominali: "La palpazione profonda del fegato scatena un violento episodio di flushing e ipotensione (rilascio massivo di mediatori).",
         farmaco_octreotide: "Somministrazione analogo della Somatostatina: Rapida scomparsa del flushing e arresto della diarrea.",
         adrenalina: "PEGGIORAMENTO: Ipotensione paradossa e peggioramento del flushing (stimola il rilascio di sostanze vasoattive dal tumore)."
     },
@@ -1909,6 +2038,7 @@ const casi = [
         esame_liquor: "Normale (o lieve pleocitosi se embolia settica cerebrale asintomatica).",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Complemento C3 e C4 ridotti (Glomerulonefrite da immunocomplessi).",
+        esame_obiettivo_addome: "Addome morbido, splenomegalia palpabile, peristalsi normale.",
 
         // --- IMAGING ---
         rx: "RX Torace: Lieve congestione polmonare. Ombra cardiaca nei limiti.",
@@ -1928,6 +2058,7 @@ const casi = [
 
         // --- EFFETTI TERAPIE ---
         antibiotici: "Terapia mirata (es. Penicillina + Gentamicina): Defervescenza lenta (3-4 giorni) e sterilizzazione delle emocolture successive.",
+        trasfusione_sangue: "Incremento della performance fisica e riduzione delle vertigini, con persistenza della febbricola.",
         cortisone: "Nessun effetto sull'infezione, possibile mascheramento della febbre.",
         dialisi: "Non necessaria in acuto.",
         intubazione: "Necessaria solo in caso di scompenso cardiaco acuto da rottura valvolare (edema polmonare).",
@@ -1959,6 +2090,7 @@ const casi = [
         esame_liquor: "Normale.",
         striscio_sangue: "Eosinofilia relativa.",
         dosaggi_specifici: "Cortisolo basale (ore 8:00): 2.0 µg/dL (Molto basso). ACTH: > 1250 pg/mL (Alle stelle). Anticorpi anti-21-idrossilasi: POSITIVI.",
+        esame_obiettivo_addome: "Addome morbido, dolore diffuso lieve, peristalsi normale.",
 
         // --- IMAGING ---
         rx: "RX Torace: Cuore di dimensioni ridotte (Microcardia da ipovolemia). Campi polmonari chiari.",
@@ -2011,6 +2143,7 @@ const casi = [
         esame_liquor: "Glucosio 15 mg/dL (basso, specchio della glicemia sistemica). Per il resto normale.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Insulina plasmatica: > 200 µU/mL (Valore estremamente elevato). Peptide C: < 0.1 ng/mL (Soppresso/Indosabile). Proinsulina: Bassa.",
+        esame_obiettivo_addome: "Addome morbido, peristalsi normale.",
 
         // --- IMAGING ---
         rx: "RX Torace: Normale.",
@@ -2063,6 +2196,7 @@ const casi = [
         esame_liquor: "Normale.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Marcatore CA-125: 150 U/mL (Aumentato - sospetto neoplasia ovarica).",
+        esame_obiettivo_addome: "Addome morbido, tono muscolare ridotto, peristalsi presente.",
 
         // --- IMAGING ---
         rx: "RX Torace: Ispessimento interstiziale basale bilaterale (Interstiziopatia polmonare iniziale).",
@@ -2100,7 +2234,7 @@ const casi = [
         eta: 26,
         sintomi: "Dolore lancinante improvviso in fossa iliaca destra (basso ventre), vertigini, lipotimia (sensazione di svenimento), dolore riflesso alla spalla destra.",
         anamnesi: "Nessuna patologia cronica nota. Riferisce di aver sentito la fitta dolorosa improvvisamente mentre sollevava un peso in palestra e di assumere regolarmente la pillola anticoncezionale da 3 anni. Nega febbre o disturbi alimentari recenti.",
-        note_infermiera: "Paziente pallida e sudata. Pressione arteriosa 85/50 mmHg (Ipotensione). Frequenza cardiaca 120 bpm. Addome molto dolente alla palpazione nei quadranti inferiori.",
+        note_infermiera: "Paziente pallida e sudata. Pressione arteriosa 85/50 mmHg (Ipotensione). Frequenza cardiaca 120 bpm.",
 
         // --- LABORATORIO ---
         emocromo: "Hb 8.5 g/dL (Calo acuto rispetto ai controlli annuali precedenti), Leucociti 12.000/mmc (Leucocitosi da stress).",
@@ -2114,6 +2248,7 @@ const casi = [
         esame_liquor: "Normale.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Beta-HCG (Gonadotropina Corionica): 15.000 mIU/mL (POSITIVO).",
+        esame_obiettivo_addome: "Addome molto dolente alla palpazione nei quadranti inferiori, difesa muscolare presente.",
 
         // --- IMAGING ---
         rx: "RX Addome in bianco: Assenza di aria libera sottodiaframmatica (esclude perforazione intestinale).",
@@ -2135,9 +2270,11 @@ const casi = [
         antibiotici: "Nessun effetto.",
         cortisone: "Nessun effetto.",
         dialisi: "Non necessaria.",
+        trasfusione_sangue: "Rapido recupero della pressione arteriosa e dello stato di coscienza dopo somministrazione di emazie concentrate.",
         intubazione: "Necessaria solo in caso di shock emorragico irreversibile pre-operatorio.",
         fluidoterapia: "Miglioramento transitorio della pressione arteriosa, ma persistente calo dell'emoglobina (il rubinetto è aperto).",
-        intervento_chirurgico: "Laparoscopia d'urgenza (Salpingectomia): Arresto dell'emorragia e rimozione della tuba rotta."
+        intervento_chirurgico: "Laparoscopia d'urgenza (Salpingectomia): Arresto dell'emorragia e rimozione della tuba rotta.",
+        farmaco_vasodilatatore: "Fenoldopam endovenoso: calo marcato della pressione arteriosa a 70/40 mmHg, peggioramento dello stato di coscienza, urine quasi assenti, paziente riferisce capogiri e sudorazione intensa."
     },
 
 // ---------------- CASO 43: AIDS (ESORDIO CON PNEUMOCYSTIS JIROVECII) ----------------
@@ -2165,6 +2302,7 @@ const casi = [
         esame_liquor: "Limpido, sterile. Test antigenico Criptococco negativo.",
         striscio_sangue: "Assenza di atipie cellulari.",
         dosaggi_specifici: "Test HIV 1/2 Ag/Ab (IV generazione): REATTIVO. Conta Linfociti T CD4+: 45 cellule/mmc (Valore critico < 200). Carica Virale HIV-RNA: > 750.000 copie/mL.",
+        esame_obiettivo_addome: "Addome morbido, lieve dolorabilità diffusa, peristalsi normale.",
 
         // --- IMAGING ---
         rx: "RX Torace: Infiltrati interstiziali diffusi bilaterali a 'vetro smerigliato' (ground glass) che risparmiano la periferia polmonare. Non addensamenti lobari franchi.",
@@ -2185,8 +2323,10 @@ const casi = [
         // --- EFFETTI TERAPIE ---
         cortisone: "Prednisone in aggiunta all'antibiotico specifico: Miglioramento rapido degli scambi gassosi e riduzione del rischio di insufficienza respiratoria.",
         dialisi: "Non necessaria.",
+        trasfusione_sangue: "Miglioramento della tolleranza allo sforzo e della tachicardia senza impatto sull’insufficienza respiratoria.",
         intubazione: "Necessaria se pO2 < 60 mmHg nonostante ossigenoterapia ad alti flussi.",
-        antibiotici: "Trimetoprim-Sulfametossazolo (Bactrim) ad alte dosi: Graduale miglioramento della dispnea e della febbre in 5-7 giorni. Inizio terapia (HAART): Soppressione della carica virale nel tempo."
+        antibiotici: "Trimetoprim-Sulfametossazolo (Bactrim) ad alte dosi: Graduale miglioramento della dispnea e della febbre in 5-7 giorni. Inizio terapia (HAART): Soppressione della carica virale nel tempo.",
+        farmaco_vasodilatatore: "Fenoldopam endovenoso: calo marcato della pressione arteriosa a 70/40 mmHg, peggioramento dello stato di coscienza, urine quasi assenti, paziente riferisce capogiri e sudorazione intensa."
     },
 
 // ---------------- CASO 44: COREA DI HUNTINGTON ----------------
@@ -2214,6 +2354,7 @@ const casi = [
         esame_liquor: "Normale.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Test genetico molecolare (PCR) gene HTT: Presenza di 45 ripetizioni della tripletta CAG (Valore patologico > 36).",
+        esame_obiettivo_addome: "Addome morbido, movimenti involontari lievi, peristalsi normale.",
 
         // --- IMAGING ---
         rx: "RX Torace: Normale.",
@@ -2266,6 +2407,7 @@ const casi = [
         esame_liquor: "Normale.",
         striscio_sangue: "Schistociti rari (emolisi da impatto meccanico).",
         dosaggi_specifici: "Interleuchina-6 (IL-6) sierica: Molto elevata (Prodotta dal tumore, causa la febbre).",
+        esame_obiettivo_addome: "Addome morbido, lieve epatomegalia, peristalsi presente.",
 
         // --- IMAGING ---
         rx: "RX Torace: Modesta congestione venosa polmonare. Cuore di dimensioni normali.",
@@ -2287,6 +2429,7 @@ const casi = [
         antibiotici: "Nessun effetto sulla febbre o sulla VES.",
         cortisone: "Lieve riduzione temporanea della febbre.",
         dialisi: "Non indicata.",
+        trasfusione_sangue: "Transitorio miglioramento della dispnea e delle sincopi senza completa normalizzazione emodinamica.",
         intubazione: "Necessaria per l'intervento cardiochirurgico.",
         anticoagulante: "Warfarin/Eparina: RISCHIOSO. Non scioglie la massa e aumenta il rischio di emorragia intratumorale con embolizzazione massiva.",
         intervento_chirurgico: "Resezione della massa in circolazione extracorporea: Guarigione completa, scomparsa immediata dei sintomi e normalizzazione degli esami."
@@ -2317,6 +2460,7 @@ const casi = [
         esame_liquor: "Normale.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Cortisolo urinario 24h: 450 µg/24h (Valore normale < 50). ACTH plasmatico: 85 pg/mL (Aumentato). Cortisolo salivare notturno: Elevato.",
+        esame_obiettivo_addome: "Addome morbido, prominente, peristalsi normale.",
 
         // --- IMAGING ---
         rx: "RX Rachide Lombare: Crolli vertebrali da osteoporosi (L3-L4).",
@@ -2344,7 +2488,8 @@ const casi = [
         dialisi: "Correzione temporanea dell'ipokaliemia.",
         intubazione: "Non necessaria.",
         farmaco_antimicotico: "Somministrazione di ketoconazolo, riduzione della sintesi di cortisolo e miglioramento graduale dei sintomi.",
-        intervento_chirurgico: "Adenectomia trans-sfenoidale: Crollo dei livelli di cortisolo post-operatorio (necessita terapia sostitutiva transitoria) e risoluzione del quadro clinico."
+        intervento_chirurgico: "Adenectomia trans-sfenoidale: Crollo dei livelli di cortisolo post-operatorio (necessita terapia sostitutiva transitoria) e risoluzione del quadro clinico.",
+        farmaco_vasodilatatore: "Amlodipina orale: abbassamento progressivo della pressione arteriosa da 160/100 mmHg a 130/85 mmHg, miglioramento lieve della cefalea e riduzione del senso di pesantezza toracica."
     },
 
 // ---------------- CASO 47: OVERDOSE DA FENTANYL ----------------
@@ -2375,6 +2520,7 @@ const casi = [
         esame_liquor: "Limpido, pressione normale.",
         glucosio_ev: "Glicemia sale a 200 mg/dL, ma il coma persiste invariato (esclude coma ipoglicemico).",
         emogas: "pH 7.10, pCO2 85 mmHg, pO2 50 mmHg (Acidosi respiratoria severa con ipercapnia e ipossiemia).",
+        esame_obiettivo_addome: "Addome morbido, peristalsi rallentata.",
 
         // --- IMAGING ---
         ecografia: "Vescica distesa (globo vescicale da ritenzione urinaria).",
@@ -2412,13 +2558,12 @@ const casi = [
         farmaco_fans: "Nessun effetto.",
         farmaco_levodopa: "Nessun effetto.",
         farmaco_antitiroideo: "Nessun effetto.",
-        farmaco_benzodiazepine: "PEGGIORAMENTO CRITICO: Arresto respiratorio completo e ipotensione grave (effetto sinergico depressivo).",
+        //farmaco_benzodiazepine: "PEGGIORAMENTO CRITICO: Arresto respiratorio completo e ipotensione grave (effetto sinergico depressivo).",
         adrenalina: "Aumento temporaneo della frequenza cardiaca a 80 bpm, ma nessuna ripresa della respirazione spontanea.",
         farmaco_betabloccante: "ARRESTO CARDIACO: Crollo della frequenza cardiaca da 38 bpm all'asistolia completa.",
         farmaco_inibitore_acetilcolinesterasi: "Aumento delle secrezioni bronchiali, peggioramento degli scambi gassosi.",
         farmaco_immunosoppressore: "Nessun effetto.",
         farmaco_biologico: "Nessun effetto.",
-        farmaco_aspirina: "Nessun effetto.",
         plasmaferesi: "Nessun effetto.",
         
         // TERAPIA RISOLUTIVA
@@ -2459,6 +2604,7 @@ const casi = [
         striscio_sangue: "Eosinofilia confermata.",
         dosaggi_specifici: "Sierologia (EITB/Western Blot) per Taenia solium: POSITIVA.",
         esame_feci: "Esame parassitologico: Presenza di uova di Taenia spp.",
+        esame_obiettivo_addome: "Addome morbido, non dolorabile, peristalsi normale.",
 
         // --- IMAGING ---
         rx: "RX Torace: Negativo. RX Muscoli (Coscia): Presenza di piccole calcificazioni fusiformi a chicco di riso (cisti muscolari calcifiche).",
@@ -2519,6 +2665,7 @@ const casi = [
         esame_tossicologico: "Screening droghe negativo.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Livello sierico Paracetamolo (Acetaminofene): 80 µg/mL (Tossico a 24h). Sierologia Epatiti A, B, C, E: NEGATIVA.",
+        esame_obiettivo_addome: "Addome dolorabile epigastrico, epatomegalia, peristalsi presente.",
 
         // --- IMAGING ---
         rx: "RX Torace: Negativo.",
@@ -2547,6 +2694,7 @@ const casi = [
         antibiotici: "Nessuna variazione degli enzimi epatici o dell'INR.",
         cortisone: "Nessun effetto sulla necrosi epatica.",
         antivirale: "Nessun effetto.",
+        trasfusione_sangue: "Stabilizzazione emodinamica temporanea in presenza di sanguinamento e coagulopatia.",
         farmaco_antidoto: "N-Acetilcisteina (NAC) EV: Ripristino delle scorte di Glutatione, miglioramento dell'emodinamica epatica e riduzione della mortalità.",
         fluidoterapia: "Soluzione Glucosata: Normalizzazione della glicemia e prevenzione del danno neurologico da ipoglicemia.",
     },
@@ -2576,6 +2724,7 @@ const casi = [
         esame_liquor: "Normale.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Mutazione BRAF V600E su DNA circolante o tissutale: POSITIVA.",
+        esame_obiettivo_addome: "Addome morbido, massa retroperitoneale palpabile, peristalsi normale.",
 
         // --- IMAGING ---
         rx: "RX Arti Inferiori (Femore/Tibia): Osteosclerosi diafisaria e metafisaria bilaterale e simmetrica (midollo osseo sostituito da osso denso).",
@@ -2638,7 +2787,8 @@ const casi = [
         esame_liquor: "Lieve aumento delle proteine, esame microscopio negativo.",
         striscio_sangue: "Rouleaux eritrocitari.",
         // IL TRABOCCHETTO:
-        dosaggi_specifici: "VDRL (Test Sifilide): POSITIVO (Falso positivo biologico). TPHA (Conferma Sifilide): NEGATIVO (Discrepanza fondamentale).",
+        dosaggi_specifici: "VDRL (Test Sifilide): POSITIVO. TPHA: NEGATIVO.",
+        esame_obiettivo_addome: "Addome morbido, non dolorabile, peristalsi normale.",
 
         // --- IMAGING ---
         rx: "RX Mani/Piedi: Assottigliamento e riassorbimento delle falangi distali ('dita a clessidra' o acro-osteolisi).",
@@ -2696,6 +2846,7 @@ const casi = [
         esame_tossicologico: "Negativo.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Complemento C3 e C4 normali.",
+        esame_obiettivo_addome: "Addome morbido, dolore addominale lieve, peristalsi normale.",
 
         // --- IMAGING ---
         rx: "RX Torace: Slargamento del mediastino superiore e dell'aorta toracica. Calcificazioni assenti (tipico in giovane età).",
@@ -2733,65 +2884,9 @@ const casi = [
         farmaco_biologico: "Tocilizumab (Anti-IL6) o Infliximab (Anti-TNF): Efficace nei casi refrattari ai cortisonici.",
         
         fluidoterapia: "Nessun effetto emodinamico significativo a lungo termine.",
-        farmaco_aspirina: "Prevenzione della formazione di trombi nelle zone di turbolenza (stenosi); nessun effetto sull'infiammazione parietale.",
+        farmaco_fans: "Dopo la somministrazione di aspirina: prevenzione della formazione di trombi nelle zone di turbolenza (stenosi); nessun effetto sull'infiammazione parietale.",
         anticoagulante: "Aumento significativo del rischio emorragico.",
-    },
-
-// ---------------- CASO 52: MENINGIOMA SPINALE ----------------
-    {
-        id: 52,
-        nome_malattia: "Meningioma Spinale",
-        livello_difficolta: "Difficile",
-
-        // --- DATI PAZIENTE ---
-        sesso: "Femmina",
-        eta: 62,
-        sintomi: "Debolezza progressiva alle gambe (paraparesi), rigidità muscolare, dolore alla schiena localizzato 'a cintura' che peggiora di notte stando sdraiata, disturbi urinari (urgenza).",
-        anamnesi: "In cura da anni per 'artrosi lombare' e 'sciatalgia' senza benefici con FANS o fisioterapia.",
-        note_infermiera: "La paziente cammina con andatura 'a forbice' (spastica). Riferisce che le gambe saltano da sole quando è a riposo (clono spontaneo).",
-
-        // --- LABORATORIO ---
-        emocromo: "Normale.",
-        esami_ematochimici: "Normale.",
-        emogas: "Normale.",
-        ves_pcr: "Normale.",
-        emocoltura: "Negativa.",
-        esame_urine: "Normale.",
-        autoanticorpi: "Negativi.",
-        esame_tossicologico: "Negativo.",
-        esame_liquor: "Dissociazione albumino-citologica: Proteine molto elevate (> 100 mg/dL) con cellule normali (Sindrome di Froin da blocco del flusso liquorale).",
-        striscio_sangue: "Normale.",
-        dosaggi_specifici: "Marcatori tumorali negativi.",
-
-        // --- IMAGING ---
-        rx: "RX Rachide: Spondilosi diffusa (artrosi), nessun crollo vertebrale o lesione osteolitica evidente.",
-        tc: "TC Rachide (senza mdc): Modeste protrusioni discali, non giustificano la clinica. Massa isodensa nel canale spinale difficile da distinguere dal midollo senza contrasto.",
-        risonanza: "RMN Rachide Dorsale (con Gadolinio): Massa intradurale extramidollare a livello D8-D9, che comprime severamente il midollo spinale. Presenza del segno della 'coda durale' (Dural tail sign).",
-        angio: "Negativa.",
-        ecografia: "Vescica a pareti ispessite (Vescica neurologica).",
-        elettrocardiogramma: "Normale.",
-        ecocardiogramma: "Normale.",
-        pet: "Nessuna captazione suggestiva di metastasi.",
-
-        // --- PROCEDURE & NEURO ---
-        biopsia: "Esame istologico (post-operatorio): Meningioma psammomatoso (benigno, Grado I WHO).",
-        eeg: "Normale.",
-        emg: "Nessun segno di denervazione nei muscoli degli arti superiori. Segni di sofferenza piramidale agli arti inferiori.",
-        esame_neurologico_specifico: "Iperreflessia rotulea e achillea bilaterale. Segno di Babinski positivo bilaterale. Livello sensitivo (ipoestesia) al di sotto dell'ombelico.",
-
-        // --- EFFETTI TERAPIE ---
-        dialisi: "Nessun effetto.",
-        plasmaferesi: "Nessun effetto.",
-        intubazione: "Non necessaria.",
-        
-        // FARMACI
-        antibiotici: "Nessun effetto.",
-        cortisone: "Desametasone: Riduzione dell'edema peritumorale con transitorio miglioramento della forza e del dolore.",
-        farmaco_fans: "Sollievo minimo dal dolore.",
-        chemioterapia: "Non indicata per meningiomi benigni.",
-        
-        // TERAPIA RISOLUTIVA
-        intervento_chirurgico: "Laminectomia e asportazione della massa: Recupero graduale della funzione motoria e sfinterica. Prognosi eccellente."
+        farmaco_vasodilatatore: "Nifedipina orale: miglioramento della temperatura e colorito delle mani e piedi, riduzione di sensazione di freddo e formicolio, pressione leggermente ridotta."
     },
 
     // ---------------- CASO 53: INFEZIONE DA CHLAMYDIA (CON SINDROME DI FITZ-HUGH-CURTIS) ----------------
@@ -2805,7 +2900,7 @@ const casi = [
         eta: 24,
         sintomi: "Dolore al basso ventre (pelvico) persistente, dolore acuto al fianco destro (zona fegato) che peggiora tossendo o respirando profondo, perdite vaginali anomale.",
         anamnesi: "Attiva sessualmente, partner multipli recenti. Riferisce dolore durante i rapporti sessuali (dispareunia) nelle ultime settimane.",
-        note_infermiera: "Temperatura 38°C. Palpazione dell’addome superiore destro dolorosa con respiro bloccato, all’esame ginecologico marcato dolore alla mobilizzazione della cervice (segno del lampadario).",
+        note_infermiera: "Temperatura 38°C. All’esame ginecologico marcato dolore alla mobilizzazione della cervice (segno del lampadario).",
 
         // --- LABORATORIO ---
         emocromo: "Leucociti 13.500/mmc (Neutrofilia). Hb normale.",
@@ -2818,7 +2913,8 @@ const casi = [
         esame_tossicologico: "Negativo.",
         striscio_sangue: "Normale.",
         dosaggi_specifici: "Test di gravidanza (Beta-HCG): Negativo.",
-        
+        esame_obiettivo_addome: "Palpazione dell’addome superiore destro dolorosa con respiro bloccato, difesa lieve.",
+
         // --- IMAGING ---
         rx: "RX Torace: Negativo. Non aria libera sottodiaframmatica.",
         tc: "TC Addome: Ispessimento della capsula epatica (fase arteriosa precoce). Discreto versamento pelvico. Annessi lievemente ingrossati.",
@@ -2872,7 +2968,8 @@ const casi = [
         esame_tossicologico: "Non indicato.",
         esame_feci: "Ricerca parassiti negativa (Giardia). Test Sudan III: Positivo (presenza di grassi nelle feci).",
         striscio_sangue: "Microcitosi, ipocromia.",
-        
+        esame_obiettivo_addome: "Addome disteso, meteorismo, dolore diffuso, peristalsi aumentata.",
+
         // IL TEST CHIAVE
         dosaggi_specifici: "Anticorpi anti-Transglutaminasi (tTG) IgA: > 100 U/mL (Valore > 10 volte la norma, in pediatria permette diagnosi anche senza biopsia se confermato da EMA). Anticorpi anti-Endomisio (EMA): POSITIVI. IgA totali: Normali.",
 
@@ -2896,6 +2993,7 @@ const casi = [
         // --- EFFETTI TERAPIE ---
         dialisi: "Nessun effetto.",
         intervento_chirurgico: "Non indicato.",
+        trasfusione_sangue: "Riduzione dei sintomi da anemia con beneficio clinico non duraturo nel tempo.",
         trasfusione_piastrine: "Non indicata.",
         intubazione: "Non necessaria.",
         
@@ -2928,7 +3026,8 @@ const casi = [
         autoanticorpi: "Negativi.",
         esame_tossicologico: "Negativo.",
         striscio_sangue: "Normale.",
-        
+        esame_obiettivo_addome: "Addome morbido, massa viscerale palpabile, peristalsi normale.",
+
         // IL TEST CHIAVE
         dosaggi_specifici: "Catecolamine urinarie/Metanefrine: Aumentate (presenza di Feocromocitoma). Eritropoietina (EPO) sierica: Alta. Test genetico VHL: Mutazione presente.",
 
@@ -2986,7 +3085,8 @@ const casi = [
         autoanticorpi: "Negativi.",
         esame_tossicologico: "Negativo.",
         striscio_sangue: "Linfociti reattivi.",
-        
+        esame_obiettivo_addome: "Addome morbido, non dolorabile, peristalsi normale.",
+
         // IL TEST CHIAVE
         dosaggi_specifici: "IgM anti-Morbillo: POSITIVE. RT-PCR per Morbillo su tampone faringeo/urine: POSITIVA.",
 
@@ -3045,7 +3145,8 @@ const casi = [
         esame_tossicologico: "Negativo.",
         esame_feci: "Calprotectina fecale: > 1000 µg/g (Marcatore specifico di infiammazione intestinale). Sangue occulto positivo. Coprocoltura negativa (esclude Salmonella/Campylobacter).",
         striscio_sangue: "Anisocitosi.",
-        
+        esame_obiettivo_addome: "Addome dolorabile in fossa iliaca destra, massa palpabile, peristalsi presente.",
+
         // IL TEST CHIAVE (Sierologico)
         dosaggi_specifici: "Anticorpi anti-Saccharomyces cerevisiae (ASCA): POSITIVI (Specifici per Crohn).",
 
@@ -3072,6 +3173,7 @@ const casi = [
         intervento_chirurgico: "Resezione ileo-colica: Risolve la stenosi o l'ascesso acuto, ma NON CURA la malattia. Era meglio evitare.",
         
         intubazione: "Non necessaria.",
+        trasfusione_sangue: "Miglioramento dell’astenia e della capacità funzionale senza beneficio sul dolore addominale.",
         trasfusione_piastrine: "Non indicata.",
         
         // FARMACI
@@ -3106,7 +3208,8 @@ const casi = [
         autoanticorpi: "ANA positivi (pattern punteggiato/speckled). Fattore Reumatoide POSITIVO (presente nel 70% dei casi).",
         esame_tossicologico: "Negativo.",
         striscio_sangue: "Normale.",
-        
+        esame_obiettivo_addome: "Addome morbido, non dolorabile, peristalsi normale.",
+
         // IL TEST CHIAVE
         dosaggi_specifici: "Anticorpi Anti-SSA (Ro): POSITIVI. Anticorpi Anti-SSB (La): POSITIVI. Elettroforesi proteica: Ipergammaglobulinemia policlonale marcata.",
 
@@ -3122,7 +3225,7 @@ const casi = [
 
         // --- PROCEDURE & NEURO ---
         biopsia: "Biopsia ghiandole salivari minori (labbro inferiore): Sialadenite linfocitaria focale con Focus Score > 1 (aggregati di >50 linfociti attorno ai dotti).",
-        test_oculistici: "Test di Schirmer: < 5 mm in 5 minuti (Conferma secchezza oculare patologica). Test Rosa Bengala: Positivo per cheratite secca.",
+        visita_oculistica: "Test di Schirmer: < 5 mm in 5 minuti (Conferma secchezza oculare patologica). Test Rosa Bengala: Positivo per cheratite secca.",
         paracentesi: "Non indicata.",
         eeg: "Normale.",
         emg: "Possibile polineuropatia sensitiva distale.",
@@ -3164,7 +3267,8 @@ const casi = [
         esame_tossicologico: "Negativo.",
         esame_feci: "Normale.",
         striscio_sangue: "Normale.",
-        
+        esame_obiettivo_addome: "Addome morbido, lieve dolorabilità sovrapubica, peristalsi normale.",
+
         // IL TEST CHIAVE (Profilo Ormonale)
         dosaggi_specifici: "Testosterone Totale e Libero: Aumentati. Rapporto LH/FSH: > 2:1 (Inversione del rapporto fisiologico, LH elevato). Prolattina: Normale. TSH: Normale (esclude ipotiroidismo). Beta-HCG: Negativo.",
 
@@ -3221,7 +3325,7 @@ const casi = [
         autoanticorpi: "Test di Coombs negativo (esclude emolisi autoimmune).",
         esame_tossicologico: "Non indicato.",
         esame_feci: "Sangue occulto positivo.",
-        
+        esame_obiettivo_addome: "Addome morbido, lieve splenomegalia palpabile, peristalsi normale.",
         striscio_sangue: "Piastrine estremamente piccole e scarse. Linfociti di aspetto normale.",
         
         dosaggi_specifici: "Immunoglobuline: IgM Basse. IgA e IgE Molto Elevate (Profilo tipico). Isoemoagglutinine assenti.",
@@ -3252,6 +3356,7 @@ const casi = [
         antibiotici: "Necessari per trattare le infezioni acute (otiti/polmoniti), ma non risolvono la malattia di base.",
         cortisone: "Miglioramento dell'eczema e lieve risalita transitoria delle piastrine, ma aumenta il rischio infettivo già alto.",
         trasfusione_piastrine: "Efficace per fermare emorragie acute, ma le piastrine trasfuse vengono distrutte rapidamente.",
+        //forse è sbagliato trasfusione_sangue: "Comparsa di reazione trasfusionale grave e peggioramento dell’immunodeficienza.",
         farmaco_immunosoppressore: "Rituximab: Controllo delle complicanze autoimmuni (emolisi o trombocitopenia immune) se presenti.",
         immunoglobuline: "IVIG: Riduzione della frequenza delle infezioni batteriche.",
         intervento_chirurgico: "Trapianto di Cellule Staminali Ematopoietiche (Midollo Osseo): Guarigione completa del difetto immunitario e piastrinico."
@@ -3280,7 +3385,8 @@ const casi = [
         autoanticorpi: "Negativi.",
         esame_tossicologico: "Negativo.",
         striscio_sangue: "Normale.",
-        
+        esame_obiettivo_addome: "Addome morbido, non dolorabile, peristalsi normale.",
+
         // IL TEST CHIAVE
         ricerca_ambientale: "Coltura su terreno Sabouraud a 25°C: Crescita di muffa biancastra che diventa scura/nera dopo giorni. Identificazione microscopica: Ife settate con conidi a 'margherita' (Sporothrix schenckii).",
 
@@ -3336,9 +3442,11 @@ const casi = [
         autoanticorpi: "ANA negativi. ANCA negativi (importante per escludere altre vasculiti).",
         esame_tossicologico: "Negativo.",
         striscio_sangue: "Normale.",
-        
+        esame_obiettivo_addome: "Addome morbido, dolore addominale lieve, peristalsi normale.",
+
         // IL TEST CHIAVE
-        dosaggi_specifici: "Tipizzazione HLA: Positività per HLA-B51 (Forte associazione genetica).",
+        dosaggi_specifici: "Test patergia: puntura dell'avambraccio con ago sterile: Formazione di una papula/pustola eritematosa dopo 24-48 ore (POSITIVO). Tipizzazione HLA: Positività per HLA-B51 (Forte associazione genetica).",
+        //test_patergia: "Puntura dell'avambraccio con ago sterile: Formazione di una papula/pustola eritematosa dopo 24-48 ore (POSITIVO).",
 
         // --- IMAGING ---
         rx: "RX Torace: Ilo polmonare destro lievemente prominente.",
@@ -3353,7 +3461,6 @@ const casi = [
         // --- PROCEDURE & NEURO ---
         biopsia: "Biopsia ulcera cutanea: Vasculite leucocitoclastica (infiammazione dei vasi).",
         visita_oculistica: "Lampada a fessura: Panuveite con Ipopion (livello di pus visibile nella camera anteriore dell'occhio). Vasculite retinica.",
-        test_patergia: "Puntura dell'avambraccio con ago sterile: Formazione di una papula/pustola eritematosa dopo 24-48 ore (POSITIVO).",
         paracentesi: "Non indicata.",
         eeg: "Normale.",
         emg: "Normale.",
@@ -3396,7 +3503,8 @@ const casi = [
         autoanticorpi: "Anti-GAD negativi. Anti-IA2 negativi. Anti-Insulina negativi. (Esclude il Diabete Tipo 1/Autoimmune).",
         esame_tossicologico: "Negativo.",
         striscio_sangue: "Normale.",
-        
+        esame_obiettivo_addome: "Addome morbido, non dolorabile, peristalsi normale.",
+
         // IL TEST CHIAVE
         dosaggi_specifici: "Peptide C: 1.2 ng/mL (Presente, non azzerato come nel Tipo 1). Test Genetico HNF1A: Mutazione eterozigote POSITIVA.",
 
@@ -3453,7 +3561,8 @@ const casi = [
         autoanticorpi: "Fattore Reumatoide negativo.",
         esame_tossicologico: "Negativo.",
         striscio_sangue: "Normale.",
-        
+        esame_obiettivo_addome: "Addome morbido, non dolorabile, peristalsi normale.",
+
         // IL TEST CHIAVE
         dosaggi_specifici: "Acido Urico sierico: 9.8 mg/dL (Alto).",
 
@@ -3482,7 +3591,7 @@ const casi = [
         
         // FARMACI
         antibiotici: "Nessun effetto (l'articolazione è rossa e calda ma non è infetta).",
-        farmaco_aspirina: "PEGGIORAMENTO: A basse dosi inibisce l'escrezione renale di acido urico, prolungando l'attacco.",
+        //farmaco_aspirina: "PEGGIORAMENTO: A basse dosi inibisce l'escrezione renale di acido urico, prolungando l'attacco.",
         //farmaco_allopurinolo: "TRABOCCHETTO: Se iniziato durante l'attacco acuto, PEGGIORA il dolore mobilitando i cristalli dai depositi. Va iniziato solo a infiammazione spenta per prevenzione.",
         farmaco_colchicina: "Risoluzione rapida del dolore e dell'infiammazione.",
         farmaco_fans: "Indometacina/Naprossene ad alte dosi: Sollievo efficace dal dolore in 24-48 ore.",
@@ -3568,7 +3677,8 @@ const casi = [
         autoanticorpi: "Negativi.",
         esame_tossicologico: "Negativo per droghe.",
         striscio_sangue: "Normale.",
-        
+        esame_obiettivo_addome: "Addome morbido, non dolorabile, peristalsi normale.",
+
         // IL TEST CHIAVE (Di esclusione)
         dosaggi_specifici: "Troponina: NEGATIVA (Esclude danno miocardico). TSH: Normale (Esclude ipertiroidismo, frequente nelle giovani donne).",
 
@@ -3614,7 +3724,7 @@ const casi = [
         livello_difficolta: "Difficile",
 
         // --- DATI PAZIENTE ---
-        sesso: "M",
+        sesso: "Maschio",
         eta: 58,
         sintomi: "Improvvisa difficoltà a vedere di notte o in ambienti poco illuminati (Nictalopia), visione di luci scintillanti o 'formicolio' visivo (Fotopsie), perdita della visione periferica.",
         anamnesi: "3 anni fa gli è stato rimosso un 'neo brutto' dalla schiena (Melanoma cutaneo), dichiarato guarito. Nessun problema di vista precedente.",
@@ -3630,7 +3740,8 @@ const casi = [
         autoanticorpi: "ANA negativi.",
         esame_tossicologico: "Negativo.",
         striscio_sangue: "Normale.",
-        
+        esame_obiettivo_addome: "Addome morbido, non dolorabile, peristalsi normale.",
+
         // IL TEST CHIAVE
         dosaggi_specifici: "Anticorpi anti-Retina (contro le cellule bipolari della retina): POSITIVI. Proteina S-100 sierica: Elevata (Marker tumorale melanoma).",
 
@@ -3664,6 +3775,279 @@ const casi = [
         cortisone: "Prednisone sistemico: Miglioramento parziale dei sintomi visivi (sopprime l'autoimmunità), ma rischio di favorire la crescita del tumore.",
         immunoglobuline: "IVIG o Plasmaferesi: Miglioramento della vista rimuovendo gli autoanticorpi circolanti.",
         farmaco_biologico: "Immunoterapia (Pembrolizumab/Nivolumab): ESSENZIALE per trattare il melanoma metastatico. PARADOSSO: Potenziando il sistema immunitario, questi farmaci potrebbero inizialmente peggiorare la retinopatia autoimmune o la vitiligine (segno che il farmaco funziona e sta attaccando i melanociti ovunque).",
+    },
+
+// ---------------- CASO 68: ANEMIA FALCIFORME (PEDIATRICO) ----------------
+    {
+        id: 68,
+        nome_malattia: "Anemia Falciforme (Drepanocitosi)",
+        livello_difficolta: "Medio",
+
+        // --- DATI PAZIENTE ---
+        sesso: "Maschio",
+        eta: 10,
+        sintomi: "Pianto ininterrotto, riferisce dolore insopportabile alle gambe e alla schiena. Febbre, pallore marcato, stanchezza (non riesce a giocare a calcio da giorni).",
+        anamnesi: "Bambino di origine africana. Storia di 'mani e piedi gonfi' (Dattilite) quando era lattante. È più basso e magro dei suoi compagni di classe (ritardo di crescita). Vaccinazioni in regola.",
+        note_infermiera: "Il bambino è rannicchiato nel letto e urla se provo a toccargli le gambe. Gli occhi sono gialli (Ittero). La madre dice che 'ha fatto pipì scura come la coca-cola'.",
+
+        // --- LABORATORIO ---
+        emocromo: "Hb 6.5 g/dL (Anemia grave). Reticolociti: 18% (Altissimi - crisi rigenerativa). Leucociti 15.000/mmc.",
+        
+        esami_ematochimici: "Bilirubina Totale: 3.8 mg/dL (Indiretta aumentata). LDH: 950 U/L. Aptoglobina: Assente.",
+        
+        emogas: "pO2 90 mmHg (Monitorare attentamente per Sindrome Toracica Acuta).",
+        ves_pcr: "PCR aumentata.",
+        coagulazione: "Normale.",
+        emocoltura: "In corso (Rischio sepsi da Pneumococco).",
+        esame_urine: "Urobilinogeno ++. Ematuria assente.",
+        autoanticorpi: "Coombs Diretto NEGATIVO.",
+        
+        esame_tossicologico: "Non indicato (età pediatrica).",
+        
+        striscio_sangue: "Presenza di drepanociti (globuli a falce) e cellule a bersaglio (Target cells).",
+        
+        // IL TEST CHIAVE
+        dosaggi_specifici: "Elettroforesi Emoglobina: HbS 92%, HbF 8% (se non prende idrossiurea), HbA assente.",
+
+        // --- IMAGING ---
+        rx: "RX Torace: Iniziali opacità basali (polmonite o infarto polmonare). RX Ossa: Allargamento degli spazi midollari (l'osso si allarga per produrre sangue).",
+        tc: "TC Cranio: Se segni neurologici, per escludere Ictus (Stroke) che è frequente nei bambini falcemici.",
+        risonanza: "RMN Encefalo: Aree di ischemie silenti (Silent infarcts).",
+        angio: "Doppler Transcranico (TCD): Velocità di flusso aumentata (> 200 cm/s) nelle arterie cerebrali (Indice di alto rischio ictus).",
+        ecografia: "Eco Addome: Milza aumentata di volume (Splenomegalia). Calcoli alla colecisti.",
+        elettrocardiogramma: "Tachicardia sinusale.",
+        ecocardiogramma: "Lieve dilatazione ventricolare sinistra (da anemia cronica).",
+        pet: "Non indicata.",
+
+        // --- PROCEDURE & NEURO ---
+        biopsia: "Non necessaria.",
+        
+        esame_obiettivo_addome: "Addome trattabile. Milza palpabile 2 cm sotto l'arcata costale (Rischio sequestro splenico acuto). Fegato lievemente ingrossato.",
+        
+        paracentesi: "Non indicata.",
+        eeg: "Normale.",
+        emg: "Normale.",
+
+        // --- EFFETTI TERAPIE ---
+        dialisi: "Non indicata.",
+        intervento_chirurgico: "Splenectomia: Valutata se crisi di sequestro splenico ricorrenti.",
+        intubazione: "Solo in caso di insufficienza respiratoria grave.",
+        trasfusione_piastrine: "Non indicata.",
+        
+        // FARMACI
+        antibiotici: "Penicillina/Ceftriaxone: Profilassi o terapia aggressiva immediata alla minima febbre (il sistema immunitario è debole).",
+        farmaco_fans: "Ibuprofene: Non sufficiente per la crisi vaso-occlusiva, ma utile per la febbre.",
+        farmaco_analgesico: "Morfina EV (dosaggio pediatrico): Necessaria.",
+        fluidoterapia: "Idratazione endovenosa (1.5 volte il fabbisogno basale): Fondamentale per 'diluire' i globuli rossi.",
+        ossigeno_alta_concentrazione: "Mantenere sat > 95%.",
+        trasfusione_sangue: "Trasfusione semplice o Exchange: Necessaria se Hb < 5 g/dL o se segni di Ictus/Sindrome Toracica.",
+        chemioterapia: "Somministrazione idrossiurea: terapia preventiva a lungo termine (aumenta HbF)."
+    },
+
+// ---------------- CASO 69: RICERCA DI FARMACI (DRUG SEEKING BEHAVIOR / SIMULAZIONE) ----------------
+    {
+        id: 69,
+        nome_malattia: "Simulazione (Drug Seeking Behavior - Finta Colica Renale)",
+        livello_difficolta: "Medio",
+
+        // --- DATI PAZIENTE ---
+        sesso: "Maschio",
+        eta: 34,
+        sintomi: "Lamenta un dolore atroce (10/10) al fianco destro che si irradia all'inguine. Si contorce sul lettino, urla e chiede aiuto.",
+        anamnesi: "Anamnesi positiva per episodi ricorrenti di calcolosi renale. Riporta precedenti reazioni avverse a diversi farmaci antinfiammatori non steroidei.",
+        note_infermiera: "Paziente vigile, orientato e collaborante. Alterna momenti di apparente sollievo a fasi di forti dolori, durante le quali richiede assistenza.",
+
+        // --- LABORATORIO ---
+        emocromo: "Normale.",
+        
+        esami_ematochimici: "Creatinina e Funzionalità renale normali. Calcio normale.",
+        
+        emogas: "Normale.",
+        ves_pcr: "Normali.",
+        coagulazione: "Normale.",
+        emocoltura: "Negativa.",
+        
+        // L'INDIZIO CHIAVE DI LABORATORIO
+        esame_urine: "Chimico-Fisico: NORMALE. Assenza totale di Microematuria (sangue).",
+        
+        autoanticorpi: "Negativi.",
+        
+        esame_tossicologico: "Positivo agli Oppiacei (tracce). Il paziente dice che ha preso 'una vecchia pillola di codeina della nonna' per il dolore prima di venire, ma che 'non ha fatto niente'.",
+        
+        striscio_sangue: "Normale.",
+        
+        dosaggi_specifici: "Nessuno specifico.",
+
+        // --- IMAGING ---
+        rx: "RX Addome: Nessuna calcificazione visibile lungo le vie urinarie.",
+        
+        // LA PROVA DEFINITIVA
+        tc: "TC Addome senza mezzo di contrasto: ASSENZA DI CALCOLI (Urolitiasi). Vie escretrici non dilatate. Reni normali.",
+        
+        risonanza: "Non indicata.",
+        angio: "Non indicata.",
+        ecografia: "Eco Reni: Reni di dimensioni normali, assenza di idronefrosi (dilatazione) o calcoli.",
+        elettrocardiogramma: "Frequenza cardiaca 75 bpm (Normale).",
+        ecocardiogramma: "Normale.",
+        pet: "Non indicata.",
+
+        // --- PROCEDURE & NEURO ---
+        biopsia: "Non necessaria.",
+        
+        esame_obiettivo_addome: "Giordano (colpo sul rene) apparentemente positivo (il paziente salta dal dolore appena lo sfiori). Addome trattabile.",
+        
+        paracentesi: "Non indicata.",
+        eeg: "Normale.",
+        emg: "Normale.",
+
+        // --- EFFETTI TERAPIE ---
+        dialisi: "Non indicata.",
+        intervento_chirurgico: "Non indicato.",
+        intubazione: "Non necessaria.",
+        trasfusione_piastrine: "Non indicata.",
+        
+        // FARMACI
+        antibiotici: "Nessun effetto.",
+        
+        farmaco_fans: "Ketorolac (Toradol): Il paziente rifiuta di farselo somministrare urlando che è allergico.",
+        
+        farmaco_analgesico: "Morfina/Petidina: dopo la somministrazione riferisce una riduzione significativa del dolore e appare più tranquillo e collaborante. Chiede informazioni sull’andamento della terapia analgesica.",
+        
+        //farmaco_placebo: "Soluzione Fisiologica (spacciata verbalmente per 'un nuovo potente antidolorifico'): Il paziente riferisce un miglioramento netto del dolore (Risposta positiva al placebo = componente non organica).",
+        
+        fluidoterapia: "Nessun effetto clinico reale, ma il paziente si lamenta che 'l'acqua non toglie il dolore'.",
+        
+        //dimissione: "Appena si comunica che la TC è negativa e non verranno prescritti oppioidi, il paziente si arrabbia, minaccia il personale, si strappa l'agocannula e se ne va (DAMA - Dimissione volontaria)."
+    },
+
+// ---------------- CASO 70: MENINGIOMA SPINALE ----------------
+    {
+        id: 70,
+        nome_malattia: "Meningioma Spinale",
+        livello_difficolta: "Difficile",
+
+        // --- DATI PAZIENTE ---
+        sesso: "Femmina",
+        eta: 62,
+        sintomi: "Debolezza progressiva alle gambe (paraparesi), rigidità muscolare, dolore alla schiena localizzato 'a cintura' che peggiora di notte stando sdraiata, disturbi urinari (urgenza).",
+        anamnesi: "In cura da anni per 'artrosi lombare' e 'sciatalgia' senza benefici con FANS o fisioterapia.",
+        note_infermiera: "La paziente cammina con andatura 'a forbice' (spastica). Riferisce che le gambe saltano da sole quando è a riposo (clono spontaneo).",
+
+        // --- LABORATORIO ---
+        emocromo: "Normale.",
+        esami_ematochimici: "Normale.",
+        emogas: "Normale.",
+        ves_pcr: "Normale.",
+        emocoltura: "Negativa.",
+        esame_urine: "Normale.",
+        autoanticorpi: "Negativi.",
+        esame_tossicologico: "Negativo.",
+        esame_liquor: "Dissociazione albumino-citologica: Proteine molto elevate (> 100 mg/dL) con cellule normali (Sindrome di Froin da blocco del flusso liquorale).",
+        striscio_sangue: "Normale.",
+        dosaggi_specifici: "Marcatori tumorali negativi.",
+        esame_obiettivo_addome: "Addome morbido, non dolorabile, peristalsi normale.",
+
+        // --- IMAGING ---
+        rx: "RX Rachide: Spondilosi diffusa (artrosi), nessun crollo vertebrale o lesione osteolitica evidente.",
+        tc: "TC Rachide (senza mdc): Modeste protrusioni discali, non giustificano la clinica. Massa isodensa nel canale spinale difficile da distinguere dal midollo senza contrasto.",
+        risonanza: "RMN Rachide Dorsale (con Gadolinio): Massa intradurale extramidollare a livello D8-D9, che comprime severamente il midollo spinale. Presenza del segno della 'coda durale' (Dural tail sign).",
+        angio: "Negativa.",
+        ecografia: "Vescica a pareti ispessite (Vescica neurologica).",
+        elettrocardiogramma: "Normale.",
+        ecocardiogramma: "Normale.",
+        pet: "Nessuna captazione suggestiva di metastasi.",
+
+        // --- PROCEDURE & NEURO ---
+        biopsia: "Esame istologico (post-operatorio): Meningioma psammomatoso (benigno, Grado I WHO).",
+        eeg: "Normale.",
+        emg: "Nessun segno di denervazione nei muscoli degli arti superiori. Segni di sofferenza piramidale agli arti inferiori.",
+        esame_neurologico_specifico: "Iperreflessia rotulea e achillea bilaterale. Segno di Babinski positivo bilaterale. Livello sensitivo (ipoestesia) al di sotto dell'ombelico.",
+
+        // --- EFFETTI TERAPIE ---
+        dialisi: "Nessun effetto.",
+        plasmaferesi: "Nessun effetto.",
+        intubazione: "Non necessaria.",
+        
+        // FARMACI
+        antibiotici: "Nessun effetto.",
+        cortisone: "Desametasone: Riduzione dell'edema peritumorale con transitorio miglioramento della forza e del dolore.",
+        farmaco_fans: "Sollievo minimo dal dolore.",
+        chemioterapia: "Non indicata per meningiomi benigni.",
+        
+        // TERAPIA RISOLUTIVA
+        intervento_chirurgico: "Laminectomia e asportazione della massa: Recupero graduale della funzione motoria e sfinterica. Prognosi eccellente."
+    },
+
+    // ---------------- CASO 71: FIBROMIALGIA ----------------
+    {
+        id: 71,
+        nome_malattia: "Fibromialgia",
+        livello_difficolta: "Difficile",
+
+        // --- DATI PAZIENTE ---
+        sesso: "Femmina",
+        eta: 42,
+        sintomi: "Dolore diffuso 'dappertutto' (muscoli, ossa, pelle), stanchezza cronica che non passa dormendo, rigidità mattutina, difficoltà di concentrazione ('nebbia mentale' o fibro-fog), formicolii alle mani.",
+        anamnesi: "La paziente ha girato 5 specialisti diversi in 2 anni (reumatologo, neurologo, ortopedico) senza diagnosi. Riferisce anche Colon Irritabile ed emicranie frequenti. Nega traumi recenti.",
+        note_infermiera: "La paziente è ipersensibile: si lamenta che la luce è troppo forte, che c'è troppo rumore e ha fatto un salto dal dolore quando le ho solo appoggiato la mano sulla spalla per rassicurarla (Allodinia tattile).",
+
+        // --- LABORATORIO ---
+        emocromo: "Perfettamente Normale.",
+        
+        esami_ematochimici: "CPK (Enzimi muscolari): Normali (esclude miosite/distrofia). TSH: Normale (esclude ipotiroidismo). Calcio e Vitamina D: Normali.",
+        
+        emogas: "Normale.",
+        ves_pcr: "VES 5 mm/h. PCR 0.1 mg/dL.",
+        esame_liquor: "Normale.",
+        coagulazione: "Normale.",
+        emocoltura: "Negativa.",
+        esame_urine: "Normale.",
+        autoanticorpi: "ANA negativi. Fattore Reumatoide negativo. Anti-CCP negativi. (Esclude Lupus e Artrite Reumatoide).",
+        
+        esame_tossicologico: "Negativo.",
+        
+        striscio_sangue: "Normale.",
+        
+        // IL TEST CHIAVE (Non è un esame del sangue, è clinico)
+        dosaggi_specifici: "Non esistono marker ematici diagnosticati.",
+
+        // --- IMAGING ---
+        rx: "RX Rachide/Articolazioni: Nessun segno di artrite, solo lievi note di artrosi non compatibili con l'intensità del dolore riferito.",
+        tc: "TC Encefalo: Normale.",
+        risonanza: "RMN Muscolare/Scheletrica: Assenza di edema o infiammazione.",
+        angio: "Negativa.",
+        ecografia: "Eco Articolare: Assenza di sinovite o versamento (l'articolazione è sana).",
+        elettrocardiogramma: "Normale.",
+        ecocardiogramma: "Normale.",
+        pet: "Ipometabolismo in aree del dolore nel cervello.",
+
+        // --- PROCEDURE & NEURO ---
+        biopsia: "Biopsia Muscolare: Normale, assenza di infiltrati infiammatori.",
+        
+        esame_obiettivo_addome: "Addome trattabile, dolente alla palpazione profonda lungo il colon (comorbidità IBS).",
+        
+        esame_neurologico_specifico: "Esame dei Tender Points: Dolore acuto alla pressione digitale (< 4kg) su almeno 11 dei 18 punti specifici (collo, trapezi, gomiti, glutei, ginocchia).",
+        
+        paracentesi: "Non indicata.",
+        eeg: "Normale.",
+        emg: "Normale (esclude neuropatie periferiche o miopatie).",
+
+        // --- EFFETTI TERAPIE ---
+        dialisi: "Nessun effetto.",
+        intervento_chirurgico: "Decompressione del tunnel carpale: Il dolore e i formicolii alla mano sono rimasti identici dopo l'operazione.",
+        intubazione: "Non necessaria.",
+        trasfusione_piastrine: "Non indicata.",
+        
+        // FARMACI
+        antibiotici: "Nessun effetto.",
+        
+        farmaco_fans: "Ibuprofene/Aspirina: Scarsa o nulla efficacia.",
+        
+        cortisone: "Nessun effetto significativo (conferma che non è polimialgia reumatica).",
+        farmaco_analgesico: "Paracetamolo: Efficacia limitata.",
+        
+        // TERAPIA RISOLUTIVA
+        farmaco_antidepressivo: "Amitriptilina (o Duloxetina/Pregabalin): Miglioramento della qualità del sonno e riduzione della soglia del dolore (agiscono sui neurotrasmettitori centrali).",
     }
 ];
 
@@ -3677,6 +4061,7 @@ let esamiDisponibili = {
         "emogas",
         "esame_feci",
         "esame_liquor",
+        "esame_obiettivo_addome",
         "esame_tossicologico",
         "esame_urine",
         "esami_ematochimici",
@@ -3715,7 +4100,8 @@ let esamiDisponibili = {
         "paracentesi",
         "plasmaferesi",
         "ossigeno_alta_concentrazione",
-        "trasfusione_piastrine"
+        "trasfusione_piastrine",
+        "trasfusione_sangue"
     ],
     "Farmaci": [
         "adrenalina",
@@ -3724,6 +4110,8 @@ let esamiDisponibili = {
         "antivirale",
         "cortisone",
         "chemioterapia",
+        "farmaco_analgesico",
+        "farmaco_antidepressivo",
         "farmaco_antidiabetico",
         "farmaco_antidoto",
         "farmaco_antimicotico",
@@ -3731,7 +4119,6 @@ let esamiDisponibili = {
         "farmaco_antipsicotico",
         "farmaco_antiserotoninico",
         "farmaco_antitiroideo",
-        "farmaco_aspirina",
         "farmaco_betabloccante",
         "farmaco_biologico",
         "farmaco_chelante",
@@ -3743,6 +4130,7 @@ let esamiDisponibili = {
         "farmaco_levodopa",
         "farmaco_octreotide",
         "farmaco_tetrabenazina",
+        "farmaco_vasodilatatore",
         "ferro_supplementare",
         "immunoglobuline",
         "insulina"

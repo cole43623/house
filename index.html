@@ -10,8 +10,20 @@
 <body>
 
     <div id="game-screen">
+        <div id="top-controls">
+            <div id="sound-toggle" onclick="toggleSound()">
+                <span id="sound-icon">🔊</span>
+            </div>
+            <div id="theme-toggle" onclick="toggleTheme()">
+                <span id="theme-icon">🌙</span>
+            </div>
+        </div>
+        <audio id="soundtrack" loop>
+            <source src="soundtrack.mp3" type="audio/mpeg">
+        </audio>
+        
         <div class="sign">USCITA</div>
-        <div class="door"></div>
+        <div class="door"><img id="door-img" src="door.png" alt="Porta"></div>
         <div class="background-decor"></div>
 
         <div id="nurse-container">
@@ -19,23 +31,156 @@
         </div>
 
         <div id="dialog-area">
-            <div id="tabs-container">
-                <!-- Le tabs verranno inserite qui dinamicamente -->
+            <div id="resize-handle"></div>
+            <div id="tabs-row">
+                <div id="tabs-container">
+                    <!-- Le tabs verranno inserite qui dinamicamente -->
+                </div>
+                <div id="exam-counter">Esami: 0</div>
             </div>
             
-            <div id="text-content">In attesa del paziente...</div>
+            <div id="text-content">In attesa...</div>
 
             <div id="controls">
-                <select id="exam-selector">
-                    <option value="" disabled selected>-- Scegli un esame --</option>
-                </select>
-                <button onclick="eseguiEsame()">ESEGUI ESAME</button>
-                <button onclick="rivelasol()">SVELA SOLUZIONE</button>
+                <button onclick="accettaPaziente()">ACCETTA PAZIENTE</button>
+            </div>
+        </div>
+
+        <!-- Popup conferma pixel art -->
+        <div id="popup-overlay" class="hidden">
+            <div id="popup-box">
+                <div id="popup-text">Sei sicuro di voler rivelare la soluzione del caso?</div>
+                <div id="popup-buttons">
+                    <button id="popup-confirm">SÌ</button>
+                    <button id="popup-cancel">NO</button>
+                </div>
             </div>
         </div>
     </div>
     <script src="casi.js"></script>
     <script>
+        // ==========================================
+        //  AUDIO CONTROL
+        // ==========================================
+        
+        const soundtrack = document.getElementById('soundtrack');
+        soundtrack.volume = 0.5; // Volume ridotto
+        const soundIcon = document.getElementById('sound-icon');
+        const clickSound = new Audio('click.mp3');
+        const errorSound = new Audio('error.ogg');
+        let isMuted = true;
+        let skipNextClick = false; // Per evitare click quando c'è errore
+
+        function playClick() {
+            if (isMuted) return;
+            if (skipNextClick) {
+                skipNextClick = false;
+                return;
+            }
+            clickSound.currentTime = 0;
+            clickSound.play().catch(() => {});
+        }
+
+        function playError() {
+            if (isMuted) return;
+            skipNextClick = true;
+            errorSound.currentTime = 0;
+            errorSound.play().catch(() => {});
+        }
+
+        // Aggiungi suono click a tutti i button e tab
+        document.addEventListener('click', (e) => {
+            if (e.target.tagName === 'BUTTON' || e.target.id === 'sound-toggle' || e.target.id === 'sound-icon' || e.target.classList.contains('tab')) {
+                playClick();
+            }
+        });
+
+        function toggleSound() {
+            if (isMuted) {
+                soundtrack.play();
+                soundIcon.textContent = '🔇';
+                isMuted = false;
+            } else {
+                soundtrack.pause();
+                soundIcon.textContent = '🔊';
+                isMuted = true;
+            }
+        }
+
+        // ==========================================
+        //  THEME CONTROL (Dark Mode)
+        // ==========================================
+        
+        const themeIcon = document.getElementById('theme-icon');
+        let isDarkMode = false;
+
+        function toggleTheme() {
+            isDarkMode = !isDarkMode;
+            document.body.classList.toggle('dark-mode', isDarkMode);
+            themeIcon.textContent = isDarkMode ? '☀️' : '🌙';
+            
+            // Forza repaint del testo per evitare bug di rendering
+            const textEl = document.getElementById('text-content');
+            const scrollPos = textEl.scrollTop;
+            textEl.style.display = 'none';
+            textEl.offsetHeight; // Trigger reflow
+            textEl.style.display = '';
+            textEl.scrollTop = scrollPos;
+        }
+
+        // ==========================================
+        //  RESIZE DIALOG AREA (Tendina)
+        // ==========================================
+        
+        const dialogArea = document.getElementById('dialog-area');
+        const resizeHandle = document.getElementById('resize-handle');
+        let isResizing = false;
+        let startY = 0;
+        let startHeight = 0;
+
+        resizeHandle.addEventListener('mousedown', (e) => {
+            isResizing = true;
+            startY = e.clientY;
+            startHeight = dialogArea.offsetHeight;
+            document.body.style.cursor = 'ns-resize';
+            document.body.style.userSelect = 'none';
+            e.preventDefault();
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (!isResizing) return;
+            const deltaY = startY - e.clientY;
+            const newHeight = Math.min(Math.max(startHeight + deltaY, 150), window.innerHeight * 0.90);
+            dialogArea.style.height = newHeight + 'px';
+        });
+
+        document.addEventListener('mouseup', () => {
+            if (isResizing) {
+                isResizing = false;
+                document.body.style.cursor = '';
+                document.body.style.userSelect = '';
+            }
+        });
+
+        // Supporto touch per mobile
+        resizeHandle.addEventListener('touchstart', (e) => {
+            isResizing = true;
+            startY = e.touches[0].clientY;
+            startHeight = dialogArea.offsetHeight;
+            e.preventDefault();
+        }, { passive: false });
+
+        document.addEventListener('touchmove', (e) => {
+            if (!isResizing) return;
+            const deltaY = startY - e.touches[0].clientY;
+            const newHeight = Math.min(Math.max(startHeight + deltaY, 150), window.innerHeight * 0.95);
+            dialogArea.style.height = newHeight + 'px';
+        }, { passive: false });
+
+        document.addEventListener('touchend', () => {
+            isResizing = false;
+        });
+
         // ==========================================
         //  LOGICA DI GIOCO
         // ==========================================
@@ -46,6 +191,17 @@
         let casoCorrenteObj = null;
         let tabs = []; // Array di oggetti {nome, contenuto, id}
         let tabAttivaId = null;
+        let timerStart = null; // Timestamp di inizio caso
+
+        function formatTempo(ms) {
+            const totalSeconds = Math.floor(ms / 1000);
+            const minuti = Math.floor(totalSeconds / 60);
+            const secondi = totalSeconds % 60;
+            if (minuti > 0) {
+                return minuti + " minuti " + secondi + " secondi.";
+            }
+            return secondi + " secondi.";
+        }
 
         function creaTabs() {
             tabsContainer.innerHTML = '';
@@ -67,9 +223,16 @@
                     }, 10);
                 }
             });
+            
+            // Aggiorna contatore esami (tabs - 1, escludendo "Infermiera Jo")
+            const numEsami = tabs.filter(t => t.id !== 'caso' && t.id !== 'soluzione').length;
+            document.getElementById('exam-counter').textContent = 'Esami: ' + numEsami;
         }
 
         function mostraTab(tabId) {
+            // Ferma il typewriter se in corso
+            clearInterval(typeInterval);
+            
             tabAttivaId = tabId;
             const tab = tabs.find(t => t.id === tabId);
             if (tab) {
@@ -103,6 +266,9 @@
             console.log(indice);
             casoCorrenteObj = casi[indice];
             
+            // Avvia il timer
+            timerStart = Date.now();
+            
             // Resetta le tabs (mantiene solo il caso)
             tabs = [];
             
@@ -130,7 +296,8 @@
             const esameScelto = selectElement.value;
 
             if (!esameScelto) {
-                // Feedback visivo se non si sceglie nulla
+                // Feedback visivo e sonoro se non si sceglie nulla
+                playError();
                 selectElement.style.borderColor = "red";
                 setTimeout(() => selectElement.style.borderColor = "#333", 500);
                 return;
@@ -146,12 +313,15 @@
                 contenuto = "RISULTATO " + nomeEsameLeggibile + ": " + risultato;
             }
 
+            // Ferma eventuale typewriter in corso
+            clearInterval(typeInterval);
+
             // Crea o aggiorna la tab per questo esame
             const tabEsistente = tabs.find(t => t.id === esameScelto);
             if (tabEsistente) {
                 tabEsistente.contenuto = contenuto;
                 tabAttivaId = esameScelto; 
-               textElement.textContent = contenuto;
+                textElement.textContent = contenuto;
                 textElement.style.whiteSpace = "pre-wrap";
                 textElement.scrollTop = 0;
                 creaTabs();
@@ -191,11 +361,28 @@
         }
 
     function rivelasol() {
-        const conferma = confirm("Sei sicuro di voler rivelare la soluzione del caso?");
+        if (!casoCorrenteObj) return;
+        
+        // Mostra popup personalizzato
+        const overlay = document.getElementById('popup-overlay');
+        overlay.classList.remove('hidden');
+        
+        // Gestione bottoni
+        document.getElementById('popup-confirm').onclick = () => {
+            overlay.classList.add('hidden');
+            mostraSoluzione();
+        };
+        document.getElementById('popup-cancel').onclick = () => {
+            overlay.classList.add('hidden');
+        };
+    }
 
-        if (!casoCorrenteObj || !conferma) return;
+    function mostraSoluzione() {
+        // Calcola il tempo impiegato
+        const tempoImpiegato = Date.now() - timerStart;
+        const tempo = formatTempo(tempoImpiegato);
 
-        const soluzione = "La soluzione del caso è: " + casoCorrenteObj.nome_malattia + ".";
+        const soluzione = "La soluzione del caso è: " + casoCorrenteObj.nome_malattia + ".\n\nTempo impiegato: " + tempo + "\nEsami richiesti: " + (tabs.length - 1);
 
         // Crea o aggiorna la tab SOLUZIONE
         tabs.push({
@@ -216,7 +403,7 @@
         nuovoCasoBtn.textContent = 'NUOVO CASO';
         condividi.textContent = 'CONDIVIDI CASO';
         condividi.onclick = () => {
-             navigator.clipboard.writeText("https://cole43623.github.io/house/?id="+(casoCorrenteObj.id-1));
+             navigator.clipboard.writeText("https://cole43623.github.io/house/?id="+(casoCorrenteObj.id));
              alert("Link copiato!");
         };
         nuovoCasoBtn.onclick = () => {
@@ -228,15 +415,53 @@
                 <button onclick="rivelasol()">SVELA SOLUZIONE</button>
             `;
             selectElement = document.getElementById('exam-selector');
-            caricaCaso(); 
+            let indice2 = Math.floor(Math.random() * casi.length);
+            while (indice2 == casoCorrenteObj.id) {
+                indice2 = Math.floor(Math.random() * casi.length);
+            }
+            caricaCaso(indice2);
         };
         controls.appendChild(nuovoCasoBtn);
         controls.appendChild(condividi);
     }
 
-        // AVVIO: Carica il primo caso
-        const id = new URLSearchParams(window.location.search).get('id');
-        caricaCaso(id);
+        // Funzione per mostrare intro
+        function mostraIntro() {
+            const ora = new Date().getHours();
+            const saluto = (ora >= 6 && ora < 18) ? "Buongiorno" : "Buonasera";
+            const messaggio = saluto + " doc! Abbiamo dei nuovi pazienti da visitare.";
+            
+            tabs = [{
+                id: 'caso',
+                nome: 'Infermiera Jo',
+                contenuto: messaggio
+            }];
+            tabAttivaId = 'caso';
+            creaTabs();
+            typeWriter(messaggio);
+        }
+
+        // Funzione per accettare un paziente
+        function accettaPaziente() {
+            const controls = document.getElementById('controls');
+            controls.innerHTML = `
+                <select id="exam-selector">
+                    <option value="" disabled selected>-- Scegli un esame --</option>
+                </select>
+                <button onclick="eseguiEsame()">ESEGUI ESAME</button>
+                <button onclick="rivelasol()">SVELA SOLUZIONE</button>
+            `;
+            selectElement = document.getElementById('exam-selector');
+            const id = new URLSearchParams(window.location.search).get('id');
+            caricaCaso(id);
+        }
+
+        const idParam = new URLSearchParams(window.location.search).get('id');
+        if (idParam !== null) {
+            accettaPaziente();
+        } else {
+            mostraIntro();
+        }
 
     </script>
 </body>
